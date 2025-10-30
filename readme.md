@@ -8,7 +8,7 @@ It combines **AI-driven conversation**, **Text-to-Speech**, and an **interactive
 ---
 
 ## 📂 โครงสร้างโปรเจ็ค
-
+```bash
 AIDA/
 ├── README.md
 ├── backend/ # AI Core + Voice modules
@@ -19,10 +19,8 @@ AIDA/
 ├── docs/ # เอกสารและ diagram
 └── demos/ # วิดีโอตัวอย่างการใช้งาน
 
-markdown
-Copy code
-
 ---
+```
 
 ## 👥 หน้าที่ของทีม
 
