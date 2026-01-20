@@ -54,7 +54,7 @@ AIDA/
 
 ---
 
-### 3️⃣ UI/UX & Avatar Designer – จป.
+### 3️⃣ UI/UX & Avatar Design & frontend – จป.
 **โฟลเดอร์:** `frontend/`  
 **หน้าที่:**
 - ออกแบบ UI และหน้าเว็บสำหรับ chatbot  
@@ -62,11 +62,11 @@ AIDA/
 - ทำให้ระบบใช้งานง่ายและดูเหมือน VTuber จริง  
 
 **ไฟล์หลัก:**
-- `app.py`  
-- `components/`  
-- `assets/avatars/`  
-- `assets/css/`  
-
+- `app/components/chat.tsx`  //ส่วนของแชท
+- `app/components/avatar.tsx` //ส่วนของavatar
+- `app/components/page.tsx` //ส่วนของ chat history
+- `public/AIDA.png`    //รูปน้อง ตอนนี้ยังเป็นpng ได้ตัวละครแล้วจะเปลี่ยน
+- `public/bg aida5.png` //พื้นหลัง
 ---
 
 ### 4️⃣ Knowledge Engineer – แก๊ง
@@ -107,14 +107,23 @@ cd AIDA
 ติดตั้ง dependencies
 
 pip install -r requirements.txt
+
 รัน backend
 
 cd backend
 python app.py
 รัน frontend
 
-cd frontend
-streamlit run app.py
+🌸cd frontend
+ติดตั้ง dependencies next.js ก่อน
+//รันคำสั่ง ใช้อันใดอันนึง
+npm install //สำหรับคนใช้ ืnode 
+yarn install //สำหรับคนใช้ yarn
+
+รัน frontend
+npm run dev
+
+แล้วเปิด --> http://localhost:3000
 
 📌 หมายเหตุ
 สมาชิกแต่ละคนทำงานในโฟลเดอร์ของตัวเอง
