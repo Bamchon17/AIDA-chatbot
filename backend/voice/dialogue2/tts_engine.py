@@ -9,6 +9,13 @@ import random
 CSV_PATH = 'backend/voice/dialogue2/processed_dialogue_v2.csv'
 df_dialogue = pd.read_csv(CSV_PATH)
 
+# สร้างโฟลเดอร์ไว้เก็บเสียงที่รันเสร็จเพื่อให้เจแปนดึงไปเล่น อย่าลืมดึงนี้ไปเล่นนะ
+output_folder = "ida_respond_week2"
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
+    print(f"สร้างโฟลเดอร์สำเร็จที่: {output_folder}")
+
+
 def ida_tts_process(user_text, auto_play=True):
     # --- ส่วนที่ 1: ค้นหา Script ทั้งหมดที่ตรงกับ Keyword ---
     # ค้นหาทุกแถวที่มี Keyword ตรงกับที่ user พูด
@@ -28,13 +35,13 @@ def ida_tts_process(user_text, auto_play=True):
     # --- ส่วนที่ 2: สร้างเสียง gTTS ---
     start_tts = time.perf_counter()
     tts = gTTS(text=script, lang='th')
-    output_filename = "ida_response.mp3"
+    output_filename = os.path.join(output_folder, "ida_response.mp3")
 
     if pygame.mixer.get_init():
         pygame.mixer.music.stop()
         pygame.mixer.music.unload()
 
-    tts.save(output_filename)
+    tts.save(output_filename) # เซฟไฟล์เสียงที่ gTTS เพิ่งสร้างขึ้นมาสดๆ
     latency = time.perf_counter() - start_tts  # ตอนเชื่อมเจแปนปลิ้นค่านี้มาด้วยนะ
     
     # --- ส่วนที่ 3: เล่นเสียง ---
@@ -51,20 +58,21 @@ def ida_tts_process(user_text, auto_play=True):
     return {
         "id": msg_id,
         "script": script,
+        "audio_file": output_filename, # ส่งไฟล์เสียงนี้ให้เจแปนไปเล่นเอง
         "latency": latency,
         "duration": duration,
         "rtf": rtf
     }
 
-# ทดสอบรัน (ลองรันหลายๆ รอบเพื่อดูว่ามันสุ่มไหม)
-if __name__ == "__main__":
-    test_input = "สวัสดี" 
-    result = ida_tts_process(test_input)
-    print(f"ID: {result['id']} | ตอบว่า: {result['script'][:30]}...")
+# # ทดสอบรัน (ลองรันหลายๆ รอบเพื่อดูว่ามันสุ่มไหม)
+# if __name__ == "__main__":
+#     test_input = "สวัสดี" 
+#     result = ida_tts_process(test_input)
+#     print(f"ID: {result['id']} | ตอบว่า: {result['script'][:30]}...")
     
-    # รอให้เสียงเล่นจบ
-    while pygame.mixer.music.get_busy():
-        time.sleep(0.1)
+#     # รอให้เสียงเล่นจบ
+#     while pygame.mixer.music.get_busy():
+#         time.sleep(0.1)
 
 # # ==========================================
 # # วิธีการทดสอบรัน (Mockup)
