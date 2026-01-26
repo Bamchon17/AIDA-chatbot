@@ -3,10 +3,11 @@ from gtts import gTTS
 import time
 import os
 from mutagen.mp3 import MP3
-import pygame # เล่นเสียงเพลงอัตโนมัติ  playing and manipulating sound effects
+import pygame # เล่นเสียงaidaอัตโนมัติ  playing and manipulating sound effects
 import random  
 
-CSV_PATH = 'backend/voice/dialogue2/processed_dialogue_v2.csv'
+# CSV_PATH = 'backend/voice/dialogue2/processed_dialogue_v2.csv'
+CSV_PATH = "processed_dialogue_v2.csv"
 df_dialogue = pd.read_csv(CSV_PATH)
 
 # สร้างโฟลเดอร์ไว้เก็บเสียงที่รันเสร็จเพื่อให้เจแปนดึงไปเล่น อย่าลืมดึงนี้ไปเล่นนะ
@@ -25,7 +26,7 @@ def ida_tts_process(user_text, auto_play=True):
         # 2. สุ่มเลือกมา 1 แถวจากรายการที่เจอทั้งหมด 
         chosen_row = matches.sample(n=1).iloc[0]
         
-        script = chosen_row['TTS Script']
+        script = chosen_row['TTS Script'] 
         msg_id = chosen_row['ID']
         print(f"DEBUG: สุ่มได้ ID -> {msg_id}") # ไว้เช็คว่ามันเปลี่ยนเวอร์ชั่นไหม
     else:
