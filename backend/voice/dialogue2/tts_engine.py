@@ -3,10 +3,11 @@ from gtts import gTTS
 import time
 import os
 from mutagen.mp3 import MP3
-import pygame # เล่นเสียงเพลงอัตโนมัติ  playing and manipulating sound effects
+import pygame # เล่นเสียงaidaอัตโนมัติ  playing and manipulating sound effects
 import random  
 
-CSV_PATH = 'backend/voice/dialogue2/processed_dialogue_v2.csv'
+# CSV_PATH = 'backend/voice/dialogue2/processed_dialogue_v2.csv'
+CSV_PATH = "processed_dialogue_v2.csv"
 df_dialogue = pd.read_csv(CSV_PATH)
 
 # สร้างโฟลเดอร์ไว้เก็บเสียงที่รันเสร็จเพื่อให้เจแปนดึงไปเล่น อย่าลืมดึงนี้ไปเล่นนะ
@@ -17,19 +18,26 @@ if not os.path.exists(output_folder):
 
 
 def ida_tts_process(user_text, auto_play=True):
-    # --- ส่วนที่ 1: ค้นหา Script ทั้งหมดที่ตรงกับ Keyword ---
-    # ค้นหาทุกแถวที่มี Keyword ตรงกับที่ user พูด
-    matches = df_dialogue[df_dialogue['Keyword'].str.contains(user_text, na=False, case=False)]
+    # --- ส่วนที่ 1: ค้นหา Script แบบยืดหยุ่น (Flexible Match) ---
+    chosen_row = None
     
-    if not matches.empty:
-        # 2. สุ่มเลือกมา 1 แถวจากรายการที่เจอทั้งหมด 
-        chosen_row = matches.sample(n=1).iloc[0]
+    # วนลูปเช็คทุกแถวใน CSV
+    for index, row in df_dialogue.iterrows():
+        # ดึงรายการ Keyword ในแถวนั้นออกมา (เช่น "สวัสดี, Hello" -> ['สวัสดี', 'hello'])
+        keywords = [k.strip().lower() for k in str(row['Keyword']).split(',')]
         
-        script = chosen_row['TTS Script']
+        # เช็คว่ามี Keyword คำไหน "ปรากฏอยู่ใน" ประโยคที่ user พูดมาบ้างไหม
+        if any(k in user_text.lower() for k in keywords):
+            chosen_row = row
+            break # เจออันแรกที่ตรงปุ๊บ หยุดหาทันที (ล็อคคำตอบ ไม่สุ่ม)
+
+    if chosen_row is not None:
+        script = chosen_row['TTS Script'] 
         msg_id = chosen_row['ID']
-        print(f"DEBUG: สุ่มได้ ID -> {msg_id}") # ไว้เช็คว่ามันเปลี่ยนเวอร์ชั่นไหม
+        print(f"DEBUG: เจอคำตอบที่ตรงกับ Keyword -> ID: {msg_id}")
     else:
-        script = "ขอโทษค่ะ ฉันไม่พบคำตอบที่ตรงกับคำถามนี้"
+        # ถ้าวนลูปจนจบแล้วไม่เจอคำไหนตรงเลย
+        script = "ขอโทษนะค้า เรื่องนี้พี่ไอด้ายังไม่มีข้อมูลเลยค่ะ ลองสอบถามเรื่องอื่นดูนะ"
         msg_id = "UNKNOWN"
 
     # --- ส่วนที่ 2: สร้างเสียง gTTS ---
