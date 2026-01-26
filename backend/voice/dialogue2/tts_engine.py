@@ -37,6 +37,7 @@ def ida_tts_process(user_text, auto_play=True):
     tts = gTTS(text=script, lang='th')
     output_filename = os.path.join(output_folder, "ida_response.mp3")
 
+    # Interrupt ไอด้า
     if pygame.mixer.get_init():
         pygame.mixer.music.stop()
         pygame.mixer.music.unload()
