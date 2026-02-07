@@ -1,0 +1,9 @@
+faiss-cpu
+sentence-transformers
+numpy
+torch
+scikit-learn
+scipy
+tqdm
+transformers
+huggingface-hub
