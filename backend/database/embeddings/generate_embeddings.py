@@ -472,6 +472,58 @@ class EmbeddingProcessor:
         pkl_path = os.path.join(self.output_dir, f"{save_name}.pkl") if export_pkl else None
         
         return chunks, faiss_path, chunks_path, pkl_path
+    
+    def process_multiple_files(
+        self,
+        file_paths,
+        chunk_funcs,
+        save_name,
+        verbose=True,
+        export_pkl=True
+    ):
+        """
+        Process multiple files and merge all chunks into ONE FAISS index.
+
+        Args:
+            file_paths: list of file paths
+            chunk_funcs: list of chunk functions (same length as file_paths)
+            save_name: base output name (single output)
+        """
+
+        all_chunks = []
+
+        for file_path, chunk_func in zip(file_paths, chunk_funcs):
+            if not os.path.exists(file_path):
+                raise FileNotFoundError(f"ไม่พบไฟล์ {file_path}")
+
+            with open(file_path, "r", encoding="utf-8") as f:
+                text = f.read()
+
+            chunks = chunk_func(text)
+
+            if verbose:
+                print(f"📄 {os.path.basename(file_path)} → {len(chunks)} chunks")
+
+            # เก็บ source ไว้ใน chunk (สำคัญมากสำหรับ RAG)
+            for c in chunks:
+                all_chunks.append(
+                    f"[SOURCE: {os.path.basename(file_path)}]\n{c}"
+                )
+
+        if not all_chunks:
+            raise ValueError("ไม่พบ chunk ใด ๆ จากไฟล์ที่เลือก")
+
+        if verbose:
+            print(f"\n✅ รวมทั้งหมด {len(all_chunks)} chunks จาก {len(file_paths)} ไฟล์")
+
+        # embed รอบเดียว
+        return self.embed_chunks(
+            all_chunks,
+            save_name,
+            verbose=verbose,
+            export_pkl=export_pkl
+        )
+
 
     def load_index_and_chunks(self, save_name, copy_to_ascii=None):
         """
@@ -582,65 +634,86 @@ if __name__ == "__main__":
             basename = os.path.basename(f)
             print(f"  {i}. [{ftype}] {basename}")
         
-        # Get file choice
+        # Get file choices (MULTI FILE)
         try:
-            choice = int(input("\nSelect file (number): "))
-            if choice < 1 or choice > len(all_clean_files):
-                print(f"Please enter number between 1 and {len(all_clean_files)}")
-                continue
-            selected_file = all_clean_files[choice - 1]
-            file_type = file_types[choice - 1]
+            choices = input("\nSelect file numbers (comma-separated, e.g. 1,3,5): ")
+
+            indices = [int(x.strip()) - 1 for x in choices.split(",")]
+
+            # validate indices
+            for i in indices:
+                if i < 0 or i >= len(all_clean_files):
+                    raise ValueError
+
+            selected_files = [all_clean_files[i] for i in indices]
+            selected_types = [file_types[i] for i in indices]
+
         except ValueError:
-            print("Please enter a valid number")
+            print(f"Please enter valid numbers between 1 and {len(all_clean_files)} (comma-separated)")
             continue
         
-        # Determine chunking method based on filename and file type
-        basename = os.path.basename(selected_file)
-        
-        # Auto-detect chunking method
-        detected_func, detected_method, detected_desc = embedding_proc.auto_detect_chunk_method_with_type(basename, file_type)
-        
-        print(f"\n📋 Detected file: {basename}")
-        print(f"📁 File type: {file_type}")
-        print(f"✓ Recommended method: {detected_desc}")
-        print("\nChunking method options:")
-        print("1 = Paragraphs (long-form content with overlap)")
-        print("2 = Markdown Tables (table-aware, keeps tables with context)")
-        print("3 = Markdown Hierarchy (respects heading structure)")
-        print("4 = Markdown Semantic (mixed content: tables + text)")
-        print("0 = Use recommended method (above)")
-        
-        chunk_choice = input("\nSelect method (0, 1-4): ")
-        
-        if chunk_choice == "0":
-            # Use auto-detected method
-            chunk_func = detected_func
-            method_name = detected_method
-        elif chunk_choice == "1":
-            chunk_func = embedding_proc.chunk_paragraphs
-            method_name = "paragraphs"
-        elif chunk_choice == "2":
-            chunk_func = embedding_proc.chunk_markdown_tables
-            method_name = "markdown_tables"
-        elif chunk_choice == "3":
-            chunk_func = embedding_proc.chunk_markdown_hierarchy
-            method_name = "markdown_hierarchy"
-        elif chunk_choice == "4":
-            chunk_func = embedding_proc.chunk_markdown_semantic
-            method_name = "markdown_semantic"
-        else:
-            print("Invalid choice")
-            continue
+        # Auto-detect chunking method for MULTIPLE files
+        chunk_funcs = []
+
+        for f, ftype in zip(selected_files, selected_types):
+            basename = os.path.basename(f)
+
+            detected_func, detected_method, detected_desc = (
+                embedding_proc.auto_detect_chunk_method_with_type(basename, ftype)
+            )
+
+            print(f"\n📄 File: {basename}")
+            print(f"📁 File type: {ftype}")
+            print(f"✓ Recommended method: {detected_desc}")
+            print("Chunking method options:")
+            print("1 = Paragraphs (long-form content with overlap)")
+            print("2 = Markdown Tables (table-aware, keeps tables with context)")
+            print("3 = Markdown Hierarchy (respects heading structure)")
+            print("4 = Markdown Semantic (mixed content: tables + text)")
+            print("0 = Use recommended method")
+
+            chunk_choice = input("Select method (0–4): ")
+
+            if chunk_choice == "0":
+                chunk_func = detected_func
+                method_name = detected_method
+            elif chunk_choice == "1":
+                chunk_func = embedding_proc.chunk_paragraphs
+                method_name = "paragraphs"
+            elif chunk_choice == "2":
+                chunk_func = embedding_proc.chunk_markdown_tables
+                method_name = "markdown_tables"
+            elif chunk_choice == "3":
+                chunk_func = embedding_proc.chunk_markdown_hierarchy
+                method_name = "markdown_hierarchy"
+            elif chunk_choice == "4":
+                chunk_func = embedding_proc.chunk_markdown_semantic
+                method_name = "markdown_semantic"
+            else:
+                print("Invalid choice, use recommended method")
+                chunk_func = detected_func
+                method_name = detected_method
+
+            print(f"→ Selected chunk method: {method_name}")
+            chunk_funcs.append(chunk_func)
+
         
         # Generate output name from input filename (remove _clean suffix and romanize)
         clean_basename = basename.replace("_clean.txt", "")
         romanized_basename = embedding_proc._romanize_filename(clean_basename)
-        save_name = romanized_basename + "_embedded"
+        save_name = "combined_embedded"
         
         try:
             print(f"\nProcessing: {basename}")
             print(f"Chunking method: {method_name}")
-            embedding_proc.process_file(selected_file, chunk_func, save_name, verbose=True, export_pkl=True)
+            embedding_proc.process_multiple_files(
+                selected_files,
+                chunk_funcs,
+                save_name,
+                verbose=True,
+                export_pkl=True
+            )
+
         except Exception as e:
             print(f"Error: {e}")
         
