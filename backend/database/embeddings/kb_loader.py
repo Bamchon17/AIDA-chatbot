@@ -41,7 +41,7 @@ class KnowledgeBaseLoader:
         Returns:
             numpy array of embeddings (float32)
         """
-        pkl_path = os.path.join(self.output_dir, f"{save_name}_embeddings.pkl")
+        pkl_path = os.path.join(self.output_dir, f"{save_name}.pkl")
         
         if not os.path.exists(pkl_path):
             raise FileNotFoundError(f"ไม่พบไฟล์ embeddings: {pkl_path}")
@@ -66,7 +66,7 @@ class KnowledgeBaseLoader:
         Returns:
             List of chunk strings
         """
-        chunks_path = os.path.join(self.output_dir, f"{save_name}_chunks.txt")
+        chunks_path = os.path.join(self.output_dir, f"{save_name}_chunk.txt")
         
         if not os.path.exists(chunks_path):
             raise FileNotFoundError(f"ไม่พบไฟล์ chunks: {chunks_path}")
@@ -99,12 +99,12 @@ class KnowledgeBaseLoader:
 
     def list_available_embeddings(self):
         """List all available embedding sets in Final_output folder"""
-        pkl_files = glob.glob(os.path.join(self.output_dir, "*_embeddings.pkl"))
+        pkl_files = glob.glob(os.path.join(self.output_dir, "*.pkl"))
         
         available = []
         for pkl_file in sorted(pkl_files):
             basename = os.path.basename(pkl_file)
-            save_name = basename.replace("_embeddings.pkl", "")
+            save_name = basename.replace(".pkl", "")
             available.append(save_name)
         
         return available
@@ -130,21 +130,15 @@ class KnowledgeBaseLoader:
             print(f"Loaded {len(chunks)} chunks from {save_name}")
         return index, chunks
 
-    def query_teachers(self, query, top_k=5):
-        """Query teacher information"""
-        return self.retriever.search_teachers(query, top_k=top_k)
-
-    def query_fees(self, query, top_k=5):
-        """Query fee information"""
-        return self.retriever.search_fees(query, top_k=top_k)
-
-    def query_companies(self, query, top_k=5):
-        """Query company/MOU information"""
-        return self.retriever.search_companies(query, top_k=top_k)
-
-    def query_all(self, query, top_k=5):
-        """Query all knowledge bases"""
-        return self.retriever.search_all(query, top_k=top_k)
+    def search(self, query, save_name, top_k=5):
+        """
+        Search combined knowledge base using FAISS index
+        """
+        return self.processor.search(
+            query=query,
+            save_name=save_name,
+            top_k=top_k
+        )
 
     def print_results(self, results, query):
         """Pretty print search results"""
@@ -192,7 +186,7 @@ if __name__ == "__main__":
     print("=" * 60)
     try:
         # Load from pickle file (recommended for external use)
-        embeddings, chunks = kb.load_all("ค่าเทอม_embedding_fees")
+        embeddings, chunks = kb.load_all("combined_embedded")
         print(f"\n✓ Loaded successfully")
         print(f"  - Embeddings shape: {embeddings.shape}")
         print(f"  - Number of chunks: {len(chunks)}")
@@ -206,8 +200,9 @@ if __name__ == "__main__":
     print("=" * 60)
     try:
         # Search using FAISS index
-        results = kb.query_fees("ค่าเทอมปี 1", top_k=2)
+        results = kb.search("ค่าเทอมปี 1", save_name="combined_embedded", top_k=3)
         kb.print_results(results, "ค่าเทอมปี 1")
+
     except Exception as e:
         print(f"✗ Error: {e}")
 
@@ -215,23 +210,32 @@ if __name__ == "__main__":
     print("Usage Examples for Other Developers:")
     print("=" * 60)
     print("""
-# Load embeddings (.pkl files)
+# Load embeddings (COMBINED EMBEDDING)
 from kb_loader import KnowledgeBaseLoader
 
 kb = KnowledgeBaseLoader()
 
 # Option 1: Load embeddings + chunks separately
-embeddings = kb.load_embeddings_pkl("ค่าเทอม_embedding_fees")  # numpy array
-chunks = kb.load_chunks("ค่าเทอม_embedding_fees")              # list of strings
+embeddings = kb.load_embeddings_pkl("combined_embedded")  # numpy array
+chunks = kb.load_chunks("combined_embedded")              # list of strings
+
+print(f"Embeddings shape: {embeddings.shape}")
+print(f"Number of chunks: {len(chunks)}")
 
 # Option 2: Load both together
-embeddings, chunks = kb.load_all("ค่าเทอม_embedding_fees")
+embeddings, chunks = kb.load_all("combined_embedded")
 
-# Option 3: Use for similarity search
-results = kb.query_fees("query text", top_k=5)
+# Option 3: Similarity search (FAISS)
+results = kb.search(
+    query="query text",
+    save_name="combined_embedded",
+    top_k=5
+)
+
 kb.print_results(results, "query text")
 
 # List available embeddings
 available = kb.list_available_embeddings()
 print(available)
 """)
+
