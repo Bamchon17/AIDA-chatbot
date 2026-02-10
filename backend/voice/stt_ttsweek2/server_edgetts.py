@@ -7,159 +7,125 @@ import time
 import asyncio
 from datetime import datetime
 from edgetts_engine import edge_process_voice
+
 app = Flask(__name__)
 CORS(app) 
 
-# --- การจัดการเส้นทางไฟล์ (Path Management) -----
+# --- Path Management ---
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = CURRENT_DIR  # เพราะ index.html อยู่ที่นี่แล้ว
+STATIC_DIR = CURRENT_DIR 
 AUDIO_PATH = os.path.join(CURRENT_DIR, "edgetts_respond_week2")
-
-# --- ส่วนการตั้งค่า Log ---
 LOG_FOLDER = os.path.join(CURRENT_DIR, 'logs')
-print(f"[DEBUG] LOG_FOLDER: {LOG_FOLDER}")
+
 if not os.path.exists(LOG_FOLDER):
     os.makedirs(LOG_FOLDER)
-    print("[DEBUG] สร้าง LOG_FOLDER ใหม่เรียบร้อย")
 
 def save_log(data):
     try:
-          # --- 1. เพิ่มการคำนวณ Total Time ---
         latency = data.get('latency', 0)
         duration = data.get('duration', 0)
-        total_time = latency + duration
+        total_time_classic = latency + duration 
 
-        # --- ส่วนการบันทึก TXT (สำหรับอ่านไวๆ) ---
-        txt_filename = f"log_{data.get('engine_type', 'voice')}_{datetime.now().strftime('%Y-%m-%d')}.txt"
-        txt_filepath = os.path.join(LOG_FOLDER, txt_filename)
-        timestamp = datetime.now().strftime('%H:%M:%S')
-        
-        log_entry = (
-            f"[{timestamp}] User: {data.get('text', '')}\n"
-            f"           ID: {data.get('id', 'UNKNOWN')} | Latency: {data.get('latency', 0):.4f}s | Duration: {data.get('duration', 0):.2f}s\n"
-            f"           RTF: {data.get('rtf', 0):.4f} | Script: {data.get('script', '')}\n"
-            f"{'-'*60}\n"
-        )
-        with open(txt_filepath, "a", encoding="utf-8") as f:
-            f.write(log_entry)
-
-        # --- 2. ส่วนการบันทึก CSV  ---
         csv_filename = f"benchmark_{data.get('engine_type', 'voice')}.csv"
         csv_filepath = os.path.join(LOG_FOLDER, csv_filename)
         file_exists = os.path.isfile(csv_filepath)
         
+        # --- [ปรับหัวตารางตามลำดับที่คุณแบมต้องการ] ---
+        fieldnames = [
+            'Timestamp', 'Engine', 'User_Dialogue', 'ID', 
+            'word_count', 'length_newmm',      # เพิ่มเข้ามาใหม่
+            'Logic_Delay', 'Latency', 'Duration', 'RTF', 
+            'Total_Time', 'E2E_Total_Latency', 'WPM', 'SPW', 'TTS_Script'
+        ]
+        
         with open(csv_filepath, mode='a', newline='', encoding='utf-8') as f:
-            # 1. เพิ่ม Total_Time เข้าไปใน fieldnames
-            writer = csv.DictWriter(f, fieldnames=[
-                'Timestamp', 'Engine', 'User_Dialogue', 'ID', 
-                'Latency', 'Duration', 'RTF', 'Total_Time', 'TTS_Script'
-            ])
-            
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             if not file_exists:
                 writer.writeheader()
                 
-            # 2. ใส่ค่า total_time ลงในคอลัมน์ใหม่
             writer.writerow({
-                'Timestamp': f"{datetime.now().strftime('%Y-%m-%d')} {datetime.now().strftime('%H:%M:%S')}",
+                'Timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 'Engine': data.get('engine', 'Unknown'),
                 'User_Dialogue': data.get('text', ''),
                 'ID': data.get('id', 'UNKNOWN'),
+                'word_count': data.get('word_count', 0),    # ดึงค่าใหม่
+                'length_newmm': data.get('length_newmm', 0), # ดึงค่าใหม่
+                'Logic_Delay': f"{data.get('logic_delay', 0):.4f}",
                 'Latency': f"{latency:.4f}",
                 'Duration': f"{duration:.2f}",
                 'RTF': f"{data.get('rtf', 0):.4f}",
-                'Total_Time': f"{total_time:.4f}", # บันทึกค่านี้ลงไป
+                'Total_Time': f"{total_time_classic:.4f}",
+                'E2E_Total_Latency': f"{data.get('e2e_total_latency', 0):.4f}",
+                'WPM': f"{data.get('wpm', 0):.2f}",
+                'SPW': f"{data.get('spw', 0):.4f}",
                 'TTS_Script': data.get('script', '')
             })
-        print(f"[DEBUG] Logged Total_Time: {total_time:.4f}s")
+        print(f"[DEBUG] ✅ Saved Edge Log -> ID: {data.get('id')}")
     except Exception as e:
         print(f"⚠️ Logging Error: {str(e)}")
 
-# --- การ Serve หน้าเว็บ (Frontend) ---
 @app.route('/')
 def serve_index():
-    print("[DEBUG] มีคนเข้ามาที่หน้า root '/'")
     return send_from_directory(STATIC_DIR, 'index.html')
 
+# --- [จุดสำคัญที่ผมทำหายไป และใส่กลับมาให้แล้ว] ---
 @app.route('/<path:path>')
 def serve_static(path):
-    print(f"[DEBUG] ขอไฟล์ static: {path}")
     return send_from_directory(STATIC_DIR, path)
 
-# --- API ประมวลผลเสียง ---
 @app.route('/api/speech', methods=['POST'])
 def receive_speech():
-    start_total_time = time.perf_counter()
-    print("[DEBUG] มี request เข้ามาที่ /api/speech")
-    
     try:
         data = request.get_json()
         text = data.get('text', '')
-        print(f"[DEBUG] ได้รับ text จาก frontend: '{text}'")
         
-        print("[DEBUG] เริ่มเรียก edge_process_voice...")
         result = asyncio.run(edge_process_voice(text, auto_play=False))
-        print("[DEBUG] edge_process_voice เสร็จแล้ว")
-        print(f"[DEBUG] Result จาก engine: {result}")
-        
-        total_latency = time.perf_counter() - start_total_time
-        print(f"[DEBUG] Total backend latency: {total_latency:.4f} วินาที")
         
         save_log({
             'engine_type': 'edge',
             'engine': 'Edge-TTS (Premwadee)',
             'text': text,
             'id': result.get('id', 'UNKNOWN'),
-            'latency': total_latency,
+            'word_count': result.get('word_count', 0),       # ส่งค่าใหม่ไปบันทึก
+            'length_newmm': result.get('length_newmm', 0),   # ส่งค่าใหม่ไปบันทึก
+            'script': result.get('script', ''),
+            'logic_delay': result.get('logic_delay', 0),
+            'latency': result.get('latency', 0),
             'duration': result.get('duration', 0),
             'rtf': result.get('rtf', 0),
-            'script': result.get('script', '')
+            'wpm': result.get('wpm', 0),
+            'spw': result.get('spw', 0),
+            'e2e_total_latency': result.get('e2e_total_latency', 0)
         })
         
-        audio_filename = os.path.basename(result.get('audio_file', '').replace('\\', '/'))
-        print(f"[DEBUG] ส่ง audio_url กลับ: /api/audio/{audio_filename}")
+        full_audio_path = result.get('audio_file', '')
+        audio_filename = os.path.basename(full_audio_path.replace('\\', '/'))
 
-        # คำนวณเตรียมไว้ก่อนส่ง
-        total_time = total_latency + result.get('duration', 0)
         return jsonify({
             'success': True,
             'audio_url': f'/api/audio/{audio_filename}',
             'received_text': text,
             'script': result.get('script', ''),
             'metrics': {
-                'total_backend_latency': total_latency,
-                'audio_duration': result.get('duration', 0),
-                'total_time': total_time
+                'logic_delay': result.get('logic_delay', 0),
+                'tts_latency': result.get('latency', 0),
+                'duration': result.get('duration', 0),
+                'total_time': result.get('latency', 0) + result.get('duration', 0)
             }
         })
     except Exception as e:
-        print(f"[DEBUG] ❌ API Error: {str(e)}")
+        print(f"❌ API Error: {str(e)}")
         return jsonify({'success': False, 'error': str(e)}), 500
 
 @app.route('/api/audio/<filename>')
 def get_audio(filename):
-    print(f"[DEBUG] ขอไฟล์เสียง: {filename}")
     try:
         full_path = os.path.join(AUDIO_PATH, filename)
-        print(f"[DEBUG] Full path ของไฟล์เสียง: {full_path}")
-        print(f"[DEBUG] ไฟล์มีจริงไหม? {os.path.exists(full_path)}")
-        
-        if not os.path.exists(full_path):
-            print("[DEBUG] ไม่เจอไฟล์เสียง!")
-            return "Audio file not found", 404
-            
-        mime_type, _ = mimetypes.guess_type(full_path)
-        print(f"[DEBUG] MIME type: {mime_type or 'audio/mpeg'}")
-        
-        return send_file(full_path, mimetype=mime_type or 'audio/mpeg', as_attachment=False)
+        return send_file(full_path, mimetype='audio/mpeg')
     except Exception as e:
-        print(f"[DEBUG] Error ส่งไฟล์เสียง: {str(e)}")
         return f"Error: {str(e)}", 500
 
 if __name__ == '__main__':
-    if not os.path.exists(AUDIO_PATH):
-        os.makedirs(AUDIO_PATH)
-        print(f"[DEBUG] สร้าง folder AUDIO_PATH ใหม่: {AUDIO_PATH}")
-    
-    print(f"[DEBUG] 🚀 Server starting at http://127.0.0.1:5002")
-    print("[DEBUG] กำลังรัน Flask server...")
-    app.run(host='0.0.0.0', port=5002, debug=True)  # เปลี่ยนเป็น 0.0.0.0 เพื่อให้เข้าจาก localhost ได้ชัวร์
+    if not os.path.exists(AUDIO_PATH): os.makedirs(AUDIO_PATH)
+    print(f"[DEBUG] 🚀 Edge Server running on http://127.0.0.1:5002")
+    app.run(host='0.0.0.0', port=5002, debug=True)
