@@ -27,6 +27,8 @@ class KnowledgeBaseLoader:
         """
         if output_dir is None:
             output_dir = os.path.join(os.path.dirname(__file__), "output_embeddings")
+        
+        # Initialize the processor which handles the FAISS loading and searching
         self.processor = EmbeddingProcessor(model_name=model_name, output_dir=output_dir)
         self.output_dir = output_dir
 
@@ -35,7 +37,7 @@ class KnowledgeBaseLoader:
         Load embeddings from .pkl file.
         
         Args:
-            save_name: Base name of saved files (e.g., "ค่าเทอม_embedding_fees")
+            save_name: Base name of saved files (e.g., "combined_embedded")
             verbose: Print progress
             
         Returns:
@@ -60,7 +62,7 @@ class KnowledgeBaseLoader:
         Load chunks from text file.
         
         Args:
-            save_name: Base name of saved files (e.g., "ค่าเทอม_embedding_fees")
+            save_name: Base name of saved files (e.g., "combined_embedded")
             verbose: Print progress
             
         Returns:
@@ -74,6 +76,7 @@ class KnowledgeBaseLoader:
         with open(chunks_path, "r", encoding="utf-8") as f:
             raw = f.read().strip()
         
+        # Split by --- that we defined in generate_embeddings.py
         chunks = [c.strip() for c in raw.split("\n---\n") if c.strip()]
         
         if verbose:
@@ -84,13 +87,6 @@ class KnowledgeBaseLoader:
     def load_all(self, save_name, verbose=True):
         """
         Load all files (embeddings + chunks) for a knowledge base.
-        
-        Args:
-            save_name: Base name of saved files
-            verbose: Print progress
-            
-        Returns:
-            Tuple of (embeddings, chunks)
         """
         embeddings = self.load_embeddings_pkl(save_name, verbose=verbose)
         chunks = self.load_chunks(save_name, verbose=verbose)
@@ -98,7 +94,7 @@ class KnowledgeBaseLoader:
         return embeddings, chunks
 
     def list_available_embeddings(self):
-        """List all available embedding sets in Final_output folder"""
+        """List all available embedding sets in output_embeddings folder"""
         pkl_files = glob.glob(os.path.join(self.output_dir, "*.pkl"))
         
         available = []
@@ -112,15 +108,6 @@ class KnowledgeBaseLoader:
     def load_embeddings(self, save_name, copy_to_ascii=None, verbose=True):
         """
         Load pre-generated embeddings and chunks from disk (FAISS index).
-        
-        Args:
-            save_name: Base name of saved files (without extension)
-                      e.g., "ค่าเทอม_embedding_fees"
-            copy_to_ascii: Optional ASCII filename to copy .faiss to (workaround for Windows Thai names)
-            verbose: Print progress
-            
-        Returns:
-            Tuple of (index, chunks)
         """
         index, chunks = self.processor.load_index_and_chunks(
             save_name,
@@ -146,24 +133,25 @@ class KnowledgeBaseLoader:
         print(f"Query: {query}")
         print(f"{'='*60}")
 
-        if isinstance(results, dict):
-            # Results from search_all()
-            for category, matches in results.items():
-                print(f"\n{category.upper()}:")
-                if matches:
-                    for i, r in enumerate(matches, 1):
-                        print(f"  [{i}] (distance: {r['distance']:.4f})")
-                        print(f"      {r['chunk'][:150]}...")
-                else:
-                    print(f"  No results found")
+        if results:
+            for i, r in enumerate(results, 1):
+                print(f"\n[{i}] (Distance/Score: {r['distance']:.4f})")
+                
+                # Split the chunk into lines to format it nicely
+                # Since we inject [SOURCE] and [หมวดหมู่] at the top, we want to see them clearly
+                chunk_lines = r['chunk'].split('\n')
+                
+                # Highlight source and category tags if they exist
+                for line in chunk_lines:
+                    if line.startswith("[SOURCE:"):
+                        print(f"    📍 {line}")
+                    elif line.startswith("[หมวดหมู่:"):
+                        print(f"    🏷️ {line}")
+                    elif line.strip(): # Normal text line
+                        print(f"    {line}")
+                print("-" * 40)
         else:
-            # Results from specific search (list)
-            if results:
-                for i, r in enumerate(results, 1):
-                    print(f"[{i}] (distance: {r['distance']:.4f})")
-                    print(f"    {r['chunk']}")
-            else:
-                print("No results found")
+            print("No results found")
 
 
 if __name__ == "__main__":
@@ -178,7 +166,7 @@ if __name__ == "__main__":
         for i, name in enumerate(available, 1):
             print(f"[{i}] {name}")
     else:
-        print("ไม่พบไฟล์ embeddings ในโฟลเดอร์ Final_output")
+        print("ไม่พบไฟล์ embeddings ในโฟลเดอร์ output_embeddings")
         exit(1)
 
     print("\n" + "=" * 60)
@@ -190,8 +178,11 @@ if __name__ == "__main__":
         print(f"\n✓ Loaded successfully")
         print(f"  - Embeddings shape: {embeddings.shape}")
         print(f"  - Number of chunks: {len(chunks)}")
+        
         print(f"\nFirst chunk preview:")
-        print(f"  {chunks[0][:100]}...")
+        # Show more context in preview
+        preview_text = chunks[0][:300].replace('\n', ' ')
+        print(f"  {preview_text}...")
     except Exception as e:
         print(f"✗ Error: {e}")
 
@@ -199,43 +190,10 @@ if __name__ == "__main__":
     print("Example 2: Search using query (FAISS index)")
     print("=" * 60)
     try:
-        # Search using FAISS index
-        results = kb.search("ค่าเทอมปี 1", save_name="combined_embedded", top_k=3)
-        kb.print_results(results, "ค่าเทอมปี 1")
+        # Search using FAISS index (Try a query that causes confusion to test Context Tag)
+        test_query = "ปี 1 เทอม 1 ต้องเรียนวิชาอะไรบ้าง"
+        results = kb.search(test_query, save_name="combined_embedded", top_k=3)
+        kb.print_results(results, test_query)
 
     except Exception as e:
         print(f"✗ Error: {e}")
-
-    print("\n" + "=" * 60)
-    print("Usage Examples for Other Developers:")
-    print("=" * 60)
-    print("""
-# Load embeddings (COMBINED EMBEDDING)
-from kb_loader import KnowledgeBaseLoader
-
-kb = KnowledgeBaseLoader()
-
-# Option 1: Load embeddings + chunks separately
-embeddings = kb.load_embeddings_pkl("combined_embedded")  # numpy array
-chunks = kb.load_chunks("combined_embedded")              # list of strings
-
-print(f"Embeddings shape: {embeddings.shape}")
-print(f"Number of chunks: {len(chunks)}")
-
-# Option 2: Load both together
-embeddings, chunks = kb.load_all("combined_embedded")
-
-# Option 3: Similarity search (FAISS)
-results = kb.search(
-    query="query text",
-    save_name="combined_embedded",
-    top_k=5
-)
-
-kb.print_results(results, "query text")
-
-# List available embeddings
-available = kb.list_available_embeddings()
-print(available)
-""")
-
