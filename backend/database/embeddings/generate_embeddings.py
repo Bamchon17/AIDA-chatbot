@@ -13,7 +13,7 @@ class EmbeddingProcessor:
     Saves outputs to Final_output folder.
     """
 
-    MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+    MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
     def __init__(self, model_name=None, output_dir=None):
         if model_name is None:
