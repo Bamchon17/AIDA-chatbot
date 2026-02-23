@@ -236,7 +236,8 @@ class EmbeddingProcessor:
         chunks_path = os.path.join(self.output_dir, f"{save_name}_chunk.txt")
         with open(chunks_path, "w", encoding="utf-8") as f:
             for c in chunks:
-                f.write(c + "\n---\n")
+                # [แก้ไข]: ใช้ตัวคั่นเฉพาะเพื่อไม่ให้ซ้ำกับ Markdown
+                f.write(c + "\n===CHUNK_SEPARATOR===\n")
 
         if verbose:
             print(f"บันทึกแล้ว: {faiss_path}")
@@ -331,7 +332,8 @@ class EmbeddingProcessor:
         with open(chunks_path, "r", encoding="utf-8") as f:
             raw = f.read().strip()
 
-        chunks = [c.strip() for c in raw.split("\n---\n") if c.strip()]
+        # [แก้ไข]: อ่านไฟล์แล้วแยกข้อมูลด้วยตัวคั่นเฉพาะ
+        chunks = [c.strip() for c in raw.split("\n===CHUNK_SEPARATOR===\n") if c.strip()]
         return index, chunks
 
     def search(self, query, save_name, top_k=5, copy_to_ascii=None):
