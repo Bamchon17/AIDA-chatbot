@@ -21,6 +21,7 @@ interface ChatHistory {
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [voiceInput, setVoiceInput] = useState<string | null>(null);
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([
     { 
       id: 1, 
@@ -116,6 +117,15 @@ export default function Home() {
     if (chat.messages.length === 0) return "No messages yet";
     return chat.messages[chat.messages.length - 1].text;
   };
+
+  // Handle voice input from Avatar
+  const handleVoiceInput = useCallback((text: string) => {
+    setVoiceInput(text);
+    // Reset voice input after a short delay to allow Chat component to process it
+    setTimeout(() => {
+      setVoiceInput(null);
+    }, 200);
+  }, []);
 
   return (
     <div className="relative flex flex-col md:flex-row h-screen w-screen overflow-hidden">
@@ -239,7 +249,7 @@ export default function Home() {
 
       {/* Left Side - Avatar Section */}
       <div className="relative z-10 w-full md:w-1/2 h-1/3 md:h-full">
-        <Avatar />
+        <Avatar onVoiceInput={handleVoiceInput} />
       </div>
 
       {/* Right Side - Chat Section */}
@@ -250,6 +260,7 @@ export default function Home() {
           initialMessages={currentChat?.messages || []}
           onMessagesUpdate={(messages) => currentChatId && updateChatMessages(currentChatId, messages)}
           onCreateNewChat={createNewChatAndReturn}
+          voiceInput={voiceInput}
         />
       </div>
     </div>
