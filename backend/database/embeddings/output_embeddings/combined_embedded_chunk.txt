@@ -1,0 +1,1089 @@
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+# แผนการเรียนสาขาปัญญาประดิษฐ์และวิทยาการข้อมูล
+
+## ปีที่ 1 ภาคการศึกษาที่ 1 (เทอม 1)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- ME154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- ME154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+## ปีที่ 1 ภาคการศึกษาที่ 2 (เทอม 2)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE213 Computer Programming (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- EN101 Everyday English (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+## ปีที่ 2 ภาคการศึกษาที่ 1 (เทอม 1)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- IE213 Mathematics for Artificial Intelligence (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+## ปีที่ 2 ภาคการศึกษาที่ 2 (เทอม 2)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+## ปีที่ 3 ภาคการศึกษาที่ 1 (เทอม 1)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+- AIE321 Big Data Processing and Analytics (3)
+- AIE313 Database System (3)
+- AIE331 Computer Vision (3)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+- AIE331 Computer Vision (3)
+- AIE332 Robotics and Intelligent Systems (3)
+- AIE313 Database System (3)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+- AIE331 Computer Vision (3)
+- AIE332 Robotics and Intelligent Systems (3)
+- AIE313 Database System (3)
+รวมหน่วยกิต: 9
+
+## ปีที่ 3 ภาคการศึกษาที่ 2 (เทอม 2)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+- AIE341 Natural Language Processing (3)
+- AIE342 Deep Learning (3)
+- วิชาเลือกเฉพาะด้าน (3)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+- AIE341 Natural Language Processing (3)
+- AIE331 Computer Vision (3)
+- วิชาเลือกเฉพาะด้าน (3)
+รวมหน่วยกิต: 9
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+- AIE341 Natural Language Processing (3)
+- AIE331 Computer Vision (3)
+- วิชาเลือกเฉพาะด้าน (3)
+รวมหน่วยกิต: 9
+
+## ปีที่ 4 ภาคการศึกษาที่ 1 (เทอม 1)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+- AIE481 AI and Data Science Project I (2)
+- วิชาเลือกเฉพาะด้าน (3)
+- วิชาเลือกเสรี (3)
+รวมหน่วยกิต: 8
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+- AIE481 AI and Data Science Project I (2)
+- วิชาเลือกเฉพาะด้าน (3)
+- วิชาเลือกเสรี (3)
+รวมหน่วยกิต: 8
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+- AIE481 AI and Data Science Project I (2)
+- วิชาเลือกเฉพาะด้าน (3)
+- วิชาเลือกเสรี (3)
+รวมหน่วยกิต: 8
+
+## ปีที่ 4 ภาคการศึกษาที่ 2 (เทอม 2)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/1 (แผนปกติ)
+- AIE482 AI and Data Science Project II (2)
+- ฝึกงานหรือสหกิจศึกษา (6)
+รวมหน่วยกิต: 8
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 1/2 (แผนปกติ)
+- AIE482 AI and Data Science Project II (2)
+- ฝึกงานหรือสหกิจศึกษา (6)
+รวมหน่วยกิต: 8
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_degree_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]
+### รุ่น 2 (แผนปกติ)
+- AIE482 AI and Data Science Project II (2)
+- ฝึกงานหรือสหกิจศึกษา (6)
+รวมหน่วยกิต: 8
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 1/1
+ค่าเทอมจำนวน 25,380 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 1/2
+ค่าเทอมจำนวน 25,100 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 2
+ค่าเทอมจำนวน 49,100 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายปีที่ 1 เท่ากับ 99,580 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 เทอม 1
+ค่าเทอมจำนวน 49,000 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 เทอม 2
+ค่าเทอมจำนวน 48,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายปีที่ 2 เท่ากับ 97,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 เทอม 1
+ค่าเทอมจำนวน 58,800 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 เทอม 2
+ค่าเทอมจำนวน 45,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 ภาคฤดูร้อน
+ค่าเทอมจำนวน 4,200 บาท
+
+รวมค่าใช้จ่ายปีที่ 3 เท่ากับ 108,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 เทอม 1
+ค่าเทอมจำนวน 34,800 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 เทอม 2
+ค่าเทอมจำนวน 34,400 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายปีที่ 4 เท่ากับ 69,200 บาท
+
+
+รวมค่าใช้จ่ายตลอดหลักสูตรประมาณ 374,980 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+รูปแบบกู้กองทุนกองทุนเงินให้กู้ยืมเพื่อการศึกษา (ลักษณะที่ 2)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 1/1
+ชำระเงินเพิ่มเติมจำนวน 3,000 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 1/2
+ไม่มีค่าใช้จ่ายเพิ่มเติม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 เทอม 2
+ชำระเงินเพิ่มเติมจำนวน 26,580 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 1 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายที่ต้องชำระปีที่ 1 เท่ากับ 29,580 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 เทอม 1
+ชำระเงินเพิ่มเติมจำนวน 14,000 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 เทอม 2
+ชำระเงินเพิ่มเติมจำนวน 13,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 2 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายที่ต้องชำระปีที่ 2 เท่ากับ 27,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 เทอม 1
+ชำระเงินเพิ่มเติมจำนวน 23,800 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 เทอม 2
+ชำระเงินเพิ่มเติมจำนวน 10,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 3 ภาคฤดูร้อน
+ชำระเงินเพิ่มเติมจำนวน 4,200 บาท
+
+รวมค่าใช้จ่ายที่ต้องชำระปีที่ 3 เท่ากับ 38,600 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 เทอม 1
+ไม่มีค่าใช้จ่ายเพิ่มเติม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 เทอม 2
+ไม่มีค่าใช้จ่ายเพิ่มเติม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_ค่าเทอม_clean.txt]
+[หมวดหมู่: ค่าเทอมและการเงิน]
+ปีที่ 4 ภาคฤดูร้อน
+ไม่มีค่าใช้จ่าย
+
+รวมค่าใช้จ่ายที่ต้องชำระปีที่ 4 เท่ากับ 0 บาท
+
+
+รวมค่าใช้จ่ายตลอดหลักสูตรที่ต้องชำระให้มหาวิทยาลัยประมาณ 95,780 บาท
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+﻿รายชื่อบริษัทหรือสถานประกอบการณ์ที่เป็นพันธมิตร/พาร์ทเนอร์ (MOU)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+1. MANGO CONSULTANT Company Limited
+        เป็นบริษัทพัฒนา ซอฟต์แวร์ สำหรับบริหารโครงการและควบคุมต้นทุน โดยจุดเริ่มต้นของ Software Mango ERP พัฒนาเพื่อให้ตอบโจทย์ธุรกิจรับเหมาและพัฒนาอสังหาริมทรัพย์ ในปัจจุบันซอฟต์แวร์ได้มีการพัฒนาต่อยอดเพื่อนำไปใช้กับธุรกิจที่เป็น PROJECT BASED และครอบคลุมทุกส่วนการทำงาน บริษัทมุ่งเน้นการบริการที่เป็นเลิศ ซึ่งเป็นที่ยอมรับทั้งในประเทศและ ต่างประเทศ บริหารสัญญาโครงการก่อสร้างด้านการพัฒนา Software และด้านการบริหารบัญชี และการเงิน มากกว่า 30 ปี ก่อตั้งและบริหารโดยผู้เชี่ยวชาญ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+2. Odd-e
+        บริษัท ออด-อี (ประเทศไทย) จำกัด ประกอบธุรกิจประเภท ข้อมูลข่าวสารและการสื่อสารโดยให้บริการด้าน การจัดทำซอฟต์แวร์สำเร็จรูป (ยกเว้นซอฟต์แวร์เกมสำเร็จรูป)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+3. Softnix Technology Company Limited
+        ก่อตั้งขึ้นในปี 2007 โดยกลุ่ม System Engineer ที่เชี่ยวชาญด้าน IT Operation และ Security โดยมีแรงบันดาลใจที่ต้องการเห็น software enterprise ฝีมือคนไทยเป็นที่ยอมรับระดับโลก  โดยเราเริ่มต้นจากการพัฒนาซอฟท์แวร์ให้บริการ Email Server ที่ใช้ในองค์กรเพราะเป็นช่องทางการสื่อสารธุรกิจที่สำคัญ และตามด้วย Log Management System และ Authentication system เพราะเราเริ่มมองเห็นว่า เป็นพืนฐานที่ใช้ในระบบเครือข่ายคอมพิวเตอร์ และเติบโตได้จากการขยายตัวของเครือข่ายคอมพิวเตอร์ ซึ่งตลอดระยะเวลาทำให้เราสะสมประสบการณ์และความเชี่ยวชาญในการพัฒนาซอฟท์แวร์ที่ทำงานกับข้อมูลปริมาณมหาศาลตลอดเวลา (Real Time Data) และเมื่อโลกก้าวเข้าสู่ยุค Big Data และ AI ทักษะที่สำคัญที่สุดของเรา จึงนำมาสร้าง Big Data Analytic Platform ที่ชื่อ Softnix Data Platform และนำเราก้าวเข้าสู่การเป็น Big Data Platform Company ในปัจจุบัน
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+4. DNA ROBOTICS AND AUTOMATION SYSTEM Company Limited
+        ประกอบกิจการซื้อ ขาย ให้เช่า จัดหา ออกแบบ สร้าง ระบบหุ่นยนต์และระบบอัตโนมัติในอุตสาหกรรม
+
+5. IIS AUTOMATION Company Limited
+        IIS AUTOMATION ให้บริการในด้านการวางแผนและจัดการ ระบบการตรวจสอบ และวิเคราะห์ โดยใช้ระบบmachine vision ในรูปแบบ เฉพาะทางแต่ละอุตสาหกรรม รวมถึงวิธีการที่ ให้ความเฉพาะ ทางในแต่ละชิ้นงาน รวมถึงกระบวนการทั้งหมด แทน มนุษย์ได้อย่างแม่นยำ ที่ออกแบบโดยทีมงานวิศวกรควมคุมของเรา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+6. Huawei Technologies Company Limited
+        เป็นผู้ให้บริการโซลูชั่นเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) ชั้นนำระดับโลก เราได้สร้างสรรค์กลุ่มโซลูชั่น ICT ที่แข่งขันได้ในด้านเครือข่ายโทรคมนาคมและเครือข่ายองค์กร อุปกรณ์ ตลอดจนเทคโนโลยีและบริการคลาวด์ โซลูชั่น ICT ผลิตภัณฑ์
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+7. EPE Packaging (Thailand) Company Limited
+        ในฐานะบริษัทผู้ให้บริการโซลูชั่นบรรจุภัณฑ์แบบครบวงจร EPE มุ่งมั่นที่จะลดเวลาและต้นทุนในการส่งมอบผลิตภัณฑ์ให้กับลูกค้า โดยนำเสนอผลิตภัณฑ์และบริการบรรจุภัณฑ์แบบครบวงจรที่มีคุณภาพสูงสุด ด้วยเหตุนี้ เราจึงได้จัดตั้งสำนักงานมากกว่า 70 แห่งใน 10 ประเทศ รวมถึงญี่ปุ่น และเราใช้เครือข่ายนี้เพื่อให้บริการที่หลากหลายซึ่งปรับให้เหมาะสมกับประเทศต่างๆ ทั่วโลกอย่างรวดเร็ว เพื่อให้เราสามารถตอบสนองความต้องการของลูกค้าได้อย่างทันท่วงที
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+8. BOTNOI CONSULTING COMPANY LIMITED
+        บริษัท AI ชั้นนำของไทย มุ่งพัฒนาโซลูชันอัจฉริยะที่สร้างผลลัพธ์จริงและยกระดับธุรกิจของคุณอย่างมีประสิทธิภาพ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+9. UiPath
+        บริษัทซอฟต์แวร์ที่มีชื่อเสียงระดับโลกเป็นผู้เชี่ยวชาญในด้านการพัฒนา Robotic Process Automation (RPA) หรือ RPA Developer ซึ่งเป็น RPA Platform ที่ทุกองค์กรทั่วโลกยอมรับและเลือกใช้งานมากที่สุดในช่วงเวลาหลายปีที่ผ่านมานี้ ช่วยเพิ่มประสิทธิภาพการทำงานในองค์กรและองค์กรได้ประโยชน์อย่างมหาศาลจากการทำงานแบบอัตโนมัติ เปลี่ยนการทำงานรูปแบบเดิมที่ต้องใช้คนทำงานในรูปแบบการทำงานที่ซ้ำๆ เดิมๆ เป็นการทำงานแบบใหม่ด้วยระบบอัตโนมัติช่วยลดความผิดพลาดที่เกิดจาก Human Error ปลดล็อคศักยภาพการทำงานของพนักงานในด้านอื่นๆ พนักงานมีเวลาไปโฟกัสกับงานที่มีความสำคัญมากกว่า
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+10. การประปาส่วนภูมิภาค
+        สำรวจ จัดหาแหล่งน้ำดิบและ จัดให้ได้มาซึ่งน้ำดิบ ผลิต จัดส่งและจำหน่ายน้ำประปาทั่วประเทศยกเว้นกรุงเทพฯ,นนทบุรี และสมุทรปราการ ดำเนินธุรกิจอื่นที่เกี่ยวข้องหรือ ต่อเนื่องกับธุรกิจการประปา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+11. RV Connex Company Limited
+        บริษัทของคนไทยที่ต้องการก้าวขึ้นเป็นผู้นำในอุตสาหกรรมป้องกันประเทศ ความมั่นคงปลอดภัยและนวัตกรรม ปัจจุบันมีพนักงานกว่า 420 คน ซึ่งมีทั้งวิศวกรและผู้เชี่ยวชาญทางเทคนิคระดับสูง เราให้ความสำคัญด้านการวิจัยและพัฒนาเพื่อสร้างนวัตกรรม และขีดความสามารถที่ยั่งยืนโดยฝีมือคนไทย ให้สามารถตอบสนองความต้องการของประเทศทั้งในภาครัฐและเอกชน รวมถึงภูมิภาคใกล้เคียง
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+12. สภาเภสัชกรรม
+        เป็นองค์กรวิชาชีพเภสัชกรรม มีสถานะเป็นนิติบุคคล ก่อตั้งขึ้นตาม พระราชบัญญัติวิชาชีพเภสัชกรรม พุทธศักราช 2537 ให้ไว้ ณ วันที่ 26 มิถุนายน พุทธศักราช 2537 ประกาศในราชกิจจานุเบกษา เล่มที่ 111 ตอนที่ 28 ก
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_บริษัทMOU_clean.txt]
+[หมวดหมู่: เครือข่ายบริษัท/MOU]
+13. A.I Technology Company Limited
+        เป็นบริษัทไทยรายแรกและดีที่สุดที่สามารถออกแบบและผลิตเครื่องจักรที่ซับซ้อนสำหรับอุตสาหกรรม โดยมีคุณภาพดีเยี่ยม ในต้นทุนที่ถูกกว่า เพื่อให้บรรลุเป้าหมาย บริษัทมุ่งเน้นการใช้บุคลากรชาวไทยที่มีประสบการณ์ ทางด้านซอฟต์แวร์ออกแบบ 3D ขั้นสูง ระบบการจัดการคุณภาพ เครื่องจักรกลความแม่นยำสูง โครงสร้างต้นทุนที่แข่งขันได้ บริการหลังการขายที่ดี และการสื่อสารที่มีประสิทธิภาพ เพื่อความต้องการของลูกค้า
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+# สหกิจศึกษา (Cooperative Education)
+
+## ภาพรวมสหกิจศึกษา
+
+สหกิจศึกษา คือ ระบบการศึกษาที่ผสมผสานการเรียนในห้องเรียนกับการปฏิบัติงานจริงในสถานประกอบการอย่างเป็นระบบ  
+นักศึกษาจะได้ทำงานที่ตรงกับสาขาวิชาที่เรียน เพื่อสร้างประสบการณ์ตรงก่อนสำเร็จการศึกษา
+
+แนวคิดหลักของสหกิจศึกษาอยู่ภายใต้ระบบ Work Integrated Learning  
+ซึ่งเน้นการเรียนรู้ผ่านการทำงานจริงควบคู่กับการศึกษาในมหาวิทยาลัย
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## เหตุผลที่มีการจัดการเรียนการสอนแบบสหกิจศึกษา
+
+- บัณฑิตขาดประสบการณ์ทำงานจริง  
+- ไม่สามารถปฏิบัติงานได้ตรงตามความต้องการของสถานประกอบการ  
+- ปรับตัวเข้ากับสภาพแวดล้อมการทำงานได้ยาก  
+- เป็นการปรับยุทธศาสตร์การศึกษาของประเทศให้ตอบโจทย์ตลาดแรงงาน
+
+## ลักษณะของสหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+- นักศึกษาปฏิบัติงานเสมือนพนักงานชั่วคราว  
+- มีหน้าที่รับผิดชอบที่ชัดเจนและตรงสายวิชาชีพ  
+- ทำงานเต็มเวลา (Full Time)  
+- ระยะเวลาไม่น้อยกว่า 16 สัปดาห์ หรือ 1 ภาคการศึกษา  
+- สถานประกอบการให้ค่าตอบแทนหรือสวัสดิการตามความเหมาะสม
+
+## ประโยชน์ของสหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ด้านวิชาการ
+- นำความรู้จากห้องเรียนไปใช้กับงานจริง  
+- เข้าใจเนื้อหาวิชาการลึกขึ้น  
+- กระตุ้นการเรียนรู้เพิ่มเติม  
+- ได้ใช้เทคโนโลยีสมัยใหม่
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ด้านวิชาชีพ
+- เข้าใจลักษณะงานในสายอาชีพ  
+- เรียนรู้วัฒนธรรมองค์กร  
+- สร้างเครือข่ายวิชาชีพ  
+- เพิ่มโอกาสได้งานหลังเรียนจบ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ด้านสังคม
+- พัฒนาบุคลิกภาพและการสื่อสาร  
+- ทำงานร่วมกับผู้อื่นได้ดี  
+- สร้างความรับผิดชอบ  
+- ส่งเสริมการเรียนรู้นอกห้องเรียน
+
+## ความแตกต่างระหว่างฝึกงานทั่วไปกับสหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### รูปแบบการดำเนินงาน
+
+ฝึกงานทั่วไป:
+- นักศึกษาหาสถานที่ฝึกเอง  
+- ระยะเวลาประมาณ 2 เดือน  
+- ประเมินผลเมื่อสิ้นสุดการฝึกงาน
+
+สหกิจศึกษา:
+- มหาวิทยาลัยตรวจสอบสถานประกอบการ  
+- มีการติดตามผลก่อน ระหว่าง และหลังปฏิบัติงาน  
+- มีการนิเทศงานเป็นระยะ  
+- สามารถนำประสบการณ์มาต่อยอดโครงงาน
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ระยะเวลาและหน่วยกิต
+
+ฝึกงานทั่วไป:
+- ประมาณ 8 สัปดาห์  
+- 0 – 1 หน่วยกิต (ขึ้นกับสาขา)
+
+สหกิจศึกษา:
+- 4 – 6 เดือน หรือไม่น้อยกว่า 16 สัปดาห์  
+- ใช้ทดแทนรายวิชาบังคับเลือก 6 – 9 หน่วยกิต
+
+## แผนการเรียนสหกิจศึกษาในคณะวิศวกรรมศาสตร์
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+- ทุกสาขามีรายวิชาสหกิจศึกษาในปีที่ 4 ภาคการศึกษาที่ 1  
+- ต้องเรียนรายวิชา CO301 เตรียมสหกิจศึกษา ในปีที่ 3 ภาคการศึกษาที่ 2  
+- มีการจัดรายวิชาเกี่ยวข้องกับสหกิจศึกษาในชั้นปีอื่นตามความเหมาะสม
+
+## คุณสมบัติผู้เข้าร่วมสหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+- นักศึกษาชั้นปีที่ 3 (บางสาขาเริ่มปีที่ 2)  
+- เกรดเฉลี่ยสะสมตั้งแต่ 2.75 ขึ้นไป ณ สิ้นปีที่ 2 ภาคการศึกษาที่ 2  
+- ผ่านรายวิชาตามที่ภาควิชากำหนด  
+- มีหน่วยกิตครบตามเงื่อนไข
+
+## กระบวนการและไทม์ไลน์สหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นเตรียมการ (เดือนกรกฎาคม – สิงหาคม)
+
+วันที่ 1 กรกฎาคม  
+เริ่มประชาสัมพันธ์โครงการสหกิจศึกษาให้แก่นักศึกษา
+
+วันที่ 15 กรกฎาคม  
+จัดกิจกรรมแนะนำโครงการและอธิบายคุณสมบัติผู้สมัคร
+
+วันที่ 1 สิงหาคม  
+เปิดรับสมัครนักศึกษาเข้าร่วมโครงการ
+
+วันที่ 31 สิงหาคม  
+ปิดรับสมัครและยื่นเอกสารประกอบการสมัคร
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นลงทะเบียน (เดือนกันยายน)
+
+วันที่ 5 กันยายน  
+ประกาศรายชื่อนักศึกษาที่ผ่านคุณสมบัติเข้าร่วมสหกิจศึกษา
+
+วันที่ 10 กันยายน  
+ลงทะเบียนรายวิชา CO301 เตรียมสหกิจศึกษา
+
+วันที่ 15 กันยายน  
+ลงทะเบียนภาคฤดูร้อนตามกำหนดมหาวิทยาลัย
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นสมัครสถานประกอบการ (เดือนตุลาคม)
+
+วันที่ 1 ตุลาคม  
+เปิดระบบสมัครงานผ่านบริษัทคู่ความร่วมมือและ WORKINTEG
+
+วันที่ 15 ตุลาคม  
+นักศึกษาส่งใบขออนุมัติตำแหน่งงานต่ออาจารย์ที่ปรึกษา
+
+วันที่ 31 ตุลาคม  
+ปิดรับสมัครสถานประกอบการ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นคัดเลือกและยืนยันผล (เดือนพฤศจิกายน)
+
+วันที่ 5 พฤศจิกายน  
+สถานประกอบการเริ่มสัมภาษณ์นักศึกษา
+
+วันที่ 20 พฤศจิกายน  
+ประกาศผลการคัดเลือก
+
+วันที่ 30 พฤศจิกายน  
+นักศึกษายืนยันสถานประกอบการที่ได้รับคัดเลือก
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นปฏิบัติงานสหกิจศึกษา (เดือนธันวาคม – มีนาคม)
+
+วันที่ 1 ธันวาคม  
+ปฐมนิเทศนักศึกษาก่อนออกปฏิบัติงาน
+
+วันที่ 10 ธันวาคม  
+เริ่มปฏิบัติงานสหกิจศึกษาในสถานประกอบการ
+
+วันที่ 15 มกราคม  
+อาจารย์นิเทศงานครั้งที่ 1
+
+วันที่ 20 กุมภาพันธ์  
+อาจารย์นิเทศงานครั้งที่ 2
+
+วันที่ 31 มีนาคม  
+สิ้นสุดการปฏิบัติงานสหกิจศึกษา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สหกิจ_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+### ขั้นสรุปผลและประเมิน (เดือนเมษายน)
+
+วันที่ 5 เมษายน  
+ส่งรายงานสหกิจศึกษา
+
+วันที่ 15 เมษายน  
+สอบนำเสนอผลงานสหกิจศึกษา
+
+วันที่ 25 เมษายน  
+ประเมินผลจากสถานประกอบการและปัจฉิมนิเทศ
+
+วันที่ 30 เมษายน  
+สิ้นสุดกระบวนการสหกิจศึกษาอย่างเป็นทางการ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+# ข้อมูลคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล (AIDA)
+
+## 1. รายชื่ออาจารย์ประจำ (Full-time Faculty)
+*ข้อมูลอาจารย์ผู้เชี่ยวชาญด้าน AI, ML และ Data Science*
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### รองศาสตราจารย์ดอกเตอร์ภูมิพัฒ แสงอุดมเลิศ
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก MIT, USA
+- **ความเชี่ยวชาญ:** Digital Communication, Optimization, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### อาจารย์ ทศพล บ้านคลองสี่
+- **วุฒิการศึกษา:** Master of Engineering จาก จุฬาลงกรณ์มหาวิทยาลัย
+- **ความเชี่ยวชาญ:** Data Analytics and Visualization
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ดอกเตอร์ปัญจวี รักประยูร
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก มหาวิทยาลัยเกษตรศาสตร์
+- **ความเชี่ยวชาญ:** Computer Vision in Robotics, 3D reconstruction
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### อาจารย์ พฤฒาภรณ์ เมาลานนท์
+- **วุฒิการศึกษา:** Master of Engineering จาก TAIST-Tokyo Tech, Japan
+- **ความเชี่ยวชาญ:** Embedded Systems, การประยุกต์ AI ใน Drone และ หุ่นยนต์
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### รองศาสตราจารย์ดอกเตอร์จักรพงษ์ สุธาภุชกุล
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก University of Surrey, USA
+- **ความเชี่ยวชาญ:** Vehicle Ad-hoc Network, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ผู้ช่วยศาสตราจารย์ดอกเตอร์วิศาล พัฒน์ชู
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก Washington State University, USA
+- **ความเชี่ยวชาญ:** Embedded Systems, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ผู้ช่วยศาสตราจารย์ดอกเตอร์ปกรณ์ ยุบลโกศล
+- **วุฒิการศึกษา:** D.Eng. จาก University of Siegen, Germany
+- **ความเชี่ยวชาญ:** Digital Communication, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ดอกเตอร์ศุภรัตน์ แย้มครวญ
+- **วุฒิการศึกษา:** D.Eng. จาก KMUTT
+- **ความเชี่ยวชาญ:** Embedded Systems, Database & Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ดอกเตอร์โรโมล โจลิโวท (Dr. Romuald Jolivot)
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก Université de Bourgogne, France
+- **ความเชี่ยวชาญ:** Image processing / Computer Vision, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ดอกเตอร์เกรียงไกร ลิ่มทอง
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก มหาวิทยาลัย Sokendai, Japan
+- **ความเชี่ยวชาญ:** Network traffic measurement, Cyber Security, การประยุกต์ใช้ Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### อาจารย์วิชุกร คันธินทระ
+- **วุฒิการศึกษา:** Master of Science จาก จุฬาลงกรณ์มหาวิทยาลัย
+- **ความเชี่ยวชาญ:** Computer Vision / NLP, Data Science
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ดอกเตอร์ตันติกร พิชญ์พิบุล
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก SIIT
+- **ความเชี่ยวชาญ:** Data Analytics and Visualization, Supply Chain and Logistic Management
+
+---
+
+## 2. รายชื่ออาจารย์พิเศษและผู้เชี่ยวชาญภายนอก (Guest Lecturers)
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### คุณปริพล ทู้ไพเราะ
+- **ตำแหน่ง:** Technical Director @ Cloud Ace
+- **ความเชี่ยวชาญ:** Google Cloud Platform, Data Strategy, Big Data Analytics
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### คุณชาคริต ผาอินทร์
+- **ตำแหน่ง:** R&D Director @ Softnix Technology
+- **ความเชี่ยวชาญ:** Big Data Analytics, Machine Learning
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### ศาสตราจารย์ดอกเตอร์พีรพล เวทีกูล
+- **ตำแหน่ง:** คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+- **ความเชี่ยวชาญ:** ประยุกต์ Machine Learning / AI, Data Mining, Business Intelligence
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### คุณธุจิรพงศ์ ฤทธิ์วงศ์
+- **ตำแหน่ง:** Managing Director @ Softnix Technology
+- **ความเชี่ยวชาญ:** Data Engineering, Big Data Technology
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_อาจารย์_clean.txt]
+[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
+### คุณชัชวาล เดชาโรจนภัทท์
+- **ตำแหน่ง:** Co-founder @ twinteur
+- **ความเชี่ยวชาญ:** Digital marketing and tools, Business Analytics, Business Strategy
+
+---
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+# คำอธิบายรายวิชา สาขาปัญญาประดิษฐ์และวิทยาการข้อมูล
+
+## AIE213 - Computer Programming
+หน่วยกิต: 3 (2 – 3 – 5)  
+หมวด: วิชาแกน  
+กลุ่ม: วิศวกรรมพื้นฐาน
+
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการเขียนโปรแกรมคอมพิวเตอร์เบื้องต้น ครอบคลุมโครงสร้างข้อมูลพื้นฐาน การใช้ตัวแปร อาเรย์ ฟังก์ชัน และการเรียกซ้ำ ฝึกการออกแบบอัลกอริทึมเพื่อแก้ปัญหาอย่างเป็นระบบ รวมถึงการเขียนโปรแกรมเชื่อมต่อกับฮาร์ดแวร์เบื้องต้นและการใช้ไลบรารีมาตรฐานสำหรับงานประยุกต์
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Study of fundamental programming concepts including variables, arrays, functions, recursion, and basic data structures. Emphasis on algorithm design, problem solving, hardware interaction, and usage of standard libraries for practical applications.
+
+---
+
+## AIE223 - Artificial Intelligence
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเฉพาะด้านบังคับ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาพื้นฐานของปัญญาประดิษฐ์ ครอบคลุมแนวคิดการเรียนรู้ของเครื่อง ระบบผู้เชี่ยวชาญ โครงข่ายประสาทเทียม และอัลกอริทึมการค้นหา วิเคราะห์การประยุกต์ใช้ปัญญาประดิษฐ์ในงานด้านการรู้จำภาพ การประมวลผลภาษาธรรมชาติ และระบบอัตโนมัติในอุตสาหกรรม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Introduction to artificial intelligence concepts including machine learning, expert systems, neural networks, and search algorithms. Applications in image recognition, natural language processing, and industrial automation are explored.
+
+---
+
+## AIE311 - Data Structure and Algorithm
+หน่วยกิต: 3 (2 – 3 – 5)  
+หมวด: วิชาเฉพาะด้านบังคับ  
+วิชาบังคับก่อน: AIE213
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการโครงสร้างข้อมูล เช่น ลิสต์ สแตก คิว ต้นไม้ และกราฟ รวมถึงอัลกอริทึมสำหรับการค้นหาและการจัดเรียงข้อมูล วิเคราะห์ประสิทธิภาพของอัลกอริทึมด้วยแนวคิดเชิงเวลาและหน่วยความจำ ฝึกการประยุกต์ใช้โครงสร้างข้อมูลในการแก้ปัญหาทางวิศวกรรม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Study of fundamental data structures such as lists, stacks, queues, trees, and graphs. Covers searching and sorting algorithms, performance analysis in terms of time and memory, and practical problem-solving applications.
+
+---
+
+## AIE313 - Database System
+หน่วยกิต: 3 (2 – 3 – 5)  
+หมวด: วิชาเฉพาะด้านบังคับ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการออกแบบฐานข้อมูลเชิงสัมพันธ์ การสร้างตาราง ความสัมพันธ์ และข้อจำกัดข้อมูล ฝึกการใช้งานภาษา SQL สำหรับการจัดการข้อมูล วิเคราะห์แนวคิดการจัดเก็บข้อมูลขนาดใหญ่ ความปลอดภัย และการสำรองข้อมูลในระบบฐานข้อมูลสมัยใหม่
+
+### Course Description (English)
+Principles of relational database design including tables, relationships, constraints, and SQL for data manipulation. Topics include data storage, security, backup, and modern database management techniques.
+
+---
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+## AIE321 - Big Data Processing and Analytics
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเฉพาะด้านบังคับ
+
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการจัดการข้อมูลขนาดใหญ่ การประมวลผลแบบกระจาย การใช้เครื่องมือสำหรับ Big Data เช่น Hadoop และ Spark วิเคราะห์ข้อมูลเชิงสถิติและเชิงพยากรณ์เพื่อสนับสนุนการตัดสินใจ รวมถึงการประยุกต์ใช้ในภาคธุรกิจและอุตสาหกรรม
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Study of big data management and distributed processing systems such as Hadoop and Spark. Covers statistical analysis, predictive analytics, and real-world applications in business and industry.
+
+---
+
+## AIE322 - Supervised Machine Learning
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเฉพาะด้านบังคับ  
+วิชาบังคับก่อน: IE213
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาวิธีการเรียนรู้ของเครื่องแบบมีผู้สอน เช่น การถดถอยเชิงเส้น การจำแนกข้อมูลด้วยอัลกอริทึมต่าง ๆ การวัดประสิทธิภาพโมเดล และเทคนิคการปรับปรุงความแม่นยำ วิเคราะห์ปัญหาการเกิด overfitting และ underfitting พร้อมฝึกประยุกต์ใช้กับชุดข้อมูลจริง
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Study of supervised machine learning techniques including linear regression, classification algorithms, model evaluation, and performance improvement methods. Covers overfitting, underfitting, and real dataset applications.
+
+---
+
+## AIE331 - Computer Vision
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเลือกเฉพาะด้าน
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการประมวลผลภาพดิจิทัล การตรวจจับวัตถุ การรู้จำรูปแบบ และการประยุกต์ใช้โครงข่ายประสาทเชิงลึกในงานด้านการมองเห็นของคอมพิวเตอร์ ฝึกพัฒนาโปรแกรมเพื่อวิเคราะห์ภาพและวิดีโอในสถานการณ์จริง
+
+### Course Description (English)
+Principles of digital image processing, object detection, pattern recognition, and deep learning applications for computer vision. Practical development for image and video analysis is emphasized.
+
+---
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+## AIE341 - Natural Language Processing
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเลือกเฉพาะด้าน
+
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาหลักการประมวลผลภาษาธรรมชาติ การวิเคราะห์ข้อความ การสร้างแบบจำลองภาษา และการประยุกต์ใช้เทคนิคการเรียนรู้ของเครื่องในการแปลภาษา การสรุปข้อความ และระบบสนทนาอัตโนมัติ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### Course Description (English)
+Study of natural language processing techniques including text analysis, language modeling, and machine learning applications for translation, summarization, and conversational systems.
+
+---
+
+## AIE342 - Deep Learning
+หน่วยกิต: 3 (3 – 0 – 6)  
+หมวด: วิชาเลือกเฉพาะด้าน  
+วิชาบังคับก่อน: AIE322
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_วิชา_clean.txt]
+[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
+### คำอธิบายรายวิชา (ภาษาไทย)
+ศึกษาสถาปัตยกรรมโครงข่ายประสาทเชิงลึก เช่น CNN, RNN และ Transformer วิเคราะห์กระบวนการฝึกโมเดลเชิงลึกและการปรับพารามิเตอร์ ฝึกการประยุกต์ใช้ deep learning กับข้อมูลภาพ เสียง และข้อความ
+
+### Course Description (English)
+Study of deep neural network architectures such as CNNs, RNNs, and Transformers. Covers training processes, parameter tuning, and applications to image, audio, and text data.
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+# ข้อมูลสาขาวิชา : Artificial Intelligence Engineering and Data Science
+
+## ภาพรวมสาขา
+
+สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล เป็นหลักสูตรที่มุ่งเน้นการพัฒนาความรู้และทักษะด้านปัญญาประดิษฐ์ (Artificial Intelligence) และการวิเคราะห์ข้อมูล (Data Science) เพื่อรองรับอุตสาหกรรมดิจิทัลและเศรษฐกิจข้อมูลในอนาคต นักศึกษาจะได้เรียนรู้ทั้งภาคทฤษฎีและการลงมือปฏิบัติจริง โดยใช้โจทย์จากภาคธุรกิจและอุตสาหกรรมเป็นหลักในการเรียนการสอน
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+หลักสูตรผสมผสานองค์ความรู้ด้านวิศวกรรมซอฟต์แวร์ การเรียนรู้ของเครื่อง การประมวลผลข้อมูลขนาดใหญ่ และการประยุกต์ใช้ AI ในหลากหลายสาขา เพื่อสร้างบัณฑิตที่สามารถออกแบบและพัฒนาโซลูชันที่ขับเคลื่อนด้วยข้อมูลได้อย่างมีประสิทธิภาพ
+
+---
+
+## จุดเด่นของหลักสูตร
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+- หลักสูตรทันสมัยและได้รับการรับรองจากสภาวิศวกร  
+- เป็นหลักสูตรที่บูรณาการทักษะด้านปัญญาประดิษฐ์และวิทยาการข้อมูลเข้าด้วยกัน  
+- เน้นการเรียนรู้เชิงปฏิบัติผ่านโครงงานและกรณีศึกษาจริงจากภาคอุตสาหกรรม  
+- มีความร่วมมือกับองค์กรและบริษัทชั้นนำในการพัฒนาหลักสูตรและฝึกงาน  
+- มีห้องปฏิบัติการด้าน AI, Robotics และ Data Analytics ที่ทันสมัย  
+- ส่งเสริมทักษะภาษาอังกฤษและความเป็นสากล
+
+---
+
+## รูปแบบการเรียนการสอน
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+การเรียนการสอนเน้นการลงมือปฏิบัติจริงควบคู่กับความรู้เชิงทฤษฎี นักศึกษาจะได้ฝึกเขียนโปรแกรม พัฒนาโมเดลปัญญาประดิษฐ์ วิเคราะห์ข้อมูลขนาดใหญ่ และทำโครงงานที่เชื่อมโยงกับปัญหาจริงในภาคธุรกิจ โดยมีอาจารย์ผู้เชี่ยวชาญและผู้เชี่ยวชาญจากภาคอุตสาหกรรมร่วมถ่ายทอดประสบการณ์
+
+---
+
+## ทักษะที่นักศึกษาจะได้รับ
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+- การเขียนโปรแกรมและพัฒนาซอฟต์แวร์  
+- การวิเคราะห์ข้อมูลและการทำ Data Analytics  
+- การพัฒนาโมเดล Machine Learning และ Deep Learning  
+- การจัดการข้อมูลขนาดใหญ่ (Big Data)  
+- การออกแบบระบบ AI สำหรับงานจริง  
+- การทำงานเป็นทีมและการแก้ปัญหาเชิงวิศวกรรม
+
+---
+
+## แนวทางอาชีพหลังสำเร็จการศึกษา
+
+ผู้สำเร็จการศึกษาสามารถประกอบอาชีพในตำแหน่งต่าง ๆ เช่น:
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+- วิศวกรปัญญาประดิษฐ์ (AI Engineer)  
+- วิศวกรการเรียนรู้ของเครื่อง (Machine Learning Engineer)  
+- นักวิทยาศาสตร์ข้อมูล (Data Scientist)  
+- วิศวกรข้อมูล (Data Engineer)  
+- นักพัฒนาซอฟต์แวร์ (Software Engineer)  
+- ผู้เชี่ยวชาญด้านความปลอดภัยข้อมูล  
+- วิศวกร MLOps
+
+---
+
+## ชื่อปริญญา
+
+ภาษาไทย:  
+วศิวกรรมศาสตรบัณฑิต (วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล)
+
+ภาษาอังกฤษ:  
+Bachelor of Engineering (Artificial Intelligence Engineering and Data Science)
+
+---
+
+## คณะและสาขา
+===CHUNK_SEPARATOR===
+[SOURCE: mockup_สาขา_clean.txt]
+[หมวดหมู่: ข้อมูลทั่วไป]
+คณะ: คณะวิศวกรรมศาสตร์  
+School of Engineering
+
+สาขาวิชา:  
+วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล  
+Artificial Intelligence Engineering and Data Science
+===CHUNK_SEPARATOR===
