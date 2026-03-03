@@ -56,8 +56,8 @@ async def edge_process_voice(user_text, auto_play=True):
     communicate = edge_tts.Communicate(
         script, 
         "th-TH-PremwadeeNeural", 
-        rate="-5%", 
-        pitch="+5Hz"
+        rate="-3%", 
+        pitch="+10Hz"
     )
     
     await communicate.save(output_filename)

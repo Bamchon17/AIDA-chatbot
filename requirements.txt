@@ -1,9 +1,18 @@
-faiss-cpu
-sentence-transformers
-numpy
-torch
-scikit-learn
-scipy
-tqdm
+# Core API & Server
+fastapi==0.128.0
+uvicorn==0.40.0
+python-dotenv==1.2.1
+
+# Voice & AI (งานของแบมและพี่โป่ง)
+edge-tts==7.2.7
+gTTS==2.5.4
+torch==2.5.0  # แนะนำเวอร์ชัน stable
+torchaudio
 transformers
-huggingface-hub
+f5-tts-thai @ git+https://github.com/VYNCX/F5-TTS-THAI.git
+
+# RAG & Database (งานพี่โป่ง)
+numpy==1.26.4
+pandas
+pyarrow
+google-generativeai # ถ้าใช้ Gemini

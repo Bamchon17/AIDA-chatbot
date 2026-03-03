@@ -102,19 +102,13 @@ AIDA/
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/yourusername/AIDA.git
-cd AIDA
+git clone https://github.com/Bamchon17/AIDA-chatbot.git
+cd AIDA-chatbot
+
 ติดตั้ง dependencies
-
 pip install -r requirements.txt
-รัน backend
 
-cd backend
-python app.py
-รัน frontend
 
-cd frontend
-streamlit run app.py
 
 📌 หมายเหตุ
 สมาชิกแต่ละคนทำงานในโฟลเดอร์ของตัวเอง
