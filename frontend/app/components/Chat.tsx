@@ -20,14 +20,23 @@ interface ChatProps {
   onMessagesUpdate?: (messages: Message[]) => void;
   onCreateNewChat?: () => number;
   voiceInput?: string | null;
+  onAISpeak?: (text: string) => void; // เพิ่ม Prop สำหรับส่งข้อความไปให้ระบบเสียง
 }
 
-export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, onCreateNewChat, voiceInput }: ChatProps) {
+export default function Chat({ 
+  chatId, 
+  initialMessages = [], 
+  onMessagesUpdate, 
+  onCreateNewChat, 
+  voiceInput,
+  onAISpeak
+}: ChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState("");
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState<Position | null>(null);
   const [dragOffset, setDragOffset] = useState<Position>({ x: 0, y: 0 });
+  
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -47,19 +56,13 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
     }
   }, [messages, onMessagesUpdate]);
 
-  // Handle voice input from Avatar component - Auto-send immediately
   useEffect(() => {
-    // Skip if no voice input, empty, or already processed this exact input
     if (!voiceInput || !voiceInput.trim()) return;
     if (processedVoiceInputRef.current === voiceInput) return;
     
-    // Mark as processed immediately to prevent duplicates
     processedVoiceInputRef.current = voiceInput;
-    
     const userText = voiceInput.trim();
-    console.log("Processing voice input:", userText);
     
-    // Create new chat if none exists
     let activeChatId = chatId;
     if (activeChatId === null && onCreateNewChat) {
       activeChatId = onCreateNewChat();
@@ -76,17 +79,35 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
 
     setMessages((prev) => [...prev, newMessage]);
 
-    // AI response based on user message
-    setTimeout(() => {
-      const aiResponse: Message = {
-        id: Date.now() + 1,
-        text: getAIResponse(userText),
-        sender: "ai",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, aiResponse]);
-    }, 1000);
-  }, [voiceInput]);
+    // สร้างฟังก์ชันสำหรับยิง API เมื่อได้รับเสียง
+    const fetchAIResponseForVoice = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: userText })
+        });
+        
+        const data = await response.json();
+        const aiText = data.answer;
+        
+        const aiResponse: Message = {
+          id: Date.now() + 1,
+          text: aiText,
+          sender: "ai",
+          timestamp: new Date(),
+        };
+        
+        setMessages((prev) => [...prev, aiResponse]);
+        onAISpeak?.(aiText); // ส่งข้อความไปให้ไอด้าพูด
+
+      } catch (error) {
+        console.error("API Error:", error);
+      }
+    };
+
+    fetchAIResponseForVoice();
+  }, [voiceInput, chatId, onCreateNewChat, onAISpeak]);
 
   // Handle mouse move for dragging
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -95,11 +116,9 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
     const containerRect = containerRef.current.getBoundingClientRect();
     const chatRect = chatRef.current.getBoundingClientRect();
     
-    // Calculate new position relative to container
     let newX = e.clientX - containerRect.left - dragOffset.x;
     let newY = e.clientY - containerRect.top - dragOffset.y;
     
-    // Limit to container bounds
     newX = Math.max(0, Math.min(newX, containerRect.width - chatRect.width));
     newY = Math.max(0, Math.min(newY, containerRect.height - chatRect.height));
     
@@ -133,7 +152,6 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
         y: e.clientY - rect.top,
       });
       
-      // If first drag, set initial position from current location
       if (position === null && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         setPosition({
@@ -146,35 +164,9 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
     }
   };
 
-  // AI Response templates
-  const AI_RESPONSES = {
-    greeting: "สวัสดีค่า ไอด้านะคะ ยินดีที่ได้รู้จัก ไอด้าเป็นผู้ช่วยตอบคำถามสำหรับคณะวิศวกรรมศาสตร์ สาขาปัญญาประดิษฐ์และวิทยาการข้อมูลค่ะ มีอะไรอยากสอบถามไหมคะ?",
-    aboutMajor: "สาขาเราคือ AI และ Data Science ย่อมาจาก Artificial Intelligence and Data Science ค่ะ",
-    cannotAnswer: "เรื่องนี้ไอด้าไม่สามารถให้ข้อมูลได้จริงๆค่ะ ขอโทษนะคะ",
-  };
-
-  // Simple keyword matching for responses
-  const getAIResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-    
-    // Check for greetings
-    if (lowerMessage.includes("สวัสดี") || lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("หวัดดี")) {
-      return AI_RESPONSES.greeting;
-    }
-    
-    // Check for questions about the major
-    if (lowerMessage.includes("สาขา") || lowerMessage.includes("ai") || lowerMessage.includes("data science") || lowerMessage.includes("เรียน")) {
-      return AI_RESPONSES.aboutMajor;
-    }
-    
-    // Default greeting for first message
-    return AI_RESPONSES.greeting;
-  };
-
-  const handleSendMessage = useCallback(() => {
+  const handleSendMessage = useCallback(async () => {
     if (inputValue.trim() === "") return;
 
-    // Create new chat if none exists
     let activeChatId = chatId;
     if (activeChatId === null && onCreateNewChat) {
       activeChatId = onCreateNewChat();
@@ -182,28 +174,42 @@ export default function Chat({ chatId, initialMessages = [], onMessagesUpdate, o
     
     if (activeChatId === null) return;
 
-    const newMessage: Message = {
+    const userText = inputValue.trim();
+    const newUserMessage: Message = {
       id: Date.now(),
-      text: inputValue.trim(),
+      text: userText,
       sender: "user",
       timestamp: new Date(),
     };
 
-    const userText = inputValue.trim();
-    setMessages((prev) => [...prev, newMessage]);
+    setMessages((prev) => [...prev, newUserMessage]);
     setInputValue("");
 
-    // AI response based on user message
-    setTimeout(() => {
+    try {
+      const response = await fetch("http://localhost:8000/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: userText })
+      });
+      
+      const data = await response.json();
+      const aiText = data.answer;
+      
       const aiResponse: Message = {
         id: Date.now() + 1,
-        text: getAIResponse(userText),
+        text: aiText,
         sender: "ai",
         timestamp: new Date(),
       };
+      
       setMessages((prev) => [...prev, aiResponse]);
-    }, 1000);
-  }, [inputValue, chatId, onCreateNewChat]);
+      
+      onAISpeak?.(aiText);
+      
+    } catch (error) {
+      console.error("API Error:", error);
+    }
+  }, [inputValue, chatId, onCreateNewChat, onAISpeak]);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
