@@ -102,18 +102,19 @@ AIDA/
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/yourusername/AIDA.git
-cd AIDA
-ติดตั้ง dependencies
+git clone https://github.com/Bamchon17/AIDA-chatbot.git
+cd AIDA-chatbot
 
+ติดตั้ง dependencies
 pip install -r requirements.txt
+<<<<<<< .merge_file_7nsExr
 
 รัน backend
+=======
+>>>>>>> .merge_file_u7RIHz
 
-cd backend
-python app.py
-รัน frontend
 
+<<<<<<< .merge_file_7nsExr
 🌸cd frontend
 ติดตั้ง dependencies next.js ก่อน
 //รันคำสั่ง ใช้อันใดอันนึง
@@ -124,6 +125,8 @@ yarn install //สำหรับคนใช้ yarn
 npm run dev
 
 แล้วเปิด --> http://localhost:3000
+=======
+>>>>>>> .merge_file_u7RIHz
 
 📌 หมายเหตุ
 สมาชิกแต่ละคนทำงานในโฟลเดอร์ของตัวเอง
