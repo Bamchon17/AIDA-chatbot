@@ -9,7 +9,7 @@ import os
 import pickle
 import glob
 import numpy as np
-from generate_embeddings import EmbeddingProcessor
+from database.embeddings.generate_embeddings import EmbeddingProcessor
 
 
 class KnowledgeBaseLoader:

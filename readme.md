@@ -113,6 +113,13 @@ pip install -r requirements.txt
 =======
 >>>>>>> .merge_file_u7RIHz
 
+วิธีการใช้งานเบื้องต้น
+cd backend
+//รันคำสั่ง uvicorn app:app --reload
+
+//เปิดอีก Terminal
+cd frontend เพื่อรันตัว AIDA
+//รันคำสั่ง npm run dev
 
 <<<<<<< .merge_file_7nsExr
 🌸cd frontend

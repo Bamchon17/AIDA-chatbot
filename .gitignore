@@ -3,3 +3,4 @@ venv/
 .env
 # Ignore all audio files in this folder
 static/audio_responses/*.mp3
+.venv/
