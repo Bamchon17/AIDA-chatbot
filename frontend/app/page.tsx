@@ -22,6 +22,7 @@ interface ChatHistory {
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [voiceInput, setVoiceInput] = useState<string | null>(null);
+  const [aiAudioUrl, setAIAudioUrl] = useState<string | null>(null);
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([
     { 
       id: 1, 
@@ -249,7 +250,7 @@ export default function Home() {
 
       {/* Left Side - Avatar Section */}
       <div className="relative z-10 w-full md:w-1/2 h-1/3 md:h-full">
-        <Avatar onVoiceInput={handleVoiceInput} />
+        <Avatar onVoiceInput={handleVoiceInput} aiAudioUrl={aiAudioUrl} />
       </div>
 
       {/* Right Side - Chat Section */}
@@ -261,6 +262,7 @@ export default function Home() {
           onMessagesUpdate={(messages) => currentChatId && updateChatMessages(currentChatId, messages)}
           onCreateNewChat={createNewChatAndReturn}
           voiceInput={voiceInput}
+          onAIAudio={setAIAudioUrl}
         />
       </div>
     </div>

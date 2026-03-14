@@ -6,16 +6,19 @@ import { useState, useRef, useEffect } from "react";
 interface AvatarProps {
   avatarSrc?: string;
   onVoiceInput?: (text: string) => void;
+  aiAudioUrl?: string | null;
 }
 
 export default function Avatar({ 
   avatarSrc = "/AIDA.png",
-  onVoiceInput
+  onVoiceInput,
+  aiAudioUrl
 }: AvatarProps) {
   const [isListening, setIsListening] = useState(false);
   const [isRecordingMode, setIsRecordingMode] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const aiAudioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptRef = useRef<string>("");
 
@@ -126,9 +129,39 @@ export default function Avatar({
     transcriptRef.current = "";
   };
 
+  useEffect(() => {
+    if (!aiAudioUrl) return;
+
+    const normalizedUrl = aiAudioUrl.startsWith("http")
+      ? aiAudioUrl
+      : `http://localhost:8000${aiAudioUrl}`;
+
+    if (aiAudioRef.current) {
+      aiAudioRef.current.pause();
+      aiAudioRef.current.currentTime = 0;
+      aiAudioRef.current = null;
+    }
+
+    const audio = new Audio(normalizedUrl);
+    aiAudioRef.current = audio;
+
+    audio.play().catch((error) => {
+      console.error("Failed to play AI audio:", error);
+    });
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [aiAudioUrl]);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
+      if (aiAudioRef.current) {
+        aiAudioRef.current.pause();
+        aiAudioRef.current = null;
+      }
       if (recognitionRef.current) {
         recognitionRef.current.stop();
       }

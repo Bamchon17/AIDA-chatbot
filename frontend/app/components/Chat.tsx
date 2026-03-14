@@ -20,7 +20,8 @@ interface ChatProps {
   onMessagesUpdate?: (messages: Message[]) => void;
   onCreateNewChat?: () => number;
   voiceInput?: string | null;
-  onAISpeak?: (text: string) => void; // เพิ่ม Prop สำหรับส่งข้อความไปให้ระบบเสียง
+  onAISpeak?: (text: string) => void;
+  onAIAudio?: (audioUrl: string | null) => void;
 }
 
 export default function Chat({ 
@@ -29,7 +30,8 @@ export default function Chat({
   onMessagesUpdate, 
   onCreateNewChat, 
   voiceInput,
-  onAISpeak
+  onAISpeak,
+  onAIAudio
 }: ChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState("");
@@ -90,6 +92,7 @@ export default function Chat({
         
         const data = await response.json();
         const aiText = data.answer;
+        const aiAudioUrl = data.audio_url ?? null;
         
         const aiResponse: Message = {
           id: Date.now() + 1,
@@ -99,7 +102,8 @@ export default function Chat({
         };
         
         setMessages((prev) => [...prev, aiResponse]);
-        onAISpeak?.(aiText); // ส่งข้อความไปให้ไอด้าพูด
+        onAISpeak?.(aiText);
+        onAIAudio?.(aiAudioUrl);
 
       } catch (error) {
         console.error("API Error:", error);
@@ -107,7 +111,7 @@ export default function Chat({
     };
 
     fetchAIResponseForVoice();
-  }, [voiceInput, chatId, onCreateNewChat, onAISpeak]);
+  }, [voiceInput, chatId, onCreateNewChat, onAISpeak, onAIAudio]);
 
   // Handle mouse move for dragging
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -194,6 +198,7 @@ export default function Chat({
       
       const data = await response.json();
       const aiText = data.answer;
+      const aiAudioUrl = data.audio_url ?? null;
       
       const aiResponse: Message = {
         id: Date.now() + 1,
@@ -205,11 +210,12 @@ export default function Chat({
       setMessages((prev) => [...prev, aiResponse]);
       
       onAISpeak?.(aiText);
+      onAIAudio?.(aiAudioUrl);
       
     } catch (error) {
       console.error("API Error:", error);
     }
-  }, [inputValue, chatId, onCreateNewChat, onAISpeak]);
+  }, [inputValue, chatId, onCreateNewChat, onAISpeak, onAIAudio]);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -265,10 +271,10 @@ export default function Chat({
         </div>
 
         {/* Chat Content Area - Glass Effect */}
-        <div className="flex-1 flex flex-col bg-white/80 backdrop-blur-sm">
+        <div className="flex-1 min-h-0 flex flex-col bg-white/80 backdrop-blur-sm">
           
           {/* Messages Container */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
             {chatId === null ? (
               <div className="flex h-full items-center justify-center text-zinc-400">
                 <p>Select a chat or start a new conversation</p>
