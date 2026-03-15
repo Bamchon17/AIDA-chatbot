@@ -79,14 +79,24 @@ class KnowledgeBaseLoader:
             if "สหกิจ" not in q: # กันเหนียว ทับซ้อนกับสหกิจ
                 return "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]"
                 
-        elif any(word in q for word in ["แผนการเรียน", "ปี 1", "ปี 2", "ปี 3", "ปี 4", "เทอม 1", "เทอม 2", "รุ่น"]):
-            if "ค่าเทอม" not in q and "จ่าย" not in q: # กันเหนียว ทับซ้อนกับค่าเทอม
+        elif any(word in q for word in ["แผนการเรียน", "ปี 1", "ปี 2", "ปี 3", "ปี 4", "เทอม 1", "เทอม 2", "รุ่น",
+                                        "ปีการศึกษา", "2565", "2566", "2567", "2568"]):
+            if "ค่าเทอม" not in q and "จ่าย" not in q:  # กันเหนียว ทับซ้อนกับค่าเทอม
+                # ถ้าระบุปีการศึกษาชัดเจน ให้ return tag ที่มีปีด้วย เพื่อ match กับ tag ที่ generate_embeddings สร้าง
+                import re as _re
+                year_match = _re.search(r'(25\d{2})', q)
+                if year_match:
+                    return f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี{year_match.group(1)}]"
                 return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
-                
-        elif any(word in q for word in ["บริษัท", "mou", "พาร์ทเนอร์", "พันธมิตร"]):
-            return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
-            
-        return None 
+
+        elif any(word in q for word in ["สาขา", "ภาควิชา", "หลักสูตร", "ปริญญา", "จบแล้วทำอะไร", "อาชีพ"]):
+            return "[หมวดหมู่: ข้อมูลสาขาวิชา]"
+
+        elif any(word in q for word in ["บริษัท", "mou", "พาร์ทเนอร์", "พันธมิตร", "บริษัทฝึกงาน"]):
+            if "ฝึกงาน" not in q:  # กันเหนียว ทับซ้อนกับสหกิจ
+                return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
+
+        return None
 
     # ===============================
     # SMART SEARCH
@@ -110,15 +120,20 @@ class KnowledgeBaseLoader:
         if target_category and self.embeddings is not None:
             # หา index ของ chunk ทั้งหมดที่มี Tag ตรงกับที่ระบุ
             valid_indices = [i for i, chunk in enumerate(self.chunks) if target_category in chunk]
-            
+
+            # ถ้า tag มีปีระบุแต่หาไม่เจอ ให้ลอง fallback ไปที่ tag กลาง (ไม่มีปี)
+            if not valid_indices and " ปี" in target_category:
+                base_category = target_category.split(" ปี")[0] + "]"
+                valid_indices = [i for i, chunk in enumerate(self.chunks) if base_category in chunk]
+
             if valid_indices:
                 filtered_embeddings = self.embeddings[valid_indices]
                 # คำนวณระยะห่าง L2 Distance ด้วย Numpy
                 distances = np.linalg.norm(filtered_embeddings - q_vec, axis=1)
-                
+
                 # เรียงลำดับตัวที่คะแนนดีที่สุด
                 best_relative_idx = np.argsort(distances)[:top_k]
-                
+
                 results = []
                 for idx in best_relative_idx:
                     original_idx = valid_indices[idx]
@@ -127,6 +142,7 @@ class KnowledgeBaseLoader:
                         "chunk": self.chunks[original_idx]
                     })
                 return results
+            # valid_indices ว่างเปล่าจริงๆ → fallback ไป FAISS ด้านล่าง
 
         # 4. โหมดปกติ (เมื่อไม่เจอ Keyword ให้หาจากทั้งหมดผ่าน FAISS)
         D, I = self.index.search(q_vec, top_k)

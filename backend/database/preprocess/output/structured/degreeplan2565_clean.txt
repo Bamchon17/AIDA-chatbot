@@ -1,0 +1,554 @@
+# แผนการเรียนสาขาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล ปี 2565
+
+> ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา 2565
+> จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต
+
+---
+
+
+## ปีที่ 1
+
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+### ภาคการศึกษาที่ 2 (เทอม 2)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 18
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 18
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 18
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 18
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- GE 105 Global Alliance and Emerging Issues (3 หน่วยกิต)
+- GE 103 Technology and Innovation for the Future (3 หน่วยกิต)
+- GE 107 Entrepreneurial Spirit and Leadership Skills (3 หน่วยกิต)
+- AIE 121 Real-life Data Challenges (3 หน่วยกิต)
+- AIE 122 Computer System and Data Communication (3 หน่วยกิต)
+- MA 108 Calculus I (3 หน่วยกิต)
+- EN 101 Everyday English (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+
+### ภาคการศึกษาฤดูร้อน (Summer)
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 3
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 3
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- ME 154 Engineering Drawing (3 หน่วยกิต)
+- GE 101 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA 109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+
+## ปีที่ 2
+
+### ภาคการศึกษาที่ 1 (เทอม 1)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+- EN 103 Global English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+- EN 103 Global English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+- EN 103 Global English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+- EN 103 Global English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- GE 102 Citizenship and Social Transformation (3 หน่วยกิต)
+- AIE 213 Computer Programming (3 หน่วยกิต)
+- EL 214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL 215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- EN 102 Social English (3 หน่วยกิต)
+- IE 213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- PH 105 Modern Physics (3 หน่วยกิต)
+- PH 106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+
+### ภาคการศึกษาที่ 2 (เทอม 2)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+รวมหน่วยกิต: 22
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- CH 101 General Chemistry (3 หน่วยกิต)
+- AIE 212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE 221 Business Analytics and Data Visualization (3 หน่วยกิต)
+- AIE 225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL 253 Digital System Fundamental (3 หน่วยกิต)
+- EL 256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE 316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- GE 104 Aesthetics and Well-being for Life (3 หน่วยกิต)
+รวมหน่วยกิต: 22
+
+### ภาคการศึกษาฤดูร้อน (Summer)
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Free Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 3
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Free Elective (3 หน่วยกิต)
+- EN 103 Global English (3 หน่วยกิต)
+- GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+
+
+## ปีที่ 3
+
+### ภาคการศึกษาที่ 1 (เทอม 1)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE 311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE 312 Web Technology (3 หน่วยกิต)
+- AIE 313 Database System (3 หน่วยกิต)
+- AIE 314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE 315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE 222 Business Intelligence (3 หน่วยกิต)
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+
+### ภาคการศึกษาที่ 2 (เทอม 2)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+รวมหน่วยกิต: 17
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+- CO 301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 20
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+รวมหน่วยกิต: 17
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+- CO 301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 20
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+รวมหน่วยกิต: 17
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE 223 Artificial Intelligence (3 หน่วยกิต)
+- AIE 322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE 323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+- AIE 324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE 325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE 322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE 211 Digital Marketing (3 หน่วยกิต)
+- CO 301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 20
+
+### ภาคการศึกษาฤดูร้อน (Summer)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE 497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE 497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE 497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+
+
+## ปีที่ 4
+
+### ภาคการศึกษาที่ 1 (เทอม 1)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE 498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (6 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE 498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (6 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE 498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (6 หน่วยกิต)
+รวมหน่วยกิต: 6
+
+### ภาคการศึกษาที่ 2 (เทอม 2)
+
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Major Elective (3 หน่วยกิต)
+- AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
+รวมหน่วยกิต: 10
+
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Major Elective (3 หน่วยกิต)
+- AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
+รวมหน่วยกิต: 10
+
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Major Elective (3 หน่วยกิต)
+- AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
+รวมหน่วยกิต: 10
