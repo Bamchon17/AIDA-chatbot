@@ -1,5 +1,33 @@
 # ข้อมูลสาขาวิชา : Artificial Intelligence Engineering and Data Science
 
+## ชื่อปริญญา
+
+ภาษาไทย:  
+วิศวกรรมศาสตร์บัณฑิต (วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล)
+
+ภาษาอังกฤษ:  
+Bachelor of Engineering (Artificial Intelligence Engineering and Data Science)
+
+---
+
+## คณะและสาขา
+
+คณะ: คณะวิศวกรรมศาสตร์  
+School of Engineering  
+
+สาขาวิชา:  
+วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล  
+Artificial Intelligence Engineering and Data Science
+
+---
+
+จํานวนหน่วยกิตรวมและจำนวนวิชารวมตลอดหลักสูตร:
+136 หน่วยกิต เฉลี่ย 50 วิชา
+
+คุณสมบัติผู้สมัคร: 
+ม.6 หรือเทียบเท่า, GED, ปวช.,ปวส. (เทียบโอนได้)
+
+---
 
 ## ภาพรวมสาขา
 
@@ -25,50 +53,111 @@
 
 การเรียนการสอนเน้นการลงมือปฏิบัติจริงควบคู่กับความรู้เชิงทฤษฎี นักศึกษาจะได้ฝึกเขียนโปรแกรม พัฒนาโมเดลปัญญาประดิษฐ์ วิเคราะห์ข้อมูลขนาดใหญ่ และทำโครงงานที่เชื่อมโยงกับปัญหาจริงในภาคธุรกิจ โดยมีอาจารย์ผู้เชี่ยวชาญและผู้เชี่ยวชาญจากภาคอุตสาหกรรมร่วมถ่ายทอดประสบการณ์
 
+---
+
+## ทักษะและความรู้ที่นักศึกษาจะได้รับ
+
+### ด้านความรู้
+- Machine learning algorithms
+- พื้นฐานการทำงานของระบบดิจิทัลและอิเล็กทรอนิกส
+- พื้นฐานคณิตศาสตร์สำหรับ AI และ Data Science
+- การจัดการธุรกิจและการตลาดดิจิทัลเบื้องต้น 
 
 ---
 
-## ทักษะที่นักศึกษาจะได้รับ
+### ด้านทักษะพื้นฐาน
+- Programming / Database
+- Cloud / Web application development
+- เครื่องมือจัดการและวิเคราะห์ข้อมูลแบบ Low Code
+- การเขียนโปรแกรมแบบ Low Code
 
-- การเขียนโปรแกรมและพัฒนาซอฟต์แวร์  
-- การวิเคราะห์ข้อมูลและการทำ Data Analytics  
-- การพัฒนาโมเดล Machine Learning และ Deep Learning  
-- การจัดการข้อมูลขนาดใหญ่ (Big Data)  
-- การออกแบบระบบ AI สำหรับงานจริง  
-- การทำงานเป็นทีมและการแก้ปัญหาเชิงวิศวกรรม  
+---
+
+### ด้านทักษะเฉพาะทาง
+- การพัฒนา AI ด้าน Computer Vision และ NLP
+- การจัดการและประมวลผลข้อมูลขนาดใหญ
+- การทำ Data Analytics และ Data Visualization
+- การประยุกต์ใช้ AI และ Data Science กับโจทย์ทางภาคอุตสาหกรรมและธุรกิจ
+
+---
+
+### Soft skills
+- Internationalization
+- Presentation
+- Teamwork
+- Leadership
+
+---
+
+## ตัวอย่างรายวิชาที่น่าสนใจ
+
+หลักสูตรเน้นความเฉพาะทาง Machine learning และ AI โดยขยายขอบเขตให้นักศึกษามีความเข้าใจและทักษะด้าน Data Science และ Analytics นอกจากนั้นยังมีวิชาที่ทำให้นักศึกษาสามารถทำงานในส่วนการพัฒนาอื่นๆ ได้ เช่น วิชา Full Stack Developement และ Robotics โดยวิชาที่น่าสนใจมากๆ เช่น
+
+- Artificial Intelligence: การประยุกต์ใช้โครงข่ายประสาทเทียม ในงาน computer vision 
+- Natural Language Processing (NLP): การประมวลผลภาษาธรรมชาติ หลักการ prompt engineer การใช้งานและการเทรนโมเดลภาษา และการประยุกต์
+- Artificial Intelligence in Robotics: การประยุกต์ใช้ A.I. สำหรับหุ่นยนต์ 
+- Idea Generation for Entrepreneurship: ฝึกแนวคิดการสร้างธุรกิจ และการนำไปปฏิบัติจริง
+
+---
+
+- AlE213: Computer Programming
+- AIE215: Programming for Al and Data Science
+- AIE312: Web Technology (Full Stack Web Development)
+- AIE322: Supervised Machine Learning
+- AIE323: Supervised Machine Learning Lab
+- AIE324: Unsupervised Machine Learning
+- AIE325: Unsupervised Machine Learning Lab.
+- AlE223: Artificial Intelligence
+- AIE321: Big Data Processing and Analytics
+- AIE221: Business analytics and data visualization
+- AIE455: Natural Language Processing
+- AIE466: Artificial Intelligence in Robotics
+
+---
+
+## ห้องปฏิบัติการ 
+
+- AI Innovation Lab | B4 302: เปิดโอกาสให้นักศึกษา เข้ามาร่วมทําโปรเจกต์จริงจากภาคอุตสาหกรรม และสร้างนวัตกรรมตามความสนใจของตนเอง รวมถึงส่งงานเข้าประกวดในเวทีแข่งขันต่างๆ โดยผู้เชี่ยวชาญคอยให้คําปรึกษาอย่างใกล้ชิด
+    - พันธมิตรในอุตสาหกรรม
+    - แหล่งทุนวิจัยและพัฒนา
+    - Workshop / Bootcamp / Lecture
+    - เลือกทําโปรเจกต์ด้านต่างๆ ที่ตนเองสนใจได้
+    - ประกวดแข่งขัน/รางวัล/Portfolio
+    - สร้างเครือข่ายกับผู้เชี่ยวชาญในภาคธุรกิจและอุตสาหกรรม
+- ห้องปฏิบัติการ Robot Studio: แหล่งรวมคนชอบหุ่นยนต์เปิดสตูดิโอต้อนรับนักศึกษาที่สนใจด้านหุ่นยนต์ AI มีอุปกรณ์และเครื่องมือที่ทันสมัย พร้อมให้นักศึกษาสร้างสรรค์ผลงานทั้งฮาร์ดแวร์และซอฟต์แวร์
+- BU CROCCS | B4 601: ศูนย์วิจัยด้านระบบสื่อสารการประมวลผลภาพและนาโนเทคโนโลยีที่มีนักวิจัยทั้งชาวไทยและชาวต่างชาติ ร่วมกันทํางานวิจัยเพื่อตอบโจทย์ภาคอุตสาหกรรม 
 
 ---
 
 ## แนวทางอาชีพหลังสำเร็จการศึกษา
 
-ผู้สำเร็จการศึกษาสามารถประกอบอาชีพในตำแหน่งต่าง ๆ เช่น:
+ผู้สำเร็จการศึกษาสามารถประกอบอาชีพในตำแหน่งต่างๆ เช่น:
 
 - วิศวกรปัญญาประดิษฐ์ (AI Engineer)  
 - วิศวกรการเรียนรู้ของเครื่อง (Machine Learning Engineer)  
 - นักวิทยาศาสตร์ข้อมูล (Data Scientist)  
 - วิศวกรข้อมูล (Data Engineer)  
+- นักวิเคราะห์ข้อมูล (Data Analyst)  
 - นักพัฒนาซอฟต์แวร์ (Software Engineer)  
 - ผู้เชี่ยวชาญด้านความปลอดภัยข้อมูล  
-- วิศวกร MLOps  
+- วิศวกรการดําเนินงานการเรียนรู้ของเครื่อง (MLOps Engineer) 
 
 ---
 
-## ชื่อปริญญา
+## ที่ตั้งและช่องทางการติดต่อสาขา
 
-ภาษาไทย:  
-วศิวกรรมศาสตรบัณฑิต (วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล)
+มหาวิทยาลัยกรุงเทพ อาคาร B4 ชั้น 2 
+9/1 หมู่ 5 ตำบลคลองหนึ่ง อำเภอคลองหลวง 
+จังหวัดปทุมธานี 12120
 
-ภาษาอังกฤษ:  
-Bachelor of Engineering (Artificial Intelligence Engineering and Data Science)
+https://www.bu.ac.th
+https://www.fb.com/BUEngineer
 
 ---
 
-## คณะและสาขา
+## สอบถามข้อมูลการสมัครเรียน
 
-คณะ: คณะวิศวกรรมศาสตร์  
-School of Engineering  
+เบอร์โทร: 02 407 3888 กด 1
+Messenger: m.me/bangkokuniverity
 
-สาขาวิชา:  
-วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล  
-Artificial Intelligence Engineering and Data Science
-
+---
