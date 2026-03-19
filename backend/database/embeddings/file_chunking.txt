@@ -1,19 +1,10 @@
 degree plan = (5) Section
-
 ค่าเทอม = (2) Markdown Tables
-
 บริษัทMOU = (1) Paragraphs
-
 สหกิจ = (3) Markdown Hierarchy
-
 อาจารย์ = (3) Markdown Hierarchy
-
 คณะ = (3) Markdown Hierarchy
-
 มหาลัย = (3) Markdown Hierarchy
-
 รายวิชา = (2) Markdown Tables
-
 สมัครเรียน = (3) Markdown Hierarchy
-
 สาขา = (1) Paragraphs

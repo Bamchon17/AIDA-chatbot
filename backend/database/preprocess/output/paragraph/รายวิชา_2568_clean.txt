@@ -12,7 +12,6 @@
 ### Course Description (English)
 Practice basic language structures and everyday expressions, including how to give informative self-introduction, describe personality, talk about interests and personal passions, as well as how to express opinions about general issues. Enhance language skills- speaking, listening, reading, and writing—through integrated methods.
 
----
 
 ## EN102 - Social English
 หน่วยกิต: 3 (2-2-6)  
@@ -25,7 +24,6 @@ Practice basic language structures and everyday expressions, including how to gi
 ### Course Description (English)
 Practice speaking and writing frequently used expressions for social interactions, exchanging information, making comparisons, and explaining ideas in social and business-related contexts, with emphasis on developing discussion and presentation skills along with digital skills and creativity.
 
----
 
 ## EN103 - Global English
 หน่วยกิต: 3 (3-0-6)  
@@ -38,7 +36,6 @@ Practice speaking and writing frequently used expressions for social interaction
 ### Course Description (English)
 Intensive practice in portraying detailed experiences and expressing opinions about living and working situations, and discussing global issues, with concentration on intercultural communication skills and digital communication skills, which are vital to becoming global citizens.
 
----
 
 ## GE011 - Thinking Skills for Lifelong Learning
 หน่วยกิต: 3 (3-0-6)  
@@ -51,7 +48,6 @@ Intensive practice in portraying detailed experiences and expressing opinions ab
 ### Course Description (English)
 Theories and practical thinking tools, practice critical thinking, creative and innovative thinking, analytical thinking, synthesis thinking and problem-solving thinking, including how to link and select appropriate thinking tools and effectively adapt to daily life, professional undertakings and lifelong learning
 
----
 
 ## GE012 - Citizenship in Society and International Community
 หน่วยกิต: 3 (3-0-6)  
@@ -64,7 +60,6 @@ Theories and practical thinking tools, practice critical thinking, creative and 
 ### Course Description (English)
 Concepts, traits, rights, duties and responsibilities of citizenship in Thai society, global society, and digital society, with ability to adjust and live happily with others while keeping abreast of and adapting themselves to societal changes which may affect livelihood and working life; awareness and cooperation at different levels among people of diverse cultures
 
----
 
 ## GE013 - Technology and Innovation for the Future
 หน่วยกิต: 3 (3-0-6)  
@@ -77,7 +72,6 @@ Concepts, traits, rights, duties and responsibilities of citizenship in Thai soc
 ### Course Description (English)
 Concepts, roles, awareness and adjustment to changes of the future and applications of various types of technology and innovation in knowledge acquisition and improvement of quality of life in a new normal society including ways to solve life complexity and challenges, and to enhance creative working life; impacts of technology and innovation on our livelihood, society and economics, and how to optimize and to protect the intellectual property arising from technology and innovation
 
----
 
 ## GE014 - Aesthetics and Well-being for Life
 หน่วยกิต: 3 (3-0-6)  
@@ -90,7 +84,7 @@ Concepts, roles, awareness and adjustment to changes of the future and applicati
 ### Course Description (English)
 How to live a meaningful life through various types of arts, recreational activities and sports; new perspectives for aesthetics of life that influence one’s mind and how one may plan a path to success from one’s passion
 
----
+
 
 ## GE015 - Entrepreneurial Spirit and Financial Literacy
 หน่วยกิต: 3 (3-0-6)  
@@ -103,7 +97,7 @@ How to live a meaningful life through various types of arts, recreational activi
 ### Course Description (English)
 The development of character traits that are vital to cultivating an entrepreneurial spirit, with an emphasis placed on how to think like an entrepreneur, opportunities to start and run a business with on the basis of ethics and moral grounds, how to effectively manage and make financial decisions, personal financial management and investment, including sustainable development, effective leadership skills development, teamwork, bold, prompt and well-informed decisions-making
 
----
+
 
 ## MA108 - Calculus I
 หน่วยกิต: 3 (3-0-6)  
@@ -116,7 +110,7 @@ The development of character traits that are vital to cultivating an entrepreneu
 ### Course Description (English)
 Functions, limits, continuity, differentiation and integration of real variables and their applications, chain rule, applications of derivatives, indefinite and definite integrals, techniques of integration, analytic geometry
 
----
+
 
 ## MA109 - Calculus II
 หน่วยกิต: 3 (3-0-6)  
@@ -129,7 +123,7 @@ Functions, limits, continuity, differentiation and integration of real variables
 ### Course Description (English)
 Indeterminate form, applications of definite integrals, improper integrals, partial differential equations, Taylor series, vector analysis, gradient, divergence, curl, matrix and determinant.
 
----
+
 
 ## CH101 - General Chemistry
 หน่วยกิต: 3 (3-0-6)  
@@ -142,7 +136,7 @@ Indeterminate form, applications of definite integrals, improper integrals, part
 ### Course Description (English)
 Stoichiometry, basic atomic theory, properties of gases, solids, liquids and solvents, chemical equilibrium, ion balance, chemical kinetics, atomic structure, chemical bond, element and properties.
 
----
+
 
 ## PH105 - Modern Physics
 หน่วยกิต: 1 (0-3-2)  
@@ -155,7 +149,7 @@ Stoichiometry, basic atomic theory, properties of gases, solids, liquids and sol
 ### Course Description (English)
 Solid and fluid mechanics, dynamics of work and energy movement, smokypipe's aquarium, collision in 2-3 dimensions, dynamics of the rigid body, static balance and properties of fluid mechanics, Bernoulli's equation and application, simple harmonic motion, mechanical waves, wave motion, standing waves, thermal properties, heat transmission, electromagnetic, light, AC circuit, basic principles of electronics, optics, laser theory, pollution, earthquakes, lunar theory, and modern physics.
 
----
+
 
 ## PH106 - Laboratory in Modern Physics
 หน่วยกิต: 3 (3-0-6)  
@@ -168,7 +162,7 @@ Solid and fluid mechanics, dynamics of work and energy movement, smokypipe's aqu
 ### Course Description (English)
 Laboratory for solid and fluid mechanics, dynamics of work and energy movement, smokypipe's aquarium, collision in 2-3 dimensions, dynamics of the rigid body, static balance and properties of fluid mechanics, Bernoulli's equation and application, simple harmonic motion, mechanical waves, wave motion, standing waves, thermal properties, heat transmission, electromagnetic, light, AC circuit, basic principles of electronics, optics, laser theory, pollution, earthquakes, lunar theory, and modern physics.
 
----
+
 
 ## IE213 - Mathematics for Artificial Intelligence Engineering and Data Science
 หน่วยกิต: 3 (2-3-5)  
@@ -181,7 +175,7 @@ Laboratory for solid and fluid mechanics, dynamics of work and energy movement, 
 ### Course Description (English)
 Multi-variable functions, derivatives and gradients; steepest-descent algorithm for minimization; artificial neural networks and training from data; vectors, matrices, and simultaneous linear equations; k-nearest neighbors and k-means algorithms; inverse matrices, ranks, determinants; vector spaces and orthonormal bases; linear transformations, eigenvalues and eigenvectors; data dimensionality reduction, principal component analysis; singular value decomposition, recommendation systems; complex vectors, complex exponential bases; Fourier transforms, filters, spectral analysis of data signals; multi-variable linear and quadratic functions in terms of vectors and matrices; linear regression
 
----
+
 
 ## ME154 - Engineering Drawing
 หน่วยกิต: 3 (3-0-6)  
@@ -194,7 +188,7 @@ Multi-variable functions, derivatives and gradients; steepest-descent algorithm 
 ### Course Description (English)
 Principles of design and engineering drawing, Thai and standard conventions, pictorial drawing, orthographic projection, dimensioning, sectioning, electrical and mechanical drawings by computer, signs and symbols, designs of electronics circuit and mechanical devices.
 
----
+
 
 ## AIE121 - Real-life Data Challenges
 หน่วยกิต: 3 (3-0-6)  
@@ -207,7 +201,7 @@ Principles of design and engineering drawing, Thai and standard conventions, pic
 ### Course Description (English)
 Overview and current trends in data science, differences between Artificial Intelligence (AI) and Data Science, determining problems related to business decision making, Personal Data Protection Act (PDPA), Identification of required information, collection, analysis, forecasting and interpretation of business data, finding relationship information to help with business decisions, such as setting product prices, keeping the number of customers, introducing new products, and selection of market segments and customer groups etc. Machine learning concepts and applications in business. Use-cases of data science in business for example churn prediction, fraud detection, customer segmentation, recommendation system.
 
----
+
 
 ## AIE122 - Computer System and Data Communication
 หน่วยกิต: 3 (2-3-5)  
@@ -220,7 +214,7 @@ Overview and current trends in data science, differences between Artificial Inte
 ### Course Description (English)
 Basic computer structure and architecture, fundamental of digital computer, basic logic, storing command codes on the computer, types of memory and data storage, types of input-output device and user, types of data communication media, data communication equipment and technology, data management, and data conversion and compression.
 
----
+
 
 ## AIE213 - Computer Programming
 หน่วยกิต: 3 (3-0-6)  
@@ -233,7 +227,7 @@ Basic computer structure and architecture, fundamental of digital computer, basi
 ### Course Description (English)
 Study of programming principles, 1 programming language, data structure and array, pointer and reference, recursion, conceptual programming for basic problem solving, basic hardware programming, calling library for hardware tasks, writing library, programming for basic image processing.
 
----
+
 
 ## AIE224 - Business Analytics and Data Visualization
 หน่วยกิต: 3 (3-0-6)  
@@ -246,7 +240,7 @@ Study of programming principles, 1 programming language, data structure and arra
 ### Course Description (English)
 Challenges of big data in the business sector, business data analysis, role of information scientists in organizations, model development for business intelligence and decision-making support systems in organizations, model development for forecasting, data science for business benefits, model development for advanced analysis, and related case studies.
 
----
+
 
 ## AIE222 - Business Intelligence
 หน่วยกิต: 3 (3-0-6)  
@@ -259,7 +253,7 @@ Challenges of big data in the business sector, business data analysis, role of i
 ### Course Description (English)
 Business information system development, advanced business intelligence, demand for business intelligence, business intelligence methods, collaboration of business intelligence methods, business intelligence platform, organizational performance management, business activity management, information management for business intelligence, data collection analysis, decision-making support system for business intelligence.
 
----
+
 
 ## EL214 - Basic Circuit and Electronics
 หน่วยกิต: 1 (0-3-2)  
@@ -272,7 +266,7 @@ Business information system development, advanced business intelligence, demand 
 ### Course Description (English)
 Laws and basic theories of electric circuits (Ohm’s and Kirchoff’s laws), nodal and mesh analysis, Thevenin’s and Norton’s theorems, fundamental AC circuits, phasor and steady state analysis, characteristics of diodes and its applications, characteristics of transistors, low frequency amplifier circuits, power amplifier circuits, integrated circuits.
 
----
+
 
 ## EL215 - Basic Circuit and Electronics Laboratory
 หน่วยกิต: 3 (3-0-6)  
@@ -285,7 +279,7 @@ Laws and basic theories of electric circuits (Ohm’s and Kirchoff’s laws), no
 ### Course Description (English)
 Laboratory experiments on Ohm's law, Kirchhoff's laws, nodes and meshes, Thevenin's and Norton's theorems, basic Alternating Current (AC) circuit theory, basic properties of diodes, and the application of properties of transistors, Operational Amplifiers and their basic applications.
 
----
+
 
 ## EL253 - Digital System Fundamental
 หน่วยกิต: 1 (0-3-2)  
@@ -298,7 +292,7 @@ Laboratory experiments on Ohm's law, Kirchhoff's laws, nodes and meshes, Theveni
 ### Course Description (English)
 Logic and Boolean system, combination circuit design, design and analysis of sequential circuits, register, counter, and several types of memories, theory for gate IC design at different operating speed, analog-to-digital and digital-to-analog conversions.
 
----
+
 
 ## EL256 - Digital System Fundamental Laboratory
 หน่วยกิต: 3 (3-0-6)  
@@ -311,7 +305,7 @@ Logic and Boolean system, combination circuit design, design and analysis of seq
 ### Course Description (English)
 Laboratory experiments on Boolean algebra and set theory of Boolean, combinational circuits, analyzing and designing sequential circuits, registers, counting circuits, converting analog signals to digital, and converting digital signals to analog. Understanding the principles and theories of designing state machines, conceptualizing digital circuit creation, and designing and simulating the operation of digital circuits.
 
----
+
 
 ## IE316 - Probability and Statistics for Artificial Intelligence
 หน่วยกิต: 3 (3-0-6)  
@@ -324,7 +318,7 @@ Laboratory experiments on Boolean algebra and set theory of Boolean, combination
 ### Course Description (English)
 Engineering and Data Science Basics and applications of probability sample spaces, random variables and probability distributions, transformations, expected values, moments and moment generating functions, conditional distributions, independence, Bayes’ theorem, statistical inference, hypothesis testing, estimation, testing of statistical significance.
 
----
+
 
 ## IE322 - Idea Generation for Entrepreneurship
 หน่วยกิต: 3 (3-0-6)  
@@ -337,7 +331,7 @@ Engineering and Data Science Basics and applications of probability sample space
 ### Course Description (English)
 Study the basic principles of creating business concepts, screening business concepts, feasibility analysis of business concepts, protecting business concepts with intellectual property management, applying business concepts to successful and sustainable start-up businesses.
 
----
+
 
 ## EN014 - English for Exploring the World
 หน่วยกิต: 3 (3-0-6)  
@@ -350,7 +344,7 @@ Study the basic principles of creating business concepts, screening business con
 ### Course Description (English)
 A competency- based English course that focuses on student-centered exploration of the world through the use of English language and technology. Reading about a variety of topics provides a springboard for tasks both inside and outside the classroom. Students are equipped with knowledge about the world especially about its different cultures, peoples, and ways of thinking. Self-study learning in a language laboratory will allow the students to improve their listening and speaking skills in different situations.
 
----
+
 
 ## IE231 - Engineering English
 หน่วยกิต: 3 (3-0-6)  
@@ -363,7 +357,7 @@ A competency- based English course that focuses on student-centered exploration 
 ### Course Description (English)
 Comprehensive foundation in technical English, emphasizing proficiency in multidisciplinary engineering fields. Students will become familiar with technical terminology and gain practical skills in using these terms in sentences, discussions and presentations relevant to their field of study.
 
----
+
 
 ## AIE211 - Digital Marketing
 หน่วยกิต: 3 (3-0-6)  
@@ -376,7 +370,7 @@ Comprehensive foundation in technical English, emphasizing proficiency in multid
 ### Course Description (English)
 Digital marketing concepts and theories, digital marketing tools, digital marketing management, current digital marketing strategies, successes and failures in digital marketing, impact evaluation of digital marketing plans, web and mobile usage analysis, search optimization.
 
----
+
 
 ## AIE212 - Statistical Data Design and Collection
 หน่วยกิต: 3 (3-0-6)  
@@ -389,7 +383,7 @@ Digital marketing concepts and theories, digital marketing tools, digital market
 ### Course Description (English)
 Principles of experimental planning and initial assumptions, completely randomized trial plan, completely randomized block plan, factorial plan, stacked plan, principle of accurate and precise sampling, probability-based sampling plan, simple random sampling, systematic sampling, stratified sampling, clustering sampling, application with real data and software packages for analysis.
 
----
+
 
 ## AIE223 - Artificial Intelligence
 หน่วยกิต: 3 (2-3-5)  
@@ -402,7 +396,7 @@ Principles of experimental planning and initial assumptions, completely randomiz
 ### Course Description (English)
 Basic concepts and principles of artificial intelligence, machine learning, artificial neural network, deep learning, convolutional neural network (CNN), image classification using CNN, natural language processing (NLP), object detection, applications of artificial intelligence.
 
----
+
 
 ## AIE225 - Programming for Artificial Intelligence Engineering and Data Science
 หน่วยกิต: 3 (3-0-6)  
@@ -415,7 +409,7 @@ Basic concepts and principles of artificial intelligence, machine learning, arti
 ### Course Description (English)
 Computer system and basic data processing, flowchart, basic programming, data type, user interface, data file processing, function development, and standard library. Loading, cleansing, transforming, modeling and visualizing data. Training, evaluating and deployment of machine learning model.
 
----
+
 
 ## AIE311 - Data Structure and Algorithm
 หน่วยกิต: 3 (3-0-6)  
@@ -428,7 +422,7 @@ Computer system and basic data processing, flowchart, basic programming, data ty
 ### Course Description (English)
 Basic data structures: queues, stacks, lists, graphs, trees and tables, etc., sorting algorithm, searching algorithm, recursive, prefix, postfix, analysis of algorithm complexity, applications of data structures, problem examples.
 
----
+
 
 ## AIE312 - Web Technology
 หน่วยกิต: 3 (3-0-6)  
@@ -441,7 +435,7 @@ Basic data structures: queues, stacks, lists, graphs, trees and tables, etc., so
 ### Course Description (English)
 Basic knowledge of web server, definitions and components of client - server, log file, searching program and automatic tools, web programming, web server security concepts, security systems for online client - server, intruder detection and data recovery.
 
----
+
 
 ## AIE313 - Database System
 หน่วยกิต: 3 (3-0-6)  
@@ -454,7 +448,7 @@ Basic knowledge of web server, definitions and components of client - server, lo
 ### Course Description (English)
 Database system concept: database designs, levels of data abstraction, entity relationship model, relational model, normalization theory, file system structure, query and transaction processing, concurrency control, distributed databases and design, applications of database systems.
 
----
+
 
 ## AIE314 - Data Preparation and Data Mining
 หน่วยกิต: 1 (0-3-2)  
@@ -467,7 +461,7 @@ Database system concept: database designs, levels of data abstraction, entity re
 ### Course Description (English)
 Advanced concepts and algorithms for data mining and data warehousing, advanced data processing techniques, data cleaning, data integration, data conversion and reduction, information finding from big data with advanced data analysis and in-depth learning, modern applications for data mining and data warehouse, and applications of data mining and data warehousing.
 
----
+
 
 ## AIE315 - Data Preparation and Data Mining Laboratory
 หน่วยกิต: 3 (3-0-6)  
@@ -480,7 +474,7 @@ Advanced concepts and algorithms for data mining and data warehousing, advanced 
 ### Course Description (English)
 Laboratory for advanced concepts and algorithms for data mining and data warehousing, advanced data processing techniques, data cleaning, data integration, data conversion and reduction, information finding from big data with advanced data analysis and in-depth learning, modern applications for data mining and data warehouse, and applications of data mining and data warehousing.
 
----
+
 
 ## AIE321 - Big Data Processing and Analytics
 หน่วยกิต: 3 (3-0-6)  
@@ -493,7 +487,7 @@ Laboratory for advanced concepts and algorithms for data mining and data warehou
 ### Course Description (English)
 Big data fundamentals and architecture, data storage, batch and stream data processing, data analysis, privacy and security, big data use cases.
 
----
+
 
 ## AIE322 - Supervised Machine Learning
 หน่วยกิต: 1 (0-3-2)  
@@ -506,7 +500,7 @@ Big data fundamentals and architecture, data storage, batch and stream data proc
 ### Course Description (English)
 Learning problem’s elements and types of machine learning, supervised machine learning, principles and statistical methods for problems using supervised machine learning, regression and correlation analysis, least squares method, multivariable regression, logistic regression, model evaluation, over-fitting, linear classification, application of supervised machine learning, k-nearest neighbor, decision tree, and sample problems.
 
----
+
 
 ## AIE323 - Supervised Machine Learning Laboratory
 หน่วยกิต: 3 (3-0-6)  
@@ -519,7 +513,7 @@ Learning problem’s elements and types of machine learning, supervised machine 
 ### Course Description (English)
 Laboratory for learning problem’s elements and types of machine learning, supervised machine learning, principles and statistical methods for problems using supervised machine learning, regression and correlation analysis, least squares method, multivariable regression, logistic regression, model evaluation, over-fitting, linear classification, application of supervised machine learning, k-nearest neighbor, decision tree, and sample problems.
 
----
+
 
 ## AIE324 - Unsupervised Machine Learning
 หน่วยกิต: 1 (0-3-2)  
@@ -532,7 +526,7 @@ Laboratory for learning problem’s elements and types of machine learning, supe
 ### Course Description (English)
 Statistical principles and methods for unsupervised machine learning, canonic correlation analysis, dimension reduction, principal component analysis, factor analysis, cluster analysis, hierarchical clustering flat segmentation, application of unsupervised machine learning and sample problems.
 
----
+
 
 ## AIE325 - Unsupervised Machine Learning Laboratory
 หน่วยกิต: 2 (0-6-6)  
@@ -545,7 +539,7 @@ Statistical principles and methods for unsupervised machine learning, canonic co
 ### Course Description (English)
 Laboratory for statistical principles and methods for unsupervised machine learning, canonic correlation analysis, dimension reduction, principal component analysis, factor analysis, cluster analysis, hierarchical clustering flat segmentation, application of unsupervised machine learning and sample problems.
 
----
+
 
 ## AIE481 - Artificial Intelligence Engineering and Data Science Project I
 หน่วยกิต: 2 (0-6-6)  
@@ -558,7 +552,7 @@ Laboratory for statistical principles and methods for unsupervised machine learn
 ### Course Description (English)
 Plan and design for projects of practical interest in various fields of computer engineering (Last year), project proposal and report, project preparation for artificial intelligence engineering and data science project II
 
----
+
 
 ## AIE482 - Artificial Intelligence Engineering and Data Science Project II
 หน่วยกิต: 0 (0-35-0)  
@@ -571,7 +565,7 @@ Plan and design for projects of practical interest in various fields of computer
 ### Course Description (English)
 Continuing project of artificial intelligence engineering and data science project I, completing project, reporting project to advisor and testing project prototype.
 
----
+
 
 ## AIE497 - Engineering Practices
 หน่วยกิต: 3 (3-0-6)  
@@ -584,7 +578,7 @@ Continuing project of artificial intelligence engineering and data science proje
 ### Course Description (English)
 Engineering practices controlled by experienced engineers in private company or government unit at least 6 weeks or 180 hours. Students will receive grade S.
 
----
+
 
 ## CO301 - Pre-Cooperative Education
 หน่วยกิต: 3 (3-0-6)  
@@ -597,7 +591,7 @@ Engineering practices controlled by experienced engineers in private company or 
 ### Course Description (English)
 Study and understand concepts of cooperative education systems and preparation for work, strengthen skills such as preparing job application documents, choosing an company, interviewing techniques, developing communication skills between generations and English for communication, cross-cultural communication, creative teamwork skills in different organizational cultures, psychology of working with others, techniques to develop emotions and adapt, entrepreneurial spirit, techniques for writing reports and presentations, practical guidelines during work, morality, and professional ethics.
 
----
+
 
 ## AIE411 - Software Engineering
 หน่วยกิต: 3 (3-0-6)  
@@ -610,7 +604,7 @@ Study and understand concepts of cooperative education systems and preparation f
 ### Course Description (English)
 Problems in designing and developing software, software developing methodology, techniques and tools for software design, memory analysis, software user manual production, software projects maintenance and management.
 
----
+
 
 ## AIE412 - Image Processing and Pattern Recognition
 หน่วยกิต: 3 (3-0-6)  
@@ -623,7 +617,7 @@ Problems in designing and developing software, software developing methodology, 
 ### Course Description (English)
 Visual perception and mathematical model of image, sampling theory and digitization, Fourier transform and its properties for image representation, image enhancement: image smoothening, image sharpening, pattern recognition concepts and their applications.
 
----
+
 
 ## AIE421 - Data Security and Protection
 หน่วยกิต: 3 (3-0-6)  
@@ -636,7 +630,7 @@ Visual perception and mathematical model of image, sampling theory and digitizat
 ### Course Description (English)
 Basic concepts of data security in computer network, security protocol, cryptography, encryption-decryption technology, security in data transmission, data error checking, data illegal modification and eavesdropping, computer virus protection, types of computer attacks, data risk evaluation and management, data security measurements.
 
----
+
 
 ## AIE454 - Advanced Database Design
 หน่วยกิต: 3 (3-0-6)  
@@ -649,7 +643,7 @@ Basic concepts of data security in computer network, security protocol, cryptogr
 ### Course Description (English)
 Job analysis for database design in real systems, database design with well- known software, validation mechanism and database reliability, introducing tools for database design, program design, user interface, distributed database system.
 
----
+
 
 ## AIE455 - Natural Language Processing
 หน่วยกิต: 3 (3-0-6)  
@@ -662,7 +656,7 @@ Job analysis for database design in real systems, database design with well- kno
 ### Course Description (English)
 Machine learning and deep learning, overview of Natural Language Processing (NLP), concept of prompt engineering, text pre-processing and feature extraction, language model and model evaluation, text representation, text classification, Recurrent Neural Network (RNN), transformer, attention mechanism, retraining of pre-trained model, sentiment analysis, information retrieval, NLP applications.
 
----
+
 
 ## AIE456 - Big Data Technology
 หน่วยกิต: 3 (3-0-6)  
@@ -675,7 +669,7 @@ Machine learning and deep learning, overview of Natural Language Processing (NLP
 ### Course Description (English)
 Basic principles for big data technology, big data analysis, big data installation and management, Hadoop, map reducing, Sparks, programming for big data analysis, search and indexing, clustering, categorization, feature selection, and various applications.
 
----
+
 
 ## AIE457 - Cloud and Sensor Networks
 หน่วยกิต: 3 (3-0-6)  
@@ -688,7 +682,7 @@ Basic principles for big data technology, big data analysis, big data installati
 ### Course Description (English)
 Overview, definitions, and concepts of cloud computing, development and installation of programs on cloud-based computers, service models, cloud computing models, cloud computing applications, cloud sensor network, sensor platform, design and placement of sensor networks taking into account limitated bandwidth and power, network control, routing, information processing, infrastructure security, sensor programming, and simulations of cloud computing and sensor network.
 
----
+
 
 ## AIE458 - Mobile Application Development
 หน่วยกิต: 3 (3-0-6)  
@@ -701,7 +695,7 @@ Overview, definitions, and concepts of cloud computing, development and installa
 ### Course Description (English)
 Basic object-oriented programming, application programming for mobile devices, graphic design, user interface, algorithms and tools for problem solving.
 
----
+
 
 ## AIE459 - Internet of Things
 หน่วยกิต: 3 (3-0-6)  
@@ -714,7 +708,7 @@ Basic object-oriented programming, application programming for mobile devices, g
 ### Course Description (English)
 The meaning of the internet of things, opportunities, challenges, and obstacles, application of related technology, design tools in logical and physical, creating and deploying includes considerations regarding security and privacy.
 
----
+
 
 ## AIE460 - Enterprise System and Application
 หน่วยกิต: 3 (3-0-6)  
@@ -727,7 +721,7 @@ The meaning of the internet of things, opportunities, challenges, and obstacles,
 ### Course Description (English)
 Study about the design and installation of systems for controlling computers within the organization, user management, group policy setting, other settings, access control to data files, remote operation control, and activating the device for providing various services.
 
----
+
 
 ## AIE461 - Applied Data Analytics
 หน่วยกิต: 3 (3-0-6)  
@@ -740,7 +734,7 @@ Study about the design and installation of systems for controlling computers wit
 ### Course Description (English)
 Application of basic knowledge related to data analysis, management of digital media resources, data conversion, data modeling and interpretation, case studies of interesting topics, such as social networking systems, agricultural information, arts, film, architecture, music, and performing arts etc.
 
----
+
 
 ## AIE462 - Advance Data Mining and Data Warehouse
 หน่วยกิต: 3 (3-0-6)  
@@ -753,7 +747,7 @@ Application of basic knowledge related to data analysis, management of digital m
 ### Course Description (English)
 Advanced concepts and algorithms for data mining and data warehouse, advanced data processing techniques, data cleansing, data integration, data conversion and reduction, finding information extraction from big data with advanced data analysis and in- depth learning, modern application for data mining and data warehouse, and applications of data mining and data warehouse.
 
----
+
 
 ## AIE463 - Agile and Scrum Process
 หน่วยกิต: 3 (3-0-6)  
@@ -766,7 +760,7 @@ Advanced concepts and algorithms for data mining and data warehouse, advanced da
 ### Course Description (English)
 Principles and concepts of agile and scrum, agile differences with traditional project management, methodology and framework, sprint development, scrum methodology, scrum team, sprint planning and implementation, task priority, remaining task, product plan, progress monitoring, sprint review, product release and report delivery, and related case studies.
 
----
+
 
 ## AIE464 - Applied Artificial Intelligence
 หน่วยกิต: 3 (3-0-6)  
@@ -779,7 +773,7 @@ Principles and concepts of agile and scrum, agile differences with traditional p
 ### Course Description (English)
 Application of basic artificial intelligence, machine learning for various case studies, current interesting topics, such as social networking systems, agricultural information, arts, film, architecture, music, and performing arts, etc.
 
----
+
 
 ## AIE465 - Artificial Intelligence in Marketing
 หน่วยกิต: 3 (3-0-6)  
@@ -792,7 +786,7 @@ Application of basic artificial intelligence, machine learning for various case 
 ### Course Description (English)
 Application of basic artificial intelligence, machine learning for successful digital marketing management, artificial intelligence system for assessing impact and enhancement of digital marketing plans.
 
----
+
 
 ## AIE466 - Artificial Intelligence in Robotics
 หน่วยกิต: 3 (3-0-6)  
@@ -805,7 +799,7 @@ Application of basic artificial intelligence, machine learning for successful di
 ### Course Description (English)
 Application of artificial intelligence, machine learning for robot control in industrial automation, such as display, motion, input/output detector, various outputs, such as motor detector, ultrasonic, etc.
 
----
+
 
 ## AIE467 - Information System Analysis and Design
 หน่วยกิต: 3 (3-0-6)  
@@ -818,7 +812,7 @@ Application of artificial intelligence, machine learning for robot control in in
 ### Course Description (English)
 Principles of information system development, information system development life cycle, information project presentation, information project investigation, information project selection, data concept, data analysis, data collection, data flow diagram, data dictionary, decision making table, system development using user requirements, structural system design, software design, software documentation, information system development and information system administration.
 
----
+
 
 ## AIE468 - Robotic Process Automation
 หน่วยกิต: 3 (3-0-6)  
@@ -831,7 +825,7 @@ Principles of information system development, information system development lif
 ### Course Description (English)
 Introduction to Robotic Process Automation (RPA) concept and development process, understanding of data types and variables, control flow, working with spreadsheet, UI interactions, applications, websites, Error and exception handling, debugging, publishing.
 
----
+
 
 ## AIE469 - Embedded System for Artificial Intelligence Engineer and Data Science
 หน่วยกิต: 3 (3-0-6)  
@@ -844,7 +838,7 @@ Introduction to Robotic Process Automation (RPA) concept and development process
 ### Course Description (English)
 Designing embedded systems, harnessing the power of microcomputers and essential connectivity devices. The focus will be on programming control and processing sensor data to seamlessly transition into the realms of artificial intelligence and machine learning. Emphasis will be placed on the critical assessment and selection of equipment tailored for practical applications. Real-time operating systems will be explored in the context of embedded systems, with a particular focus on designing peripheral circuits catering to both digital and analog input and output. Additionally, participants will learn to integrate machine learning models into embedded systems, unleashing their potential for applications in artificial intelligence and data science.
 
----
+
 
 ## AIE470 - Machine Learning Operation
 หน่วยกิต: 3 (3-0-6)  
@@ -857,7 +851,7 @@ Designing embedded systems, harnessing the power of microcomputers and essential
 ### Course Description (English)
 Introduction to machine learning operations (MLOps), version controls for machine learning (ML), continuous integration (CI) and continuous deployment (CD) for machine learning models, model versioning and management, explore deployment platforms (cloud and on-premise), automate reproducible ML environments with Docker and Kubernetes, model monitoring, ethics and compliance, case study for example Large Language Model Operation (LLMOps).
 
----
+
 
 ## AIE493 - Selected Topics in Artificial Intelligence Engineering and Data Science I
 หน่วยกิต: 3 (3-0-6)  
@@ -870,7 +864,7 @@ Introduction to machine learning operations (MLOps), version controls for machin
 ### Course Description (English)
 Interesting topics of developments in artificial intelligence engineering and data science.
 
----
+
 
 ## AIE494 - Selected Topics in Artificial Intelligence Engineering and Data Science II
 หน่วยกิต: 3 (3-0-6)  
@@ -883,7 +877,7 @@ Interesting topics of developments in artificial intelligence engineering and da
 ### Course Description (English)
 Interesting topics of developments in artificial intelligence engineering and data science.
 
----
+
 
 ## AIE495 - Special Problems in Artificial Intelligence Engineering and Data Science I
 หน่วยกิต: 3 (3-0-6)  
@@ -896,7 +890,7 @@ Interesting topics of developments in artificial intelligence engineering and da
 ### Course Description (English)
 Special problems, interesting case studies in artificial intelligence engineering and data science.
 
----
+
 
 ## AIE496 - Special Problems in Artificial Intelligence Engineering and Data Science II
 หน่วยกิต: 5 (0-40-0)  
@@ -909,7 +903,7 @@ Special problems, interesting case studies in artificial intelligence engineerin
 ### Course Description (English)
 Special problems, interesting case studies in artificial intelligence engineering and data science.
 
----
+
 
 ## AIE498 - Cooperative Education in Artificial Intelligence Engineering and Data Science
 หน่วยกิต: 3 (3-0-6)  
@@ -922,7 +916,7 @@ Special problems, interesting case studies in artificial intelligence engineerin
 ### Course Description (English)
 Study the real work system in the workplace as an employee, enhance students' readiness for career. Students must have full-time job training in the workplace with a minimum duration of 1 semester or 16 weeks. The job must correspond to the student's profession or project-based learning. It is beneficial to the organization. There will be an evaluation from faculty members together with the company. Students must prepare a report of the results of the cooperative education after the end of work.
 
----
+
 
 ## IE314 - Emerging Technology in Engineering
 หน่วยกิต: 3 (3-0-6)  
@@ -935,7 +929,7 @@ Study the real work system in the workplace as an employee, enhance students' re
 ### Course Description (English)
 Emerging technology, current research and development, awareness of emerging technology for future human life, by focusing on various topics, such as communication systems, energy, application of engineering knowledge on medical technology, challenge of engineering towards change of environment, linkage between multimedia technology and software engineering, document preparation for the software, information system development, and information system management.
 
----
+
 
 ## IE315 - System Safety and ISOs
 หน่วยกิต: 3 (3-0-6)  
@@ -948,7 +942,7 @@ Emerging technology, current research and development, awareness of emerging tec
 ### Course Description (English)
 International safety standards, preparation for the assessment, machine vision, identifying hazards, risk estimation, risk assessment, risk reduction, international standards related to the system, robot, reliability, ready to use, and safe maintenance.
 
----
+
 
 ## IE414 - Startup Opportunity and Planning
 หน่วยกิต: 3 (3-0-6)  
@@ -961,7 +955,7 @@ International safety standards, preparation for the assessment, machine vision, 
 ### Course Description (English)
 Process of starting a new business, selecting the appropriate organizational structure to start a business, intellectual property protection, funding and support opportunity at the beginning of the business, business management at an early stage with high risk, successful case study of starting business.
 
----
+
 
 ## IE415 - Entrepreneurial Practicum
 หน่วยกิต: 3 (3-0-6)  
@@ -974,7 +968,7 @@ Process of starting a new business, selecting the appropriate organizational str
 ### Course Description (English)
 Business management in various areas, such as marketing, finance, human resources, production processes and information systems management through the perspective of real entrepreneurs, case studies, and special speakers for a successful entrepreneur.
 
----
+
 
 ## IE421 - Engineering Economics
 หน่วยกิต: ไม่ระบุ  
@@ -987,4 +981,3 @@ Business management in various areas, such as marketing, finance, human resource
 ### Course Description (English)
 Economic principles, investment analysis, time value of money, comparisons of alternatives, depreciation, replacement, break-even analysis, decision making under risk and uncertainly.
 
----

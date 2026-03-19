@@ -3139,7 +3139,7 @@
 ---
 [SOURCE: บริษัทMOU_clean.txt]
 [หมวดหมู่: เครือข่ายบริษัท/MOU]
-﻿รายชื่อบริษัทหรือสถานประกอบการณ์ที่เป็นพันธมิตร/พาร์ทเนอร์ (MOU)
+﻿# รายชื่อบริษัทหรือสถานประกอบการณ์ที่เป็นพันธมิตร/พาร์ทเนอร์ (MOU)
 ---
 [SOURCE: บริษัทMOU_clean.txt]
 [หมวดหมู่: เครือข่ายบริษัท/MOU]
@@ -3598,7 +3598,6 @@
 
 หลักสูตรของเรายังได้ผ่านการรับรองมาตรฐานการศึกษาจากสํานักงานคณะกรรมการการอุดมศึกษา รวมทั้งสภาวิศวกรอีกด้วย และนักศึกษาของเรายังมีโอกาสได้ใบประกาศนียบัตรวิชาชีพ รองรับ Cisco, Mircrosoft Certificate และ Palo Alto Certificate  
 
----
 
 ## สาขาวิชา
 
@@ -3607,32 +3606,24 @@
     - สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล 
     - สาขาวิชาวิศวกรรมไฟฟ้า 
     - สาขาวิชาวิศวกรรมมัลติมีเดียและเอ็นเตอร์เทนเมนต์
-
----
 ---
 [SOURCE: คณะ_clean.txt]
 [หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
 ### สาขาวิชาวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ 
 
-สาขาวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ มุ่งมั่นที่จะผลิตบุคลากรที่มีความรู้ความสามารถทางด้านวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ เพื่อตอบสนองความต้องการของตลาดงาน โดยสายงานวิศวกรรมคอมพิวเตอร์และหุ่นยนต์มีตลาดงานกว้าง ครอบคลุมในส่วนของ Programmer, IT, Smart System, Robotics & Automation เรียนรู้งานทั้ง Hardware และ Software ทางด้านคอมพิวเตอร์และหุ่นยนต์ รวมถึงเทคโนโลยีที่เกี่ยวข้อง เช่น IoT, AI & Machine Learning และก้าวทันข้อมูลยุคใหม่กับ Big Data โดยบัณฑิตจะมีความรู้ทักษะและความสามารถในวิชาชีพอย่างสมบูรณ์ 
-
----
+สาขาวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ มุ่งมั่นที่จะผลิตบุคลากรที่มีความรู้ความสามารถทางด้านวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ เพื่อตอบสนองความต้องการของตลาดงาน โดยสายงานวิศวกรรมคอมพิวเตอร์และหุ่นยนต์มีตลาดงานกว้าง ครอบคลุมในส่วนของ Programmer, IT, Smart System, Robotics & Automation เรียนรู้งานทั้ง Hardware และ Software ทางด้านคอมพิวเตอร์และหุ่นยนต์ รวมถึงเทคโนโลยีที่เกี่ยวข้อง เช่น IoT, AI & Machine Learning และก้าวทันข้อมูลยุคใหม่กับ Big Data โดยบัณฑิตจะมีความรู้ทักษะและความสามารถในวิชาชีพอย่างสมบูรณ์
 ---
 [SOURCE: คณะ_clean.txt]
 [หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
 ### สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล 
 
 หลักสูตรแรกและหลักสูตรเดียวในไทยที่มุ่งเน้นการเรียนรู้เพื่อพัฒนาอุตสาหกรรมข้อมูลและปัญญาประดิษฐ์ เชื่อมโยงกับองค์ความรู้รอบตัวทั้ง ทักษะปัญญาประดิษฐ์ วิทยาการข้อมูล เสริมสร้างความรู้ด้านธุรกิจ ด้วยกระบวนการบ่มเพาะที่เน้นการเรียนการสอนรูปแบบใหม่ ให้นักศึกษาได้เรียนรู้เทคโนโลยีใหม่ๆ กับผู้เชี่ยวชาญที่มีประสบการณ์จากภาคอุตสาหกรรม มีการใช้โจทย์จริงในโลกธุรกิจมาสอนในรายวิชาเน้นการเรียนรู้ที่สามารถต่อยอดในอนาคตได้ และสามารถประยุกต์ใช้งาน AI & Data Science มาเชื่อมโยงวิศวกรรมและภาคธุรกิจช่วยให้ทำงานง่ายและแก้ปัญหาให้ผู้คนได้อย่างกว้างขวางกว่าเดิม
-
----
 ---
 [SOURCE: คณะ_clean.txt]
 [หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
 ### สาขาวิชาวิศวกรรมไฟฟ้า 
 
 สาขาวิชาที่จะเรียนรู้งานด้านการผลิตและการส่งจ่ายไฟฟ้า การออกแบบ การควบคุมเครื่องจักรกลไฟฟ้าและระบบควบคุมอัตโนมัติ ตลอดจนการรักษาคุณภาพระบบไฟฟ้าทั้งในระดับโครงข่ายและภายในโรงงาน สำนักงาน และอาคารที่อยู่อาศัย พร้อมเสริมความรู้ทางด้าน AutoCad, PLC, Renewable Energy, Building Management ฯลฯ ด้วยหลักสูตรที่ทันสมัยและได้รับการรับรองจากสภาวิศวกร
-
----
 ---
 [SOURCE: คณะ_clean.txt]
 [หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
@@ -3644,7 +3635,6 @@
 
 สาขาวิศวกรรมมัลติมีเดียและเอนเตอร์เทนเมนต์ ของ ม.กรุงเทพ จึงออกแบบหลักสูตรที่ครอบคลุมการสร้างงานที่หลากหลายครบวงจร จัดเต็มผู้สอนทั้งอาจารย์ประจำและอาจารย์พิเศษที่มีความเชี่ยวชาญ และมีประสบการณ์ตรง มาถ่ายทอดความรู้ความเข้าใจให้กับนักศึกษาอย่างเข้มข้น เพื่อให้นักศึกษาได้รับความรู้กันอย่างเต็มที่ ทั้งด้านการออกแบบมัลติมีเดียที่ใช้องค์ความรู้ทางวิศวกรรมและเขียนโปรแกรม สำหรับงานแสดง อีเว้นท์ คอนเสิร์ต การทำ CG & Animation ร่วมกับแสง สี เสียง ในการสร้างสรรค์ผลงาน รวมถึงทักษะการเขียนโปรมแกรม การผลิตภาพนิ่งและวิดีโอ ตลอดจนการผลิตสื่อ เนื้อหา และบริการในแพลตฟอร์มต่างๆ เพื่อสร้างบุคลากรที่มีความสามารถและเป็นที่ต้องการของตลาดแรงงานในสายงานนี้  
 
----
 
 ## ที่ตั้งและช่องทางการติดต่อคณะ
 
@@ -3654,8 +3644,6 @@
 
 https://www.bu.ac.th
 https://www.fb.com/BUEngineer
-
----
 ---
 [SOURCE: มหาลัย_clean.txt]
 [หมวดหมู่: ข้อมูลมหาวิทยาลัย]
@@ -3666,7 +3654,6 @@ https://www.fb.com/BUEngineer
 มหาวิทยาลัยกรุงเทพ
 Bangkok Unversity
 
----
 
 ## เกี่ยวกับมหาวิทยาลัย
 
@@ -3674,13 +3661,10 @@ Bangkok Unversity
 
 ระหว่างทางกว่า 60 ปี ที่เราปรับปรุงและเปลี่ยนแปลงเพื่อตอบโจทย์แห่งยุคสมัย ผ่านช่วงเวลาของสังคมไทย ตั้งแต่ยุคก่อร่างสร้างตัว ยุคฟองสบู่ ยุคโลกาภิวัฒน์ ยุค 3G-4G-5G ไปจนถึงกี่ G ก็ตาม เรายังพัฒนาหลักสูตร วิธีการเรียนการสอน อาคารสถานที่ เทคโนโลยี และสิ่งแวดล้อม ที่ยืนยันถึงความเชื่อมั่นในเรื่อง ออกแบบอนาคตด้วย Passion ของตัวคุณเอง
 
----
 
 ## หลักสูตร
 
 ที่มหาวิทยาลัยกรุงเทพ เราเน้นการเรียนรู้ผนวกความคิดสร้างสรรค์ เน้นการปฏิบัติจริง ด้วยอุปกรณ์ที่ทันสมัย เปิดกว้างให้อิสระทางความคิด เพื่อให้เกิดประสบการณ์จริง
-
----
 ---
 [SOURCE: มหาลัย_clean.txt]
 [หมวดหมู่: ข้อมูลมหาวิทยาลัย]
@@ -3700,8 +3684,6 @@ Bangkok Unversity
 - คณะดิจิทัลมีเดียและศิลปะภาพยนตร์
 - หลักสูตรนานาชาติ
 - หลักสูตรนานาชาติจีน
-
----
 ---
 [SOURCE: มหาลัย_clean.txt]
 [หมวดหมู่: ข้อมูลมหาวิทยาลัย]
@@ -3714,8 +3696,6 @@ Bangkok Unversity
 - คณะเทคโนโลยีสารสนเทศและนวัตกรรม
 - คณะการสร้างเจ้าของธุรกิจและการบริหารกิจการ
 - หลักสูตรนานาชาติ
-
----
 ---
 [SOURCE: มหาลัย_clean.txt]
 [หมวดหมู่: ข้อมูลมหาวิทยาลัย]
@@ -3724,7 +3704,6 @@ Bangkok Unversity
 - คณะนิเทศศาสตร์
 - หลักสูตรนานาชาติ
 
----
 
 ## ช่องทางการติดต่อมหาวิทยาลัย
 
@@ -3733,8 +3712,6 @@ F: 02 407 3999
 General Enquires: info@bu.ac.th
 Admissions: admission@bu.ac.th
 ที่ตั้ง: 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120
-
----
 ---
 [SOURCE: มหาลัย_clean.txt]
 [หมวดหมู่: ข้อมูลมหาวิทยาลัย]
@@ -3750,7 +3727,7 @@ Admissions: admission@bu.ac.th
 - รถไฟฟ้าสายสีเขียว (BTS) 
     ลงสถานีหมอชิต (ทางออก 3,4) ต่อรถตู้สาย ต. 118-1
     ลงสถานีอนุสาวรีย์ชัยสมรภูมิ (ทางออก 3,4) ต่อรถตู้สาย ต.85-93 (ฝั่งเกาะพญาไท)
-    ลงสถานีแยกคปอาจารย์ (ทางออก 1,3) ต่อรถเมล์ สาย สามหมื่นเก้าพันห้าร้อยยี่สิบ
+    ลงสถานีแยกคปอ. (ทางออก 1,3) ต่อรถเมล์ สาย 39,520
 
 - รถไฟฟ้าสายสีน้ำเงิน (MRT)
     ลงสถานีจตุจักร (ทางออก 3,4) ต่อรถตู้สาย ต.118-1 หมอชิต-มธ. (ศูนย์รังสิต)
@@ -3760,8 +3737,6 @@ Admissions: admission@bu.ac.th
 
 - รถสองแถวสีขาว  (ให้บริการหลัง 21:00 น.)
     รังสิต-นวนคร-ประตูน้ำพระอินทร์
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3783,8 +3758,6 @@ EN101 - Everyday English
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Practice basic language structures and everyday expressions, including how to give informative self-introduction, describe personality, talk about interests and personal passions, as well as how to express opinions about general issues. Enhance language skills- speaking, listening, reading, and writing—through integrated methods.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3802,8 +3775,6 @@ EN102 - Social English
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Practice speaking and writing frequently used expressions for social interactions, exchanging information, making comparisons, and explaining ideas in social and business-related contexts, with emphasis on developing discussion and presentation skills along with digital skills and creativity.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3821,8 +3792,6 @@ EN103 - Global English
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Intensive practice in portraying detailed experiences and expressing opinions about living and working situations, and discussing global issues, with concentration on intercultural communication skills and digital communication skills, which are vital to becoming global citizens.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3840,8 +3809,6 @@ GE011 - Thinking Skills for Lifelong Learning
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Theories and practical thinking tools, practice critical thinking, creative and innovative thinking, analytical thinking, synthesis thinking and problem-solving thinking, including how to link and select appropriate thinking tools and effectively adapt to daily life, professional undertakings and lifelong learning
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3859,8 +3826,6 @@ GE012 - Citizenship in Society and International Community
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Concepts, traits, rights, duties and responsibilities of citizenship in Thai society, global society, and digital society, with ability to adjust and live happily with others while keeping abreast of and adapting themselves to societal changes which may affect livelihood and working life; awareness and cooperation at different levels among people of diverse cultures
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3878,8 +3843,6 @@ GE013 - Technology and Innovation for the Future
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Concepts, roles, awareness and adjustment to changes of the future and applications of various types of technology and innovation in knowledge acquisition and improvement of quality of life in a new normal society including ways to solve life complexity and challenges, and to enhance creative working life; impacts of technology and innovation on our livelihood, society and economics, and how to optimize and to protect the intellectual property arising from technology and innovation
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3897,8 +3860,6 @@ GE014 - Aesthetics and Well-being for Life
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 How to live a meaningful life through various types of arts, recreational activities and sports; new perspectives for aesthetics of life that influence one’s mind and how one may plan a path to success from one’s passion
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3916,8 +3877,6 @@ GE015 - Entrepreneurial Spirit and Financial Literacy
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 The development of character traits that are vital to cultivating an entrepreneurial spirit, with an emphasis placed on how to think like an entrepreneur, opportunities to start and run a business with on the basis of ethics and moral grounds, how to effectively manage and make financial decisions, personal financial management and investment, including sustainable development, effective leadership skills development, teamwork, bold, prompt and well-informed decisions-making
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3935,8 +3894,6 @@ MA108 - Calculus I
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Functions, limits, continuity, differentiation and integration of real variables and their applications, chain rule, applications of derivatives, indefinite and definite integrals, techniques of integration, analytic geometry
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3954,8 +3911,6 @@ MA109 - Calculus II
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Indeterminate form, applications of definite integrals, improper integrals, partial differential equations, Taylor series, vector analysis, gradient, divergence, curl, matrix and determinant.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3973,8 +3928,6 @@ CH101 - General Chemistry
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Stoichiometry, basic atomic theory, properties of gases, solids, liquids and solvents, chemical equilibrium, ion balance, chemical kinetics, atomic structure, chemical bond, element and properties.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -3992,8 +3945,6 @@ PH105 - Modern Physics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Solid and fluid mechanics, dynamics of work and energy movement, smokypipe's aquarium, collision in 2-3 dimensions, dynamics of the rigid body, static balance and properties of fluid mechanics, Bernoulli's equation and application, simple harmonic motion, mechanical waves, wave motion, standing waves, thermal properties, heat transmission, electromagnetic, light, AC circuit, basic principles of electronics, optics, laser theory, pollution, earthquakes, lunar theory, and modern physics.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4011,8 +3962,6 @@ PH106 - Laboratory in Modern Physics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory for solid and fluid mechanics, dynamics of work and energy movement, smokypipe's aquarium, collision in 2-3 dimensions, dynamics of the rigid body, static balance and properties of fluid mechanics, Bernoulli's equation and application, simple harmonic motion, mechanical waves, wave motion, standing waves, thermal properties, heat transmission, electromagnetic, light, AC circuit, basic principles of electronics, optics, laser theory, pollution, earthquakes, lunar theory, and modern physics.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4030,8 +3979,6 @@ IE213 - Mathematics for Artificial Intelligence Engineering and Data Science
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Multi-variable functions, derivatives and gradients; steepest-descent algorithm for minimization; artificial neural networks and training from data; vectors, matrices, and simultaneous linear equations; k-nearest neighbors and k-means algorithms; inverse matrices, ranks, determinants; vector spaces and orthonormal bases; linear transformations, eigenvalues and eigenvectors; data dimensionality reduction, principal component analysis; singular value decomposition, recommendation systems; complex vectors, complex exponential bases; Fourier transforms, filters, spectral analysis of data signals; multi-variable linear and quadratic functions in terms of vectors and matrices; linear regression
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4049,8 +3996,6 @@ ME154 - Engineering Drawing
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Principles of design and engineering drawing, Thai and standard conventions, pictorial drawing, orthographic projection, dimensioning, sectioning, electrical and mechanical drawings by computer, signs and symbols, designs of electronics circuit and mechanical devices.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4068,8 +4013,6 @@ AIE121 - Real-life Data Challenges
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Overview and current trends in data science, differences between Artificial Intelligence (AI) and Data Science, determining problems related to business decision making, Personal Data Protection Act (PDPA), Identification of required information, collection, analysis, forecasting and interpretation of business data, finding relationship information to help with business decisions, such as setting product prices, keeping the number of customers, introducing new products, and selection of market segments and customer groups etc. Machine learning concepts and applications in business. Use-cases of data science in business for example churn prediction, fraud detection, customer segmentation, recommendation system.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4087,8 +4030,6 @@ AIE122 - Computer System and Data Communication
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic computer structure and architecture, fundamental of digital computer, basic logic, storing command codes on the computer, types of memory and data storage, types of input-output device and user, types of data communication media, data communication equipment and technology, data management, and data conversion and compression.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4106,8 +4047,6 @@ AIE213 - Computer Programming
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Study of programming principles, 1 programming language, data structure and array, pointer and reference, recursion, conceptual programming for basic problem solving, basic hardware programming, calling library for hardware tasks, writing library, programming for basic image processing.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4125,8 +4064,6 @@ AIE224 - Business Analytics and Data Visualization
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Challenges of big data in the business sector, business data analysis, role of information scientists in organizations, model development for business intelligence and decision-making support systems in organizations, model development for forecasting, data science for business benefits, model development for advanced analysis, and related case studies.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4144,8 +4081,6 @@ AIE222 - Business Intelligence
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Business information system development, advanced business intelligence, demand for business intelligence, business intelligence methods, collaboration of business intelligence methods, business intelligence platform, organizational performance management, business activity management, information management for business intelligence, data collection analysis, decision-making support system for business intelligence.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4163,8 +4098,6 @@ EL214 - Basic Circuit and Electronics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laws and basic theories of electric circuits (Ohm’s and Kirchoff’s laws), nodal and mesh analysis, Thevenin’s and Norton’s theorems, fundamental AC circuits, phasor and steady state analysis, characteristics of diodes and its applications, characteristics of transistors, low frequency amplifier circuits, power amplifier circuits, integrated circuits.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4182,8 +4115,6 @@ EL215 - Basic Circuit and Electronics Laboratory
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory experiments on Ohm's law, Kirchhoff's laws, nodes and meshes, Thevenin's and Norton's theorems, basic Alternating Current (AC) circuit theory, basic properties of diodes, and the application of properties of transistors, Operational Amplifiers and their basic applications.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4201,8 +4132,6 @@ EL253 - Digital System Fundamental
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Logic and Boolean system, combination circuit design, design and analysis of sequential circuits, register, counter, and several types of memories, theory for gate IC design at different operating speed, analog-to-digital and digital-to-analog conversions.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4220,8 +4149,6 @@ EL256 - Digital System Fundamental Laboratory
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory experiments on Boolean algebra and set theory of Boolean, combinational circuits, analyzing and designing sequential circuits, registers, counting circuits, converting analog signals to digital, and converting digital signals to analog. Understanding the principles and theories of designing state machines, conceptualizing digital circuit creation, and designing and simulating the operation of digital circuits.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4239,8 +4166,6 @@ IE316 - Probability and Statistics for Artificial Intelligence
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Engineering and Data Science Basics and applications of probability sample spaces, random variables and probability distributions, transformations, expected values, moments and moment generating functions, conditional distributions, independence, Bayes’ theorem, statistical inference, hypothesis testing, estimation, testing of statistical significance.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4258,8 +4183,6 @@ IE322 - Idea Generation for Entrepreneurship
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Study the basic principles of creating business concepts, screening business concepts, feasibility analysis of business concepts, protecting business concepts with intellectual property management, applying business concepts to successful and sustainable start-up businesses.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4277,8 +4200,6 @@ EN014 - English for Exploring the World
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 A competency- based English course that focuses on student-centered exploration of the world through the use of English language and technology. Reading about a variety of topics provides a springboard for tasks both inside and outside the classroom. Students are equipped with knowledge about the world especially about its different cultures, peoples, and ways of thinking. Self-study learning in a language laboratory will allow the students to improve their listening and speaking skills in different situations.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4296,8 +4217,6 @@ IE231 - Engineering English
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Comprehensive foundation in technical English, emphasizing proficiency in multidisciplinary engineering fields. Students will become familiar with technical terminology and gain practical skills in using these terms in sentences, discussions and presentations relevant to their field of study.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4315,8 +4234,6 @@ AIE211 - Digital Marketing
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Digital marketing concepts and theories, digital marketing tools, digital marketing management, current digital marketing strategies, successes and failures in digital marketing, impact evaluation of digital marketing plans, web and mobile usage analysis, search optimization.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4334,8 +4251,6 @@ AIE212 - Statistical Data Design and Collection
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Principles of experimental planning and initial assumptions, completely randomized trial plan, completely randomized block plan, factorial plan, stacked plan, principle of accurate and precise sampling, probability-based sampling plan, simple random sampling, systematic sampling, stratified sampling, clustering sampling, application with real data and software packages for analysis.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4353,8 +4268,6 @@ AIE223 - Artificial Intelligence
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic concepts and principles of artificial intelligence, machine learning, artificial neural network, deep learning, convolutional neural network (CNN), image classification using CNN, natural language processing (NLP), object detection, applications of artificial intelligence.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4372,8 +4285,6 @@ AIE225 - Programming for Artificial Intelligence Engineering and Data Science
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Computer system and basic data processing, flowchart, basic programming, data type, user interface, data file processing, function development, and standard library. Loading, cleansing, transforming, modeling and visualizing data. Training, evaluating and deployment of machine learning model.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4391,8 +4302,6 @@ AIE311 - Data Structure and Algorithm
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic data structures: queues, stacks, lists, graphs, trees and tables, etc., sorting algorithm, searching algorithm, recursive, prefix, postfix, analysis of algorithm complexity, applications of data structures, problem examples.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4410,8 +4319,6 @@ AIE312 - Web Technology
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic knowledge of web server, definitions and components of client - server, log file, searching program and automatic tools, web programming, web server security concepts, security systems for online client - server, intruder detection and data recovery.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4429,8 +4336,6 @@ AIE313 - Database System
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Database system concept: database designs, levels of data abstraction, entity relationship model, relational model, normalization theory, file system structure, query and transaction processing, concurrency control, distributed databases and design, applications of database systems.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4448,8 +4353,6 @@ AIE314 - Data Preparation and Data Mining
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Advanced concepts and algorithms for data mining and data warehousing, advanced data processing techniques, data cleaning, data integration, data conversion and reduction, information finding from big data with advanced data analysis and in-depth learning, modern applications for data mining and data warehouse, and applications of data mining and data warehousing.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4467,8 +4370,6 @@ AIE315 - Data Preparation and Data Mining Laboratory
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory for advanced concepts and algorithms for data mining and data warehousing, advanced data processing techniques, data cleaning, data integration, data conversion and reduction, information finding from big data with advanced data analysis and in-depth learning, modern applications for data mining and data warehouse, and applications of data mining and data warehousing.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4486,8 +4387,6 @@ AIE321 - Big Data Processing and Analytics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Big data fundamentals and architecture, data storage, batch and stream data processing, data analysis, privacy and security, big data use cases.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4505,8 +4404,6 @@ AIE322 - Supervised Machine Learning
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Learning problem’s elements and types of machine learning, supervised machine learning, principles and statistical methods for problems using supervised machine learning, regression and correlation analysis, least squares method, multivariable regression, logistic regression, model evaluation, over-fitting, linear classification, application of supervised machine learning, k-nearest neighbor, decision tree, and sample problems.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4524,8 +4421,6 @@ AIE323 - Supervised Machine Learning Laboratory
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory for learning problem’s elements and types of machine learning, supervised machine learning, principles and statistical methods for problems using supervised machine learning, regression and correlation analysis, least squares method, multivariable regression, logistic regression, model evaluation, over-fitting, linear classification, application of supervised machine learning, k-nearest neighbor, decision tree, and sample problems.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4543,8 +4438,6 @@ AIE324 - Unsupervised Machine Learning
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Statistical principles and methods for unsupervised machine learning, canonic correlation analysis, dimension reduction, principal component analysis, factor analysis, cluster analysis, hierarchical clustering flat segmentation, application of unsupervised machine learning and sample problems.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4562,8 +4455,6 @@ AIE325 - Unsupervised Machine Learning Laboratory
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Laboratory for statistical principles and methods for unsupervised machine learning, canonic correlation analysis, dimension reduction, principal component analysis, factor analysis, cluster analysis, hierarchical clustering flat segmentation, application of unsupervised machine learning and sample problems.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4581,8 +4472,6 @@ AIE481 - Artificial Intelligence Engineering and Data Science Project I
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Plan and design for projects of practical interest in various fields of computer engineering (Last year), project proposal and report, project preparation for artificial intelligence engineering and data science project II
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4600,8 +4489,6 @@ AIE482 - Artificial Intelligence Engineering and Data Science Project II
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Continuing project of artificial intelligence engineering and data science project I, completing project, reporting project to advisor and testing project prototype.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4619,8 +4506,6 @@ AIE497 - Engineering Practices
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Engineering practices controlled by experienced engineers in private company or government unit at least 6 weeks or 180 hours. Students will receive grade S.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4638,8 +4523,6 @@ CO301 - Pre-Cooperative Education
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Study and understand concepts of cooperative education systems and preparation for work, strengthen skills such as preparing job application documents, choosing an company, interviewing techniques, developing communication skills between generations and English for communication, cross-cultural communication, creative teamwork skills in different organizational cultures, psychology of working with others, techniques to develop emotions and adapt, entrepreneurial spirit, techniques for writing reports and presentations, practical guidelines during work, morality, and professional ethics.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4657,8 +4540,6 @@ AIE411 - Software Engineering
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Problems in designing and developing software, software developing methodology, techniques and tools for software design, memory analysis, software user manual production, software projects maintenance and management.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4676,8 +4557,6 @@ AIE412 - Image Processing and Pattern Recognition
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Visual perception and mathematical model of image, sampling theory and digitization, Fourier transform and its properties for image representation, image enhancement: image smoothening, image sharpening, pattern recognition concepts and their applications.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4695,8 +4574,6 @@ AIE421 - Data Security and Protection
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic concepts of data security in computer network, security protocol, cryptography, encryption-decryption technology, security in data transmission, data error checking, data illegal modification and eavesdropping, computer virus protection, types of computer attacks, data risk evaluation and management, data security measurements.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4714,8 +4591,6 @@ AIE454 - Advanced Database Design
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Job analysis for database design in real systems, database design with well- known software, validation mechanism and database reliability, introducing tools for database design, program design, user interface, distributed database system.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4733,8 +4608,6 @@ AIE455 - Natural Language Processing
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Machine learning and deep learning, overview of Natural Language Processing (NLP), concept of prompt engineering, text pre-processing and feature extraction, language model and model evaluation, text representation, text classification, Recurrent Neural Network (RNN), transformer, attention mechanism, retraining of pre-trained model, sentiment analysis, information retrieval, NLP applications.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4752,8 +4625,6 @@ AIE456 - Big Data Technology
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic principles for big data technology, big data analysis, big data installation and management, Hadoop, map reducing, Sparks, programming for big data analysis, search and indexing, clustering, categorization, feature selection, and various applications.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4771,8 +4642,6 @@ AIE457 - Cloud and Sensor Networks
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Overview, definitions, and concepts of cloud computing, development and installation of programs on cloud-based computers, service models, cloud computing models, cloud computing applications, cloud sensor network, sensor platform, design and placement of sensor networks taking into account limitated bandwidth and power, network control, routing, information processing, infrastructure security, sensor programming, and simulations of cloud computing and sensor network.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4790,8 +4659,6 @@ AIE458 - Mobile Application Development
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Basic object-oriented programming, application programming for mobile devices, graphic design, user interface, algorithms and tools for problem solving.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4809,8 +4676,6 @@ AIE459 - Internet of Things
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 The meaning of the internet of things, opportunities, challenges, and obstacles, application of related technology, design tools in logical and physical, creating and deploying includes considerations regarding security and privacy.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4828,8 +4693,6 @@ AIE460 - Enterprise System and Application
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Study about the design and installation of systems for controlling computers within the organization, user management, group policy setting, other settings, access control to data files, remote operation control, and activating the device for providing various services.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4847,8 +4710,6 @@ AIE461 - Applied Data Analytics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Application of basic knowledge related to data analysis, management of digital media resources, data conversion, data modeling and interpretation, case studies of interesting topics, such as social networking systems, agricultural information, arts, film, architecture, music, and performing arts etc.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4866,8 +4727,6 @@ AIE462 - Advance Data Mining and Data Warehouse
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Advanced concepts and algorithms for data mining and data warehouse, advanced data processing techniques, data cleansing, data integration, data conversion and reduction, finding information extraction from big data with advanced data analysis and in- depth learning, modern application for data mining and data warehouse, and applications of data mining and data warehouse.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4885,8 +4744,6 @@ AIE463 - Agile and Scrum Process
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Principles and concepts of agile and scrum, agile differences with traditional project management, methodology and framework, sprint development, scrum methodology, scrum team, sprint planning and implementation, task priority, remaining task, product plan, progress monitoring, sprint review, product release and report delivery, and related case studies.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4904,8 +4761,6 @@ AIE464 - Applied Artificial Intelligence
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Application of basic artificial intelligence, machine learning for various case studies, current interesting topics, such as social networking systems, agricultural information, arts, film, architecture, music, and performing arts, etc.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4923,8 +4778,6 @@ AIE465 - Artificial Intelligence in Marketing
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Application of basic artificial intelligence, machine learning for successful digital marketing management, artificial intelligence system for assessing impact and enhancement of digital marketing plans.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4942,8 +4795,6 @@ AIE466 - Artificial Intelligence in Robotics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Application of artificial intelligence, machine learning for robot control in industrial automation, such as display, motion, input/output detector, various outputs, such as motor detector, ultrasonic, etc.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4961,8 +4812,6 @@ AIE467 - Information System Analysis and Design
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Principles of information system development, information system development life cycle, information project presentation, information project investigation, information project selection, data concept, data analysis, data collection, data flow diagram, data dictionary, decision making table, system development using user requirements, structural system design, software design, software documentation, information system development and information system administration.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4980,8 +4829,6 @@ AIE468 - Robotic Process Automation
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Introduction to Robotic Process Automation (RPA) concept and development process, understanding of data types and variables, control flow, working with spreadsheet, UI interactions, applications, websites, Error and exception handling, debugging, publishing.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -4999,8 +4846,6 @@ AIE469 - Embedded System for Artificial Intelligence Engineer and Data Science
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Designing embedded systems, harnessing the power of microcomputers and essential connectivity devices. The focus will be on programming control and processing sensor data to seamlessly transition into the realms of artificial intelligence and machine learning. Emphasis will be placed on the critical assessment and selection of equipment tailored for practical applications. Real-time operating systems will be explored in the context of embedded systems, with a particular focus on designing peripheral circuits catering to both digital and analog input and output. Additionally, participants will learn to integrate machine learning models into embedded systems, unleashing their potential for applications in artificial intelligence and data science.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5018,8 +4863,6 @@ AIE470 - Machine Learning Operation
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Introduction to machine learning operations (MLOps), version controls for machine learning (ML), continuous integration (CI) and continuous deployment (CD) for machine learning models, model versioning and management, explore deployment platforms (cloud and on-premise), automate reproducible ML environments with Docker and Kubernetes, model monitoring, ethics and compliance, case study for example Large Language Model Operation (LLMOps).
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5037,8 +4880,6 @@ AIE493 - Selected Topics in Artificial Intelligence Engineering and Data Science
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Interesting topics of developments in artificial intelligence engineering and data science.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5056,8 +4897,6 @@ AIE494 - Selected Topics in Artificial Intelligence Engineering and Data Science
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Interesting topics of developments in artificial intelligence engineering and data science.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5075,8 +4914,6 @@ AIE495 - Special Problems in Artificial Intelligence Engineering and Data Scienc
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Special problems, interesting case studies in artificial intelligence engineering and data science.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5094,8 +4931,6 @@ AIE496 - Special Problems in Artificial Intelligence Engineering and Data Scienc
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Special problems, interesting case studies in artificial intelligence engineering and data science.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5113,8 +4948,6 @@ AIE498 - Cooperative Education in Artificial Intelligence Engineering and Data S
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Study the real work system in the workplace as an employee, enhance students' readiness for career. Students must have full-time job training in the workplace with a minimum duration of 1 semester or 16 weeks. The job must correspond to the student's profession or project-based learning. It is beneficial to the organization. There will be an evaluation from faculty members together with the company. Students must prepare a report of the results of the cooperative education after the end of work.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5132,8 +4965,6 @@ IE314 - Emerging Technology in Engineering
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Emerging technology, current research and development, awareness of emerging technology for future human life, by focusing on various topics, such as communication systems, energy, application of engineering knowledge on medical technology, challenge of engineering towards change of environment, linkage between multimedia technology and software engineering, document preparation for the software, information system development, and information system management.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5151,8 +4982,6 @@ IE315 - System Safety and ISOs
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 International safety standards, preparation for the assessment, machine vision, identifying hazards, risk estimation, risk assessment, risk reduction, international standards related to the system, robot, reliability, ready to use, and safe maintenance.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5170,8 +4999,6 @@ IE414 - Startup Opportunity and Planning
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Process of starting a new business, selecting the appropriate organizational structure to start a business, intellectual property protection, funding and support opportunity at the beginning of the business, business management at an early stage with high risk, successful case study of starting business.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5189,8 +5016,6 @@ IE415 - Entrepreneurial Practicum
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Business management in various areas, such as marketing, finance, human resources, production processes and information systems management through the perspective of real entrepreneurs, case studies, and special speakers for a successful entrepreneur.
-
----
 ---
 [SOURCE: รายวิชา_2568_clean.txt]
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
@@ -5208,8 +5033,6 @@ IE421 - Engineering Economics
 [หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]
 Course Description (English)
 Economic principles, investment analysis, time value of money, comparisons of alternatives, depreciation, replacement, break-even analysis, decision making under risk and uncertainly.
-
----
 ---
 [SOURCE: สมัครเรียน_clean.txt]
 [หมวดหมู่: การสมัครเรียน]
@@ -5231,8 +5054,6 @@ Economic principles, investment analysis, time value of money, comparisons of al
     เป็นผู้ที่สำเร็จการศึกษา หรือกำลังศึกษาชั้นมัธยมศึกษาตอนปลายสายสามัญ (ม.6) หรือประกาศนีบัตรวิชาชีพ (ปวช.) หรือการศึกษาอื่นที่เทียบเท่าซึ่งจะต้องได้รับการรับรองจากกระทรวงศึกษาธิการ และมีคะแนนเฉลี่ยสะสม (GPA) จากโรงเรียนที่ตนศึกษา โดยสามารถใช้ผลการเรียนสมัครในหลักสูตรภาษาไทยได้ทุกคณะ ยกเว้นคณะศิลปกรรมศาสตร์ คณะสถาปัตยกรรมศาสตร์ และหลักสูตรนานาชาติ ที่จะต้องผ่านเกณฑ์ในการคัดเลือก
 
     *สามารถใช้ผลการเรียน เมื่อสิ้นสุดชั้น ม.5 หรือ ภาคเรียนที่ 1 ของ ม.6 มายื่นเพื่อสมัครเรียน และจะต้องนำหลักฐานวุฒิการศึกษา ที่ระบุวันอนุมัติสำเร็จการศึกษา มายื่นก่อนวันเปิดภาคเรียนของมหาวิทยาลัยกรุงเทพ
-
----
 ---
 [SOURCE: สมัครเรียน_clean.txt]
 [หมวดหมู่: การสมัครเรียน]
@@ -5247,8 +5068,6 @@ Economic principles, investment analysis, time value of money, comparisons of al
 คุณสมบัติ
     เป็นผู้ที่สอบผ่านและได้รับวุฒิการศึกษาระดับเทียบเท่ามัธยมศึกษาปีที่ 6 General Educational Development (GED)
 
----
-
 
 ## นักศึกษาเทียบโอน ปริญญาตรี
 ---
@@ -5260,12 +5079,10 @@ Economic principles, investment analysis, time value of money, comparisons of al
     - สำเนาหลักฐานสำเร็จการศึกษาที่จบ ปวส. (รบ.1 ) จำนวน 2 ฉบับ
     - สำเนาบัตรประจำตัวประชาชน
     - สำเนาทะเบียนบ้าน
-    - ค่าขึ้นทะเบียนนักศึกษาและค่าเทียบโอนหน่วยกิต หนึ่งพัน บาท
+    - ค่าขึ้นทะเบียนนักศึกษาและค่าเทียบโอนหน่วยกิต 1,000 บาท
 
 คุณสมบัติ
-    สำหรับผู้ที่สำเร็จการศึกษาระดับ ปวส. หรือ เทียบเท่าจากสถาบันการศึกษา ที่สำนักงานคณะกรรมการการอุดมศึกษารับรอง สามารถเทียบโอนหน่วยกิตเข้าศึกษาต่อระดับปริญญาตรี ในคณะสาขาวิชาที่มหาวิทยาลัยกำหนด 
-
----
+    สำหรับผู้ที่สำเร็จการศึกษาระดับ ปวส. หรือ เทียบเท่าจากสถาบันการศึกษา ที่สำนักงานคณะกรรมการการอุดมศึกษารับรอง สามารถเทียบโอนหน่วยกิตเข้าศึกษาต่อระดับปริญญาตรี ในคณะสาขาวิชาที่มหาวิทยาลัยกำหนด
 ---
 [SOURCE: สมัครเรียน_clean.txt]
 [หมวดหมู่: การสมัครเรียน]
@@ -5277,14 +5094,12 @@ Economic principles, investment analysis, time value of money, comparisons of al
     - สำเนาบัตรประจำตัวประชาชน
     - สำเนาทะเบียนบ้าน
     - รายละเอียดประจำวิชา (Course Description) และผลลัพธ์การเรียนรู้ระดับวิชา (CLOs)
-    - ค่าขึ้นทะเบียนนักศึกษาและค่าเทียบโอนหน่วยกิต สองพัน บาท
+    - ค่าขึ้นทะเบียนนักศึกษาและค่าเทียบโอนหน่วยกิต 2,000 บาท
 
 คุณสมบัติ
     - เป็นผู้มีความประพฤติดี
     - เป็นหรือเคยเป็นนักศึกษาในสถาบันอุดมศึกษา ซึ่งสำนักงานคณะกรรมการการอุดมศึกษารับรอง
     - ไม่เป็นผู้ที่ถูกคัดชื่อออกหรือถูกไล่ออกจากสถาบันอุดมศึกษาเดิม เนื่องจากถูกลงโทษทางวินัย 
-
----
 
 
 ## วิธีการสมัครเรียน
@@ -5295,7 +5110,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
 
 มหาวิทยาลัยกรุงเทพ Main Campus 
 ฝ่ายรับสมัครนักศึกษา อาคาร A8 ชั้น 2
-9/1 หมู่ 5 ถนนพหลโยธิน ต.คลองหนึ่ง อาจารย์คลองหลวง ปทุมธานี 12120
+9/1 หมู่ 5 ถนนพหลโยธิน ต.คลองหนึ่ง อ.คลองหลวง ปทุมธานี 12120
 เปิดทำการทุกวัน ไม่เว้นวันหยุดนักขัตฤกษ์
 เวลา 08.30 – 17.00 น.
 โทร : 02 407 3888 ต่อ 2411-2417
@@ -5305,8 +5120,6 @@ Economic principles, investment analysis, time value of money, comparisons of al
 ### สมัครผ่านระบบออนไลน์
 
 Website: https://admissiononline.bu.ac.th/Admission/Login
-
----
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
@@ -5320,8 +5133,6 @@ Website: https://admissiononline.bu.ac.th/Admission/Login
 ภาษาอังกฤษ:  
 Bachelor of Engineering (Artificial Intelligence Engineering and Data Science)
 
----
-
 ## คณะและสาขา
 
 คณะ: คณะวิศวกรรมศาสตร์  
@@ -5331,29 +5142,21 @@ School of Engineering
 วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล  
 Artificial Intelligence Engineering and Data Science
 
----
+จํานวนหน่วยกิตรวมและจำนวนวิชารวมตลอดหลักสูตร:
+136 หน่วยกิต เฉลี่ย 50 วิชา
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
-จํานวนหน่วยกิตรวมและจำนวนวิชารวมตลอดหลักสูตร:
-136 หน่วยกิต เฉลี่ย 50 วิชา
-
 คุณสมบัติผู้สมัคร: 
 ม.6 หรือเทียบเท่า, GED, ปวช.,ปวส. (เทียบโอนได้)
 
----
-
 ## ภาพรวมสาขา
----
-[SOURCE: สาขา_clean.txt]
-[หมวดหมู่: ข้อมูลสาขาวิชา]
+
 สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล เป็นหลักสูตรที่มุ่งเน้นการพัฒนาความรู้และทักษะด้านปัญญาประดิษฐ์ (Artificial Intelligence) และการวิเคราะห์ข้อมูล (Data Science) เพื่อรองรับอุตสาหกรรมดิจิทัลและเศรษฐกิจข้อมูลในอนาคต นักศึกษาจะได้เรียนรู้ทั้งภาคทฤษฎีและการลงมือปฏิบัติจริง โดยใช้โจทย์จากภาคธุรกิจและอุตสาหกรรมเป็นหลักในการเรียนการสอน
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
 หลักสูตรผสมผสานองค์ความรู้ด้านวิศวกรรมซอฟต์แวร์ การเรียนรู้ของเครื่อง การประมวลผลข้อมูลขนาดใหญ่ และการประยุกต์ใช้ AI ในหลากหลายสาขา เพื่อสร้างบัณฑิตที่สามารถออกแบบและพัฒนาโซลูชันที่ขับเคลื่อนด้วยข้อมูลได้อย่างมีประสิทธิภาพ
-
----
 
 ## จุดเด่นของหลักสูตร
 ---
@@ -5366,15 +5169,11 @@ Artificial Intelligence Engineering and Data Science
 - มีห้องปฏิบัติการด้าน AI, Robotics และ Data Analytics ที่ทันสมัย  
 - ส่งเสริมทักษะภาษาอังกฤษและความเป็นสากล
 
----
-
 ## รูปแบบการเรียนการสอน
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
 การเรียนการสอนเน้นการลงมือปฏิบัติจริงควบคู่กับความรู้เชิงทฤษฎี นักศึกษาจะได้ฝึกเขียนโปรแกรม พัฒนาโมเดลปัญญาประดิษฐ์ วิเคราะห์ข้อมูลขนาดใหญ่ และทำโครงงานที่เชื่อมโยงกับปัญหาจริงในภาคธุรกิจ โดยมีอาจารย์ผู้เชี่ยวชาญและผู้เชี่ยวชาญจากภาคอุตสาหกรรมร่วมถ่ายทอดประสบการณ์
-
----
 
 ## ทักษะและความรู้ที่นักศึกษาจะได้รับ
 
@@ -5383,8 +5182,6 @@ Artificial Intelligence Engineering and Data Science
 - พื้นฐานการทำงานของระบบดิจิทัลและอิเล็กทรอนิกส
 - พื้นฐานคณิตศาสตร์สำหรับ AI และ Data Science
 - การจัดการธุรกิจและการตลาดดิจิทัลเบื้องต้น
-
----
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
@@ -5394,15 +5191,11 @@ Artificial Intelligence Engineering and Data Science
 - เครื่องมือจัดการและวิเคราะห์ข้อมูลแบบ Low Code
 - การเขียนโปรแกรมแบบ Low Code
 
----
-
 ### ด้านทักษะเฉพาะทาง
 - การพัฒนา AI ด้าน Computer Vision และ NLP
 - การจัดการและประมวลผลข้อมูลขนาดใหญ
 - การทำ Data Analytics และ Data Visualization
 - การประยุกต์ใช้ AI และ Data Science กับโจทย์ทางภาคอุตสาหกรรมและธุรกิจ
-
----
 
 ### Soft skills
 - Internationalization
@@ -5410,12 +5203,10 @@ Artificial Intelligence Engineering and Data Science
 - Teamwork
 - Leadership
 
----
+## ตัวอย่างรายวิชาที่น่าสนใจ
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
-## ตัวอย่างรายวิชาที่น่าสนใจ
-
 หลักสูตรเน้นความเฉพาะทาง Machine learning และ AI โดยขยายขอบเขตให้นักศึกษามีความเข้าใจและทักษะด้าน Data Science และ Analytics นอกจากนั้นยังมีวิชาที่ทำให้นักศึกษาสามารถทำงานในส่วนการพัฒนาอื่นๆ ได้ เช่น วิชา Full Stack Developement และ Robotics โดยวิชาที่น่าสนใจมากๆ เช่น
 ---
 [SOURCE: สาขา_clean.txt]
@@ -5424,8 +5215,6 @@ Artificial Intelligence Engineering and Data Science
 - Natural Language Processing (NLP): การประมวลผลภาษาธรรมชาติ หลักการ prompt engineer การใช้งานและการเทรนโมเดลภาษา และการประยุกต์
 - Artificial Intelligence in Robotics: การประยุกต์ใช้ A.I. สำหรับหุ่นยนต์ 
 - Idea Generation for Entrepreneurship: ฝึกแนวคิดการสร้างธุรกิจ และการนำไปปฏิบัติจริง
-
----
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
@@ -5456,8 +5245,6 @@ Artificial Intelligence Engineering and Data Science
 ---
 [SOURCE: สาขา_clean.txt]
 [หมวดหมู่: ข้อมูลสาขาวิชา]
----
-
 ## แนวทางอาชีพหลังสำเร็จการศึกษา
 
 ผู้สำเร็จการศึกษาสามารถประกอบอาชีพในตำแหน่งต่างๆ เช่น:
@@ -5471,8 +5258,6 @@ Artificial Intelligence Engineering and Data Science
 - ผู้เชี่ยวชาญด้านความปลอดภัยข้อมูล  
 - วิศวกรการดําเนินงานการเรียนรู้ของเครื่อง (MLOps Engineer)
 
----
-
 ## ที่ตั้งและช่องทางการติดต่อสาขา
 ---
 [SOURCE: สาขา_clean.txt]
@@ -5484,12 +5269,8 @@ Artificial Intelligence Engineering and Data Science
 https://www.bu.ac.th
 https://www.fb.com/BUEngineer
 
----
-
 ## สอบถามข้อมูลการสมัครเรียน
 
 เบอร์โทร: 02 407 3888 กด 1
 Messenger: m.me/bangkokuniverity
-
----
 ---

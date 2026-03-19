@@ -8,7 +8,6 @@
 ภาษาอังกฤษ:  
 Bachelor of Engineering (Artificial Intelligence Engineering and Data Science)
 
----
 
 ## คณะและสาขา
 
@@ -19,15 +18,12 @@ School of Engineering
 วิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล  
 Artificial Intelligence Engineering and Data Science
 
----
-
 จํานวนหน่วยกิตรวมและจำนวนวิชารวมตลอดหลักสูตร:
 136 หน่วยกิต เฉลี่ย 50 วิชา
 
 คุณสมบัติผู้สมัคร: 
 ม.6 หรือเทียบเท่า, GED, ปวช.,ปวส. (เทียบโอนได้)
 
----
 
 ## ภาพรวมสาขา
 
@@ -35,8 +31,6 @@ Artificial Intelligence Engineering and Data Science
 
 หลักสูตรผสมผสานองค์ความรู้ด้านวิศวกรรมซอฟต์แวร์ การเรียนรู้ของเครื่อง การประมวลผลข้อมูลขนาดใหญ่ และการประยุกต์ใช้ AI ในหลากหลายสาขา เพื่อสร้างบัณฑิตที่สามารถออกแบบและพัฒนาโซลูชันที่ขับเคลื่อนด้วยข้อมูลได้อย่างมีประสิทธิภาพ
 
-
----
 
 ## จุดเด่นของหลักสูตร
 
@@ -47,13 +41,11 @@ Artificial Intelligence Engineering and Data Science
 - มีห้องปฏิบัติการด้าน AI, Robotics และ Data Analytics ที่ทันสมัย  
 - ส่งเสริมทักษะภาษาอังกฤษและความเป็นสากล  
 
----
 
 ## รูปแบบการเรียนการสอน
 
 การเรียนการสอนเน้นการลงมือปฏิบัติจริงควบคู่กับความรู้เชิงทฤษฎี นักศึกษาจะได้ฝึกเขียนโปรแกรม พัฒนาโมเดลปัญญาประดิษฐ์ วิเคราะห์ข้อมูลขนาดใหญ่ และทำโครงงานที่เชื่อมโยงกับปัญหาจริงในภาคธุรกิจ โดยมีอาจารย์ผู้เชี่ยวชาญและผู้เชี่ยวชาญจากภาคอุตสาหกรรมร่วมถ่ายทอดประสบการณ์
 
----
 
 ## ทักษะและความรู้ที่นักศึกษาจะได้รับ
 
@@ -63,15 +55,11 @@ Artificial Intelligence Engineering and Data Science
 - พื้นฐานคณิตศาสตร์สำหรับ AI และ Data Science
 - การจัดการธุรกิจและการตลาดดิจิทัลเบื้องต้น 
 
----
-
 ### ด้านทักษะพื้นฐาน
 - Programming / Database
 - Cloud / Web application development
 - เครื่องมือจัดการและวิเคราะห์ข้อมูลแบบ Low Code
 - การเขียนโปรแกรมแบบ Low Code
-
----
 
 ### ด้านทักษะเฉพาะทาง
 - การพัฒนา AI ด้าน Computer Vision และ NLP
@@ -79,15 +67,12 @@ Artificial Intelligence Engineering and Data Science
 - การทำ Data Analytics และ Data Visualization
 - การประยุกต์ใช้ AI และ Data Science กับโจทย์ทางภาคอุตสาหกรรมและธุรกิจ
 
----
-
 ### Soft skills
 - Internationalization
 - Presentation
 - Teamwork
 - Leadership
 
----
 
 ## ตัวอย่างรายวิชาที่น่าสนใจ
 
@@ -97,8 +82,6 @@ Artificial Intelligence Engineering and Data Science
 - Natural Language Processing (NLP): การประมวลผลภาษาธรรมชาติ หลักการ prompt engineer การใช้งานและการเทรนโมเดลภาษา และการประยุกต์
 - Artificial Intelligence in Robotics: การประยุกต์ใช้ A.I. สำหรับหุ่นยนต์ 
 - Idea Generation for Entrepreneurship: ฝึกแนวคิดการสร้างธุรกิจ และการนำไปปฏิบัติจริง
-
----
 
 - AlE213: Computer Programming
 - AIE215: Programming for Al and Data Science
@@ -113,7 +96,6 @@ Artificial Intelligence Engineering and Data Science
 - AIE455: Natural Language Processing
 - AIE466: Artificial Intelligence in Robotics
 
----
 
 ## ห้องปฏิบัติการ 
 
@@ -127,7 +109,6 @@ Artificial Intelligence Engineering and Data Science
 - ห้องปฏิบัติการ Robot Studio: แหล่งรวมคนชอบหุ่นยนต์เปิดสตูดิโอต้อนรับนักศึกษาที่สนใจด้านหุ่นยนต์ AI มีอุปกรณ์และเครื่องมือที่ทันสมัย พร้อมให้นักศึกษาสร้างสรรค์ผลงานทั้งฮาร์ดแวร์และซอฟต์แวร์
 - BU CROCCS | B4 601: ศูนย์วิจัยด้านระบบสื่อสารการประมวลผลภาพและนาโนเทคโนโลยีที่มีนักวิจัยทั้งชาวไทยและชาวต่างชาติ ร่วมกันทํางานวิจัยเพื่อตอบโจทย์ภาคอุตสาหกรรม 
 
----
 
 ## แนวทางอาชีพหลังสำเร็จการศึกษา
 
@@ -142,7 +123,6 @@ Artificial Intelligence Engineering and Data Science
 - ผู้เชี่ยวชาญด้านความปลอดภัยข้อมูล  
 - วิศวกรการดําเนินงานการเรียนรู้ของเครื่อง (MLOps Engineer) 
 
----
 
 ## ที่ตั้งและช่องทางการติดต่อสาขา
 
@@ -153,11 +133,8 @@ Artificial Intelligence Engineering and Data Science
 https://www.bu.ac.th
 https://www.fb.com/BUEngineer
 
----
 
 ## สอบถามข้อมูลการสมัครเรียน
 
 เบอร์โทร: 02 407 3888 กด 1
 Messenger: m.me/bangkokuniverity
-
----
