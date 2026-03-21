@@ -7,3 +7,4 @@ scipy
 tqdm
 transformers
 huggingface-hub
+pdfplumber>=0.10.0

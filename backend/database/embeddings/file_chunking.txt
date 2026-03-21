@@ -1,10 +1,27 @@
 degree plan = (5) Section
+การฝึกงาน = (5) Section
 ค่าเทอม = (2) Markdown Tables
 บริษัทMOU = (1) Paragraphs
-สหกิจ = (3) Markdown Hierarchy
 อาจารย์ = (3) Markdown Hierarchy
 คณะ = (3) Markdown Hierarchy
 มหาลัย = (3) Markdown Hierarchy
 รายวิชา = (2) Markdown Tables
 สมัครเรียน = (3) Markdown Hierarchy
 สาขา = (1) Paragraphs
+
+
+📄 degreeplan2565_clean.txt → 59 chunks
+📄 degreeplan2566_clean.txt → 60 chunks
+📄 degreeplan2567_clean.txt → 57 chunks
+📄 degreeplan2568_clean.txt → 58 chunks
+📄 การฝึกงาน_clean.txt → 22 chunks
+📄 ค่าเทอม_clean.txt → 27 chunks
+📄 บริษัทMOU_clean.txt → 13 chunks
+📄 อาจารย์_clean.txt → 18 chunks
+📄 คณะ_clean.txt → 5 chunks
+📄 มหาลัย_clean.txt → 5 chunks
+📄 รายวิชา_2568_clean.txt → 229 chunks
+📄 สมัครเรียน_clean.txt → 7 chunks
+📄 สาขา_clean.txt → 12 chunks
+
+✅ รวมทั้งหมด 572 chunks จาก 13 ไฟล์

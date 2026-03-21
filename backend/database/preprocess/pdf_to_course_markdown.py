@@ -183,8 +183,7 @@ def build_markdown(courses, mapping):
 {thai}
 
 ### Course Description (English)
-{eng}\n
----"""
+{eng}"""
 
         chunks.append(chunk)
 
@@ -224,6 +223,6 @@ def convert_pdf_to_markdown(pdf_path, output_path):
 # -----------------------------
 pdf_file = r"C:\Graduate Project\AIDA-chatbot\backend\database\preprocess\input\paragraph\คำอธิบายรายวิชา_2568.pdf"
 
-output_file = r"C:\Graduate Project\AIDA-chatbot\backend\database\preprocess\output\paragraph\คำอธิบายรายวิชา_2568_clean.txt"
+output_file = r"C:\Graduate Project\AIDA-chatbot\backend\database\preprocess\output\paragraph\รายวิชา_2568_clean1.txt"
 
 convert_pdf_to_markdown(pdf_file, output_file)

@@ -227,18 +227,12 @@ class EmbeddingProcessor:
             return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
         elif "teacher" in fname or "อาจารย์" in fname or "อจ" in fname:
             return "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]"
-        elif "co-op" in fname or "สหกิจ" in fname:
+        elif "co-op" in fname or "สหกิจ" in fname or "การฝึกงาน" in fname or "internship" in fname:
             return "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]"
         elif "company" in fname or "บริษัท" in fname or "mou" in fname:
             return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
         elif "สาขา" in fname or "department" in fname:
             return "[หมวดหมู่: ข้อมูลสาขาวิชา]"
-        elif "คณะ" in fname or "faculty" in fname or "engineer" in fname:
-            return "[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]"
-        elif "มหาล" in fname or "มหาวิทยาลัย" in fname or "university" in fname:
-            return "[หมวดหมู่: ข้อมูลมหาวิทยาลัย]"
-        elif "สมัคร" in fname or "admission" in fname or "apply" in fname:
-            return "[หมวดหมู่: การสมัครเรียน]"
         return "[หมวดหมู่: ข้อมูลทั่วไป]"
 
     def _romanize_filename(self, thai_name):
@@ -248,6 +242,7 @@ class EmbeddingProcessor:
             "บริษัท": "companies",
             "บริษัทMOU": "com_mou",
             "สหกิจ": "co-op",
+            "การฝึกงาน": "internship",
             "สาขา": "department",
             "วิชา": "course",
             "อจ": "teacher",
@@ -257,11 +252,6 @@ class EmbeddingProcessor:
             "เทอม": "term",
             "รายชื่อ": "list",
             "เพื่อการศึกษา": "education",
-            "มหาวิทยาลัย": "university",
-            "มหาล": "university",   # ครอบ "มหาลัย" ด้วย
-            "คณะ": "faculty",
-            "สมัครเรียน": "admission",
-            "สมัคร": "admission",
         }
         for thai, ascii_name in mapping.items():
             thai_name = thai_name.replace(thai, ascii_name)
@@ -286,16 +276,10 @@ class EmbeddingProcessor:
             return self.chunk_paragraphs, "paragraphs", "Paragraphs (Best for Companies lists)"
         elif "สาขา" in filename or "department" in filename_lower:
             return self.chunk_paragraphs, "paragraphs", "Paragraphs (Best for Department overview)"
-        elif "คณะ" in filename or "faculty" in filename_lower:
-            return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (best for Faculty — 1 chunk per สาขา)"
-        elif "มหาล" in filename or "มหาวิทยาลัย" in filename or "university" in filename_lower:
-            return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (best for University info — 1 chunk per section)"
-        elif "สมัคร" in filename or "admission" in filename_lower:
-            return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (best for Admission — 1 chunk per applicant type)"
         elif "รายชื่ออาจารย์" in filename or "อาจารย์" in filename or "teachers" in filename_lower:
             return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (Structure-aware)"
-        elif "สหกิจ" in filename or "co-op" in filename_lower:
-            return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (best for Co-op)"
+        elif "สหกิจ" in filename or "co-op" in filename_lower or "การฝึกงาน" in filename or "internship" in filename_lower:
+            return self.chunk_by_section, "chunk_by_section", "Section Chunking (#### level — best for Internship/Co-op with timeline)"
         else:
             return self.chunk_markdown_semantic, "markdown_semantic", "Markdown Semantic (Mixed content)"
 

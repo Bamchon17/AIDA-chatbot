@@ -217,7 +217,6 @@ def build_markdown(academic_year, all_entries):
     lines.append(f"> ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา {academic_year}")
     lines.append("> จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต")
     lines.append("")
-    lines.append("---")
 
     all_entries.sort(key=lambda e: (e["year"], SEM_ORDER.get(e["semester"], 9)))
 

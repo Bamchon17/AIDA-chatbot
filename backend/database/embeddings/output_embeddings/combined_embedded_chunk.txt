@@ -4,8 +4,6 @@
 
 > ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา 2565
 > จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต
-
----
 ---
 [SOURCE: degreeplan2565_clean.txt]
 [หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2565]
@@ -757,8 +755,6 @@
 
 > ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา 2566
 > จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต
-
----
 ---
 [SOURCE: degreeplan2566_clean.txt]
 [หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2566]
@@ -1520,8 +1516,6 @@
 
 > ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา 2567
 > จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต
-
----
 ---
 [SOURCE: degreeplan2567_clean.txt]
 [หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2567]
@@ -2254,732 +2248,1034 @@
 
 > ข้อมูลจากหลักสูตรปริญญาตรี คณะวิศวกรรมศาสตร์ ปีการศึกษา 2568
 > จำนวนหน่วยกิตตลอดหลักสูตร 136 หน่วยกิต
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- ME154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- ME154 Engineering Drawing (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+- CH101 General Chemistry (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+- CH101 General Chemistry (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+- CH101 General Chemistry (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+- CH101 General Chemistry (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
+- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
+- AIE122 Computer System and Data Communication (3 หน่วยกิต)
+- MA108 Calculus I (3 หน่วยกิต)
+- EN101 Everyday English (3 หน่วยกิต)
+รวมหน่วยกิต: 21
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- ME154 Engineering Drawing (3 หน่วยกิต)
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- ME154 Engineering Drawing (3 หน่วยกิต)
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- ME154 Engineering Drawing (3 หน่วยกิต)
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 1
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- ME154 Engineering Drawing (3 หน่วยกิต)
+- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
+- MA109 Calculus II (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+- EN103 Global English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+- EN103 Global English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+- EN103 Global English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+- EN103 Global English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- EN014 English for Exploring the World (3 หน่วยกิต)
+- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
+- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
+- EN102 Social English (3 หน่วยกิต)
+- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- PH105 Modern Physics (3 หน่วยกิต)
+- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- XXxxx Free Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- XXxxx Free Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 19
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- CH101 General Chemistry (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
+รวมหน่วยกิต: 22
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- CH101 General Chemistry (3 หน่วยกิต)
+- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
+- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
+- IE231 Engineering English (3 หน่วยกิต)
+- EL253 Digital System Fundamental (3 หน่วยกิต)
+- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
+- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
+- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
+รวมหน่วยกิต: 22
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- EN103 Global English (3 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+รวมหน่วยกิต: 6
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 2
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- XXxxx Free Elective (3 หน่วยกิต)
+- EN103 Global English (3 หน่วยกิต)
+- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
+รวมหน่วยกิต: 9
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
+- AIE313 Database System (3 หน่วยกิต)
+- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
+- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
+- AIE222 Business Intelligence (3 หน่วยกิต)
+- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
+- AIE322 Supervised Machine Learning (3 หน่วยกิต)
+- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
+รวมหน่วยกิต: 20
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE223 Artificial Intelligence (3 หน่วยกิต)
+- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
+- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
+- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
+- AIE211 Digital Marketing (3 หน่วยกิต)
+- AIE312 Web Technology (3 หน่วยกิต)
+รวมหน่วยกิต: 16
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 3
+### ภาคการศึกษาฤดูร้อน (Summer)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE497 Engineering Practice (0 หน่วยกิต)
+รวมหน่วยกิต: 0
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+- CO301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+- CO301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 1 (เทอม 1)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+- CO301 Pre-Cooperative Education (3 หน่วยกิต)
+รวมหน่วยกิต: 14
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนปกติ)
+รายวิชา:
+- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/1 (แผนสหกิจ)
+รายวิชา:
+- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
+รวมหน่วยกิต: 5
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนปกติ)
+รายวิชา:
+- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
+รวมหน่วยกิต: 5
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนปกติ)
+รายวิชา:
+- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
+- XXxxx Major Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 11
+---
+[SOURCE: degreeplan2568_clean.txt]
+[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
+## ปีที่ 4
+### ภาคการศึกษาที่ 2 (เทอม 2)
+#### รุ่น 2 (แผนสหกิจ)
+รายวิชา:
+- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
+รวมหน่วยกิต: 5
+---
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## ฝึกงานทั่วไป
+เป็นการฝึกงานวิศวกรรมในสาขาที่เกี่ยวข้อง ภายใต้การดูแลของวิศวกรที่มีประสบการณ์ประจําบริษัทเอกชนหรือหน่วยงานราชการเป็นเวลาอย่างน้อย 6 สัปดาห์ หรือ 180 ชั่วโมง
+---
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## ฝึกงานทั่วไป
+### ขั้นตอนของการฝึกงานทั่วไป
+1. ลงชื่อแจ้งความประสงค์ที่จะฝึกงานในเทอมในแบบฟอร์ม เมื่อส่งแบบฟอร์มเรียบร้อยนักศึกษาจะได้รับอีเมลยืนยันการลงชื่อผ่านทาง bumail.net ถ้าต้องการแก้ไขข้อมูลในแบบฟอร์ม สามารถทำผ่านลิงก์จากอีเมลฉบับนี้เท่านั้น
+2. นักศึกษาที่ลงชื่อเรียบร้อยแล้วสามารถตรวจสอบรายชื่อตัวเองได้ผ่านทางเว็บไซต์ (แสดงเฉพาะข้อมูล รหัสนักศึกษา ชื่อ นามสกุล และสาขาวิชาเท่านั้น)
+3. นักศึกษาต้องหาสถานที่ฝึกงานด้วยตนเอง อาจจะติดต่อเบื้องต้นผ่านทางโทรศัพท์หรือเข้าไปสอบถามด้วยตนเอง โดยแจ้งความประสงค์ขอฝึกงานระหว่างเดือน มิถุนายน ถึง กรกฏาคม (สำหรับฝึกงาน 2 เดือน) หรือ พฤษภาคม ถึง สิงหาคม (สำหรับฝึกงาน 3 เดือน) เมื่อได้สถานที่ฝึกงานแล้ว ให้แจ้งกับ อ.เกรียงไกร ผ่านทาง MS Team kriangkrai.l@bu.ac.th เพื่อที่จะได้ดำเนินการในขั้นตอนต่อไป
+---
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## ฝึกงานทั่วไป
+### สอบถามข้อมูลการฝึกงานทั่วไป
+สอบถามข้อมูลเพิ่มเติมได้ที่
+อาจารย์เกรียงไกร ลิ่มทอง 
+ผ่านทาง MS Team kriangkrai.l@bu.ac.th
+---
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+สหกิจศึกษา คือ ระบบการศึกษาที่ผสมผสานการเรียนในห้องเรียนกับการปฏิบัติงานจริงในสถานประกอบการอย่างเป็นระบบ  
+นักศึกษาจะได้ทำงานที่ตรงกับสาขาวิชาที่เรียน เพื่อสร้างประสบการณ์ตรงก่อนสำเร็จการศึกษา  
 
+แนวคิดหลักของสหกิจศึกษาอยู่ภายใต้ระบบ Work Integrated Learning  
+ซึ่งเน้นการเรียนรู้ผ่านการทำงานจริงควบคู่กับการศึกษาในมหาวิทยาลัย
 ---
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### เหตุผลที่มีการจัดการเรียนการสอนแบบสหกิจศึกษา
+- บัณฑิตขาดประสบการณ์ทำงานจริง  
+- ไม่สามารถปฏิบัติงานได้ตรงตามความต้องการของสถานประกอบการ  
+- ปรับตัวเข้ากับสภาพแวดล้อมการทำงานได้ยาก  
+- เป็นการปรับยุทธศาสตร์การศึกษาของประเทศให้ตอบโจทย์ตลาดแรงงาน
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-- ME154 Engineering Drawing (3 หน่วยกิต)
-รวมหน่วยกิต: 6
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### ลักษณะของสหกิจศึกษา
+- นักศึกษาปฏิบัติงานเสมือนพนักงานชั่วคราว  
+- มีหน้าที่รับผิดชอบที่ชัดเจนและตรงสายวิชาชีพ  
+- ทำงานเต็มเวลา (Full Time)  
+- ระยะเวลาไม่น้อยกว่า 16 สัปดาห์ หรือ 1 ภาคการศึกษา  
+- สถานประกอบการให้ค่าตอบแทนหรือสวัสดิการตามความเหมาะสม
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-- ME154 Engineering Drawing (3 หน่วยกิต)
-รวมหน่วยกิต: 6
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### ประโยชน์ของสหกิจศึกษา
+#### ด้านวิชาการ
+- นำความรู้จากห้องเรียนไปใช้กับงานจริง  
+- เข้าใจเนื้อหาวิชาการลึกขึ้น  
+- กระตุ้นการเรียนรู้เพิ่มเติม  
+- ได้ใช้เทคโนโลยีสมัยใหม่
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 16
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### ประโยชน์ของสหกิจศึกษา
+#### ด้านวิชาชีพ
+- เข้าใจลักษณะงานในสายอาชีพ  
+- เรียนรู้วัฒนธรรมองค์กร  
+- สร้างเครือข่ายวิชาชีพ  
+- เพิ่มโอกาสได้งานหลังเรียนจบ
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 16
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### ประโยชน์ของสหกิจศึกษา
+#### ด้านสังคม
+- พัฒนาบุคลิกภาพและการสื่อสาร  
+- ทำงานร่วมกับผู้อื่นได้ดี  
+- สร้างความรับผิดชอบ  
+- ส่งเสริมการเรียนรู้นอกห้องเรียน
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 16
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### แผนการเรียนสหกิจศึกษาในคณะวิศวกรรมศาสตร์ ปี 2568
+- ทุกสาขามีรายวิชาสหกิจศึกษาในปีที่ 4 ภาคการศึกษาที่ 1  
+- ต้องเรียนรายวิชา CO301 เตรียมสหกิจศึกษา ในปีที่ 3 ภาคการศึกษาที่ 2  
+- มีการจัดรายวิชาเกี่ยวข้องกับสหกิจศึกษาในชั้นปีอื่นตามความเหมาะสม 
+    - สาขาวิชาวิศวกรรมไฟฟ้า เริ่มในชั้นปีที่ 1 ภาคเรียนที่ 3
+    - สาขาวิชาวิศวกรรมปัญญาประดิษฐ์ฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3 (Free Elective)
+    - สาขาวิชาวิศวกรรมคอมพิวเตอร์ฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3 (Free Elective)
+    - สาขาวิชาวิศวกรรมมัลติมีเดียฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 16
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### คุณสมบัติผู้เข้าร่วมสหกิจศึกษา ปี 2568
+- นักศึกษาชั้นปีที่ 3 (สำหรับภาควิชาวิศวกรรมไฟฟ้า นักศึกษาชั้นปีที่ 2)
+- นักศึกษาที่อยู่ชั้นปีอื่น ๆ หรือ มีการฝึกงานแล้ว ถ้าต้องการเข้าร่วมโครงการปรึกษากับหัวหน้าภาควิชา เพื่อวางแผนการเรียน  
+- เกรดเฉลี่ยสะสมตั้งแต่ 2.75 ขึ้นไป ณ สิ้นปีที่ 2 ภาคการศึกษาที่ 2  
+- ผ่านทุกรายวิชาตามที่ภาควิชากำหนด  
+- มีจำนวนหน่วยกิตตามที่ภาควิชากำหนด  
+- เอกสารสมัครเข้าร่วมโครงการสหกิจศึกษา 
+    - แบบฟอร์มทั่วไปาหกิจศึกษา
+    - Transcript
+- ปรึกษา สอบถามรายละเอียดเพิ่มเติมได้ที่
+    - ดร.ศิริชัย เติมโชคเกษม sirichai.t@bu.ac.th
+    - อ.ศิริพรรณ เพชรน่วม siriphan.p@bu.ac.th หรือ MS Team
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-- CH101 General Chemistry (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### อาจารย์ผู้รับผิดชอบโครงการสหกิจศึกษา
+- ดร.ศิริชัย เติมโชคเกษม หัวหน้าโครงการสหกิจศึกษา sirichai.t@bu.ac.th
+- อ.ศิริพรรณ เพชรน่วม siriphan.p@bu.ac.th
+- อ.ธิดารัตน์ ต่อสุข หัวหน้าสาขาวิชาวิศวกรรมคอมพิวเตอร์ฯ thidarat.t@bu.ac.th
+- ผศ.ดร.ปกรณ์ ยุบลโกศล หัวหน้าสาขาวิชาวิศวกรรมปัญญาประดิษฐ์ฯ pakorn.u@bu.ac.th
+- รศ.ดร.นันทิยา ชัยบุตร หัวหน้าสาขาวิชาวิศวกรรมไฟฟ้าฯ nuntiya.c@bu.ac.th
+- อ.ทศพล บ้านคลองสี่ หัวหน้าสาขาวิชาวิศวกรรมมัลติมีเดียฯ todsapon.b@bu.ac.th
+- อ.เสาวณี มณีแสงสาคร ผู้อำนวยการ Work INTEG/ เรียนควบงาน
+- อ. ฐิติรัตน์ เกิดหาญ อาจารย์ผู้ประสานงาน Work INTEG/เรียนควบงาน thitiratana.k@bu.ac.th
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-- CH101 General Chemistry (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+กระบวนการต่อไปนี้จะเป็นกระบวนการของปี 2568 เท่านั้น
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-- CH101 General Chemistry (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นเตรียมการ
+วันที่ 5 เม.ย. 2568 - 24 เม.ย. 2568 
+เริ่มประชาสัมพันธ์โครงการสหกิจศึกษาให้แก่นักศึกษา  
+
+วันที่ 24 เม.ย. 2568 
+จัดกิจกรรมแนะนำโครงการและอธิบายคุณสมบัติผู้สมัคร  
+
+วันที่ 1 ก.ค. 2568   
+เปิดรับสมัครผู้เข้าร่วมโครงการสหกิจศึกษา 2569
+
+วันที่ 18 ก.ค. 2568 เป็นต้นไป  
+นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-- CH101 General Chemistry (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นลงทะเบียน 1
+วันที่ 18 ก.ค. 2568 เป็นต้นไป  
+นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
+
+วันที่ 22 - 24 ก.ค. 2568  
+ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบเซตวิชา ลงทะเบียนกลุ่ม/รายบุคคล
+
+วันที่ 30 ก.ค. - 1 ส.ค. 68
+ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบรายวิชา ลงทะเบียนกลุ่ม/รายบุคคล
+
+วันที่ 4 ส.ค. 2568
+ลงทะเบียนเพิ่มรายวิชาออนไลน์ (Adding Online) *สำหรับนักศึกษาที่ลงทะเบียนออนไลน์และชำระเงินแล้วเท่านั้น* (กรณีต้องการเพิ่มวิชาเท่านั้น)
+
+วันที่ 14 - 15 ส.ค. 2568
+ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 1 (ก่อนเปิดภาคเรียน) *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
+
+วันที่ 18 ส.ค. 2568
+เปิดเทอม 1/2568
+
+วันที่ 20 - 21 ส.ค 2568 
+ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 2 *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
+
+วันที่ 21 ส.ค 2568
+ปิดรับสมัครเข้าแผนสหกิจศึกษา
+
+วันที่ 29 ส.ค 2568
+หัวหน้าภาควิชาฯ พิจารณาเอกสารสมัครสหกิจศึกษา
+
+วันที่ 1 - 3 ก.ย. 2568
+แจ้งรายชื่อนักศึกษาที่เข้าร่วมแผนสหกิจศึกษา และดึงเข้าร่วม Microsoft Team
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นสมัครสถานประกอบการ 1
+วันที่ 8 - 12 ก.ย. 2568 
+การจัดทา Resume/CV/Portfolio การเขียน E-mail แบบทางการการสัมภาษณ์ Q & A 
+
+วันที่ 8 ก.ย. - 4 ธ.ค. 2568  
+นักศึกษาติดต่อหาสถานที่ประกอบการสำหรับฝึกสหกิจศึกษารอบที่ 1 
+    - นักศึกษาขออนุมัติตำแหน่ง/สถานประกอบการผ่านอาจารย์สหกิจศึกษา
+    - นักศึกษาสมคัรสหกิจศึกษา
+        - Partner
+        - สมัครโดย WORKINTEG
+        - สมัครด้วยตนเอง
+    - ได้รับการตอบรับสหกิจศึกษาแจ้งสถานะกับทาง WORKINTEG
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- GE012 Citizenship in Society and International Community (3 หน่วยกิต)
-- GE013 Technology and Innovation for the Future (3 หน่วยกิต)
-- AIE122 Computer System and Data Communication (3 หน่วยกิต)
-- MA108 Calculus I (3 หน่วยกิต)
-- EN101 Everyday English (3 หน่วยกิต)
-รวมหน่วยกิต: 21
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นลงทะเบียน 2 (นักศึกษาลงทะเบียนเรียนวิชา CO301)
+วันที่ 6 พ.ย. 2568 เป็นตน้ไป 
+นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
+
+วันที่ 10 - 14 พ.ย. 2568   
+ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบเซตวิชา ลงทะเบียนกลุ่ม/รายบุคคล
+
+วันที่ 19 - 21 พ.ย. 2568
+ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบรายวิชา ลงทะเบียนกลุ่ม/รายบุคคล
+
+วันที่ 24 พ.ย. 2568
+ลงทะเบียนเพิ่มรายวิชาออนไลน์ (Adding Online) *สำหรับนักศึกษาที่ลงทะเบียนออนไลน์และชำระเงินแล้วเท่านั้น* (กรณีต้องการเพิ่มวิชาเท่านั้น)
+
+วันที่ 7 - 8 ม.ค. 2569
+ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 1 (ก่อนเปิดภาคเรียน) *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
+
+วันที่ 12 ม.ค. 2569 
+เปิดเทอม 2/2568
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- ME154 Engineering Drawing (3 หน่วยกิต)
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-รวมหน่วยกิต: 6
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นสมัครสถานประกอบการ 2
+วันที่ 12 ม.ค. - 30 เม.ย. 2569 
+นักศึกษาติดต่อหาสถานที่ประกอบการสำหรับฝึกสหกิจศึกษารอบที่ 2 
+    - นักศึกษาขออนุมัติตำแหน่ง/สถานประกอบการผ่านอาจารย์สหกิจศึกษา
+    - นักศึกษาสมคัรสหกิจศึกษา
+        - Partner
+        - สมัครโดย WORKINTEG
+        - สมัครด้วยตนเอง
+    - ได้รับการตอบรับสหกิจศึกษาแจ้งสถานะกับทาง WORKINTEG
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- ME154 Engineering Drawing (3 หน่วยกิต)
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-รวมหน่วยกิต: 6
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นปฏิบัติงานสหกิจศึกษา
+วันที่ 1 - 17 พ.ค. 2569  
+ปฐมนิเทศสหกิจศึกษาโดย WORKINTEG และรับจดหมายส่งตัวฝึกสหกิจศึกษา  
+
+วันที่ 1 มิ.ย. - 30 พ.ย. 2569  
+ปฏิบัติงานสหกิจศึกษาในสถานประกอบการ  
+
+มิ.ย. 2569
+นักศึกษากรอกแบบฟอร์ม Online แจ้งข้อมูลเกี่ยวกับสหกิจศึกษาให้แก่อาจารย์สหกิจศึกษา 
+
+วันที่ 15 ก.ค. - 15 ส.ค. 2569
+อาจารย์สหกิจศึกษาติดตามความคืบหน้าคร้ังที่ 1 (โทรติดตามความคืบหน้า)
+
+ก.ย. 2569
+อาจารย์สหกิจศึกษาติดตามความคืบหน้าคร้ังที่ 2 (โทรติดตามความคืบหน้าและนัดหมายนิเทศสหกิจศึกษา) 
+
+ต.ค. - พ.ย. 2569
+นิเทศสหกิจศึกษา
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- ME154 Engineering Drawing (3 หน่วยกิต)
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-รวมหน่วยกิต: 9
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## สหกิจศึกษา (Cooperative Education)
+### กระบวนการและไทม์ไลน์สหกิจศึกษา ปี 2568
+#### ขั้นสรุปผลและประเมิน
+วันที่ 1 - 15 ธ.ค. 2569 
+    - ปัจฉิมนิเทศสหกิจศึกษา และรับใบรับรอง WORKINTEG  
+    - สอบนำเสนอสหกิจศึกษาและส่งรายงานสหกิจศึกษา (นักศึกษาส่งรายงานก่อนวันสอบนำเสนอสหกิจศึกษา)
+    - นักศึกษาสหกิจศึกษารวมกลุ่มทำโครงงาน หาอ.ที่ปรึกษาโครงงาน พร้อมจัดทำเอกสารใบ ก1
+
+(ต้น)ธันวาคม 2569  
+วันเริ่มปิดภาคการศึกษา 
+
+มกราคม 2570
+เปิดภาคเรียน ภาคเรียนที่2
+
+มกราคม - เมษายน 2570 
+นักศึกษาดำเนินการจัดทำโครงการ  
+
+พฤษภาคม 2570
+สอบนำเสนอโครงงาน
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 1
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- ME154 Engineering Drawing (3 หน่วยกิต)
-- GE011 Thinking Skills for Lifelong Learning (3 หน่วยกิต)
-- MA109 Calculus II (3 หน่วยกิต)
-รวมหน่วยกิต: 9
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## ความแตกต่างระหว่างฝึกงานทั่วไปกับสหกิจศึกษา
+### รูปแบบการดำเนินงาน
+ฝึกงานทั่วไป:
+- นักศึกษาหาสถานที่ฝึกเอง  
+- ระยะเวลาประมาณ 2 เดือน  
+- ประเมินผลเมื่อสิ้นสุดการฝึกงาน  
+
+สหกิจศึกษา:
+- มหาวิทยาลัยตรวจสอบสถานประกอบการ  
+- มีการติดตามผลก่อน ระหว่าง และหลังปฏิบัติงาน  
+- มีการนิเทศงานเป็นระยะ  
+- สามารถนำประสบการณ์มาต่อยอดโครงงาน
 ---
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-- EN103 Global English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-- EN103 Global English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-- EN103 Global English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-- EN103 Global English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- EN014 English for Exploring the World (3 หน่วยกิต)
-- AIE225 Programming for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- EL214 Basic Circuit and Electronics (3 หน่วยกิต)
-- EL215 Basic Circuit and Electronics Laboratory (1 หน่วยกิต)
-- EN102 Social English (3 หน่วยกิต)
-- IE213 Mathematics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- PH105 Modern Physics (3 หน่วยกิต)
-- PH106 Laboratory in Modern Physics (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- XXxxx Free Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- XXxxx Free Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 19
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- CH101 General Chemistry (3 หน่วยกิต)
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
-รวมหน่วยกิต: 22
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- CH101 General Chemistry (3 หน่วยกิต)
-- AIE212 Statistical Data Design and Collection (3 หน่วยกิต)
-- AIE224 Business Analytics and Data Visualization (3 หน่วยกิต)
-- IE231 Engineering English (3 หน่วยกิต)
-- EL253 Digital System Fundamental (3 หน่วยกิต)
-- EL256 Digital System Fundamental Laboratory (1 หน่วยกิต)
-- IE316 Probability and Statistics for Artificial Intelligence Engineering and Data Science (3 หน่วยกิต)
-- GE014 Aesthetics and Well-being for Life (3 หน่วยกิต)
-รวมหน่วยกิต: 22
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- EN103 Global English (3 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-รวมหน่วยกิต: 6
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 2
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- XXxxx Free Elective (3 หน่วยกิต)
-- EN103 Global English (3 หน่วยกิต)
-- GE015 Entrepreneurial Spirit and Financial Literacy (3 หน่วยกิต)
-รวมหน่วยกิต: 9
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- AIE311 Data Structure and Algorithm (3 หน่วยกิต)
-- AIE313 Database System (3 หน่วยกิต)
-- AIE314 Data Preparation and Data Mining (3 หน่วยกิต)
-- AIE315 Data Preparation and Data Mining Laboratory (1 หน่วยกิต)
-- AIE222 Business Intelligence (3 หน่วยกิต)
-- AIE321 Big Data Processing and Analytics (3 หน่วยกิต)
-- AIE322 Supervised Machine Learning (3 หน่วยกิต)
-- AIE323 Supervised Machine Learning Laboratory (1 หน่วยกิต)
-รวมหน่วยกิต: 20
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- AIE223 Artificial Intelligence (3 หน่วยกิต)
-- AIE324 Unsupervised Machine Learning (3 หน่วยกิต)
-- AIE325 Unsupervised Machine Learning Laboratory (1 หน่วยกิต)
-- IE322 Idea Generation for Entrepreneurship (3 หน่วยกิต)
-- AIE211 Digital Marketing (3 หน่วยกิต)
-- AIE312 Web Technology (3 หน่วยกิต)
-รวมหน่วยกิต: 16
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE497 Engineering Practice (0 หน่วยกิต)
-รวมหน่วยกิต: 0
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE497 Engineering Practice (0 หน่วยกิต)
-รวมหน่วยกิต: 0
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 3
-### ภาคการศึกษาฤดูร้อน (Summer)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- AIE497 Engineering Practice (0 หน่วยกิต)
-รวมหน่วยกิต: 0
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-- CO301 Pre-Cooperative Education (3 หน่วยกิต)
-รวมหน่วยกิต: 14
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-- CO301 Pre-Cooperative Education (3 หน่วยกิต)
-รวมหน่วยกิต: 14
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 1 (เทอม 1)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- AIE481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-- CO301 Pre-Cooperative Education (3 หน่วยกิต)
-รวมหน่วยกิต: 14
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนปกติ)
-รายวิชา:
-- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/1 (แผนสหกิจ)
-รายวิชา:
-- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
-รวมหน่วยกิต: 5
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนปกติ)
-รายวิชา:
-- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 1/2 (แผนสหกิจ)
-รายวิชา:
-- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
-รวมหน่วยกิต: 5
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนปกติ)
-รายวิชา:
-- AIE482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
-- XXxxx Major Elective (3 หน่วยกิต)
-รวมหน่วยกิต: 11
----
-[SOURCE: degreeplan2568_clean.txt]
-[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]
-## ปีที่ 4
-### ภาคการศึกษาที่ 2 (เทอม 2)
-#### รุ่น 2 (แผนสหกิจ)
-รายวิชา:
-- AIE498 Cooperative Education in Artificial Intelligence Engineering and Data Science (Major Elective) (5 หน่วยกิต)
-รวมหน่วยกิต: 5
+[SOURCE: การฝึกงาน_clean.txt]
+[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
+## ความแตกต่างระหว่างฝึกงานทั่วไปกับสหกิจศึกษา
+### ระยะเวลาและหน่วยกิต
+ฝึกงานทั่วไป:
+- ประมาณ 8 สัปดาห์  
+- 0 – 1 หน่วยกิต (ขึ้นอยู่กับสาขาวิชา ผลการประเมิน S/U)  
+
+สหกิจศึกษา:
+- 4 – 6 เดือน หรือไม่น้อยกว่า 16 สัปดาห์  
+- ใช้ทดแทนรายวิชาบังคับเลือก 6 – 9 หน่วยกิต (ขึ้นอยู่กับสาขาวิชา ผลการประเมิน ตามคะแนนจากสถาบันและสถานประกอบการ)
 ---
 [SOURCE: ค่าเทอม_clean.txt]
 [หมวดหมู่: ค่าเทอมและการเงิน]
@@ -3204,275 +3500,6 @@
 13. A.I Technology Company Limited
         เป็นบริษัทไทยรายแรกและดีที่สุดที่สามารถออกแบบและผลิตเครื่องจักรที่ซับซ้อนสำหรับอุตสาหกรรม โดยมีคุณภาพดีเยี่ยม ในต้นทุนที่ถูกกว่า เพื่อให้บรรลุเป้าหมาย บริษัทมุ่งเน้นการใช้บุคลากรชาวไทยที่มีประสบการณ์ ทางด้านซอฟต์แวร์ออกแบบ 3D ขั้นสูง ระบบการจัดการคุณภาพ เครื่องจักรกลความแม่นยำสูง โครงสร้างต้นทุนที่แข่งขันได้ บริการหลังการขายที่ดี และการสื่อสารที่มีประสิทธิภาพ เพื่อความต้องการของลูกค้า
 ---
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-# สหกิจศึกษา (Cooperative Education) ปี 2568
-
-
-## ภาพรวมสหกิจศึกษา
-
-สหกิจศึกษา คือ ระบบการศึกษาที่ผสมผสานการเรียนในห้องเรียนกับการปฏิบัติงานจริงในสถานประกอบการอย่างเป็นระบบ  
-นักศึกษาจะได้ทำงานที่ตรงกับสาขาวิชาที่เรียน เพื่อสร้างประสบการณ์ตรงก่อนสำเร็จการศึกษา  
-
-แนวคิดหลักของสหกิจศึกษาอยู่ภายใต้ระบบ Work Integrated Learning  
-ซึ่งเน้นการเรียนรู้ผ่านการทำงานจริงควบคู่กับการศึกษาในมหาวิทยาลัย
-
-
-## เหตุผลที่มีการจัดการเรียนการสอนแบบสหกิจศึกษา
-
-- บัณฑิตขาดประสบการณ์ทำงานจริง  
-- ไม่สามารถปฏิบัติงานได้ตรงตามความต้องการของสถานประกอบการ  
-- ปรับตัวเข้ากับสภาพแวดล้อมการทำงานได้ยาก  
-- เป็นการปรับยุทธศาสตร์การศึกษาของประเทศให้ตอบโจทย์ตลาดแรงงาน  
-
-
-## ลักษณะของสหกิจศึกษา
-
-- นักศึกษาปฏิบัติงานเสมือนพนักงานชั่วคราว  
-- มีหน้าที่รับผิดชอบที่ชัดเจนและตรงสายวิชาชีพ  
-- ทำงานเต็มเวลา (Full Time)  
-- ระยะเวลาไม่น้อยกว่า 16 สัปดาห์ หรือ 1 ภาคการศึกษา  
-- สถานประกอบการให้ค่าตอบแทนหรือสวัสดิการตามความเหมาะสม  
-
-
-## ประโยชน์ของสหกิจศึกษา
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ด้านวิชาการ
-- นำความรู้จากห้องเรียนไปใช้กับงานจริง  
-- เข้าใจเนื้อหาวิชาการลึกขึ้น  
-- กระตุ้นการเรียนรู้เพิ่มเติม  
-- ได้ใช้เทคโนโลยีสมัยใหม่
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ด้านวิชาชีพ
-- เข้าใจลักษณะงานในสายอาชีพ  
-- เรียนรู้วัฒนธรรมองค์กร  
-- สร้างเครือข่ายวิชาชีพ  
-- เพิ่มโอกาสได้งานหลังเรียนจบ
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ด้านสังคม
-- พัฒนาบุคลิกภาพและการสื่อสาร  
-- ทำงานร่วมกับผู้อื่นได้ดี  
-- สร้างความรับผิดชอบ  
-- ส่งเสริมการเรียนรู้นอกห้องเรียน  
-
-
-## ความแตกต่างระหว่างฝึกงานทั่วไปกับสหกิจศึกษา
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### รูปแบบการดำเนินงาน
-
-ฝึกงานทั่วไป:
-- นักศึกษาหาสถานที่ฝึกเอง  
-- ระยะเวลาประมาณ 2 เดือน  
-- ประเมินผลเมื่อสิ้นสุดการฝึกงาน  
-
-สหกิจศึกษา:
-- มหาวิทยาลัยตรวจสอบสถานประกอบการ  
-- มีการติดตามผลก่อน ระหว่าง และหลังปฏิบัติงาน  
-- มีการนิเทศงานเป็นระยะ  
-- สามารถนำประสบการณ์มาต่อยอดโครงงาน
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ระยะเวลาและหน่วยกิต
-
-ฝึกงานทั่วไป:
-- ประมาณ 8 สัปดาห์  
-- 0 – 1 หน่วยกิต (ขึ้นอยู่กับสาขาวิชา ผลการประเมิน S/U)  
-
-สหกิจศึกษา:
-- 4 – 6 เดือน หรือไม่น้อยกว่า 16 สัปดาห์  
-- ใช้ทดแทนรายวิชาบังคับเลือก 6 – 9 หน่วยกิต (ขึ้นอยู่กับสาขาวิชา ผลการประเมิน ตามคะแนนจากสถาบันและสถานประกอบการ)
-
-
-## แผนการเรียนสหกิจศึกษาในคณะวิศวกรรมศาสตร์
-
-- ทุกสาขามีรายวิชาสหกิจศึกษาในปีที่ 4 ภาคการศึกษาที่ 1  
-- ต้องเรียนรายวิชา CO301 เตรียมสหกิจศึกษา ในปีที่ 3 ภาคการศึกษาที่ 2  
-- มีการจัดรายวิชาเกี่ยวข้องกับสหกิจศึกษาในชั้นปีอื่นตามความเหมาะสม 
-    - สาขาวิชาวิศวกรรมไฟฟ้า เริ่มในชั้นปีที่ 1 ภาคเรียนที่ 3
-    - สาขาวิชาวิศวกรรมปัญญาประดิษฐ์ฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3 (Free Elective)
-    - สาขาวิชาวิศวกรรมคอมพิวเตอร์ฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3 (Free Elective)
-    - สาขาวิชาวิศวกรรมมัลติมีเดียฯ เริ่มในชั้นปีที่ 2 ภาคเรียนที่ 3
-
-## คุณสมบัติผู้เข้าร่วมสหกิจศึกษา
-
-- นักศึกษาชั้นปีที่ 3 (สำหรับภาควิชาวิศวกรรมไฟฟ้า นักศึกษาชั้นปีที่ 2)
-- นักศึกษาที่อยู่ชั้นปีอื่น ๆ หรือ มีการฝึกงานแล้ว ถ้าต้องการเข้าร่วมโครงการปรึกษากับหัวหน้าภาควิชา เพื่อวางแผนการเรียน  
-- เกรดเฉลี่ยสะสมตั้งแต่ 2.75 ขึ้นไป ณ สิ้นปีที่ 2 ภาคการศึกษาที่ 2  
-- ผ่านทุกรายวิชาตามที่ภาควิชากำหนด  
-- มีจำนวนหน่วยกิตตามที่ภาควิชากำหนด  
-- เอกสารสมัครเข้าร่วมโครงการสหกิจศึกษา 
-    - แบบฟอร์มทั่วไปาหกิจศึกษา
-    - Transcript
-- ปรึกษา สอบถามรายละเอียดเพิ่มเติมได้ที่
-    - ดอกเตอร์ศิริชัย เติมโชคเกษม sirichai.t@bu.ac.th
-    - อาจารย์ศิริพรรณ เพชรน่วม siriphan.p@bu.ac.th หรือ MS Team
-
-## อาจารย์ผู้รับผิดชอบโครงการสหกิจศึกษา
-- ดอกเตอร์ศิริชัย เติมโชคเกษม หัวหน้าโครงการสหกิจศึกษา sirichai.t@bu.ac.th
-- อาจารย์ศิริพรรณ เพชรน่วม siriphan.p@bu.ac.th
-- อาจารย์ธิดารัตน์ ต่อสุข หัวหน้าสาขาวิชาวิศวกรรมคอมพิวเตอร์ฯ thidarat.t@bu.ac.th
-- ผู้ช่วยศาสตราจารย์ดอกเตอร์ปกรณ์ ยุบลโกศล หัวหน้าสาขาวิชาวิศวกรรมปัญญาประดิษฐ์ฯ pakorn.u@bu.ac.th
-- รองศาสตราจารย์ดอกเตอร์นันทิยา ชัยบุตร หัวหน้าสาขาวิชาวิศวกรรมไฟฟ้าฯ nuntiya.c@bu.ac.th
-- อาจารย์ทศพล บ้านคลองสี่ หัวหน้าสาขาวิชาวิศวกรรมมัลติมีเดียฯ todsapon.b@bu.ac.th
-- อาจารย์เสาวณี มณีแสงสาคร ผู้อำนวยการ Work INTEG/ เรียนควบงาน
-- อาจารย์ ฐิติรัตน์ เกิดหาญ อาจารย์ผู้ประสานงาน Work INTEG/เรียนควบงาน thitiratana.k@bu.ac.th
-
-
-## กระบวนการและไทม์ไลน์สหกิจศึกษา
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นเตรียมการ
-
-วันที่ 5 เม.ย. 2568 - 24 เม.ย. 2568 
-เริ่มประชาสัมพันธ์โครงการสหกิจศึกษาให้แก่นักศึกษา  
-
-วันที่ 24 เม.ย. 2568 
-จัดกิจกรรมแนะนำโครงการและอธิบายคุณสมบัติผู้สมัคร  
-
-วันที่ 1 ก.ค. 2568   
-เปิดรับสมัครผู้เข้าร่วมโครงการสหกิจศึกษา 2569
-
-วันที่ 18 ก.ค. 2568 เป็นต้นไป  
-นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นลงทะเบียน 1
-
-วันที่ 18 ก.ค. 2568 เป็นต้นไป  
-นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
-
-วันที่ 22 - 24 ก.ค. 2568  
-ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบเซตวิชา ลงทะเบียนกลุ่ม/รายบุคคล
-
-วันที่ 30 ก.ค. - 1 ส.ค. 68
-ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบรายวิชา ลงทะเบียนกลุ่ม/รายบุคคล
-
-วันที่ 4 ส.ค. 2568
-ลงทะเบียนเพิ่มรายวิชาออนไลน์ (Adding Online) *สำหรับนักศึกษาที่ลงทะเบียนออนไลน์และชำระเงินแล้วเท่านั้น* (กรณีต้องการเพิ่มวิชาเท่านั้น)
-
-วันที่ 14 - 15 ส.ค. 2568
-ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 1 (ก่อนเปิดภาคเรียน) *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
-
-วันที่ 18 ส.ค. 2568
-เปิดเทอม 1/2568
-
-วันที่ 20 - 21 ส.ค 2568 
-ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 2 *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
-
-วันที่ 21 ส.ค 2568
-ปิดรับสมัครเข้าแผนสหกิจศึกษา
-
-วันที่ 29 ส.ค 2568
-หัวหน้าภาควิชาฯ พิจารณาเอกสารสมัครสหกิจศึกษา
-
-วันที่ 1 - 3 ก.ย. 2568
-แจ้งรายชื่อนักศึกษาที่เข้าร่วมแผนสหกิจศึกษา และดึงเข้าร่วม Microsoft Team
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นสมัครสถานประกอบการ 1
-
-วันที่ 8 - 12 ก.ย. 2568 
-การจัดทา Resume/CV/Portfolio การเขียน E-mail แบบทางการการสัมภาษณ์ Q & A 
-
-วันที่ 8 ก.ย. - 4 ธ.ค. 2568  
-นักศึกษาติดต่อหาสถานที่ประกอบการสำหรับฝึกสหกิจศึกษารอบที่ 1 
-    - นักศึกษาขออนุมัติตำแหน่ง/สถานประกอบการผ่านอาจารย์สหกิจศึกษา
-    - นักศึกษาสมคัรสหกิจศึกษา
-        - Partner
-        - สมัครโดย WORKINTEG
-        - สมัครด้วยตนเอง
-    - ได้รับการตอบรับสหกิจศึกษาแจ้งสถานะกับทาง WORKINTEG
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นลงทะเบียน 2 (นักศึกษาลงทะเบียนเรียนวิชา CO301)
-
-วันที่ 6 พ.ย. 2568 เป็นตน้ไป 
-นักศึกษาดูรายละเอียดการลงทะเบียนเรียนทางอินเทอร์เน็ต
-
-วันที่ 10 - 14 พ.ย. 2568   
-ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบเซตวิชา ลงทะเบียนกลุ่ม/รายบุคคล
-
-วันที่ 19 - 21 พ.ย. 2568
-ลงทะเบียนเรียนล่วงหน้าออนไลน์ - แบบรายวิชา ลงทะเบียนกลุ่ม/รายบุคคล
-
-วันที่ 24 พ.ย. 2568
-ลงทะเบียนเพิ่มรายวิชาออนไลน์ (Adding Online) *สำหรับนักศึกษาที่ลงทะเบียนออนไลน์และชำระเงินแล้วเท่านั้น* (กรณีต้องการเพิ่มวิชาเท่านั้น)
-
-วันที่ 7 - 8 ม.ค. 2569
-ลงทะเบียนเพิ่ม - ลดวิชาคร้ังที่ 1 (ก่อนเปิดภาคเรียน) *สำหรับนักศึกษาที่ลงทะเบียนเรียนออนไลน์และชำระเงินแล้ว*
-
-วันที่ 12 ม.ค. 2569 
-เปิดเทอม 2/2568
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นสมัครสถานประกอบการ 2
-
-วันที่ 12 ม.ค. - 30 เม.ย. 2569 
-นักศึกษาติดต่อหาสถานที่ประกอบการสำหรับฝึกสหกิจศึกษารอบที่ 2 
-    - นักศึกษาขออนุมัติตำแหน่ง/สถานประกอบการผ่านอาจารย์สหกิจศึกษา
-    - นักศึกษาสมคัรสหกิจศึกษา
-        - Partner
-        - สมัครโดย WORKINTEG
-        - สมัครด้วยตนเอง
-    - ได้รับการตอบรับสหกิจศึกษาแจ้งสถานะกับทาง WORKINTEG
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นปฏิบัติงานสหกิจศึกษา
-
-วันที่ 1 - 17 พ.ค. 2569  
-ปฐมนิเทศสหกิจศึกษาโดย WORKINTEG และรับจดหมายส่งตัวฝึกสหกิจศึกษา  
-
-วันที่ 1 มิ.ย. - 30 พ.ย. 2569  
-ปฏิบัติงานสหกิจศึกษาในสถานประกอบการ  
-
-มิ.ย. 2569
-นักศึกษากรอกแบบฟอร์ม Online แจ้งข้อมูลเกี่ยวกับสหกิจศึกษาให้แก่อาจารย์สหกิจศึกษา 
-
-วันที่ 15 ก.ค. - 15 ส.ค. 2569
-อาจารย์สหกิจศึกษาติดตามความคืบหน้าคร้ังที่ 1 (โทรติดตามความคืบหน้า)
-
-ก.ย. 2569
-อาจารย์สหกิจศึกษาติดตามความคืบหน้าคร้ังที่ 2 (โทรติดตามความคืบหน้าและนัดหมายนิเทศสหกิจศึกษา) 
-
-ต.ค. - พ.ย. 2569
-นิเทศสหกิจศึกษา
----
-[SOURCE: สหกิจ_clean.txt]
-[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]
-### ขั้นสรุปผลและประเมิน
-
-วันที่ 1 - 15 ธ.ค. 2569 
-    - ปัจฉิมนิเทศสหกิจศึกษา และรับใบรับรอง WORKINTEG  
-    - สอบนำเสนอสหกิจศึกษาและส่งรายงานสหกิจศึกษา (นักศึกษาส่งรายงานก่อนวันสอบนำเสนอสหกิจศึกษา)
-    - นักศึกษาสหกิจศึกษารวมกลุ่มทำโครงงาน หาอาจารย์ที่ปรึกษาโครงงาน พร้อมจัดทำเอกสารใบ ก1
-
-(ต้น)ธันวาคม 2569  
-วันเริ่มปิดภาคการศึกษา 
-
-มกราคม 2570
-เปิดภาคเรียน ภาคเรียนที่2
-
-มกราคม - เมษายน 2570 
-นักศึกษาดำเนินการจัดทำโครงการ  
-
-พฤษภาคม 2570
-สอบนำเสนอโครงงาน
----
 [SOURCE: อาจารย์_clean.txt]
 [หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]
 # ข้อมูลคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล (AIDA)
@@ -3589,7 +3616,7 @@
 ---
 ---
 [SOURCE: คณะ_clean.txt]
-[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
+[หมวดหมู่: ข้อมูลทั่วไป]
 # คณะวิศวกรรมศาสตร์
 
 ## คำอธิบายคณะวิศวกรรมศาสตร์
@@ -3608,25 +3635,25 @@
     - สาขาวิชาวิศวกรรมมัลติมีเดียและเอ็นเตอร์เทนเมนต์
 ---
 [SOURCE: คณะ_clean.txt]
-[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สาขาวิชาวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ 
 
 สาขาวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ มุ่งมั่นที่จะผลิตบุคลากรที่มีความรู้ความสามารถทางด้านวิศวกรรมคอมพิวเตอร์และหุ่นยนต์ เพื่อตอบสนองความต้องการของตลาดงาน โดยสายงานวิศวกรรมคอมพิวเตอร์และหุ่นยนต์มีตลาดงานกว้าง ครอบคลุมในส่วนของ Programmer, IT, Smart System, Robotics & Automation เรียนรู้งานทั้ง Hardware และ Software ทางด้านคอมพิวเตอร์และหุ่นยนต์ รวมถึงเทคโนโลยีที่เกี่ยวข้อง เช่น IoT, AI & Machine Learning และก้าวทันข้อมูลยุคใหม่กับ Big Data โดยบัณฑิตจะมีความรู้ทักษะและความสามารถในวิชาชีพอย่างสมบูรณ์
 ---
 [SOURCE: คณะ_clean.txt]
-[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล 
 
 หลักสูตรแรกและหลักสูตรเดียวในไทยที่มุ่งเน้นการเรียนรู้เพื่อพัฒนาอุตสาหกรรมข้อมูลและปัญญาประดิษฐ์ เชื่อมโยงกับองค์ความรู้รอบตัวทั้ง ทักษะปัญญาประดิษฐ์ วิทยาการข้อมูล เสริมสร้างความรู้ด้านธุรกิจ ด้วยกระบวนการบ่มเพาะที่เน้นการเรียนการสอนรูปแบบใหม่ ให้นักศึกษาได้เรียนรู้เทคโนโลยีใหม่ๆ กับผู้เชี่ยวชาญที่มีประสบการณ์จากภาคอุตสาหกรรม มีการใช้โจทย์จริงในโลกธุรกิจมาสอนในรายวิชาเน้นการเรียนรู้ที่สามารถต่อยอดในอนาคตได้ และสามารถประยุกต์ใช้งาน AI & Data Science มาเชื่อมโยงวิศวกรรมและภาคธุรกิจช่วยให้ทำงานง่ายและแก้ปัญหาให้ผู้คนได้อย่างกว้างขวางกว่าเดิม
 ---
 [SOURCE: คณะ_clean.txt]
-[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สาขาวิชาวิศวกรรมไฟฟ้า 
 
 สาขาวิชาที่จะเรียนรู้งานด้านการผลิตและการส่งจ่ายไฟฟ้า การออกแบบ การควบคุมเครื่องจักรกลไฟฟ้าและระบบควบคุมอัตโนมัติ ตลอดจนการรักษาคุณภาพระบบไฟฟ้าทั้งในระดับโครงข่ายและภายในโรงงาน สำนักงาน และอาคารที่อยู่อาศัย พร้อมเสริมความรู้ทางด้าน AutoCad, PLC, Renewable Energy, Building Management ฯลฯ ด้วยหลักสูตรที่ทันสมัยและได้รับการรับรองจากสภาวิศวกร
 ---
 [SOURCE: คณะ_clean.txt]
-[หมวดหมู่: ข้อมูลคณะวิศวกรรมศาสตร์]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สาขาวิชาวิศวกรรมมัลติมีเดียและเอ็นเตอร์เทนเมนต์
 
 นี่คืออีกหนึ่งสายอาชีพที่จบแล้วมีงานรองรับทันที! 
@@ -3646,7 +3673,7 @@ https://www.bu.ac.th
 https://www.fb.com/BUEngineer
 ---
 [SOURCE: มหาลัย_clean.txt]
-[หมวดหมู่: ข้อมูลมหาวิทยาลัย]
+[หมวดหมู่: ข้อมูลทั่วไป]
 # ข้อมูลมหาวิทยาลัยกรุงเทพ
 
 ## ชื่อมหาวิทยาลัย
@@ -3667,7 +3694,7 @@ Bangkok Unversity
 ที่มหาวิทยาลัยกรุงเทพ เราเน้นการเรียนรู้ผนวกความคิดสร้างสรรค์ เน้นการปฏิบัติจริง ด้วยอุปกรณ์ที่ทันสมัย เปิดกว้างให้อิสระทางความคิด เพื่อให้เกิดประสบการณ์จริง
 ---
 [SOURCE: มหาลัย_clean.txt]
-[หมวดหมู่: ข้อมูลมหาวิทยาลัย]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### ปริญญาตรี
 
 - คณะบัญชี
@@ -3686,7 +3713,7 @@ Bangkok Unversity
 - หลักสูตรนานาชาติจีน
 ---
 [SOURCE: มหาลัย_clean.txt]
-[หมวดหมู่: ข้อมูลมหาวิทยาลัย]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### ปริญญาโท
 
 - คณะบริหารธุรกิจ
@@ -3698,7 +3725,7 @@ Bangkok Unversity
 - หลักสูตรนานาชาติ
 ---
 [SOURCE: มหาลัย_clean.txt]
-[หมวดหมู่: ข้อมูลมหาวิทยาลัย]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### ปริญญาเอก
 
 - คณะนิเทศศาสตร์
@@ -3714,7 +3741,7 @@ Admissions: admission@bu.ac.th
 ที่ตั้ง: 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120
 ---
 [SOURCE: มหาลัย_clean.txt]
-[หมวดหมู่: ข้อมูลมหาวิทยาลัย]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### การเดินทางมามหาวิทยาลัย
 
 - รถเมล์ สาย 39 (1-4), 356, 510 (1-19), 510 (1-20E), 520, 1-31 
@@ -5035,13 +5062,13 @@ Course Description (English)
 Economic principles, investment analysis, time value of money, comparisons of alternatives, depreciation, replacement, break-even analysis, decision making under risk and uncertainly.
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 # ข้อมูลการสมัครเรียน 
 
 ## นักศึกษาปริญญาตรี
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### 1. ผู้ที่สำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย (ม.6) หรือเทียบเท่า (ปวช,กศน)
 
 เอกสาร
@@ -5056,7 +5083,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
     *สามารถใช้ผลการเรียน เมื่อสิ้นสุดชั้น ม.5 หรือ ภาคเรียนที่ 1 ของ ม.6 มายื่นเพื่อสมัครเรียน และจะต้องนำหลักฐานวุฒิการศึกษา ที่ระบุวันอนุมัติสำเร็จการศึกษา มายื่นก่อนวันเปิดภาคเรียนของมหาวิทยาลัยกรุงเทพ
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### 2. ผู้ที่สำเร็จการศึกษาเทียบเท่าระดับมัธยมศึกษาปีที่ 6 General Educational Development (GED)
 
 เอกสาร
@@ -5072,7 +5099,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
 ## นักศึกษาเทียบโอน ปริญญาตรี
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### 1. นักศึกษาเทียบโอนหน่วยกิตสำหรับผู้จบ ปวส.
 
 เอกสาร
@@ -5085,7 +5112,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
     สำหรับผู้ที่สำเร็จการศึกษาระดับ ปวส. หรือ เทียบเท่าจากสถาบันการศึกษา ที่สำนักงานคณะกรรมการการอุดมศึกษารับรอง สามารถเทียบโอนหน่วยกิตเข้าศึกษาต่อระดับปริญญาตรี ในคณะสาขาวิชาที่มหาวิทยาลัยกำหนด
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### 2. นักศึกษาเทียบโอนต่างสถาบัน
 
 เอกสาร
@@ -5105,7 +5132,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
 ## วิธีการสมัครเรียน
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สมัครโดยตรงที่มหาวิทยาลัย
 
 มหาวิทยาลัยกรุงเทพ Main Campus 
@@ -5116,7 +5143,7 @@ Economic principles, investment analysis, time value of money, comparisons of al
 โทร : 02 407 3888 ต่อ 2411-2417
 ---
 [SOURCE: สมัครเรียน_clean.txt]
-[หมวดหมู่: การสมัครเรียน]
+[หมวดหมู่: ข้อมูลทั่วไป]
 ### สมัครผ่านระบบออนไลน์
 
 Website: https://admissiononline.bu.ac.th/Admission/Login
