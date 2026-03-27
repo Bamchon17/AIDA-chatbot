@@ -51,7 +51,6 @@
 - **วุฒิการศึกษา:** Doctor of Philosophy จาก SIIT
 - **ความเชี่ยวชาญ:** Data Analytics and Visualization, Supply Chain and Logistic Management
 
----
 
 ## 2. รายชื่ออาจารย์พิเศษและผู้เชี่ยวชาญภายนอก (Guest Lecturers)
 
@@ -74,5 +73,3 @@
 ### คุณชัชวาล เดชาโรจนภัทท์
 - **ตำแหน่ง:** Co-founder @ twinteur
 - **ความเชี่ยวชาญ:** Digital marketing and tools, Business Analytics, Business Strategy
-
----

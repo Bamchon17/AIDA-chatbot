@@ -3,55 +3,54 @@
 ## 1. รายชื่ออาจารย์ประจำ (Full-time Faculty)
 *ข้อมูลอาจารย์ผู้เชี่ยวชาญด้าน AI, ML และ Data Science*
 
-### รศ.ดร.ภูมิพัฒ แสงอุดมเลิศ
-- **วุฒิการศึกษา:** PhD. จาก MIT, USA
+### รองศาสตราจารย์ดอกเตอร์ภูมิพัฒ แสงอุดมเลิศ
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก MIT, USA
 - **ความเชี่ยวชาญ:** Digital Communication, Optimization, การประยุกต์ใช้ Machine Learning
 
-### อ. ทศพล บ้านคลองสี่
-- **วุฒิการศึกษา:** M.Eng. จาก จุฬาลงกรณ์มหาวิทยาลัย
+### อาจารย์ ทศพล บ้านคลองสี่
+- **วุฒิการศึกษา:** Master of Engineering จาก จุฬาลงกรณ์มหาวิทยาลัย
 - **ความเชี่ยวชาญ:** Data Analytics and Visualization
 
-### ดร.ปัญจวี รักประยูร
-- **วุฒิการศึกษา:** PhD. จาก มหาวิทยาลัยเกษตรศาสตร์
+### ดอกเตอร์ปัญจวี รักประยูร
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก มหาวิทยาลัยเกษตรศาสตร์
 - **ความเชี่ยวชาญ:** Computer Vision in Robotics, 3D reconstruction
 
-### อ. พฤฒาภรณ์ เมาลานนท์
-- **วุฒิการศึกษา:** M.Eng. จาก TAIST-Tokyo Tech, Japan
+### อาจารย์ พฤฒาภรณ์ เมาลานนท์
+- **วุฒิการศึกษา:** Master of Engineering จาก TAIST-Tokyo Tech, Japan
 - **ความเชี่ยวชาญ:** Embedded Systems, การประยุกต์ AI ใน Drone และ หุ่นยนต์
 
-### รศ.ดร.จักรพงษ์ สุธาภุชกุล
-- **วุฒิการศึกษา:** PhD. จาก University of Surrey, USA
+### รองศาสตราจารย์ดอกเตอร์จักรพงษ์ สุธาภุชกุล
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก University of Surrey, USA
 - **ความเชี่ยวชาญ:** Vehicle Ad-hoc Network, การประยุกต์ใช้ Machine Learning
 
-### ผศ.ดร.วิศาล พัฒน์ชู
-- **วุฒิการศึกษา:** PhD. จาก Washington State University, USA
+### ผู้ช่วยศาสตราจารย์ดอกเตอร์วิศาล พัฒน์ชู
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก Washington State University, USA
 - **ความเชี่ยวชาญ:** Embedded Systems, การประยุกต์ใช้ Machine Learning
 
-### ผศ.ดร.ปกรณ์ ยุบลโกศล
+### ผู้ช่วยศาสตราจารย์ดอกเตอร์ปกรณ์ ยุบลโกศล
 - **วุฒิการศึกษา:** D.Eng. จาก University of Siegen, Germany
 - **ความเชี่ยวชาญ:** Digital Communication, การประยุกต์ใช้ Machine Learning
 
-### ดร.ศุภรัตน์ แย้มครวญ
+### ดอกเตอร์ศุภรัตน์ แย้มครวญ
 - **วุฒิการศึกษา:** D.Eng. จาก KMUTT
 - **ความเชี่ยวชาญ:** Embedded Systems, Database & Machine Learning
 
-### ดร.โรโมล โจลิโวท (Dr. Romuald Jolivot)
-- **วุฒิการศึกษา:** PhD. จาก Université de Bourgogne, France
+### ดอกเตอร์โรโมล โจลิโวท (Dr. Romuald Jolivot)
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก Université de Bourgogne, France
 - **ความเชี่ยวชาญ:** Image processing / Computer Vision, การประยุกต์ใช้ Machine Learning
 
-### ดร.เกรียงไกร ลิ่มทอง
-- **วุฒิการศึกษา:** PhD. จาก มหาวิทยาลัย Sokendai, Japan
+### ดอกเตอร์เกรียงไกร ลิ่มทอง
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก มหาวิทยาลัย Sokendai, Japan
 - **ความเชี่ยวชาญ:** Network traffic measurement, Cyber Security, การประยุกต์ใช้ Machine Learning
 
-### อ.วิชุกร คันธินทระ
-- **วุฒิการศึกษา:** M.Sc. จาก จุฬาลงกรณ์มหาวิทยาลัย
+### อาจารย์วิชุกร คันธินทระ
+- **วุฒิการศึกษา:** Master of Science จาก จุฬาลงกรณ์มหาวิทยาลัย
 - **ความเชี่ยวชาญ:** Computer Vision / NLP, Data Science
 
-### ดร.ตันติกร พิชญ์พิบุล
-- **วุฒิการศึกษา:** PhD. จาก SIIT
+### ดอกเตอร์ตันติกร พิชญ์พิบุล
+- **วุฒิการศึกษา:** Doctor of Philosophy จาก SIIT
 - **ความเชี่ยวชาญ:** Data Analytics and Visualization, Supply Chain and Logistic Management
 
----
 
 ## 2. รายชื่ออาจารย์พิเศษและผู้เชี่ยวชาญภายนอก (Guest Lecturers)
 
@@ -63,7 +62,7 @@
 - **ตำแหน่ง:** R&D Director @ Softnix Technology
 - **ความเชี่ยวชาญ:** Big Data Analytics, Machine Learning
 
-### ศ.ดร.พีรพล เวทีกูล
+### ศาสตราจารย์ดอกเตอร์พีรพล เวทีกูล
 - **ตำแหน่ง:** คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
 - **ความเชี่ยวชาญ:** ประยุกต์ Machine Learning / AI, Data Mining, Business Intelligence
 
@@ -74,5 +73,3 @@
 ### คุณชัชวาล เดชาโรจนภัทท์
 - **ตำแหน่ง:** Co-founder @ twinteur
 - **ความเชี่ยวชาญ:** Digital marketing and tools, Business Analytics, Business Strategy
-
----
