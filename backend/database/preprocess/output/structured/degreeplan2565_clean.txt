@@ -5,9 +5,9 @@
 
 
 
-## ปีที่ 1
+## ปี 1
 
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/1
+### ภาคการศึกษาที่ 1/1 (เทอม 1/1)
 
 #### รุ่น 1/1 (แผนปกติ)
 รายวิชา:
@@ -21,7 +21,7 @@
 - ME 154 Engineering Drawing (3 หน่วยกิต)
 รวมหน่วยกิต: 6
 
-### ภาคการศึกษาที่ 1 (เทอม 1) กลุ่ม 1/2
+### ภาคการศึกษาที่ 1/2 (เทอม 1/2)
 
 #### รุ่น 1/1 (แผนปกติ)
 รายวิชา:
@@ -156,7 +156,7 @@
 รวมหน่วยกิต: 9
 
 
-## ปีที่ 2
+## ปี 2
 
 ### ภาคการศึกษาที่ 1 (เทอม 1)
 
@@ -305,8 +305,14 @@
 - XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 3
 
+#### รุ่น 1/2 (แผนสหกิจ)
+รายวิชา:
+- XX xxx Free Elective (3 หน่วยกิต)
+รวมหน่วยกิต: 3
+
 #### รุ่น 2 (แผนปกติ)
 รายวิชา:
+- EN 103 Global English (3 หน่วยกิต)
 - GE 106 Financial Literacy and Sustainable Development (3 หน่วยกิต)
 รวมหน่วยกิต: 6
 
@@ -318,7 +324,7 @@
 รวมหน่วยกิต: 9
 
 
-## ปีที่ 3
+## ปี 3
 
 ### ภาคการศึกษาที่ 1 (เทอม 1)
 
@@ -474,7 +480,7 @@
 รวมหน่วยกิต: 0
 
 
-## ปีที่ 4
+## ปี 4
 
 ### ภาคการศึกษาที่ 1 (เทอม 1)
 
@@ -483,6 +489,8 @@
 - AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
 - AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 14
 
 #### รุ่น 1/1 (แผนสหกิจ)
@@ -495,6 +503,8 @@
 - AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
 - AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 14
 
 #### รุ่น 1/2 (แผนสหกิจ)
@@ -507,6 +517,8 @@
 - AIE 321 Big Data Processing and Analytics (3 หน่วยกิต)
 - AIE 481 Artificial Intelligence Engineering and Data Science Project I (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 14
 
 #### รุ่น 2 (แผนสหกิจ)
@@ -520,11 +532,15 @@
 รายวิชา:
 - AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 11
 
 #### รุ่น 1/1 (แผนสหกิจ)
 รายวิชา:
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 - AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
 รวมหน่วยกิต: 10
 
@@ -532,11 +548,15 @@
 รายวิชา:
 - AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 11
 
 #### รุ่น 1/2 (แผนสหกิจ)
 รายวิชา:
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 - AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
 รวมหน่วยกิต: 10
 
@@ -544,10 +564,14 @@
 รายวิชา:
 - AIE 482 Artificial Intelligence Engineering and Data Science Project II (2 หน่วยกิต)
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 รวมหน่วยกิต: 11
 
 #### รุ่น 2 (แผนสหกิจ)
 รายวิชา:
 - XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Major Elective (3 หน่วยกิต)
+- XX xxx Free Elective (3 หน่วยกิต)
 - AIE 483 Artificial Intelligence Engineering and Data Science Project for Cooperative Education (1 หน่วยกิต)
 รวมหน่วยกิต: 10

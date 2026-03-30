@@ -63,41 +63,46 @@ class KnowledgeBaseLoader:
     # QUERY ROUTER (ตัวสับรางคำถาม)
     # ===============================
     def detect_category(self, query):
-        """ฟังก์ชันดักจับ Keyword ในคำถาม เพื่อเจาะจงหมวดหมู่ที่จะค้นหา"""
         q = query.lower()
         
-        if any(word in q for word in ["อาจารย์", "อจ", "ผู้สอน", "ดร.", "รศ.", "ผศ.", "สอน", "อจ."]):
+        # 1. แผนการเรียน (Priority 1: ถ้าระบุ ปี/เทอม ให้ดักตรงนี้ก่อนเสมอ)
+        plan_keywords = ["ปี 1", "ปี 1", "ปี 2", "ปี 2", "ปี 3", "ปี 3", "ปี 4", "ปี 4", 
+                         "เทอม 1", "เทอม 1", "เทอม 2", "เทอม 2", "แผนการเรียน"]
+        
+        # เช็คว่ามีคำระบุปีหรือเทอมหรือไม่
+        has_plan_info = any(word in q for word in plan_keywords)
+        
+        if has_plan_info:
+            # กันเหนียว: ถ้าถามเรื่องเงิน/ค่าเทอม ให้ข้ามไปหมวดการเงิน (ยกเว้นจะเน้นวิชาเรียน)
+            if any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ"]):
+                return "[หมวดหมู่: ค่าเทอมและการเงิน]"
+            
+            # ถ้ามี ปี/เทอม และถามว่า "เรียนอะไร" หรือ "วิชาอะไร" ให้ลงแผนการเรียนทันที
+            import re as _re
+            year_match = _re.search(r'(25\d{2})', q)
+            if year_match:
+                return f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี{year_match.group(1)}]"
+            return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
+
+        # 2. ข้อมูลอาจารย์
+        elif any(word in q for word in ["อาจารย์", "อจ", "ผู้สอน", "ดร.", "รศ.", "ผศ."]):
             return "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]"
             
-        elif any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ", "กู้", "กี่บาท", "ค่าใช้จ่าย", "แพง", "เท่าไหร่", "เท่าไร"]):
+        # 3. ค่าเทอมและการเงิน (กรณีไม่ได้ระบุปี/เทอม หรือระบุแต่เน้นเรื่องเงิน)
+        elif any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ", "กี่บาท", "เท่าไหร่"]):
             return "[หมวดหมู่: ค่าเทอมและการเงิน]"
             
-        elif any(word in q for word in ["สหกิจ", "ฝึกงาน", "co-op", "สถานที่ฝึกงาน",
-                                        "ไทม์ไลน์", "ขั้นตอนสหกิจ", "co301", "resume",
-                                        "สถานประกอบการ", "workinteg", "internship",
-                                        "ฝึกงานทั่วไป", "ปฐมนิเทศ", "นิเทศ"]):
+        # 4. สหกิจศึกษา
+        elif any(word in q for word in ["สหกิจ", "ฝึกงาน", "co-op", "internship"]):
             return "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]"
             
-        elif any(word in q for word in ["วิชา", "เรียนอะไร", "รหัสวิชา", "course", "หน่วยกิต"]):
-            if "สหกิจ" not in q: # กันเหนียว ทับซ้อนกับสหกิจ
-                return "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]"
-                
-        elif any(word in q for word in ["แผนการเรียน", "ปี 1", "ปี 2", "ปี 3", "ปี 4", "เทอม 1", "เทอม 2", "รุ่น",
-                                        "ปีการศึกษา", "2565", "2566", "2567", "2568"]):
-            if "ค่าเทอม" not in q and "จ่าย" not in q:  # กันเหนียว ทับซ้อนกับค่าเทอม
-                # ถ้าระบุปีการศึกษาชัดเจน ให้ return tag ที่มีปีด้วย เพื่อ match กับ tag ที่ generate_embeddings สร้าง
-                import re as _re
-                year_match = _re.search(r'(25\d{2})', q)
-                if year_match:
-                    return f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี{year_match.group(1)}]"
-                return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
+        # 5. รายวิชา (จะตกมาถึงตรงนี้ก็ต่อเมื่อ "ไม่มี" คำระบุ ปี 1/เทอม 1)
+        elif any(word in q for word in ["วิชา", "เรียนอะไร", "รหัสวิชา", "course"]):
+            return "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]"
 
-        elif any(word in q for word in ["สาขา", "ภาควิชา", "หลักสูตร", "ปริญญา", "จบแล้วทำอะไร", "อาชีพ"]):
+        # 6. ข้อมูลสาขา
+        elif any(word in q for word in ["สาขา", "ภาควิชา", "จบแล้วทำอะไร", "อาชีพ"]):
             return "[หมวดหมู่: ข้อมูลสาขาวิชา]"
-
-        elif any(word in q for word in ["บริษัท", "mou", "พาร์ทเนอร์", "พันธมิตร", "บริษัทฝึกงาน"]):
-            if "ฝึกงาน" not in q:  # กันเหนียว ทับซ้อนกับสหกิจ
-                return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
 
         return None
 
@@ -121,12 +126,14 @@ class KnowledgeBaseLoader:
 
         # 3. โหมดกรองหมวดหมู่ (เมื่อเจอ Keyword)
         if target_category and self.embeddings is not None:
+
+            search_tag = target_category.replace("]", "")
             # หา index ของ chunk ทั้งหมดที่มี Tag ตรงกับที่ระบุ
-            valid_indices = [i for i, chunk in enumerate(self.chunks) if target_category in chunk]
+            valid_indices = [i for i, chunk in enumerate(self.chunks) if search_tag in chunk]
 
             # ถ้า tag มีปีระบุแต่หาไม่เจอ ให้ลอง fallback ไปที่ tag กลาง (ไม่มีปี)
             if not valid_indices and " ปี" in target_category:
-                base_category = target_category.split(" ปี")[0] + "]"
+                base_category = target_category.split(" ปี")[0].replace("]", "")
                 valid_indices = [i for i, chunk in enumerate(self.chunks) if base_category in chunk]
 
             if valid_indices:
