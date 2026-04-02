@@ -1,6 +1,7 @@
 venv/
 .DS_Store
 .env
+frontend/.env.local
 # Ignore all audio files in this folder
 static/audio_responses/*.mp3
 .venv/

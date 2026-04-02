@@ -2,51 +2,49 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { onAuthStateChanged, signInAnonymously } from "firebase/auth";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+} from "firebase/firestore";
 import Avatar from "./components/Avatar";
 import Chat from "./components/Chat";
-
-interface Message {
-  id: number;
-  text: string;
-  sender: "user" | "ai";
-  timestamp: Date;
-}
+import { auth, db, isFirebaseConfigured } from "@/lib/firebase";
 
 interface ChatHistory {
-  id: number;
+  id: string;
   title: string;
-  messages: Message[];
-  timestamp: Date;
+  timestamp: Date | null;
 }
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [voiceInput, setVoiceInput] = useState<string | null>(null);
   const [aiAudioUrl, setAIAudioUrl] = useState<string | null>(null);
-  const [chatHistories, setChatHistories] = useState<ChatHistory[]>([
-    { 
-      id: 1, 
-      title: "Previous Chat 1", 
-      messages: [
-        { id: 1, text: "Hello!", sender: "user", timestamp: new Date(Date.now() - 86400000) },
-        { id: 2, text: "Hello! I'm your Virtual AI assistant. How can I help you today?", sender: "ai", timestamp: new Date(Date.now() - 86400000) },
-      ],
-      timestamp: new Date(Date.now() - 86400000) 
-    },
-    { 
-      id: 2, 
-      title: "Previous Chat 2", 
-      messages: [
-        { id: 1, text: "What can you do?", sender: "user", timestamp: new Date(Date.now() - 172800000) },
-        { id: 2, text: "I can help you with many things! Feel free to ask me anything.", sender: "ai", timestamp: new Date(Date.now() - 172800000) },
-      ],
-      timestamp: new Date(Date.now() - 172800000) 
-    },
-  ]);
-  const [currentChatId, setCurrentChatId] = useState<number | null>(null);
+  const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
+  const [currentChatId, setCurrentChatId] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const isSigningInRef = useRef(false);
 
-  // Close sidebar when clicking outside
+  const formatChatTimestamp = (timestamp: Date | null) => {
+    if (!timestamp) return "New chat";
+
+    return timestamp.toLocaleDateString([], {
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (isSidebarOpen && sidebarRef.current && !sidebarRef.current.contains(e.target as Node)) {
@@ -60,76 +58,119 @@ export default function Home() {
     };
   }, [isSidebarOpen]);
 
-  const handleNewChat = () => {
-    const newChatId = Date.now();
-    const newChat: ChatHistory = {
-      id: newChatId,
-      title: `New Chat`,
-      messages: [],
-      timestamp: new Date(),
-    };
-    setChatHistories(prev => [newChat, ...prev]);
-    setCurrentChatId(newChatId);
-    setIsSidebarOpen(false);
-    return newChatId;
-  };
+  useEffect(() => {
+    const firebaseAuth = auth;
 
-  const createNewChatAndReturn = useCallback(() => {
-    const newChatId = Date.now();
-    const newChat: ChatHistory = {
-      id: newChatId,
-      title: `New Chat`,
-      messages: [],
-      timestamp: new Date(),
-    };
-    setChatHistories(prev => [newChat, ...prev]);
-    setCurrentChatId(newChatId);
-    return newChatId;
+    if (!firebaseAuth) {
+      setUserId(null);
+      return;
+    }
+
+    const unsubscribe = onAuthStateChanged(firebaseAuth, async (currentUser) => {
+      if (currentUser) {
+        isSigningInRef.current = false;
+        setUserId(currentUser.uid);
+        return;
+      }
+
+      if (isSigningInRef.current) {
+        return;
+      }
+
+      isSigningInRef.current = true;
+
+      try {
+        const credential = await signInAnonymously(firebaseAuth);
+        setUserId(credential.user.uid);
+      } catch (error) {
+        console.error("Error signing in anonymously:", error);
+      } finally {
+        isSigningInRef.current = false;
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
 
-  const loadChat = (chatId: number) => {
+  useEffect(() => {
+    const firestore = db;
+
+    if (!firestore || !userId) return;
+
+    const q = query(
+      collection(firestore, "users", userId, "chats"),
+      orderBy("timestamp", "desc")
+    );
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const histories: ChatHistory[] = snapshot.docs.map((chatDoc) => {
+        const data = chatDoc.data();
+        const rawTimestamp = data.timestamp;
+
+        return {
+          id: chatDoc.id,
+          title: typeof data.title === "string" && data.title.trim().length > 0 ? data.title : "New Chat",
+          timestamp: rawTimestamp && typeof rawTimestamp.toDate === "function" ? rawTimestamp.toDate() : null,
+        };
+      });
+
+      setChatHistories(histories);
+    });
+
+    return () => unsubscribe();
+  }, [userId]);
+
+  const handleNewChat = useCallback(async () => {
+    const firestore = db;
+
+    if (!firestore || !userId) return null;
+
+    const docRef = await addDoc(collection(firestore, "users", userId, "chats"), {
+      title: "New Chat",
+      timestamp: serverTimestamp(),
+    });
+
+    setCurrentChatId(docRef.id);
+    setIsSidebarOpen(false);
+    return docRef.id;
+  }, [userId]);
+
+  const loadChat = (chatId: string) => {
     setCurrentChatId(chatId);
     setIsSidebarOpen(false);
   };
 
-  const deleteChat = (chatId: number, e: React.MouseEvent) => {
+  const deleteChat = async (chatId: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    setChatHistories(prev => prev.filter(chat => chat.id !== chatId));
-    if (currentChatId === chatId) {
-      setCurrentChatId(null);
+    const firestore = db;
+
+    if (!firestore || !userId) return;
+
+    try {
+      const messagesSnapshot = await getDocs(
+        collection(firestore, "users", userId, "chats", chatId, "messages")
+      );
+
+      await Promise.all(messagesSnapshot.docs.map((messageDoc) => deleteDoc(messageDoc.ref)));
+      await deleteDoc(doc(firestore, "users", userId, "chats", chatId));
+
+      if (currentChatId === chatId) {
+        setCurrentChatId(null);
+      }
+    } catch (error) {
+      console.error("Error deleting chat:", error);
     }
   };
 
-  const updateChatMessages = useCallback((chatId: number, messages: Message[]) => {
-    setChatHistories(prev => prev.map(chat => {
-      if (chat.id === chatId) {
-        return {
-          ...chat,
-          messages,
-          title: messages.length > 0 ? messages[0].text.slice(0, 30) + (messages[0].text.length > 30 ? '...' : '') : 'New Chat',
-        };
-      }
-      return chat;
-    }));
-  }, []);
-
-  const currentChat = chatHistories.find(chat => chat.id === currentChatId);
-  const getLastMessage = (chat: ChatHistory) => {
-    if (chat.messages.length === 0) return "No messages yet";
-    return chat.messages[chat.messages.length - 1].text;
-  };
-
-  // Handle voice input from Avatar
   const handleVoiceInput = useCallback((text: string) => {
     setVoiceInput(text);
-    // Reset voice input after a short delay to allow Chat component to process it
     setTimeout(() => {
       setVoiceInput(null);
     }, 200);
   }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row h-screen w-screen overflow-hidden">
+    <div className="relative flex h-screen w-screen flex-col overflow-hidden md:flex-row">
       {/* Full Page Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -143,21 +184,21 @@ export default function Home() {
 
       {/* Sidebar Overlay */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 bg-black/30 z-40" onClick={() => setIsSidebarOpen(false)} />
+        <div className="fixed inset-0 z-40 bg-black/30" onClick={() => setIsSidebarOpen(false)} />
       )}
 
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full w-72 bg-[#e0dbf4] z-50 transform transition-transform duration-300 ease-in-out rounded-r-2xl ${
-          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed left-0 top-0 z-50 h-full w-72 transform rounded-r-2xl bg-[#e0dbf4] transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Sidebar Header */}
-        <div className="p-4 border-b border-zinc-700">
+        <div className="border-b border-zinc-700 p-4">
           <button
-            onClick={handleNewChat}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg border border-zinc-600 text-black hover:bg-white transition-colors"
+            onClick={() => void handleNewChat()}
+            disabled={!isFirebaseConfigured || !userId}
+            className="flex w-full items-center gap-3 rounded-lg border border-zinc-600 px-4 py-3 text-black transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +206,7 @@ export default function Home() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5"
+              className="h-5 w-5"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
@@ -173,26 +214,30 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Chat History List */}
         <div className="flex-1 overflow-y-auto p-2">
-          <p className="text-xs text-zinc-500 px-3 py-2">Recent Chats</p>
+          <p className="px-3 py-2 text-xs text-zinc-500">
+            {!isFirebaseConfigured
+              ? "Firebase config missing or invalid"
+              : userId
+                ? "Recent Chats"
+                : "Connecting to Firebase..."}
+          </p>
           {chatHistories.map((chat) => (
             <div
               key={chat.id}
               onClick={() => loadChat(chat.id)}
-              className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-left hover:bg-white transition-colors cursor-pointer ${
-                currentChatId === chat.id ? 'bg-white/50' : ''
+              className={`flex w-full cursor-pointer items-center gap-3 rounded-lg px-3 py-3 text-left transition-colors hover:bg-white ${
+                currentChatId === chat.id ? "bg-white/50" : ""
               }`}
             >
-              {/* Avatar Icon */}
-              <div className="w-8 h-8 rounded-full bg-[#b57edc] flex items-center justify-center shrink-0">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#b57edc]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-4 h-4 text-white"
+                  className="h-4 w-4 text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -201,14 +246,13 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm text-black truncate">{chat.title}</p>
-                <p className="text-xs text-zinc-500 truncate">{getLastMessage(chat)}</p>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm text-black">{chat.title}</p>
+                <p className="truncate text-xs text-zinc-500">{formatChatTimestamp(chat.timestamp)}</p>
               </div>
-              {/* Delete Button */}
               <button
-                onClick={(e) => deleteChat(chat.id, e)}
-                className="p-1 rounded hover:bg-red-100 text-zinc-400 hover:text-red-500 transition-colors"
+                onClick={(e) => void deleteChat(chat.id, e)}
+                className="rounded p-1 text-zinc-400 transition-colors hover:bg-red-100 hover:text-red-500"
                 title="Delete chat"
               >
                 <svg
@@ -217,7 +261,7 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                 >
                   <path
                     strokeLinecap="round"
@@ -231,10 +275,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hamburger Menu Button - Fixed on left side */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="fixed top-4 left-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-[#b57edc] text-white hover:bg-[#a060c8] transition-colors shadow-lg"
+        className="fixed left-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-[#b57edc] text-white shadow-lg transition-colors hover:bg-[#a060c8]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -242,27 +285,24 @@ export default function Home() {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="w-5 h-5"
+          className="h-5 w-5"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
 
-      {/* Left Side - Avatar Section */}
-      <div className="relative z-10 w-full md:w-1/2 h-1/3 md:h-full">
+      <div className="relative z-10 h-1/3 w-full md:h-full md:w-1/2">
         <Avatar onVoiceInput={handleVoiceInput} aiAudioUrl={aiAudioUrl} />
       </div>
 
-      {/* Right Side - Chat Section */}
-      <div className="relative z-10 w-full md:w-1/2 h-2/3 md:h-full p-2 md:p-6">
-        <Chat 
-          key={currentChatId}
+      <div className="relative z-10 h-2/3 w-full p-2 md:h-full md:w-1/2 md:p-6">
+        <Chat
+          userId={userId}
           chatId={currentChatId}
-          initialMessages={currentChat?.messages || []}
-          onMessagesUpdate={(messages) => currentChatId && updateChatMessages(currentChatId, messages)}
-          onCreateNewChat={createNewChatAndReturn}
+          onCreateNewChat={handleNewChat}
           voiceInput={voiceInput}
           onAIAudio={setAIAudioUrl}
+          isFirebaseReady={isFirebaseConfigured && Boolean(db)}
         />
       </div>
     </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp, updateDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 interface Message {
-  id: number;
+  id: string;
   text: string;
   sender: "user" | "ai";
   timestamp: Date;
@@ -15,25 +17,25 @@ interface Position {
 }
 
 interface ChatProps {
-  chatId: number | null;
-  initialMessages?: Message[];
-  onMessagesUpdate?: (messages: Message[]) => void;
-  onCreateNewChat?: () => number;
+  userId: string | null;
+  chatId: string | null;
+  onCreateNewChat?: () => Promise<string | null>;
   voiceInput?: string | null;
   onAISpeak?: (text: string) => void;
   onAIAudio?: (audioUrl: string | null) => void;
+  isFirebaseReady?: boolean;
 }
 
 export default function Chat({ 
+  userId,
   chatId, 
-  initialMessages = [], 
-  onMessagesUpdate, 
-  onCreateNewChat, 
+  onCreateNewChat,
   voiceInput,
   onAISpeak,
-  onAIAudio
+  onAIAudio,
+  isFirebaseReady = true,
 }: ChatProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState<Position | null>(null);
@@ -42,76 +44,131 @@ export default function Chat({
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const initialMessageCountRef = useRef(initialMessages.length);
   const processedVoiceInputRef = useRef<string>("");
+
+  useEffect(() => {
+    setInputValue("");
+  }, [chatId]);
 
   // Auto-scroll to bottom when new messages are added
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Notify parent only when NEW messages are added (not on initial load)
   useEffect(() => {
-    if (messages.length > initialMessageCountRef.current) {
-      onMessagesUpdate?.(messages);
-      initialMessageCountRef.current = messages.length;
+    const firestore = db;
+
+    if (!isFirebaseReady || !firestore || !userId || !chatId) {
+      setMessages([]);
+      return;
     }
-  }, [messages, onMessagesUpdate]);
 
-  useEffect(() => {
-    if (!voiceInput || !voiceInput.trim()) return;
-    if (processedVoiceInputRef.current === voiceInput) return;
-    
-    processedVoiceInputRef.current = voiceInput;
-    const userText = voiceInput.trim();
-    
-    let activeChatId = chatId;
-    if (activeChatId === null && onCreateNewChat) {
-      activeChatId = onCreateNewChat();
-    }
-    
-    if (activeChatId === null) return;
+    const q = query(
+      collection(firestore, "users", userId, "chats", chatId, "messages"),
+      orderBy("timestamp", "asc")
+    );
 
-    const newMessage: Message = {
-      id: Date.now(),
-      text: userText,
-      sender: "user",
-      timestamp: new Date(),
-    };
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const nextMessages: Message[] = snapshot.docs.map((messageDoc) => {
+        const data = messageDoc.data();
+        const rawTimestamp = data.timestamp;
 
-    setMessages((prev) => [...prev, newMessage]);
-
-    // สร้างฟังก์ชันสำหรับยิง API เมื่อได้รับเสียง
-    const fetchAIResponseForVoice = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: userText })
-        });
-        
-        const data = await response.json();
-        const aiText = data.answer;
-        const aiAudioUrl = data.audio_url ?? null;
-        
-        const aiResponse: Message = {
-          id: Date.now() + 1,
-          text: aiText,
-          sender: "ai",
-          timestamp: new Date(),
+        return {
+          id: messageDoc.id,
+          text: typeof data.text === "string" ? data.text : "",
+          sender: data.sender === "ai" ? "ai" : "user",
+          timestamp: rawTimestamp && typeof rawTimestamp.toDate === "function" ? rawTimestamp.toDate() : new Date(),
         };
-        
-        setMessages((prev) => [...prev, aiResponse]);
-        onAISpeak?.(aiText);
-        onAIAudio?.(aiAudioUrl);
+      });
 
-      } catch (error) {
-        console.error("API Error:", error);
+      setMessages(nextMessages);
+    });
+
+    return () => unsubscribe();
+  }, [chatId, isFirebaseReady, userId]);
+
+  const ensureChatId = useCallback(async () => {
+    if (chatId) {
+      return chatId;
+    }
+
+    if (!onCreateNewChat) {
+      return null;
+    }
+
+    return onCreateNewChat();
+  }, [chatId, onCreateNewChat]);
+
+  const updateChatTitle = useCallback(async (activeChatId: string, firstMessage: string) => {
+    const firestore = db;
+
+    if (!isFirebaseReady || !firestore || !userId) return;
+
+    const title = firstMessage.slice(0, 30) + (firstMessage.length > 30 ? "..." : "");
+    await updateDoc(doc(firestore, "users", userId, "chats", activeChatId), {
+      title,
+    });
+  }, [isFirebaseReady, userId]);
+
+  const persistMessage = useCallback(async (activeChatId: string, text: string, sender: "user" | "ai") => {
+    const firestore = db;
+
+    if (!isFirebaseReady || !firestore || !userId) return;
+
+    await addDoc(collection(firestore, "users", userId, "chats", activeChatId, "messages"), {
+      text,
+      sender,
+      timestamp: serverTimestamp(),
+    });
+  }, [isFirebaseReady, userId]);
+
+  const requestAIResponse = useCallback(async (text: string) => {
+    const response = await fetch("http://localhost:8000/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: text })
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    return response.json() as Promise<{ answer?: string; audio_url?: string | null }>;
+  }, []);
+
+  const sendMessage = useCallback(async (messageText: string) => {
+    const userText = messageText.trim();
+
+    if (userText === "") return;
+    if (!isFirebaseReady) return;
+
+    const activeChatId = await ensureChatId();
+    if (!activeChatId) return;
+
+    const shouldUpdateTitle = messages.length === 0;
+
+    setInputValue("");
+    await persistMessage(activeChatId, userText, "user");
+
+    if (shouldUpdateTitle) {
+      await updateChatTitle(activeChatId, userText);
+    }
+
+    try {
+      const data = await requestAIResponse(userText);
+      const aiText = data.answer ?? "";
+      const aiAudioUrl = data.audio_url ?? null;
+
+      if (aiText) {
+        await persistMessage(activeChatId, aiText, "ai");
       }
-    };
 
-    fetchAIResponseForVoice();
-  }, [voiceInput, chatId, onCreateNewChat, onAISpeak, onAIAudio]);
+      onAISpeak?.(aiText);
+      onAIAudio?.(aiAudioUrl);
+    } catch (error) {
+      console.error("API Error:", error);
+    }
+  }, [ensureChatId, isFirebaseReady, messages.length, onAISpeak, onAIAudio, persistMessage, requestAIResponse, updateChatTitle]);
 
   // Handle mouse move for dragging
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -169,57 +226,20 @@ export default function Chat({
   };
 
   const handleSendMessage = useCallback(async () => {
-    if (inputValue.trim() === "") return;
+    await sendMessage(inputValue);
+  }, [inputValue, sendMessage]);
 
-    let activeChatId = chatId;
-    if (activeChatId === null && onCreateNewChat) {
-      activeChatId = onCreateNewChat();
-    }
-    
-    if (activeChatId === null) return;
+  useEffect(() => {
+    if (!voiceInput || !voiceInput.trim()) return;
+    if (processedVoiceInputRef.current === voiceInput) return;
 
-    const userText = inputValue.trim();
-    const newUserMessage: Message = {
-      id: Date.now(),
-      text: userText,
-      sender: "user",
-      timestamp: new Date(),
-    };
-
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInputValue("");
-
-    try {
-      const response = await fetch("http://localhost:8000/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: userText })
-      });
-      
-      const data = await response.json();
-      const aiText = data.answer;
-      const aiAudioUrl = data.audio_url ?? null;
-      
-      const aiResponse: Message = {
-        id: Date.now() + 1,
-        text: aiText,
-        sender: "ai",
-        timestamp: new Date(),
-      };
-      
-      setMessages((prev) => [...prev, aiResponse]);
-      
-      onAISpeak?.(aiText);
-      onAIAudio?.(aiAudioUrl);
-      
-    } catch (error) {
-      console.error("API Error:", error);
-    }
-  }, [inputValue, chatId, onCreateNewChat, onAISpeak, onAIAudio]);
+    processedVoiceInputRef.current = voiceInput;
+    void sendMessage(voiceInput);
+  }, [voiceInput, sendMessage]);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      handleSendMessage();
+      void handleSendMessage();
     }
   };
 
@@ -228,7 +248,7 @@ export default function Chat({
       {/* Browser Mockup Container - Draggable on desktop */}
       <div 
         ref={chatRef}
-        className="absolute flex h-[95%] md:h-[90%] w-[95%] md:w-[60%] flex-col rounded-2xl border-2 border-[#ac88c4] overflow-hidden shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
+        className="absolute flex h-[95%] w-[95%] flex-col overflow-hidden rounded-2xl border-2 border-[#ac88c4] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)] md:h-[90%] md:w-[60%]"
         style={position === null ? {
           left: '50%',
           top: '50%',
@@ -241,16 +261,16 @@ export default function Chat({
       >
         {/* Browser Top Bar - Drag Handle */}
         <div 
-          className="bg-[#ac88c4] px-4 py-3 flex items-center gap-2 cursor-grab active:cursor-grabbing select-none"
+          className="flex items-center gap-2 bg-[#ac88c4] px-4 py-3 select-none cursor-grab active:cursor-grabbing"
           onMouseDown={handleMouseDown}
         >
           {/* Window Title */}
           <div className="flex-1 text-center">
-            <span className="text-white text-sm font-medium">Chat with Aida</span>
+            <span className="text-sm font-medium text-white">Chat with Aida</span>
           </div>
           {/* Close Button */}
           <button 
-            className="text-white hover:text-zinc-200 transition-colors"
+            className="text-white transition-colors hover:text-zinc-200"
             onClick={(e) => e.stopPropagation()}
           >
             <svg
@@ -259,7 +279,7 @@ export default function Chat({
               viewBox="0 0 24 24"
               strokeWidth={2.5}
               stroke="currentColor"
-              className="w-5 h-5"
+              className="h-5 w-5"
             >
               <path
                 strokeLinecap="round"
@@ -271,13 +291,17 @@ export default function Chat({
         </div>
 
         {/* Chat Content Area - Glass Effect */}
-        <div className="flex-1 min-h-0 flex flex-col bg-white/80 backdrop-blur-sm">
-          
-          {/* Messages Container */}
+        <div className="flex min-h-0 flex-1 flex-col bg-white/80 backdrop-blur-sm">
           <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
-            {chatId === null ? (
+            {!isFirebaseReady || !userId || chatId === null ? (
               <div className="flex h-full items-center justify-center text-zinc-400">
-                <p>Select a chat or start a new conversation</p>
+                <p>
+                  {!isFirebaseReady
+                    ? "Firebase is not configured"
+                    : userId
+                      ? "Select a chat or start a new conversation"
+                      : "Connecting to Firebase..."}
+                </p>
               </div>
             ) : messages.length === 0 ? (
               <div className="flex h-full items-center justify-center text-zinc-400">
@@ -299,7 +323,7 @@ export default function Chat({
                     }`}
                   >
                     <p className="text-sm">{message.text}</p>
-                    <span className="text-xs opacity-70 mt-1 block">
+                    <span className="mt-1 block text-xs opacity-70">
                       {message.timestamp.toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
@@ -312,24 +336,21 @@ export default function Chat({
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Container */}
-          <div className="border-t border-[#b57edc]/30 p-4 bg-white/50">
+          <div className="border-t border-[#b57edc]/30 bg-white/50 p-4">
             <div className="flex items-center gap-2">
-              {/* Text Input */}
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyPress}
                 placeholder="Type your message..."
                 className="flex-1 rounded-lg border border-zinc-300 bg-white px-4 py-2 text-zinc-800 placeholder-zinc-400 focus:border-[#b57edc] focus:outline-none focus:ring-1 focus:ring-[#b57edc]"
               />
 
-              {/* Send Button */}
               <button
-                onClick={handleSendMessage}
+                onClick={() => void handleSendMessage()}
                 disabled={inputValue.trim() === ""}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b57edc] text-white transition-colors hover:bg-[#a060c8] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b57edc] text-white transition-colors hover:bg-[#a060c8] disabled:cursor-not-allowed disabled:opacity-50"
                 title="Send message"
               >
                 <svg
