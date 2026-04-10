@@ -7,6 +7,7 @@ python-dotenv
 numpy
 faiss-cpu
 sentence-transformers
+<<<<<<< HEAD
 
 edge-tts
 gTTS
@@ -17,3 +18,13 @@ pythainlp
 flask
 flask-cors
 pandas
+=======
+numpy
+torch
+scikit-learn
+scipy
+tqdm
+transformers
+huggingface-hub
+pdfplumber>=0.10.0
+>>>>>>> 541cbf5695a6b40ccca9d5a1e64de76fc39b641d

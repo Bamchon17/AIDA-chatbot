@@ -1,0 +1,236 @@
+import re
+import json
+import torch
+import pickle
+import os
+
+from pythainlp.tokenize import word_tokenize
+from pythainlp.util import normalize
+from pythainlp.spell import correct
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+# ===== 1. กำหนด Path ไปที่โฟลเดอร์โมเดล =====
+DEFAULT_MODEL_PATH = r"C:\Users\pinkp\OneDrive\Desktop\AIE\4th\project\AIDA-chatbot\intent_model"
+
+# ===== 2. กำหนดชื่อภาษาไทยให้แต่ละหมวดหมู่ =====
+DISPLAY_NAMES = {
+    "admission_info": "[หมวดหมู่: ค่าเทอมและการเงิน]",
+    "curriculum_info": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]",
+    "degreeplan2565": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2565]",
+    "degreeplan2566": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2566]",
+    "degreeplan2567": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2567]",
+    "degreeplan2568": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี2568]",
+    "staff_info": "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]",
+    "small_talk": "[หมวดหมู่: พูดคุยทั่วไป]",
+    "toxic": "[หมวดหมู่: คำไม่สุภาพ]",
+    "report_issue": "[หมวดหมู่: แจ้งปัญหาการใช้งาน]",
+    "greeting": "[หมวดหมู่: ทักทาย]",
+    "career_info": "[หมวดหมู่: ข้อมูลอาชีพหลังเรียนจบ]",
+    "compare_options": "[หมวดหมู่: เปรียบเทียบข้อมูล/ทางเลือก]",
+    "out_of_scope": "[หมวดหมู่: นอกเหนือขอบเขต]",
+    "course_desc": "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]",
+    "coop_intern": "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]",
+    "mou_company": "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
+}
+# =========================================================
+
+class ThaiIntentClassifier:
+    def __init__(self, model_path=DEFAULT_MODEL_PATH):
+        self.model_path = model_path
+        self.tokenizer = None
+        self.model = None
+        self.label_encoder = None
+        self.is_loaded = False
+
+    def load(self):
+        """โหลดโมเดลเข้าสู่หน่วยความจำ"""
+        print(f"กำลังโหลดสมองส่วนแยกแยะ Intent จาก: {self.model_path} ...")
+        
+        if not os.path.exists(self.model_path):
+            raise FileNotFoundError(f"[ERROR] ไม่พบโฟลเดอร์โมเดลที่: {self.model_path}")
+
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_path)
+            self.model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
+
+            with open(os.path.join(self.model_path, "label_encoder.pkl"), "rb") as f:
+                self.label_encoder = pickle.load(f)
+                
+            self.is_loaded = True
+            print("[OK] โหลดโมเดลสำเร็จ! พร้อมทำงาน\n")
+            
+        except Exception as e:
+            raise RuntimeError(f"[ERROR] เกิดข้อผิดพลาดในการโหลดโมเดล: {e}")
+
+    def _extract_entities(self, text: str) -> dict:
+        """ฟังก์ชันย่อยสำหรับดึงข้อมูล ปี, เทอม, รหัสวิชา และ keywords จากข้อความ"""
+        # 1. ดึงชั้นปีที่เรียน (1-4)
+        year_match = re.search(r"ปี\s*([1-4])", text)
+        year = year_match.group(1) if year_match else ""
+
+        # 2. [เพิ่มใหม่] ดึงปี พ.ศ. หลักสูตร (เช่น 2565, 65, 2568, 68)
+        curr_year_match = re.search(r"(256[5-9]|6[5-9])", text)
+        curriculum_year = curr_year_match.group(1) if curr_year_match else ""
+        if len(curriculum_year) == 2:
+            curriculum_year = "25" + curriculum_year # แปลง ปี 67 เป็น 2567
+
+        # 3. ดึงตัวเลขหลังคำว่า "เทอม" 
+        semester_match = re.search(r"เทอม\s*(\d)", text)
+        semester = semester_match.group(1) if semester_match else ""
+
+        # 4. ดึงรหัสวิชา (ตัวอักษร 3 ตัว ตามด้วยตัวเลข 3 ตัว)
+        course_match = re.search(r"([a-zA-Z]{3}\d{3})", text)
+        course_code = course_match.group(1).upper() if course_match else ""
+
+        # 5. ดึง Keywords ที่เจอบ่อย (เพิ่มคีย์เวิร์ดของ degree plan ด้วย)
+        keyword_pool = ["จ่าย", "กี่บาท", "ค่าเทอม", "หน่วยกิต", "ราคา", "เท่าไหร่", "เรียน", "ฝึกงาน", "จบ", "วิชา", "เกี่ยวกับอะไร", "แผนการเรียน", "โครงสร้างหลักสูตร", "degree plan"]
+        found_keywords = [kw for kw in keyword_pool if kw in text.lower()]
+
+        return {
+            "year": year,                       # ชั้นปี (1-4)
+            "curriculum_year": curriculum_year, # ปีหลักสูตร พ.ศ. (2565-2568)
+            "semester": semester,
+            "course_code": course_code,
+            "keywords": found_keywords
+        }
+
+    def _format_output(self, original_text: str, raw_intent: str, confidence: float, is_fallback: bool = False) -> dict:
+        """ฟังก์ชันตัวช่วยสำหรับจัดรูป Output ให้เป็นแพทเทิร์นเดียวกันทั้งหมด"""
+        entities_data = self._extract_entities(original_text)
+        
+        display_name = DISPLAY_NAMES.get(raw_intent, "หมวดหมู่ทั่วไป")
+        
+        # --- [Logic ใหม่] ถ้าเป็นหมวดแผนการเรียน และมีระบุปี พ.ศ. ให้เปลี่ยนชื่อหมวดหมู่ ---
+        target_years = ["2565", "2566", "2567", "2568"]
+        if raw_intent == "curriculum_info" and entities_data.get("curriculum_year") in target_years:
+            display_name = f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี{entities_data['curriculum_year']}]"
+        
+        return {
+            "original_query": original_text,
+            "intent": {
+                "label": str(raw_intent),
+                "confidence": round(confidence, 4),
+                "display_name": display_name
+            },
+            "entities": entities_data,
+            "processing_meta": {
+                "model": "WangchanBERTa-AIE-FineTuned",
+                "is_fallback": is_fallback
+            }
+        }
+
+    def predict(self, text: str) -> dict:
+        """รับข้อความเข้ามา และคืนค่าผลลัพธ์เป็น Dictionary ตามโครงสร้างใหม่"""
+        if not self.is_loaded:
+            raise RuntimeError("[ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน")
+
+        # ==========================================
+        # ด่าน 1: Preprocessing
+        # ==========================================
+        clean_text = normalize(text)
+        clean_text = re.sub(r'([ก-๙])\1{2,}', r'\1', clean_text)
+        
+        # ตัดคำเตรียมไว้ สำหรับแก้ปัญหา Substring ซ้อนทับ
+        tokens = word_tokenize(clean_text, engine="newmm")
+
+        # ==========================================
+        # ด่าน 2: Rule-based ดักคำสำคัญ
+        # ==========================================
+        toxic_keywords = {"โง่", "สัส", "เหี้ย", "ควาย", "กาก", "ปัญญาอ่อน", "สถุน", "ควย", "มึง", "กู", "กุ", "เอ๋อ", "เหว๋อ", "ตอแหล", "หี", "แตด"}
+        
+        if any(word in toxic_keywords for word in tokens):
+            return self._format_output(text, "toxic", 1.0, is_fallback=True)
+
+        issue_keywords = ["พัง", "ล่ม", "เข้าไม่ได้", "ล็อกอิน", "รหัสผ่าน", "ไวไฟ", "เน็ต"]
+        if any(word in clean_text for word in issue_keywords):
+            return self._format_output(text, "report_issue", 1.0, is_fallback=True)
+
+        greetings = ["สวัสดี", "หวัดดี", "ทัก", "ฮัลโหล", "มอนิ่ง", "ดีจ้า", "ดีครับ", "ดีค่ะ", "hey", "hi"]
+        if any(word in clean_text.lower() for word in greetings):
+            return self._format_output(text, "greeting", 1.0, is_fallback=True)
+
+        bot_name_questions = ["ชื่ออะไร", "เธอชื่ออะไร", "ตัวเองชื่ออะไร", "บอทชื่ออะไร", "น้องชื่ออะไร", "ชื่อไร"]
+        if clean_text in bot_name_questions:
+            return self._format_output(text, "small_talk", 1.0, is_fallback=True)
+
+        career_keywords = ["เงินเดือน", "ทำงาน", "จบไป", "อาชีพ", "ตลาดงาน", "ตกงาน"]
+        if any(word in clean_text for word in career_keywords):
+            return self._format_output(text, "career_info", 1.0, is_fallback=True)
+
+        admission_keywords = ["ค่าเทอม", "กู้", "ทุน", "รับสมัคร", "สัมภาษณ์", "จ่ายเงิน", "ผ่อนผัน"]
+        if any(word in clean_text for word in admission_keywords):
+            return self._format_output(text, "admission_info", 1.0, is_fallback=True)
+
+        mou_company = ["บริษัท", "MANGO CONSULTANT", "Odd-e", "Softnix", "DNA ROBOTICS", "IIS AUTOMATION", "Huawei", "EPE Packaging", "BOTNOI", "UiPath", "การประปาส่วนภูมิภาค", "RV Connex", "สภาเภสัชกรรม", "A.I Technology"]
+        if any(word in clean_text for word in mou_company):
+            return self._format_output(text, "mou_company", 1.0, is_fallback=True)
+
+        curriculum_strong = ["แผนการเรียน", "โครงสร้างหลักสูตร", "degree plan", "ดีกรีแพลน", "degreeplan"]
+        if any(word in clean_text.lower() for word in curriculum_strong):
+            return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
+            
+        course_desc_keywords = ["เรียนเกี่ยวกับอะไร", "เรียนอะไร", "คือวิชาอะไร", "สอนอะไร", "สอนเกี่ยวกับอะไร"]
+        course_match = re.search(r"([a-zA-Z]{3}\d{3})", clean_text)
+        
+        if course_match or any(word in clean_text for word in course_desc_keywords):
+            return self._format_output(text, "course_desc", 1.0, is_fallback=True)
+
+        curriculum_weak = ["เรียนยาก", "หน่วยกิต", "วิชา"]
+        if any(word in clean_text for word in curriculum_weak):
+            return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
+
+        if "ชื่อ" in clean_text and "อะไร" in clean_text:
+            ignore_words = ["อาจารย์", "จารย์", "คณะ", "สาขา", "มหาลัย", "วิชา", "คณบดี", "ผอ", "ผู้อำนวยการ"]
+            if not any(word in clean_text for word in ignore_words):
+                return self._format_output(text, "small_talk", 1.0, is_fallback=True)
+
+        closing_keywords = ["ขอบคุณ", "แต๊งกิ้ว", "บ๊ายบาย", "บาย", "bye", "ขอบใจ"]
+        if any(word in clean_text.lower() for word in closing_keywords):
+            return self._format_output(text, "small_talk", 1.0, is_fallback=True)
+
+        # ==========================================
+        # ด่าน 3: ส่งให้ Transformer (WangchanBERTa) คิดลึก
+        # ==========================================
+        inputs = self.tokenizer(clean_text, return_tensors="pt", truncation=True, padding=True, max_length=128)
+
+        with torch.no_grad():
+            outputs = self.model(**inputs)
+
+        logits = outputs.logits
+        probabilities = torch.softmax(logits, dim=1)[0]
+        predicted_class_id = torch.argmax(logits, dim=1).item()
+
+        raw_intent = self.label_encoder.inverse_transform([predicted_class_id])[0]
+        confidence = float(probabilities[predicted_class_id].item()) 
+
+        # ด่าน 4: เซฟตี้โซน
+        if confidence < 0.50:
+            return self._format_output(text, "out_of_scope", confidence, is_fallback=True)
+
+        # ด่าน 5: จัดฟอร์แมต Output ผ่านฟังก์ชันตัวช่วย
+        return self._format_output(text, raw_intent, confidence, is_fallback=False)
+
+    def predict_as_json(self, text: str) -> str:
+        """ฟังก์ชันสำหรับทำนายและส่งผลลัพธ์ออกเป็น JSON String"""
+        result_dict = self.predict(text)
+        return json.dumps(result_dict, ensure_ascii=False, indent=2)
+
+# ===============================================================
+if __name__ == "__main__":
+    classifier = ThaiIntentClassifier()
+    try:
+        classifier.load()
+        
+        # เทสระบบดักปี พ.ศ. ของโครงสร้างหลักสูตร
+        test_queries = [
+            "ขอแผนการเรียนปี 2565 หน่อย",
+            "โครงสร้างหลักสูตร ปี 67 เป็นยังไง",
+            "ปี 1 เทอม 1 ต้องเรียนวิชาอะไรบ้าง"  # ประโยคนี้ควรได้หมวดหลักสูตรปกติ ไม่เจาะปี พ.ศ.
+        ]
+        
+        for q in test_queries:
+            print(f"\nข้อความ: {q}")
+            print(classifier.predict_as_json(q))
+            
+    except Exception as e:
+        print(f"\nไม่สามารถรันเทสได้เนื่องจาก: {e}")

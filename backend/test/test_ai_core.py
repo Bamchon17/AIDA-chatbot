@@ -4,6 +4,7 @@ import json
 
 # ตั้งค่า Path ให้มองเห็นโฟลเดอร์ backend ทั้งหมด
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from backend.ai_core.rag_handler import RAGHandler
 from backend.ai_core.llm_interface import LLMInterface

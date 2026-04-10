@@ -1,0 +1,28 @@
+# ============================================================
+# AIDA Chatbot — Python dependencies
+# ติดตั้งทั้งหมดด้วย:  pip install -r requirements.txt
+# Python 3.9+ แนะนำ
+# ============================================================
+
+# --- Vector search ---
+# ใช้ใน: generate_embeddings.py, kb_loader.py, retrieval.py
+faiss-cpu>=1.7.4
+
+# --- Numerical computing ---
+# ใช้ใน: generate_embeddings.py, kb_loader.py, retrieval.py
+numpy>=1.24.0
+
+# --- Sentence embedding model ---
+# โมเดลที่ใช้: paraphrase-multilingual-MiniLM-L12-v2
+# ใช้ใน: generate_embeddings.py, retrieval.py
+# หมายเหตุ: จะดาวน์โหลดโมเดลอัตโนมัติครั้งแรกที่รัน (~500 MB)
+sentence-transformers>=2.6.0
+
+# --- PDF extraction ---
+# ใช้ใน: convert_degreeplan_multi.py, pdf_to_course_markdown.py
+pdfplumber>=0.10.0
+
+# ============================================================
+# stdlib ที่ใช้ (ไม่ต้องติดตั้ง — มีใน Python แล้ว)
+# re, os, sys, glob, pickle, io
+# ============================================================

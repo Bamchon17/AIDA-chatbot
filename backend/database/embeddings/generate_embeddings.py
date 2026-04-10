@@ -155,6 +155,56 @@ class EmbeddingProcessor:
         
         return [c for c in chunks if len(c) > 30]
 
+    @staticmethod
+    def chunk_by_section(text):
+        """
+        สำหรับ degree plan files (degreeplan*_clean.txt)
+        Split ที่ #### (รุ่น/แผน) แล้วเก็บ breadcrumb ## / ### ไว้ใน header ของแต่ละ chunk
+        ผลลัพธ์: 1 chunk = 1 รุ่น + แผน + เทอม + ปีที่ (พร้อม context ครบ)
+        """
+        chunks = []
+        current_h2 = ""
+        current_h3 = ""
+        current_h4 = ""
+        current_body_lines = []
+
+        def flush():
+            body = "\n".join(current_body_lines).strip()
+            if not body:
+                return
+            header_parts = []
+            if current_h2:
+                header_parts.append(current_h2)
+            if current_h3:
+                header_parts.append(current_h3)
+            if current_h4:
+                header_parts.append(current_h4)
+            chunk = "\n".join(header_parts) + "\n" + body if header_parts else body
+            if len(chunk) > 40:
+                chunks.append(chunk.strip())
+
+        for line in text.splitlines():
+            if line.startswith("#### "):
+                flush()
+                current_h4 = line
+                current_body_lines = []
+            elif line.startswith("### "):
+                flush()
+                current_h3 = line
+                current_h4 = ""
+                current_body_lines = []
+            elif line.startswith("## "):
+                flush()
+                current_h2 = line
+                current_h3 = ""
+                current_h4 = ""
+                current_body_lines = []
+            else:
+                current_body_lines.append(line)
+
+        flush()
+        return chunks
+
     # =====================
     # HELPER & EMBEDDING FUNCTIONS
     # =====================
@@ -162,7 +212,14 @@ class EmbeddingProcessor:
     def _get_context_tag(self, filename):
         """Auto-generate category tag based on filename to prevent Context Confusion"""
         fname = filename.lower()
-        if "fee" in fname or "ค่าเทอม" in fname:
+        # degree plan ต้องตรวจก่อน "วิชา" เพราะชื่อไฟล์ degreeplan*_clean.txt
+        if "degreeplan" in fname or "degree_plan" in fname:
+            # พยายามดึงปีการศึกษาจากชื่อไฟล์ เช่น degreeplan2568_clean.txt
+            import re
+            year_match = re.search(r'(25\d{2})', filename)
+            year_str = f" ปี{year_match.group(1)}" if year_match else ""
+            return f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร{year_str}]"
+        elif "fee" in fname or "ค่าเทอม" in fname:
             return "[หมวดหมู่: ค่าเทอมและการเงิน]"
         elif "course" in fname or "วิชา" in fname:
             return "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]"
@@ -170,10 +227,12 @@ class EmbeddingProcessor:
             return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
         elif "teacher" in fname or "อาจารย์" in fname or "อจ" in fname:
             return "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]"
-        elif "co-op" in fname or "สหกิจ" in fname:
+        elif "co-op" in fname or "สหกิจ" in fname or "การฝึกงาน" in fname or "internship" in fname:
             return "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]"
         elif "company" in fname or "บริษัท" in fname or "mou" in fname:
             return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
+        elif "สาขา" in fname or "department" in fname:
+            return "[หมวดหมู่: ข้อมูลสาขาวิชา]"
         return "[หมวดหมู่: ข้อมูลทั่วไป]"
 
     def _romanize_filename(self, thai_name):
@@ -183,6 +242,7 @@ class EmbeddingProcessor:
             "บริษัท": "companies",
             "บริษัทMOU": "com_mou",
             "สหกิจ": "co-op",
+            "การฝึกงาน": "internship",
             "สาขา": "department",
             "วิชา": "course",
             "อจ": "teacher",
@@ -201,16 +261,25 @@ class EmbeddingProcessor:
 
     def auto_detect_chunk_method(self, filename):
         filename_lower = filename.lower()
-        if "mockup" in filename_lower and ("อจ" in filename or "teacher" in filename_lower):
+        # degree plan ต้องตรวจก่อน เพราะชื่ออาจมีคำว่า "วิชา" หรือ "แผน" ปน
+        if "degreeplan" in filename_lower or "degree_plan" in filename_lower:
+            return self.chunk_by_section, "chunk_by_section", "Section Chunking (#### level — best for Degree Plans)"
+        elif "mockup" in filename_lower and ("อจ" in filename or "teacher" in filename_lower):
             return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (Structure-aware - best for Teachers)"
         elif "ค่าเทอม" in filename or "fees" in filename_lower:
             return self.chunk_markdown_tables, "markdown_tables", "Markdown Tables (Table-aware - best for Fees)"
+        elif "วิชา" in filename or "course" in filename_lower:
+            return self.chunk_markdown_tables, "markdown_tables", "Markdown Tables (best for Course Lists)"
         elif "degree" in filename_lower or "curriculum" in filename_lower or "แผนการเรียน" in filename:
             return self.chunk_markdown_semantic, "markdown_semantic", "Markdown Semantic (Best for Curriculum planning)"
         elif "บริษัท" in filename or "mou" in filename_lower or "companies" in filename_lower:
             return self.chunk_paragraphs, "paragraphs", "Paragraphs (Best for Companies lists)"
-        elif "รายชื่ออาจารย์" in filename or "teachers" in filename_lower:
+        elif "สาขา" in filename or "department" in filename_lower:
+            return self.chunk_paragraphs, "paragraphs", "Paragraphs (Best for Department overview)"
+        elif "รายชื่ออาจารย์" in filename or "อาจารย์" in filename or "teachers" in filename_lower:
             return self.chunk_markdown_hierarchy, "markdown_hierarchy", "Markdown Hierarchy (Structure-aware)"
+        elif "สหกิจ" in filename or "co-op" in filename_lower or "การฝึกงาน" in filename or "internship" in filename_lower:
+            return self.chunk_by_section, "chunk_by_section", "Section Chunking (#### level — best for Internship/Co-op with timeline)"
         else:
             return self.chunk_markdown_semantic, "markdown_semantic", "Markdown Semantic (Mixed content)"
 
@@ -419,9 +488,10 @@ if __name__ == "__main__":
             print("2 = Markdown Tables (Table-aware, keeps context)")
             print("3 = Markdown Hierarchy (Respects ### heading structure)")
             print("4 = Markdown Semantic (Mixed content: tables + text)")
+            print("5 = Section Chunking (#### level — for Degree Plans)")
             print("0 = Use recommended method")
 
-            chunk_choice = input("Select method (0–4): ")
+            chunk_choice = input("Select method (0–5): ")
 
             if chunk_choice == "0":
                 chunk_func = detected_func
@@ -438,6 +508,9 @@ if __name__ == "__main__":
             elif chunk_choice == "4":
                 chunk_func = embedding_proc.chunk_markdown_semantic
                 method_name = "markdown_semantic"
+            elif chunk_choice == "5":
+                chunk_func = embedding_proc.chunk_by_section
+                method_name = "chunk_by_section"
             else:
                 print("Invalid choice, use recommended method")
                 chunk_func = detected_func

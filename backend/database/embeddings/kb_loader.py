@@ -66,39 +66,47 @@ class KnowledgeBaseLoader:
     # QUERY ROUTER (ตัวสับรางคำถาม) - UPDATED
     # ===============================
     def detect_category(self, query):
-        """ฟังก์ชันดักจับ Keyword ในคำถาม เพื่อเจาะจงหมวดหมู่ที่จะค้นหา (ปรับปรุงให้ยืดหยุ่นขึ้น)"""
         q = query.lower()
         
-        # 1. หมวดอาจารย์ (ชัดเจนสุด)
-        if any(word in q for word in ["อาจารย์", "อจ", "ผู้สอน", "ดร.", "รศ.", "ผศ.", "สอน", "อจ."]):
+        # 1. แผนการเรียน (Priority 1: ถ้าระบุ ปี/เทอม ให้ดักตรงนี้ก่อนเสมอ)
+        plan_keywords = ["ปี 1", "ปี 1", "ปี 2", "ปี 2", "ปี 3", "ปี 3", "ปี 4", "ปี 4", 
+                         "เทอม 1", "เทอม 1", "เทอม 2", "เทอม 2", "แผนการเรียน"]
+        
+        # เช็คว่ามีคำระบุปีหรือเทอมหรือไม่
+        has_plan_info = any(word in q for word in plan_keywords)
+        
+        if has_plan_info:
+            # กันเหนียว: ถ้าถามเรื่องเงิน/ค่าเทอม ให้ข้ามไปหมวดการเงิน (ยกเว้นจะเน้นวิชาเรียน)
+            if any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ"]):
+                return "[หมวดหมู่: ค่าเทอมและการเงิน]"
+            
+            # ถ้ามี ปี/เทอม และถามว่า "เรียนอะไร" หรือ "วิชาอะไร" ให้ลงแผนการเรียนทันที
+            import re as _re
+            year_match = _re.search(r'(25\d{2})', q)
+            if year_match:
+                return f"[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร ปี{year_match.group(1)}]"
+            return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
+
+        # 2. ข้อมูลอาจารย์
+        elif any(word in q for word in ["อาจารย์", "อจ", "ผู้สอน", "ดร.", "รศ.", "ผศ."]):
             return "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]"
             
-        # 2. หมวดค่าเทอม (ชัดเจนสุด)
-        elif any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ", "กู้", "กี่บาท", "ค่าใช้จ่าย", "แพง", "เท่าไหร่", "เท่าไร"]):
+        # 3. ค่าเทอมและการเงิน (กรณีไม่ได้ระบุปี/เทอม หรือระบุแต่เน้นเรื่องเงิน)
+        elif any(word in q for word in ["ค่าเทอม", "จ่าย", "กยศ", "กี่บาท", "เท่าไหร่"]):
             return "[หมวดหมู่: ค่าเทอมและการเงิน]"
             
-        # 3. หมวดสหกิจ/ฝึกงาน
-        elif any(word in q for word in ["สหกิจ", "ฝึกงาน", "co-op", "สถานที่ฝึกงาน"]):
+        # 4. สหกิจศึกษา
+        elif any(word in q for word in ["สหกิจ", "ฝึกงาน", "co-op", "internship"]):
             return "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]"
             
-        # 4. หมวดบริษัท MOU
-        elif any(word in q for word in ["บริษัท", "mou", "พาร์ทเนอร์", "พันธมิตร"]):
-            return "[หมวดหมู่: เครือข่ายบริษัท/MOU]"
-            
-        # 5. หมวดแผนการเรียน vs คำอธิบายรายวิชา (อันนี้ซับซ้อนสุด ต้องแยกให้ดี)
-        # ถ้ามีคำว่า ปี หรือ เทอม ให้ไปหาที่ 'แผนการเรียน' ก่อนเสมอ
-        elif any(word in q for word in ["ปี 1", "ปี 2", "ปี 3", "ปี 4", "เทอม 1", "เทอม 2", "รุ่น"]):
-            return "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]"
-            
-        # ถ้าถามถึงเนื้อหาข้างในวิชา หรือรหัสวิชาตรงๆ ค่อยไปหาที่ 'คำอธิบายรายวิชา'
-        elif any(word in q for word in ["เรียนเกี่ยวกับ", "คือวิชาอะไร", "รหัสวิชา", "aie", "ma", "ph"]):
+        # 5. รายวิชา (จะตกมาถึงตรงนี้ก็ต่อเมื่อ "ไม่มี" คำระบุ ปี 1/เทอม 1)
+        elif any(word in q for word in ["วิชา", "เรียนอะไร", "รหัสวิชา", "course"]):
             return "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]"
-            
-        # 6. หมวดข้อมูลทั่วไป (อาชีพ, แนวทาง)
-        elif any(word in q for word in ["จบไป", "ทำงานอะไร", "อาชีพ", "ภาพรวม"]):
-            return "[หมวดหมู่: ข้อมูลทั่วไป]"
-            
-        # 7. ถ้าไม่เข้าพวกเลย ปล่อยให้ FAISS จัดการแบบอิสระ
+
+        # 6. ข้อมูลสาขา
+        elif any(word in q for word in ["สาขา", "ภาควิชา", "จบแล้วทำอะไร", "อาชีพ"]):
+            return "[หมวดหมู่: ข้อมูลสาขาวิชา]"
+
         return None
 
     # ===============================
@@ -121,17 +129,24 @@ class KnowledgeBaseLoader:
 
         # 3. โหมดกรองหมวดหมู่ (เมื่อเจอ Keyword)
         if target_category and self.embeddings is not None:
+
+            search_tag = target_category.replace("]", "")
             # หา index ของ chunk ทั้งหมดที่มี Tag ตรงกับที่ระบุ
-            valid_indices = [i for i, chunk in enumerate(self.chunks) if target_category in chunk]
-            
+            valid_indices = [i for i, chunk in enumerate(self.chunks) if search_tag in chunk]
+
+            # ถ้า tag มีปีระบุแต่หาไม่เจอ ให้ลอง fallback ไปที่ tag กลาง (ไม่มีปี)
+            if not valid_indices and " ปี" in target_category:
+                base_category = target_category.split(" ปี")[0].replace("]", "")
+                valid_indices = [i for i, chunk in enumerate(self.chunks) if base_category in chunk]
+
             if valid_indices:
                 filtered_embeddings = self.embeddings[valid_indices]
                 # คำนวณระยะห่าง L2 Distance ด้วย Numpy
                 distances = np.linalg.norm(filtered_embeddings - q_vec, axis=1)
-                
+
                 # เรียงลำดับตัวที่คะแนนดีที่สุด
                 best_relative_idx = np.argsort(distances)[:top_k]
-                
+
                 results = []
                 for idx in best_relative_idx:
                     original_idx = valid_indices[idx]
@@ -140,6 +155,7 @@ class KnowledgeBaseLoader:
                         "chunk": self.chunks[original_idx]
                     })
                 return results
+            # valid_indices ว่างเปล่าจริงๆ → fallback ไป FAISS ด้านล่าง
 
         # 4. โหมดปกติ (เมื่อไม่เจอ Keyword ให้หาจากทั้งหมดผ่าน FAISS)
         D, I = self.index.search(q_vec, top_k)
