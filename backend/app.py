@@ -35,7 +35,11 @@ tts = TTSEngine()
 
 # [เพิ่มใหม่] โหลดโมเดล Intent ไว้ในหน่วยความจำตอนเปิดเซิร์ฟเวอร์
 intent_classifier = ThaiIntentClassifier()
-intent_classifier.load()
+try:
+    intent_classifier.load()
+except FileNotFoundError as e:
+    logging.warning(f"[Intent] ข้าม Intent Classifier: {e}")
+    intent_classifier = None
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
@@ -50,7 +54,7 @@ app.add_middleware(
 class ChatRequest(BaseModel):
     query: str
 
-request_counter = 1  # ตัวนับ ID 
+request_counter = 1  # ตัวนับ ID
 
 @app.get("/")
 def read_root():
@@ -74,15 +78,17 @@ async def ask_aida(request: ChatRequest):
     # [เพิ่มใหม่] สเต็ป 0: Intent Classification (แยกหมวดหมู่คำถาม)
     # ---------------------------------------------------------
     start_intent_time = time.perf_counter()
-    # ใช้ .predict() เพื่อให้ได้ Dictionary กลับมาเลย จะได้นำไปใช้ง่ายๆ
-    intent_data = intent_classifier.predict(user_message) 
+    if intent_classifier is not None:
+        intent_data = intent_classifier.predict(user_message)
+        detected_intent = intent_data["intent"]["label"]
+        display_intent = intent_data["intent"]["display_name"]
+        entities = intent_data["entities"]
+    else:
+        detected_intent = "unknown"
+        display_intent = "ไม่ระบุ"
+        entities = {}
     intent_latency = time.perf_counter() - start_intent_time
-    
-    # ดึงค่า Intent และ Entity ออกมาเตรียมไว้
-    detected_intent = intent_data["intent"]["label"]
-    display_intent = intent_data["intent"]["display_name"]
-    entities = intent_data["entities"]
-    
+
     logging.info(f"[Intent] หมวดหมู่: {display_intent} | ใช้เวลา: {intent_latency:.4f} วินาที")
     
     # ---------------------------------------------------------

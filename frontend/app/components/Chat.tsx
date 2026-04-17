@@ -23,16 +23,18 @@ interface ChatProps {
   voiceInput?: string | null;
   onAISpeak?: (text: string) => void;
   onAIAudio?: (audioUrl: string | null) => void;
+  onAIEmotion?: (emotion: "Normal" | "Talking" | "Curious") => void;
   isFirebaseReady?: boolean;
 }
 
-export default function Chat({ 
+export default function Chat({
   userId,
-  chatId, 
+  chatId,
   onCreateNewChat,
   voiceInput,
   onAISpeak,
   onAIAudio,
+  onAIEmotion,
   isFirebaseReady = true,
 }: ChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -121,7 +123,7 @@ export default function Chat({
       timestamp: serverTimestamp(),
     });
   }, [isFirebaseReady, userId]);
-
+  //fetch ส่งไปให้ backend
   const requestAIResponse = useCallback(async (text: string) => {
     const response = await fetch("http://localhost:8000/ask", {
       method: "POST",
@@ -133,7 +135,7 @@ export default function Chat({
       throw new Error(`Request failed with status ${response.status}`);
     }
 
-    return response.json() as Promise<{ answer?: string; audio_url?: string | null }>;
+    return response.json() as Promise<{ answer?: string; audio_url?: string | null; emotion?: string }>;
   }, []);
 
   const sendMessage = useCallback(async (messageText: string) => {
@@ -158,6 +160,7 @@ export default function Chat({
       const data = await requestAIResponse(userText);
       const aiText = data.answer ?? "";
       const aiAudioUrl = data.audio_url ?? null;
+      const aiEmotion = (data.emotion ?? "Normal") as "Normal" | "Talking" | "Curious";
 
       if (aiText) {
         await persistMessage(activeChatId, aiText, "ai");
@@ -165,10 +168,11 @@ export default function Chat({
 
       onAISpeak?.(aiText);
       onAIAudio?.(aiAudioUrl);
+      onAIEmotion?.(aiEmotion);
     } catch (error) {
       console.error("API Error:", error);
     }
-  }, [ensureChatId, isFirebaseReady, messages.length, onAISpeak, onAIAudio, persistMessage, requestAIResponse, updateChatTitle]);
+  }, [ensureChatId, isFirebaseReady, messages.length, onAISpeak, onAIAudio, onAIEmotion, persistMessage, requestAIResponse, updateChatTitle]);
 
   // Handle mouse move for dragging
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -245,130 +249,165 @@ export default function Chat({
 
   return (
     <div ref={containerRef} className="relative h-full w-full overflow-hidden">
-      {/* Browser Mockup Container - Draggable on desktop */}
-      <div 
+      {/* Chat Window — Dreamy Glass */}
+      <div
         ref={chatRef}
-        className="absolute flex h-[95%] w-[95%] flex-col overflow-hidden rounded-2xl border-2 border-[#ac88c4] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)] md:h-[90%] md:w-[60%]"
-        style={position === null ? {
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-        } : {
-          left: position.x,
-          top: position.y,
-          cursor: isDragging ? 'grabbing' : 'default',
+        className="absolute flex h-[95%] w-[95%] flex-col overflow-hidden backdrop-blur-2xl md:h-[90%] md:w-[62%]"
+        style={{
+          ...(position === null
+            ? { left: "50%", top: "50%", transform: "translate(-50%, -50%)" }
+            : { left: position.x, top: position.y, cursor: isDragging ? "grabbing" : "default" }),
+          background: "rgba(210, 190, 245, 0.28)",
+          border: "1px solid rgba(255, 255, 255, 0.40)",
+          boxShadow: "0 12px 56px rgba(100, 60, 180, 0.22), inset 0 1px 0 rgba(255,255,255,0.50)",
+          borderRadius: "24px",
         }}
       >
-        {/* Browser Top Bar - Drag Handle */}
-        <div 
-          className="flex items-center gap-2 bg-[#ac88c4] px-4 py-3 select-none cursor-grab active:cursor-grabbing"
+        {/* ── Title Bar ── */}
+        <div
+          className="flex shrink-0 items-center gap-3 px-5 py-3 select-none cursor-grab active:cursor-grabbing"
+          style={{
+            background: "rgba(155, 110, 210, 0.50)",
+            borderBottom: "1px solid rgba(255,255,255,0.20)",
+          }}
           onMouseDown={handleMouseDown}
         >
-          {/* Window Title */}
-          <div className="flex-1 text-center">
-            <span className="text-sm font-medium text-white">Chat with Aida</span>
-          </div>
-          {/* Close Button */}
-          <button 
-            className="text-white transition-colors hover:text-zinc-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              stroke="currentColor"
-              className="h-5 w-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            className="h-4 w-4 text-pink-200">
+            <path fillRule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clipRule="evenodd" />
+          </svg>
+          <span className="flex-1 text-sm font-semibold tracking-widest text-white/95"
+            style={{ textShadow: "0 1px 8px rgba(120,60,180,0.5)" }}>
+            Chat with Aida
+          </span>
+          {/* window dots */}
+          <div className="flex gap-1.5">
+            {[
+              "rgba(255,200,200,0.7)",
+              "rgba(255,230,150,0.7)",
+              "rgba(180,255,180,0.7)",
+            ].map((color, i) => (
+              <button
+                key={i}
+                onClick={(e) => e.stopPropagation()}
+                className="h-3 w-3 rounded-full transition-all hover:scale-110"
+                style={{ background: color, border: "1px solid rgba(255,255,255,0.4)" }}
               />
-            </svg>
-          </button>
+            ))}
+          </div>
         </div>
 
-        {/* Chat Content Area - Glass Effect */}
-        <div className="flex min-h-0 flex-1 flex-col bg-white/80 backdrop-blur-sm">
-          <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
-            {!isFirebaseReady || !userId || chatId === null ? (
-              <div className="flex h-full items-center justify-center text-zinc-400">
-                <p>
-                  {!isFirebaseReady
-                    ? "Firebase is not configured"
-                    : userId
-                      ? "Select a chat or start a new conversation"
-                      : "Connecting to Firebase..."}
-                </p>
+        {/* ── Messages area ── */}
+        <div
+          className="flex-1 min-h-0 overflow-y-auto px-4 py-3 space-y-3 kawaii-scroll"
+          style={{ background: "transparent" }}
+        >
+          {!isFirebaseReady || !userId || chatId === null ? (
+            <div className="flex h-full items-center justify-center">
+              <div className="rounded-2xl px-6 py-4 text-sm text-purple-200 text-center"
+                style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}>
+                ✦{" "}
+                {!isFirebaseReady
+                  ? "Firebase is not configured"
+                  : userId
+                    ? "Select a chat or start a new conversation"
+                    : "Connecting..."}
+                {" "}✦
               </div>
-            ) : messages.length === 0 ? (
-              <div className="flex h-full items-center justify-center text-zinc-400">
-                <p>Start a conversation...</p>
-              </div>
-            ) : (
-              messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex ${
-                    message.sender === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
-                  <div
-                    className={`max-w-[80%] rounded-lg px-4 py-2 ${
-                      message.sender === "user"
-                        ? "bg-[#b57edc] text-white"
-                        : "bg-zinc-100 text-zinc-800"
-                    }`}
-                  >
-                    <p className="text-sm">{message.text}</p>
-                    <span className="mt-1 block text-xs opacity-70">
-                      {message.timestamp.toLocaleTimeString([], {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
-                    </span>
-                  </div>
-                </div>
-              ))
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-
-          <div className="border-t border-[#b57edc]/30 bg-white/50 p-4">
-            <div className="flex items-center gap-2">
-              <input
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={handleKeyPress}
-                placeholder="Type your message..."
-                className="flex-1 rounded-lg border border-zinc-300 bg-white px-4 py-2 text-zinc-800 placeholder-zinc-400 focus:border-[#b57edc] focus:outline-none focus:ring-1 focus:ring-[#b57edc]"
-              />
-
-              <button
-                onClick={() => void handleSendMessage()}
-                disabled={inputValue.trim() === ""}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b57edc] text-white transition-colors hover:bg-[#a060c8] disabled:cursor-not-allowed disabled:opacity-50"
-                title="Send message"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-                  />
-                </svg>
-              </button>
             </div>
+          ) : messages.length === 0 ? (
+            <div className="flex h-full items-center justify-center">
+              <div className="rounded-2xl px-6 py-4 text-sm text-purple-200 text-center"
+                style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}>
+                ✦ Start a conversation... ✦
+              </div>
+            </div>
+          ) : (
+            messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex items-end gap-2 ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+              >
+                {message.sender === "ai" && (
+                  <div className="shrink-0 h-7 w-7 rounded-full flex items-center justify-center text-xs mb-0.5"
+                    style={{ background: "rgba(200,160,255,0.45)", border: "1px solid rgba(255,255,255,0.3)" }}>
+                    ✦
+                  </div>
+                )}
+                <div
+                  className="max-w-[75%] px-4 py-2.5"
+                  style={
+                    message.sender === "user"
+                      ? {
+                          background: "rgba(130, 80, 200, 0.60)",
+                          border: "1px solid rgba(200,170,255,0.35)",
+                          backdropFilter: "blur(12px)",
+                          color: "#fff",
+                          borderRadius: "18px 18px 4px 18px",
+                          boxShadow: "0 2px 16px rgba(110,60,180,0.25)",
+                        }
+                      : {
+                          background: "rgba(255, 255, 255, 0.55)",
+                          border: "1px solid rgba(255,255,255,0.40)",
+                          backdropFilter: "blur(12px)",
+                          color: "#3d2060",
+                          borderRadius: "18px 18px 18px 4px",
+                          boxShadow: "0 2px 16px rgba(160,120,220,0.15)",
+                        }
+                  }
+                >
+                  <p className="text-sm leading-relaxed">{message.text}</p>
+                  <span className="mt-1 block text-right text-[10px] opacity-50">
+                    {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                  </span>
+                </div>
+              </div>
+            ))
+          )}
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* ── Input area ── */}
+        <div
+          className="shrink-0 px-4 py-3"
+          style={{
+            background: "rgba(150, 110, 210, 0.30)",
+            borderTop: "1px solid rgba(255,255,255,0.18)",
+          }}
+        >
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyPress}
+              placeholder="✦  say something..."
+              className="flex-1 rounded-2xl px-4 py-2.5 text-sm text-purple-900 focus:outline-none"
+              style={{
+                background: "rgba(255, 255, 255, 0.55)",
+                border: "1px solid rgba(255,255,255,0.45)",
+                backdropFilter: "blur(12px)",
+              }}
+              onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.75)")}
+              onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.55)")}
+            />
+            <button
+              onClick={() => void handleSendMessage()}
+              disabled={inputValue.trim() === ""}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl text-white text-base transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
+              style={{
+                background: "rgba(150, 100, 220, 0.70)",
+                border: "1px solid rgba(255,255,255,0.35)",
+                boxShadow: "0 2px 16px rgba(130,80,200,0.40)",
+              }}
+              title="Send message"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                strokeWidth={2} stroke="currentColor" className="h-5 w-5">
+                <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

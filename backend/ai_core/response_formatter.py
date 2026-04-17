@@ -21,7 +21,7 @@ class ResponseFormatter:
             return default_response
 
         # ตรวจสอบและบังคับค่า Emotion ให้อยู่ใน 5 สถานะที่กำหนด (ตัวพิมพ์ใหญ่ตัวแรกเสมอ)
-        valid_emotions = ["Normal", "Talking", "Happy", "Curious", "Encouraging"]
+        valid_emotions = ["Normal", "Talking","Curious"]
         emotion_raw = str(llm_response.get("emotion", "Normal")).strip().capitalize()
         final_emotion = emotion_raw if emotion_raw in valid_emotions else "Normal"
 
