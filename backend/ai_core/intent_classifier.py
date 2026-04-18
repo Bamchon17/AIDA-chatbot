@@ -30,6 +30,7 @@ DISPLAY_NAMES = {
     "course_desc":     "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]",
     "coop_intern":     "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]",
     "mou_company":     "[หมวดหมู่: เครือข่ายบริษัท/MOU]",
+    "general_info":    "[หมวดหมู่: ข้อมูลทั่วไป]",       # คณะ, มหาวิทยาลัย, การสมัครเรียน
 }
 
 
@@ -56,16 +57,23 @@ class ThaiIntentClassifier:
             raise RuntimeError(f"[ERROR] เกิดข้อผิดพลาดในการโหลดโมเดล: {e}")
 
     def _extract_entities(self, text: str) -> dict:
-        year_match      = re.search(r"ปี\s*([1-4])", text)
-        year            = year_match.group(1) if year_match else ""
+        # ── ปีหลักสูตร (256x) ต้องสกัดก่อน เพื่อไม่ให้ปี regex ด้านล่างชนกัน
         curr_year_match = re.search(r"(256[5-9]|6[5-9])", text)
         curriculum_year = curr_year_match.group(1) if curr_year_match else ""
         if len(curriculum_year) == 2:
             curriculum_year = "25" + curriculum_year
+
+        # ── ชั้นปีที่เรียน (1-4) — ต้อง NOT ตามด้วย 56x เพื่อไม่จับ "ปี 2568" เป็น "ปี 2"
+        year_match = re.search(r"ปี\s*([1-4])(?!5\d\d)", text)
+        year       = year_match.group(1) if year_match else ""
         semester_match = re.search(r"เทอม\s*(\d)", text)
         semester       = semester_match.group(1) if semester_match else ""
-        course_match   = re.search(r"([a-zA-Z]{3}\d{3})", text)
-        course_code    = course_match.group(1).upper() if course_match else ""
+        # ภาคฤดูร้อน / Summer → semester = "summer"
+        if not semester and re.search(r"ซัมเมอร์|summer|ฤดูร้อน|ภาคฤดูร้อน", text.lower()):
+            semester = "summer"
+        # รองรับทั้ง "AIE455" และ "AIE 455" (มีช่องว่าง)
+        course_match = re.search(r"([a-zA-Z]{2,3})\s*(\d{3})", text)
+        course_code  = (course_match.group(1) + course_match.group(2)).upper() if course_match else ""
 
         # ── รุ่น: 1/1, 1/2, 2 ──────────────────────────────────────────────
         gen = ""
@@ -152,16 +160,40 @@ class ThaiIntentClassifier:
         if clean_text in bot_name_questions:
             return self._format_output(text, "small_talk", 1.0, is_fallback=True)
 
+        # 4b. คำถามเกี่ยวกับเนื้อหาวิชา (ก่อน career) → course_desc
+        # "วิชาอะไรที่สอน...", "สอนเรื่อง MLOps", "วิชาที่เกี่ยวกับ CI/CD"
+        course_content_kw = ["mlops","ci/cd","machine learning operation",
+                              "สอนเรื่อง","วิชาอะไรที่สอน","วิชาที่สอน",
+                              "วิชาเกี่ยวกับ","วิชาที่เกี่ยวกับ"]
+        if any(w in clean_text.lower() for w in course_content_kw):
+            return self._format_output(text, "course_desc", 1.0, is_fallback=True)
+
         # 5. Career
         career_keywords = ["เงินเดือน","ทำงาน","จบไป","อาชีพ","ตลาดงาน","ตกงาน"]
         if any(w in clean_text for w in career_keywords):
             return self._format_output(text, "career_info", 1.0, is_fallback=True)
 
-        # 6. Admission
+        # 5b. ห้องปฏิบัติการและสถานที่ในคณะ → career_info (ข้อมูลสาขาวิชา)
+        # Robot Studio, AI Innovation Lab, BU CROCCS ข้อมูลอยู่ใน [หมวดหมู่: ข้อมูลสาขาวิชา]
+        facility_keywords = ["robot studio","robotstudio","ai lab","ai innovation","bu croccs","croccs",
+                             "ห้องปฏิบัติการ","ห้องแล็บ","ห้องlab"]
+        if any(w in clean_text.lower() for w in facility_keywords):
+            return self._format_output(text, "career_info", 1.0, is_fallback=True)
+
+        # 6. Admission (ค่าเทอม/ทุน/การเงิน)
         admission_keywords = ["ค่าเทอม","กู้","ทุน","รับสมัคร",
                                "สัมภาษณ์","จ่ายเงิน","ผ่อนผัน"]
         if any(w in clean_text for w in admission_keywords):
             return self._format_output(text, "admission_info", 1.0, is_fallback=True)
+
+        # 6b. General info — คณะ / มหาวิทยาลัย / การสมัครเรียน / ที่ตั้ง
+        general_keywords = ["สมัครเรียน","สมัครเข้า","เอกสารสมัคร","คุณสมบัติผู้สมัคร",
+                             "เทียบโอน","ปวส","ปวช","ม.กรุงเทพ","มหาวิทยาลัยกรุงเทพ",
+                             "ที่ตั้งคณะ","ตึก b4","b4 ชั้น","ติดต่อคณะ","เดินทางมา",
+                             "รถเมล์","รถตู้","bts","mrt","สายสี","คณะมีกี่สาขา",
+                             "สาขาในคณะ","สาขาวิชาที่เปิด"]
+        if any(w in clean_text.lower() for w in general_keywords):
+            return self._format_output(text, "general_info", 1.0, is_fallback=True)
 
         # 7. Coop  ← FIX Bug 2: ขึ้นก่อน mou
         coop_keywords = ["สหกิจ","ฝึกงาน","co-op","coop","intern","สถานที่ฝึกงาน"]
@@ -176,14 +208,36 @@ class ThaiIntentClassifier:
             return self._format_output(text, "mou_company", 1.0, is_fallback=True)
 
         # 9. Curriculum (strong signal)
-        curriculum_strong = ["แผนการเรียน","โครงสร้างหลักสูตร","degree plan","ดีกรีแพลน","degreeplan"]
+        curriculum_strong = ["แผนการเรียน","โครงสร้างหลักสูตร","degree plan","ดีกรีแพลน","degreeplan",
+                             "แผนปี"]   # ← FIX: "แผนปี 2567 ..." ต้องได้ curriculum ไม่ใช่ out_of_scope
         if any(w in clean_text.lower() for w in curriculum_strong):
             return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
 
-        # 10. Course description (รหัสวิชา หรือ keyword)
+        # 9b. Standalone plan/generation answer (3-step clarification follow-up)
+        # เมื่อ user ตอบสั้นๆ เช่น "แผนปกติ" "รุ่น 1/1" หลังถูกถามกลับ
+        # ← FIX 3: ป้องกัน "แผนปกติ" ถูกจัดเป็น out_of_scope
+        _ents_quick = self._extract_entities(clean_text)
+        _is_plan_reply = (
+            len(clean_text.strip()) <= 15
+            and (_ents_quick.get("plan") or _ents_quick.get("generation"))
+        )
+        if _is_plan_reply:
+            return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
+
+        # 9c. ปีX + เทอมX อยู่ในประโยคเดียวกัน → curriculum เสมอ
+        # "ปี 1 เทอม 1 ต้องเรียนอะไร", "ปี 2 เทอม 2 มีวิชาอะไร"
+        # ต้องอยู่ก่อน Rule 10 (course_desc) เพื่อให้ intercept ได้ก่อน
+        _has_year_AND_sem = (
+            bool(re.search(r"ปี\s*[1-4]", clean_text)) and
+            bool(re.search(r"เทอม\s*[1-2]", clean_text))
+        )
+        if _has_year_AND_sem:
+            return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
+        # ← FIX 1: ถ้ามี "ปี X" หรือ "เทอม X" อยู่ด้วย → ไม่ใช่ course_desc แต่เป็น curriculum
+        _has_year_sem = bool(re.search(r"ปี\s*[1-4]|เทอม\s*[1-2]", clean_text))
         course_desc_keywords = ["เรียนเกี่ยวกับอะไร","เรียนอะไร","คือวิชาอะไร","สอนอะไร","สอนเกี่ยวกับอะไร"]
-        course_match = re.search(r"([a-zA-Z]{3}\d{3})", clean_text)
-        if course_match or any(w in clean_text for w in course_desc_keywords):
+        course_match = re.search(r"([a-zA-Z]{2,3})\s*(\d{3})", clean_text)  # รองรับ "AIE 121" ด้วย
+        if (course_match or any(w in clean_text for w in course_desc_keywords)) and not _has_year_sem:
             return self._format_output(text, "course_desc", 1.0, is_fallback=True)
 
         # 11. Staff info  ← FIX 3: เพิ่ม "ดร." และ "ดอกเตอร์"
@@ -222,6 +276,10 @@ class ThaiIntentClassifier:
 
         # ด่าน 4: Safety zone
         if confidence < 0.50:
+            # ← FIX 2: ถ้า confidence ต่ำ แต่มี curriculum_year entity → เป็น curriculum ไม่ใช่ out_of_scope
+            _ents_safety = self._extract_entities(text)
+            if _ents_safety.get("curriculum_year"):
+                return self._format_output(text, "curriculum_info", confidence, is_fallback=True)
             return self._format_output(text, "out_of_scope", confidence, is_fallback=True)
 
         return self._format_output(text, raw_intent, confidence, is_fallback=False)
@@ -234,15 +292,27 @@ if __name__ == "__main__":
     clf = ThaiIntentClassifier()
     clf.load()
     tests = [
+        # เดิม
         "สวัสดีครับ",
-        "ดร. ใครสอนวิชา Machine Learning",   # Bug1 fix test
-        "สหกิจมีบริษัทอะไรบ้าง",              # Bug2 fix test
+        "ดร. ใครสอนวิชา Machine Learning",
+        "สหกิจมีบริษัทอะไรบ้าง",
         "ค่าเทอมปี 1 เท่าไหร่",
         "จบไปทำงานอะไรได้บ้าง",
         "Huawei เป็น MOU กับสาขาไหม",
         "ระบบเน็ตล่ม เข้าไม่ได้เลย",
         "ใครชนะบอลโลก 2026",
+        # ── Fix 1: ปี X เทอม X + เรียนอะไร → curriculum ไม่ใช่ course_desc ──
+        "ปี 1 เทอม 1 ต้องเรียนอะไร",            # expect: curriculum_info
+        # ── Fix 2: แผนปี → curriculum ไม่ใช่ out_of_scope ──
+        "แผนปี 2567 ปี 1 เทอม 1 มีอะไร",        # expect: curriculum_info
+        # ── Fix 2b: Safety Zone มี curriculum_year → curriculum ──
+        "แผนปี 2567 รุ่น 1/1 มีวิชาอะไร",       # expect: curriculum_info
+        # ── Fix 3: แผนปกติ คนเดียว → curriculum ไม่ใช่ out_of_scope ──
+        "แผนปกติ",                               # expect: curriculum_info
+        "รุ่น 1/1",                              # expect: curriculum_info
     ]
+    print(f"\n{'คำถาม':<50} {'intent':<20} {'conf':>6}")
+    print("-" * 80)
     for q in tests:
         r = clf.predict(q)
-        print(f"{q[:45]:<46} → {r['intent']['label']} ({r['intent']['confidence']:.2f})")
+        print(f"{q[:50]:<50} {r['intent']['label']:<20} {r['intent']['confidence']:>6.2f}")

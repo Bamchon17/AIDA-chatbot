@@ -1,0 +1,312 @@
+{
+  "timestamp": "2026-04-18T02:58:34.269180",
+  "summary": {
+    "total": 30,
+    "pass": 0,
+    "fail": 30,
+    "skip": 0,
+    "pct": 0.0
+  },
+  "results": [
+    {
+      "id": 1,
+      "category": "curriculum_info",
+      "logic": "Filtering by Year/Sem/Plan",
+      "question": "หลักสูตร 2565 ปี 3 เทอม 1 แผนปกติ ต้องเรียนวิชาอะไรบ้าง?",
+      "expected": "AIE311, AIE312, AIE313",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 2,
+      "category": "curriculum_info",
+      "logic": "Gap Check",
+      "question": "หลักสูตร 2567 รุ่น 1/1 แผนปกติ ปี 2 เทอม 1 มีวิชา AIE213 ไหม?",
+      "expected": "มี (Computer Programming)",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 3,
+      "category": "curriculum_info",
+      "logic": "Header Matching & Arithmetic",
+      "question": "หลักสูตร 2568 รุ่น 1/1 ปี 1 เทอม 2 แผนปกติ เรียนกี่หน่วยกิต?",
+      "expected": "21 หน่วยกิต",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 4,
+      "category": "curriculum_info",
+      "logic": "Generation/Summer Logic",
+      "question": "ถ้าเป็นเด็กปี 2568 รุ่น 2 ช่วงซัมเมอร์ปี 1 ต้องลงเรียนวิชาอะไร?",
+      "expected": "ME154, GE011, MA109",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 5,
+      "category": "curriculum_info",
+      "logic": "Plan Comparison",
+      "question": "วิชาเลือกเสรี (Free Elective) ของปี 2566 แผนสหกิจ เริ่มเรียนเทอมไหน?",
+      "expected": "ปี 2 ภาคฤดูร้อน",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 6,
+      "category": "course_desc",
+      "logic": "Content Retrieval",
+      "question": "วิชา AIE121 Real-life Data Challenges เรียนเกี่ยวกับเรื่องอะไรบ้าง?",
+      "expected": "Churn Prediction, Fraud Detection",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 7,
+      "category": "course_desc",
+      "logic": "Keyword Search",
+      "question": "วิชาอะไรที่สอนเรื่อง Machine Learning Operations (MLOps) และ CI/CD?",
+      "expected": "AIE470",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 8,
+      "category": "course_desc",
+      "logic": "Comparison Logic",
+      "question": "วิชา AIE455 และ AIE466 มีเนื้อหาแตกต่างกันอย่างไร?",
+      "expected": "NLP, Robotics",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 9,
+      "category": "course_desc",
+      "logic": "Relationship Extraction",
+      "question": "วิชา MA109 Calculus II มีวิชาบังคับก่อน (Prerequisite) คือวิชาอะไร?",
+      "expected": "MA108",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 10,
+      "category": "admission_info",
+      "logic": "Summation",
+      "question": "ค่าเทอมปี 1 (รวมเทอม 1/1, 1/2 และ 2) แบบชำระเต็มจำนวนเป็นเงินกี่บาท?",
+      "expected": "99,580",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 11,
+      "category": "admission_info",
+      "logic": "Specific Row Retrieval",
+      "question": "ถ้ากู้ กยศ. (ลักษณะ 2) ปี 3 เทอม 1 ต้องเตรียมเงินจ่ายส่วนต่างเองเท่าไหร่?",
+      "expected": "23,800",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 12,
+      "category": "admission_info",
+      "logic": "Total Sum Retrieval",
+      "question": "รวมค่าใช้จ่ายส่วนต่าง กยศ. ตลอดหลักสูตร 4 ปี คือกี่บาท?",
+      "expected": "95,780",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 13,
+      "category": "admission_info",
+      "logic": "Comparative Logic",
+      "question": "ค่าเทอมเทอมไหนแพงที่สุดในหลักสูตร 4 ปี และราคาเท่าไหร่?",
+      "expected": "58,800",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 14,
+      "category": "coop_intern",
+      "logic": "Threshold Logic",
+      "question": "ถ้าเกรดเฉลี่ย (GPAX) 2.65 สามารถสมัครเข้าแผนสหกิจศึกษาได้ไหม?",
+      "expected": "ไม่ได้",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 15,
+      "category": "coop_intern",
+      "logic": "Structural Comparison",
+      "question": "การฝึกงานทั่วไป แตกต่างจาก สหกิจศึกษา ในแง่หน่วยกิตอย่างไร?",
+      "expected": "0-1 หน่วยกิต",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 16,
+      "category": "coop_intern",
+      "logic": "Timeline Retrieval",
+      "question": "ช่วงเวลาปฏิบัติงานสหกิจศึกษาในสถานประกอบการของปี 2568 คือช่วงเดือนไหน?",
+      "expected": "มิ.ย. 2569",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 17,
+      "category": "coop_intern",
+      "logic": "Course Timing",
+      "question": "วิชา CO301 ต้องเรียนในชั้นปีไหนและเทอมไหน?",
+      "expected": "ปี 3 ภาคการศึกษาที่ 2",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 18,
+      "category": "mou_company",
+      "logic": "Semantic Search",
+      "question": "บริษัทใดเชี่ยวชาญด้าน RPA และช่วยลด Human Error ได้?",
+      "expected": "UiPath",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 19,
+      "category": "mou_company",
+      "logic": "Content Extraction",
+      "question": "บริษัท Huawei Technologies ให้บริการโซลูชั่นด้านใดบ้าง?",
+      "expected": "ICT, Cloud",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 20,
+      "category": "mou_company",
+      "logic": "Domain Specific Search",
+      "question": "ซอฟต์แวร์ Mango ERP เหมาะกับธุรกิจประเภทใดตามข้อมูล MOU?",
+      "expected": "รับเหมา, อสังหาริมทรัพย์",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 21,
+      "category": "staff_info",
+      "logic": "Cross-Search",
+      "question": "มีอาจารย์พิเศษคนไหนมาจากบริษัท Softnix Technology บ้าง?",
+      "expected": "ชาคริต",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 22,
+      "category": "staff_info",
+      "logic": "Entity Linking",
+      "question": "ใครคืออาจารย์ที่จบจาก MIT ประเทศสหรัฐอเมริกา และเชี่ยวชาญด้าน ML?",
+      "expected": "ภูมิพัฒ",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 23,
+      "category": "staff_info",
+      "logic": "Expertise Retrieval",
+      "question": "ดร.ปัญจวี รักประยูร เชี่ยวชาญด้านใดเป็นพิเศษ?",
+      "expected": "Computer Vision",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 24,
+      "category": "career_info",
+      "logic": "Facility Mapping",
+      "question": "ห้องปฏิบัติการ AI Innovation Lab ตั้งอยู่ที่ห้องหมายเลขใด?",
+      "expected": "B4-302",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 25,
+      "category": "career_info",
+      "logic": "Content Extraction",
+      "question": "ศูนย์วิจัย BU CROCCS เน้นการทำงานวิจัยด้านใดบ้าง?",
+      "expected": "สื่อสาร, ประมวลผลภาพ",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 26,
+      "category": "career_info",
+      "logic": "Career Association",
+      "question": "จบสาขา AIDA ไปประกอบอาชีพเป็นอะไรได้บ้าง? (ขอ 3 ตัวอย่าง)",
+      "expected": "AI Engineer, Data Scientist",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 27,
+      "category": "general_info",
+      "logic": "Route Navigation",
+      "question": "ถ้าจะเดินทางมา ม.กรุงเทพ ด้วยรถไฟฟ้า BTS ต้องลงสถานีไหน?",
+      "expected": "หมอชิต",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 28,
+      "category": "general_info",
+      "logic": "Admin Procedure",
+      "question": "จบ ปวส. มา อยากสมัครเทียบโอน ต้องใช้เอกสารอะไรและเสียค่าธรรมเนียมกี่บาท?",
+      "expected": "1,000 บาท",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 29,
+      "category": "general_info",
+      "logic": "Location Retrieval",
+      "question": "คณะวิศวกรรมศาสตร์ ม.กรุงเทพ ตั้งอยู่ที่อาคารไหน ชั้นอะไร?",
+      "expected": "B4 ชั้น 2",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    },
+    {
+      "id": 30,
+      "category": "out_of_scope",
+      "logic": "Guardrail Check",
+      "question": "เย็นนี้กินอะไรดี หรือ แนะนำเมนูอาหารหน่อย",
+      "expected": "นอกเหนือขอบเขต",
+      "answer": "[ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]",
+      "status": "FAIL",
+      "time_sec": 0.0
+    }
+  ]
+}
