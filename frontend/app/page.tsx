@@ -26,7 +26,12 @@ interface ChatHistory {
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [micTrigger, setMicTrigger] = useState(0);
+  const [isRecording, setIsRecording] = useState(false);
+  const [recordingSecs, setRecordingSecs] = useState(0);
   const [voiceInput, setVoiceInput] = useState<string | null>(null);
+
+  const formatTime = (s: number) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
   const [aiAudioUrl, setAIAudioUrl] = useState<string | null>(null);
   const [currentEmotion, setCurrentEmotion] = useState<"Normal" | "Talking" | "Curious">("Normal");
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
@@ -175,10 +180,10 @@ export default function Home() {
       {/* Full Page Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bg aida5.png"
+          src="/bg aida6.png"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover object-bottom"
           priority
         />
       </div>
@@ -255,13 +260,13 @@ export default function Home() {
               style={
                 currentChatId === chat.id
                   ? {
-                      background: "rgba(255,255,255,0.40)",
-                      border: "1px solid rgba(255,255,255,0.50)",
-                      boxShadow: "0 2px 12px rgba(130,80,200,0.20)",
+                      background: "rgba(255,255,255,0.55)",
+                      border: "1px solid rgba(255,255,255,0.75)",
+                      boxShadow: "0 4px 16px rgba(100,50,180,0.25)",
                     }
                   : {
-                      background: "rgba(255,255,255,0.18)",
-                      border: "1px solid rgba(255,255,255,0.20)",
+                      background: "rgba(255,255,255,0.20)",
+                      border: "1px solid rgba(255,255,255,0.35)",
                     }
               }
             >
@@ -296,11 +301,11 @@ export default function Home() {
 
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="fixed left-4 top-4 z-30 flex h-14 w-14 items-center justify-center rounded-2xl backdrop-blur-md transition-all hover:scale-105 active:scale-95"
+        className="fixed left-4 top-4 z-30 flex h-12 w-12 items-center justify-center rounded-2xl backdrop-blur-md transition-all hover:scale-110 hover:brightness-110 active:scale-95"
         style={{
-          background: "rgba(220,180,255,0.28)",
-          border: "1.5px solid rgba(200,160,240,0.55)",
-          boxShadow: "0 4px 24px rgba(160,100,220,0.4), inset 0 1px 0 rgba(255,255,255,0.45)",
+          background: "linear-gradient(135deg, rgba(190,140,255,0.65), rgba(150,95,235,0.55))",
+          border: "1.5px solid rgba(210,175,255,0.65)",
+          boxShadow: "0 0 20px rgba(155,90,240,0.50), 0 4px 16px rgba(120,65,210,0.35), inset 0 1px 0 rgba(255,255,255,0.55)",
         }}
       >
         <svg
@@ -315,11 +320,42 @@ export default function Home() {
         </svg>
       </button>
 
-      <div className="relative z-10 h-1/3 w-full md:h-full md:w-1/2">
-        <Avatar onVoiceInput={handleVoiceInput} aiAudioUrl={aiAudioUrl} emotion={currentEmotion} />
+      {/* Mic overlay — bubble + clickable area */}
+      <div className="absolute z-20" style={{ left: "59%", bottom: "8%", width: "7%", height: "32%" }}>
+        <div
+          className="absolute -top-20 left-[calc(25%+20px)] -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full whitespace-nowrap text-[11px] font-medium text-white backdrop-blur-md pointer-events-none bubble-breathe"
+          style={{
+            background: "rgba(255,255,255,0.18)",
+            border: "1px solid rgba(255,255,255,0.40)",
+          }}
+        >
+          {isRecording ? (
+            <>
+              <span className="h-1.5 w-1.5 rounded-full bg-pink-300 animate-pulse" />
+              {formatTime(recordingSecs)}
+            </>
+          ) : (
+            "Tap the mic to speak"
+          )}
+        </div>
+        <button
+          className="w-full h-full cursor-pointer rounded-2xl"
+          style={{ background: "transparent" }}
+          onClick={() => setMicTrigger((n) => n + 1)}
+        />
       </div>
 
-      <div className="relative z-10 h-2/3 w-full p-2 md:h-full md:w-1/2 md:p-6">
+      <div className="relative z-10 h-1/3 w-full md:h-full md:w-[55%]">
+        <Avatar
+          onVoiceInput={handleVoiceInput}
+          aiAudioUrl={aiAudioUrl}
+          emotion={currentEmotion}
+          triggerMic={micTrigger}
+          onRecordingChange={(rec, secs) => { setIsRecording(rec); setRecordingSecs(secs); }}
+        />
+      </div>
+
+      <div className="relative z-10 h-2/3 w-full p-2 md:h-full md:w-[45%] md:p-6">
         <Chat
           userId={userId}
           chatId={currentChatId}

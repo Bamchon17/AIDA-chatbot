@@ -7,12 +7,16 @@ interface AvatarProps {
   onVoiceInput?: (text: string) => void;
   aiAudioUrl?: string | null;
   emotion?: EmotionType;
+  triggerMic?: number;
+  onRecordingChange?: (isRecording: boolean, seconds: number) => void;
 }
 
 export default function Avatar({
   onVoiceInput,
   aiAudioUrl,
   emotion,
+  triggerMic,
+  onRecordingChange,
 }: AvatarProps) {
   // ─── Live2D ───────────────────────────────────────────────────────────────
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -45,6 +49,12 @@ export default function Avatar({
     };
   }, [initLive2D]);
 
+  useEffect(() => {
+    if (triggerMic === undefined || triggerMic === 0) return;
+    handleMicrophoneClick();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [triggerMic]);
+
   // Curious ให้ backend control, Talking/Normal ให้ audio control
   useEffect(() => {
     if (emotion === "Curious") {
@@ -55,7 +65,7 @@ export default function Avatar({
   }, [emotion]);
 
   // ─── Voice input ──────────────────────────────────────────────────────────
-  const [isListening, setIsListening] = useState(false);
+
   const [isRecordingMode, setIsRecordingMode] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
@@ -63,13 +73,7 @@ export default function Avatar({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptRef = useRef<string>("");
 
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  };
-
-  const startTimer = () => {
+const startTimer = () => {
     setRecordingTime(0);
     timerRef.current = setInterval(() => {
       setRecordingTime((prev) => prev + 1);
@@ -108,7 +112,7 @@ export default function Avatar({
     recognition.lang = "th-TH";
 
     recognition.onstart = () => {
-      setIsListening(true);
+
       startTimer();
     };
 
@@ -135,12 +139,12 @@ export default function Avatar({
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
       console.error("Speech recognition error:", event.error);
-      setIsListening(false);
+
       stopTimer();
     };
 
     recognition.onend = () => {
-      setIsListening(false);
+
       stopTimer();
     };
 
@@ -150,7 +154,6 @@ export default function Avatar({
 
   const stopRecording = () => {
     if (recognitionRef.current) recognitionRef.current.stop();
-    setIsListening(false);
     setIsRecordingMode(false);
     stopTimer();
     setRecordingTime(0);
@@ -160,6 +163,10 @@ export default function Avatar({
     }
     transcriptRef.current = "";
   };
+
+  useEffect(() => {
+    onRecordingChange?.(isRecordingMode, recordingTime);
+  }, [isRecordingMode, recordingTime, onRecordingChange]);
 
   // ─── AI audio — sync animation กับเสียง ──────────────────────────────────
   const fallbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -234,7 +241,10 @@ export default function Avatar({
   return (
     <div className="relative flex h-full w-full items-center justify-center md:justify-end overflow-hidden">
       {/* Live2D Canvas */}
-      <div className="relative z-10 flex items-center justify-center md:translate-x-35 translate-y-3 w-full h-full max-h-[30vh] md:max-h-[80vh]">
+      <div
+        className="relative z-10 flex items-center justify-center w-full h-full max-h-[60vh] md:max-h-[90vh]"
+        style={{ transform: "translateX(140px) translateY(-95px)" }}
+      >
         <canvas
           ref={canvasRef}
           className="w-full h-full"
@@ -242,58 +252,6 @@ export default function Avatar({
         />
       </div>
 
-      {/* Microphone Button */}
-      <div className="absolute bottom-16 left-8 z-20">
-        {isRecordingMode && (
-          <div
-            className="absolute -top-11 left-1/2 -translate-x-1/2 px-3 py-1 rounded-lg whitespace-nowrap text-xs font-semibold text-white backdrop-blur-md"
-            style={{
-              background: "rgba(255,255,255,0.2)",
-              border: "1px solid rgba(255,255,255,0.4)",
-              boxShadow: "0 2px 12px rgba(160,100,220,0.3)",
-            }}
-          >
-            ● {formatTime(recordingTime)}
-          </div>
-        )}
-
-        <button
-          onClick={handleMicrophoneClick}
-          className="relative flex h-20 w-20 items-center justify-center rounded-3xl backdrop-blur-md transition-all hover:scale-105 active:scale-95"
-          style={
-            isListening
-              ? {
-                  background: "rgba(255,160,200,0.35)",
-                  border: "1.5px solid rgba(255,200,230,0.6)",
-                  boxShadow: "0 0 32px rgba(255,120,180,0.65), 0 4px 20px rgba(200,80,140,0.3), inset 0 1px 0 rgba(255,255,255,0.5)",
-                }
-              : {
-                  background: "rgba(220,180,255,0.28)",
-                  border: "1.5px solid rgba(200,160,240,0.55)",
-                  boxShadow: "0 4px 24px rgba(160,100,220,0.4), inset 0 1px 0 rgba(255,255,255,0.45)",
-                }
-          }
-          title={isListening ? "Stop recording" : "Start voice recording"}
-        >
-          {isListening && (
-            <div className="absolute inset-0 rounded-3xl animate-pulse" style={{ background: "rgba(255,150,200,0.2)" }} />
-          )}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="#d8b4fe"
-            className="h-10 w-10 relative z-10"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
-            />
-          </svg>
-        </button>
-      </div>
     </div>
   );
 }

@@ -257,9 +257,9 @@ export default function Chat({
           ...(position === null
             ? { left: "50%", top: "50%", transform: "translate(-50%, -50%)" }
             : { left: position.x, top: position.y, cursor: isDragging ? "grabbing" : "default" }),
-          background: "rgba(210, 190, 245, 0.28)",
-          border: "1px solid rgba(255, 255, 255, 0.40)",
-          boxShadow: "0 12px 56px rgba(100, 60, 180, 0.22), inset 0 1px 0 rgba(255,255,255,0.50)",
+          background: "rgba(215, 190, 255, 0.45)",
+          border: "1px solid rgba(220, 190, 255, 0.55)",
+          boxShadow: "0 8px 48px rgba(120, 60, 220, 0.35), 0 0 0 1px rgba(200,160,255,0.25), inset 0 1px 0 rgba(255,255,255,0.65)",
           borderRadius: "24px",
         }}
       >
@@ -267,8 +267,8 @@ export default function Chat({
         <div
           className="flex shrink-0 items-center gap-3 px-5 py-3 select-none cursor-grab active:cursor-grabbing"
           style={{
-            background: "rgba(155, 110, 210, 0.50)",
-            borderBottom: "1px solid rgba(255,255,255,0.20)",
+            background: "linear-gradient(135deg, rgba(165, 105, 245, 0.80), rgba(125, 75, 210, 0.75))",
+            borderBottom: "1px solid rgba(220,190,255,0.30)",
           }}
           onMouseDown={handleMouseDown}
         >
@@ -339,20 +339,20 @@ export default function Chat({
                   style={
                     message.sender === "user"
                       ? {
-                          background: "rgba(130, 80, 200, 0.60)",
-                          border: "1px solid rgba(200,170,255,0.35)",
-                          backdropFilter: "blur(12px)",
+                          background: "linear-gradient(135deg, rgba(155, 90, 240, 0.88), rgba(115, 55, 200, 0.82))",
+                          border: "1px solid rgba(210,175,255,0.45)",
+                          backdropFilter: "blur(16px)",
                           color: "#fff",
                           borderRadius: "18px 18px 4px 18px",
-                          boxShadow: "0 2px 16px rgba(110,60,180,0.25)",
+                          boxShadow: "0 4px 20px rgba(120,55,210,0.40)",
                         }
                       : {
-                          background: "rgba(255, 255, 255, 0.55)",
-                          border: "1px solid rgba(255,255,255,0.40)",
-                          backdropFilter: "blur(12px)",
-                          color: "#3d2060",
+                          background: "rgba(255, 255, 255, 0.82)",
+                          border: "1px solid rgba(220,200,255,0.60)",
+                          backdropFilter: "blur(16px)",
+                          color: "#2d1555",
                           borderRadius: "18px 18px 18px 4px",
-                          boxShadow: "0 2px 16px rgba(160,120,220,0.15)",
+                          boxShadow: "0 4px 20px rgba(160,120,220,0.20)",
                         }
                   }
                 >
@@ -371,8 +371,8 @@ export default function Chat({
         <div
           className="shrink-0 px-4 py-3"
           style={{
-            background: "rgba(150, 110, 210, 0.30)",
-            borderTop: "1px solid rgba(255,255,255,0.18)",
+            background: "rgba(140, 100, 215, 0.42)",
+            borderTop: "1px solid rgba(220,190,255,0.30)",
           }}
         >
           <div className="flex items-center gap-2">
@@ -384,21 +384,28 @@ export default function Chat({
               placeholder="✦  say something..."
               className="flex-1 rounded-2xl px-4 py-2.5 text-sm text-purple-900 focus:outline-none"
               style={{
-                background: "rgba(255, 255, 255, 0.55)",
-                border: "1px solid rgba(255,255,255,0.45)",
-                backdropFilter: "blur(12px)",
+                background: "rgba(255, 255, 255, 0.72)",
+                border: "1px solid rgba(200,170,255,0.55)",
+                backdropFilter: "blur(16px)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.8)",
               }}
-              onFocus={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.75)")}
-              onBlur={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.55)")}
+              onFocus={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.90)";
+                e.currentTarget.style.boxShadow = "0 0 0 2px rgba(170,110,255,0.45), inset 0 1px 0 rgba(255,255,255,0.9)";
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.72)";
+                e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.8)";
+              }}
             />
             <button
               onClick={() => void handleSendMessage()}
               disabled={inputValue.trim() === ""}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl text-white text-base transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
               style={{
-                background: "rgba(150, 100, 220, 0.70)",
-                border: "1px solid rgba(255,255,255,0.35)",
-                boxShadow: "0 2px 16px rgba(130,80,200,0.40)",
+                background: "linear-gradient(135deg, rgba(175, 105, 255, 0.92), rgba(125, 60, 225, 0.88))",
+                border: "1px solid rgba(210,175,255,0.50)",
+                boxShadow: "0 4px 20px rgba(140,70,230,0.55)",
               }}
               title="Send message"
             >

@@ -42,3 +42,13 @@ input::placeholder {
 .kawaii-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(160, 110, 210, 0.65);
 }
+
+@keyframes breathe-bubble {
+  0%, 100% { box-shadow: 0 0 4px 1px rgba(255,255,255,0.20); }
+  50%       { box-shadow: 0 0 18px 5px rgba(255,255,255,0.65); }
+}
+
+.bubble-breathe {
+  animation: breathe-bubble 2.5s ease-in-out infinite;
+}
+
