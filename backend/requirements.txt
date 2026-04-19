@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+pydantic
+requests
+python-dotenv
+
+numpy
+faiss-cpu
+sentence-transformers
+numpy
+torch
+scikit-learn
+scipy
+tqdm
+transformers
+huggingface-hub
+pdfplumber>=0.10.0
