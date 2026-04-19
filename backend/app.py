@@ -84,9 +84,19 @@ async def ask_aida(request: ChatRequest):
         display_intent = intent_data["intent"]["display_name"]
         entities = intent_data["entities"]
     else:
-        detected_intent = "unknown"
-        display_intent = "ไม่ระบุ"
-        entities = {}
+        # --- เพิ่มโครงสร้างกล่องจำลองตรงนี้ ---
+        intent_data = {
+            "intent": {
+                "label": "unknown",
+                "display_name": "ไม่ระบุ"
+            },
+            "entities": {}
+        }
+        # ---------------------------------
+        detected_intent = intent_data["intent"]["label"]
+        display_intent = intent_data["intent"]["display_name"]
+        entities = intent_data["entities"]
+        
     intent_latency = time.perf_counter() - start_intent_time
 
     logging.info(f"[Intent] หมวดหมู่: {display_intent} | ใช้เวลา: {intent_latency:.4f} วินาที")
@@ -100,7 +110,7 @@ async def ask_aida(request: ChatRequest):
     # เช่น ถ้ารู้ว่าเป็นรายวิชา สามารถเอา entities["course_code"] ไปต่อท้าย query 
     # เพื่อให้ RAG ค้นหาได้แม่นยำขึ้น เช่น: query=f"{user_message} {entities['course_code']}"
     
-    search_results = rag.retrieve(query=user_message, top_k=6)
+    search_results = rag.retrieve(query=user_message, intent_result=intent_data, top_k=6)
     rag_latency = time.perf_counter() - start_rag_time
     logging.info(f"[RAG] ใช้เวลาค้นหาข้อมูล: {rag_latency:.4f} วินาที")
     
@@ -111,8 +121,8 @@ async def ask_aida(request: ChatRequest):
     
     # 💡 [แนะนำเพิ่มเติม]: คุณอาจจะส่ง detected_intent เข้าไปใน llm.generate_response ด้วย
     # เพื่อให้ LLM รู้ว่าควรตอบบริบทไหน (ถ้าฟังก์ชันเพื่อนรองรับ)
-    raw_ai_response = llm.generate_response(query=user_message, retrieval_results=search_results)
-    final_response = ResponseFormatter.format_output(raw_ai_response)
+    raw_ai_response = llm.generate_response(query=user_message, retrieval_results=search_results, intent_result=intent_data)
+    final_response = ResponseFormatter.format_output(raw_ai_response, intent_result=intent_data)
     
     llm_latency = time.perf_counter() - start_llm_time
     logging.info(f"[LLM] ใช้เวลาคิดคำตอบและจัดรูปแบบ: {llm_latency:.4f} วินาที")

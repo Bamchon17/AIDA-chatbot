@@ -1,0 +1,153 @@
+AIDA RAG Test Report — 2026-04-18 02:58:34
+Total: 30 | PASS: 0 (0.0%) | FAIL: 30 | SKIP: 0
+
+[01] FAIL | Filtering by Year/Sem/Plan
+  Q: หลักสูตร 2565 ปี 3 เทอม 1 แผนปกติ ต้องเรียนวิชาอะไรบ้าง?
+  E: AIE311, AIE312, AIE313
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[02] FAIL | Gap Check
+  Q: หลักสูตร 2567 รุ่น 1/1 แผนปกติ ปี 2 เทอม 1 มีวิชา AIE213 ไหม?
+  E: มี (Computer Programming)
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[03] FAIL | Header Matching & Arithmetic
+  Q: หลักสูตร 2568 รุ่น 1/1 ปี 1 เทอม 2 แผนปกติ เรียนกี่หน่วยกิต?
+  E: 21 หน่วยกิต
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[04] FAIL | Generation/Summer Logic
+  Q: ถ้าเป็นเด็กปี 2568 รุ่น 2 ช่วงซัมเมอร์ปี 1 ต้องลงเรียนวิชาอะไร?
+  E: ME154, GE011, MA109
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[05] FAIL | Plan Comparison
+  Q: วิชาเลือกเสรี (Free Elective) ของปี 2566 แผนสหกิจ เริ่มเรียนเทอมไหน?
+  E: ปี 2 ภาคฤดูร้อน
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[06] FAIL | Content Retrieval
+  Q: วิชา AIE121 Real-life Data Challenges เรียนเกี่ยวกับเรื่องอะไรบ้าง?
+  E: Churn Prediction, Fraud Detection
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[07] FAIL | Keyword Search
+  Q: วิชาอะไรที่สอนเรื่อง Machine Learning Operations (MLOps) และ CI/CD?
+  E: AIE470
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[08] FAIL | Comparison Logic
+  Q: วิชา AIE455 และ AIE466 มีเนื้อหาแตกต่างกันอย่างไร?
+  E: NLP, Robotics
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[09] FAIL | Relationship Extraction
+  Q: วิชา MA109 Calculus II มีวิชาบังคับก่อน (Prerequisite) คือวิชาอะไร?
+  E: MA108
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[10] FAIL | Summation
+  Q: ค่าเทอมปี 1 (รวมเทอม 1/1, 1/2 และ 2) แบบชำระเต็มจำนวนเป็นเงินกี่บาท?
+  E: 99,580
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[11] FAIL | Specific Row Retrieval
+  Q: ถ้ากู้ กยศ. (ลักษณะ 2) ปี 3 เทอม 1 ต้องเตรียมเงินจ่ายส่วนต่างเองเท่าไหร่?
+  E: 23,800
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[12] FAIL | Total Sum Retrieval
+  Q: รวมค่าใช้จ่ายส่วนต่าง กยศ. ตลอดหลักสูตร 4 ปี คือกี่บาท?
+  E: 95,780
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[13] FAIL | Comparative Logic
+  Q: ค่าเทอมเทอมไหนแพงที่สุดในหลักสูตร 4 ปี และราคาเท่าไหร่?
+  E: 58,800
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[14] FAIL | Threshold Logic
+  Q: ถ้าเกรดเฉลี่ย (GPAX) 2.65 สามารถสมัครเข้าแผนสหกิจศึกษาได้ไหม?
+  E: ไม่ได้
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[15] FAIL | Structural Comparison
+  Q: การฝึกงานทั่วไป แตกต่างจาก สหกิจศึกษา ในแง่หน่วยกิตอย่างไร?
+  E: 0-1 หน่วยกิต
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[16] FAIL | Timeline Retrieval
+  Q: ช่วงเวลาปฏิบัติงานสหกิจศึกษาในสถานประกอบการของปี 2568 คือช่วงเดือนไหน?
+  E: มิ.ย. 2569
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[17] FAIL | Course Timing
+  Q: วิชา CO301 ต้องเรียนในชั้นปีไหนและเทอมไหน?
+  E: ปี 3 ภาคการศึกษาที่ 2
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[18] FAIL | Semantic Search
+  Q: บริษัทใดเชี่ยวชาญด้าน RPA และช่วยลด Human Error ได้?
+  E: UiPath
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[19] FAIL | Content Extraction
+  Q: บริษัท Huawei Technologies ให้บริการโซลูชั่นด้านใดบ้าง?
+  E: ICT, Cloud
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[20] FAIL | Domain Specific Search
+  Q: ซอฟต์แวร์ Mango ERP เหมาะกับธุรกิจประเภทใดตามข้อมูล MOU?
+  E: รับเหมา, อสังหาริมทรัพย์
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[21] FAIL | Cross-Search
+  Q: มีอาจารย์พิเศษคนไหนมาจากบริษัท Softnix Technology บ้าง?
+  E: ชาคริต
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[22] FAIL | Entity Linking
+  Q: ใครคืออาจารย์ที่จบจาก MIT ประเทศสหรัฐอเมริกา และเชี่ยวชาญด้าน ML?
+  E: ภูมิพัฒ
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[23] FAIL | Expertise Retrieval
+  Q: ดร.ปัญจวี รักประยูร เชี่ยวชาญด้านใดเป็นพิเศษ?
+  E: Computer Vision
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[24] FAIL | Facility Mapping
+  Q: ห้องปฏิบัติการ AI Innovation Lab ตั้งอยู่ที่ห้องหมายเลขใด?
+  E: B4-302
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[25] FAIL | Content Extraction
+  Q: ศูนย์วิจัย BU CROCCS เน้นการทำงานวิจัยด้านใดบ้าง?
+  E: สื่อสาร, ประมวลผลภาพ
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[26] FAIL | Career Association
+  Q: จบสาขา AIDA ไปประกอบอาชีพเป็นอะไรได้บ้าง? (ขอ 3 ตัวอย่าง)
+  E: AI Engineer, Data Scientist
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[27] FAIL | Route Navigation
+  Q: ถ้าจะเดินทางมา ม.กรุงเทพ ด้วยรถไฟฟ้า BTS ต้องลงสถานีไหน?
+  E: หมอชิต
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[28] FAIL | Admin Procedure
+  Q: จบ ปวส. มา อยากสมัครเทียบโอน ต้องใช้เอกสารอะไรและเสียค่าธรรมเนียมกี่บาท?
+  E: 1,000 บาท
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[29] FAIL | Location Retrieval
+  Q: คณะวิศวกรรมศาสตร์ ม.กรุงเทพ ตั้งอยู่ที่อาคารไหน ชั้นอะไร?
+  E: B4 ชั้น 2
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
+[30] FAIL | Guardrail Check
+  Q: เย็นนี้กินอะไรดี หรือ แนะนำเมนูอาหารหน่อย
+  E: นอกเหนือขอบเขต
+  A: [ERROR: [ERROR] ยังไม่ได้ load model — เรียก .load() ก่อน]
+
