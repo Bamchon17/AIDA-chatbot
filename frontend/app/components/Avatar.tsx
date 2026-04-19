@@ -182,9 +182,11 @@ const startTimer = () => {
   useEffect(() => {
     if (!aiAudioUrl) return;
 
-    const normalizedUrl = aiAudioUrl.startsWith("http")
-      ? aiAudioUrl
-      : `http://localhost:8000${aiAudioUrl}`;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+  const normalizedUrl = aiAudioUrl.startsWith("http")
+    ? aiAudioUrl
+    : `${apiUrl}${aiAudioUrl.startsWith("/") ? "" : "/"}${aiAudioUrl}`;
 
     if (aiAudioRef.current) {
       aiAudioRef.current.pause();

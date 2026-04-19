@@ -125,7 +125,9 @@ export default function Chat({
   }, [isFirebaseReady, userId]);
   //fetch ส่งไปให้ backend
   const requestAIResponse = useCallback(async (text: string) => {
-    const response = await fetch("http://localhost:8000/ask", {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+    const response = await fetch(`${apiUrl}/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query: text })

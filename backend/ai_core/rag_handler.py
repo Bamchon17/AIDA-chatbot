@@ -7,7 +7,7 @@ rag_handler.py — Final Version
 """
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from backend.database.embeddings.kb_loader import KnowledgeBaseLoader
+from database.embeddings.kb_loader import KnowledgeBaseLoader
 
 NO_RETRIEVAL_INTENTS = {"greeting","small_talk","out_of_scope","report_issue","toxic"}
 CLARIFICATION_NEEDED = "__CLARIFICATION_NEEDED__"
