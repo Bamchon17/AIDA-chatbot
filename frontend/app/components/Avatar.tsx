@@ -23,6 +23,11 @@ export default function Avatar({
   const managerRef = useRef<import("@/lib/live2d/live2dmanager").Live2DManager | null>(null);
   const live2dLoadedRef = useRef(false);
 
+  const latestEmotionRef = useRef<EmotionType | undefined>(emotion);
+  useEffect(() => {
+    latestEmotionRef.current = emotion;
+  }, [emotion]);
+
   const initLive2D = useCallback(async () => {
     if (live2dLoadedRef.current) return;
     const canvas = canvasRef.current;
@@ -52,19 +57,8 @@ export default function Avatar({
   useEffect(() => {
     if (triggerMic === undefined || triggerMic === 0) return;
     handleMicrophoneClick();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [triggerMic]);
 
-  // Curious ให้ backend control, Talking/Normal ให้ audio control
-  useEffect(() => {
-    if (emotion === "Curious") {
-      managerRef.current?.setEmotion("Curious");
-      const t = setTimeout(() => managerRef.current?.stopMotion(), 4000);
-      return () => clearTimeout(t);
-    }
-  }, [emotion]);
-
-  // ─── Voice input ──────────────────────────────────────────────────────────
 
   const [isRecordingMode, setIsRecordingMode] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
@@ -73,7 +67,7 @@ export default function Avatar({
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptRef = useRef<string>("");
 
-const startTimer = () => {
+  const startTimer = () => {
     setRecordingTime(0);
     timerRef.current = setInterval(() => {
       setRecordingTime((prev) => prev + 1);
@@ -112,7 +106,6 @@ const startTimer = () => {
     recognition.lang = "th-TH";
 
     recognition.onstart = () => {
-
       startTimer();
     };
 
@@ -139,12 +132,10 @@ const startTimer = () => {
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
       console.error("Speech recognition error:", event.error);
-
       stopTimer();
     };
 
     recognition.onend = () => {
-
       stopTimer();
     };
 
@@ -182,11 +173,11 @@ const startTimer = () => {
   useEffect(() => {
     if (!aiAudioUrl) return;
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-  const normalizedUrl = aiAudioUrl.startsWith("http")
-    ? aiAudioUrl
-    : `${apiUrl}${aiAudioUrl.startsWith("/") ? "" : "/"}${aiAudioUrl}`;
+    const normalizedUrl = aiAudioUrl.startsWith("http")
+      ? aiAudioUrl
+      : `${apiUrl}${aiAudioUrl.startsWith("/") ? "" : "/"}${aiAudioUrl}`;
 
     if (aiAudioRef.current) {
       aiAudioRef.current.pause();
@@ -201,18 +192,20 @@ const startTimer = () => {
     const audio = new Audio(normalizedUrl);
     aiAudioRef.current = audio;
 
-    // รู้ duration แล้ว → ตั้ง fallback timer เผื่อ onended ไม่ fire
     audio.addEventListener("loadedmetadata", () => {
       const durationMs = (audio.duration || 5) * 1000 + 500;
       fallbackTimerRef.current = setTimeout(revertToIdle, durationMs);
     });
 
-    // เสียงเริ่มเล่น → Talking
     audio.addEventListener("play", () => {
-      managerRef.current?.setEmotion("Talking");
+      const currentEm = latestEmotionRef.current;
+      if (currentEm && currentEm !== "Normal") {
+        managerRef.current?.setEmotion(currentEm);
+      } else {
+        managerRef.current?.setEmotion("Talking");
+      }
     });
 
-    // เสียงจบ → Normal (primary handler)
     audio.addEventListener("ended", revertToIdle);
     audio.addEventListener("error", revertToIdle);
 
@@ -253,7 +246,6 @@ const startTimer = () => {
           style={{ display: "block" }}
         />
       </div>
-
     </div>
   );
 }
