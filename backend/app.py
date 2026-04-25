@@ -1,39 +1,33 @@
 import os
 import time
 import logging
-import json # เพิ่มเพื่อจัดการการแสดงผล
+import json
+import re
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-# --- นำเข้าไลบรารีตัดคำภาษาไทย (PyThaiNLP) ---
 from pythainlp.tokenize import word_tokenize
 
-# --- ตั้งค่า Logging สำหรับเก็บข้อมูล Performance ---
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
 )
 
-# --- 1. นำเข้าไฟล์ของเพื่อนให้ครบทั้ง 3 ส่วน ---
 from ai_core.rag_handler import RAGHandler
 from ai_core.llm_interface import LLMInterface
 from ai_core.response_formatter import ResponseFormatter
 from voice.tts_engine import TTSEngine
-
-# [เพิ่มใหม่] นำเข้า Intent Classifier
 from ai_core.intent_classifier import ThaiIntentClassifier
 
 app = FastAPI()
 
-# --- 2. เรียกใช้งานระบบทั้งหมด ---
 rag = RAGHandler()
 llm = LLMInterface()
 tts = TTSEngine()
 
-# [เพิ่มใหม่] โหลดโมเดล Intent ไว้ในหน่วยความจำตอนเปิดเซิร์ฟเวอร์
 intent_classifier = ThaiIntentClassifier()
 try:
     intent_classifier.load()
@@ -54,161 +48,260 @@ app.add_middleware(
 class ChatRequest(BaseModel):
     query: str
 
-request_counter = 1  # ตัวนับ ID
+request_counter = 1
+
+# =========================================================
+# Memory (ความจำระหว่าง session)
+# =========================================================
+bot_memory = {
+    "intent":          "",
+    "intent_group":    "",
+    "year":            "",
+    "generation":      "",
+    "semester":        "",
+    "curriculum_year": "",
+    "sid_prefix":      "",
+}
+
+# [อัปเดต] Mapping รหัสนักศึกษา 2 หน้า → รุ่นย่อยและปีหลักสูตร
+COHORT_CONFIG = {
+    "63": {"curr": "2563", "gens": ["1/1", "1/2", "2"]},
+    "64": {"curr": "2563", "gens": ["1/1", "1/2", "2"]},
+    "65": {"curr": "2565", "gens": ["1/1", "1/2", "2"]},
+    "66": {"curr": "2565", "gens": ["1/1", "1/2", "2"]},
+    "67": {"curr": "2565", "gens": ["1/1", "1/2", "2"]},
+    "68": {"curr": "2568", "gens": ["1/1", "1/2", "2"]},
+}
+
+# กลุ่ม intent ที่ควรจำข้ามรอบ
+INTENT_GROUP_MAP = {
+    "curriculum_info": "CURRICULUM",
+    "course_desc":     "CURRICULUM",
+    "career_info":     "CAREER",
+    "major_info":      "MAJOR",
+    "staff_info":      "STAFF",
+    "admission_info":  "ADMISSION",
+    "coop_intern":     "COOP",
+    "mou_company":     "MOU",
+    "general_info":    "GENERAL",
+}
+
+# Intent ที่ "reset" ความจำเรื่อง curriculum (เปลี่ยนเรื่องแล้ว)
+MEMORY_RESET_INTENTS = {"greeting", "small_talk", "toxic", "out_of_scope", "report_issue"}
+# =========================================================
+
 
 @app.get("/")
 def read_root():
     return {"message": "AIDA API is running successfully!"}
 
+
 @app.post("/ask")
 async def ask_aida(request: ChatRequest):
-    global request_counter
+    global request_counter, bot_memory
     user_message = request.query
-    
+
     current_id = f"G{request_counter:02d}"
     request_counter += 1
 
     logging.info(f"--- [NEW REQUEST ID: {current_id}] เริ่มประมวลผลคำถาม: '{user_message}' ---")
-    
-    # จับเวลาภาพรวมทั้งหมด (End-to-End)
     start_total_time = time.perf_counter()
-    start_logic = time.perf_counter() # เริ่มจับเวลาส่วน Logic รวม
-    
+    start_logic      = time.perf_counter()
+
     # ---------------------------------------------------------
-    # [เพิ่มใหม่] สเต็ป 0: Intent Classification (แยกหมวดหมู่คำถาม)
+    # [สเต็ป 0] Intent Classification
     # ---------------------------------------------------------
     start_intent_time = time.perf_counter()
     if intent_classifier is not None:
-        intent_data = intent_classifier.predict(user_message)
-        detected_intent = intent_data["intent"]["label"]
-        display_intent = intent_data["intent"]["display_name"]
-        entities = intent_data["entities"]
+        intent_data      = intent_classifier.predict(user_message)
+        detected_intent  = intent_data["intent"]["label"]
+        display_intent   = intent_data["intent"]["display_name"]
+        entities         = intent_data["entities"]
     else:
-        # --- เพิ่มโครงสร้างกล่องจำลองตรงนี้ ---
-        intent_data = {
-            "intent": {
-                "label": "unknown",
-                "display_name": "ไม่ระบุ"
-            },
-            "entities": {}
-        }
-        # ---------------------------------
-        detected_intent = intent_data["intent"]["label"]
-        display_intent = intent_data["intent"]["display_name"]
-        entities = intent_data["entities"]
-        
+        intent_data     = {"intent": {"label": "unknown", "display_name": "ไม่ระบุ"}, "entities": {}}
+        detected_intent = "unknown"
+        display_intent  = "ไม่ระบุ"
+        entities        = {}
+
     intent_latency = time.perf_counter() - start_intent_time
 
-    logging.info(f"[Intent] หมวดหมู่: {display_intent} | ใช้เวลา: {intent_latency:.4f} วินาที")
-    
+    # =========================================================
+    # [สเต็ป 0.5] Memory & Silent Mapping (เพิ่ม Advance Logic)
+    # =========================================================
+
+    # 1. Regex เพิ่มเติม: ชั้นปี (1-6) และเทอม (1-3)
+    m_year = re.search(r"ปี\s*([1-6])(?!\d)", user_message)
+    if m_year:
+        entities["year"] = m_year.group(1)
+
+    m_sem = re.search(r"เทอม\s*([1-3])\b", user_message)
+    if m_sem:
+        entities["semester"] = m_sem.group(1)
+
+    # 2. Silent Mapping: cohort prefix 63-69 → หลักสูตร & เตรียมถามรุ่นย่อย
+    match_id = re.search(r"\b(6[3-9])\b", user_message)
+    if match_id:
+        sid = match_id.group(1)
+        if sid in COHORT_CONFIG:
+            entities["curriculum_year"] = COHORT_CONFIG[sid]["curr"]
+            bot_memory["sid_prefix"] = sid # จำรหัส 2 ตัวหน้าไว้ใช้ถามกลับ
+            # ถ้าปีนั้นมีรุ่นเดียว จับยัดให้เลยไม่ต้องถาม
+            if len(COHORT_CONFIG[sid]["gens"]) == 1:
+                entities["generation"] = COHORT_CONFIG[sid]["gens"][0]
+
+    # [เพิ่ม] ดักจับรุ่นย่อยจากข้อความ (เช่น 1/1, 1/2, /1, /2 หรือ รุ่น 2)
+    m_gen = re.search(r"(1/1|1/2|\b2\b|/1|/2)", user_message)
+    if m_gen:
+        gen_val = m_gen.group(1).replace("/", "1/") if "/" in m_gen.group(1) and len(m_gen.group(1)) == 2 else m_gen.group(1)
+        entities["generation"] = gen_val
+
+    # [เพิ่มใหม่] ดึงสติบอท: ถ้าเจอข้อมูลตัวเลข ห้ามมองว่าเป็น small_talk เด็ดขาด! (แก้บั๊กตอบ "ปี 65 ครับ" แล้วลืม)
+    has_important_data = bool(m_year or m_sem or match_id or m_gen)
+    if has_important_data and bot_memory["intent"] in ["curriculum_info", "course_desc"]:
+        detected_intent = bot_memory["intent"]
+        intent_data["intent"]["label"] = detected_intent
+        logging.info(f"[Intent Override] เจอข้อมูลตอบกลับ ดึงสติเข้าเรื่อง {detected_intent} ป้องกันการล้างความจำ!")
+
+    # 3. Memory Recovery: ถ้า intent ใหม่เป็น unknown/greeting แต่เคยคุยเรื่องหนึ่งอยู่
+    new_group = INTENT_GROUP_MAP.get(detected_intent, "")
+
+    if detected_intent in MEMORY_RESET_INTENTS:
+        # เปลี่ยนเรื่องชัดเจน — ล้าง memory บางส่วน
+        if bot_memory["intent_group"] and bot_memory["intent_group"] != new_group:
+            logging.info(f"[Memory] เปลี่ยนเรื่องจาก {bot_memory['intent_group']} ไป {new_group or 'NONE'} -> ล้างความจำระยะสั้น")
+            bot_memory.update({"year": "", "generation": "", "semester": "", "curriculum_year": "", "sid_prefix": ""})
+    elif detected_intent in ("unknown", "out_of_scope") and bot_memory["intent"]:
+        # ไม่ชัดเจน → ใช้ intent เดิม
+        detected_intent = bot_memory["intent"]
+        intent_data["intent"]["label"] = detected_intent
+
+    # 4. อัปเดต memory ด้วย intent ที่มีความหมาย
+    if detected_intent not in {*MEMORY_RESET_INTENTS, "unknown", "out_of_scope"}:
+        bot_memory["intent"]       = detected_intent
+        bot_memory["intent_group"] = INTENT_GROUP_MAP.get(detected_intent, "")
+
+    # 5. อัปเดต memory entity
+    for key in ("year", "generation", "semester", "curriculum_year"):
+        if entities.get(key):
+            bot_memory[key] = entities[key]
+
+    # 6. เติม entity จาก memory (ถ้าหายไป)
+    for key in ("year", "generation", "semester", "curriculum_year"):
+        if not entities.get(key) and bot_memory[key]:
+            entities[key] = bot_memory[key]
+
+    logging.info(
+        f"[Memory] สถานะ: ปี {entities.get('year')}, เทอม {entities.get('semester')}, "
+        f"รหัสอ้างอิง(รุ่น {entities.get('generation')}, หลักสูตร {entities.get('curriculum_year')})"
+    )
+
+    # 7. API Saver (Validator) — เฉพาะ curriculum_info
+    if detected_intent == "curriculum_info":
+        is_missing   = False
+        val_display  = ""
+        val_speech   = ""
+
+        sid = bot_memory.get("sid_prefix")
+
+        if not entities.get("year"):
+            is_missing  = True
+            val_display = "น้องไอด้าขอทราบชั้นปีหน่อยค่ะ (เช่น ปี 1, ปี 2) จะได้เปิดดูแผนการเรียนให้ถูกต้องนะคะ"
+            val_speech  = "น้องไอด้าขอทราบชั้นปีหน่อยค่ะ จะได้เปิดดูแผนการเรียนให้ถูกต้องนะคะ"
+        elif not sid and not entities.get("generation"):
+            is_missing  = True
+            val_display = "น้องไอด้าขอทราบรหัสนักศึกษา 2 ตัวหน้าหน่อยค่ะ (เช่น 65, 66) จะได้ดึงแผนการเรียนเป๊ะๆ ให้นะคะ"
+            val_speech  = "น้องไอด้าขอทราบรหัสนักศึกษา 2 ตัวหน้าหน่อยค่ะ จะได้ดึงแผนการเรียนเป๊ะๆ ให้นะคะ"
+        elif sid and sid in COHORT_CONFIG:
+            available_gens = COHORT_CONFIG[sid]["gens"]
+            if len(available_gens) > 1 and not entities.get("generation"):
+                is_missing = True
+                gen_list_text = " หรือ ".join(available_gens)
+                val_display = f"รุ่นที่เท่าไหร่คะ (รุ่น {gen_list_text}) 😊"
+                val_speech = "รุ่นที่เท่าไหร่คะ 😊"
+
+        if is_missing:
+            logging.info("[API Saver] ข้อมูลไม่ครบ → ตัดจบก่อนเข้า LLM!")
+            audio_path = await tts.generate_voice(val_speech)
+            return {
+                "answer":   val_display,
+                "audio_url": audio_path,
+                "emotion":  "Curious",
+                "intent":   detected_intent,
+                "performance_report": {"note": "Short-circuited: missing year/generation/clarification"},
+            }
+
+    # =========================================================
+
     # ---------------------------------------------------------
-    # สเต็ป 1: RAG Retrieval (วัดเวลาการค้นหาข้อมูล)
+    # สเต็ป 1: RAG Retrieval
     # ---------------------------------------------------------
     start_rag_time = time.perf_counter()
-    
-    # 💡 [แนะนำเพิ่มเติม]: คุณสามารถประยุกต์ใช้ Intent/Entities ตรงนี้ได้ 
-    # เช่น ถ้ารู้ว่าเป็นรายวิชา สามารถเอา entities["course_code"] ไปต่อท้าย query 
-    # เพื่อให้ RAG ค้นหาได้แม่นยำขึ้น เช่น: query=f"{user_message} {entities['course_code']}"
-    
     search_results = rag.retrieve(query=user_message, intent_result=intent_data, top_k=6)
-    rag_latency = time.perf_counter() - start_rag_time
-    logging.info(f"[RAG] ใช้เวลาค้นหาข้อมูล: {rag_latency:.4f} วินาที")
-    
+    rag_latency    = time.perf_counter() - start_rag_time
+
     # ---------------------------------------------------------
-    # สเต็ป 2 & 3: LLM Inference & Formatting (วัดเวลาคิดคำตอบและจัดฟอร์แมต)
+    # สเต็ป 2 & 3: LLM Inference & Formatting
     # ---------------------------------------------------------
     start_llm_time = time.perf_counter()
-    
-    # 💡 [แนะนำเพิ่มเติม]: คุณอาจจะส่ง detected_intent เข้าไปใน llm.generate_response ด้วย
-    # เพื่อให้ LLM รู้ว่าควรตอบบริบทไหน (ถ้าฟังก์ชันเพื่อนรองรับ)
-    raw_ai_response = llm.generate_response(query=user_message, retrieval_results=search_results, intent_result=intent_data)
+    raw_ai_response = llm.generate_response(
+        query=user_message,
+        retrieval_results=search_results,
+        intent_result=intent_data,
+    )
     final_response = ResponseFormatter.format_output(raw_ai_response, intent_result=intent_data)
-    
-    llm_latency = time.perf_counter() - start_llm_time
-    logging.info(f"[LLM] ใช้เวลาคิดคำตอบและจัดรูปแบบ: {llm_latency:.4f} วินาที")
-    
-    # คำนวณเวลา Logic_Delay (Intent + RAG + LLM)
-    logic_delay = time.perf_counter() - start_logic
-    
+    llm_latency    = time.perf_counter() - start_llm_time
+
+    logic_delay  = time.perf_counter() - start_logic
     display_text = final_response["display_text"]
-    speech_text = final_response["speech_text"]
-    emotion = final_response["emotion"]
-    
-    # ---------------------------------------------------------
-    # วิเคราะห์ข้อความด้วย PyThaiNLP เพื่อหาจำนวนคำและจัดระดับ
-    # ---------------------------------------------------------
-    words = [w for w in word_tokenize(speech_text, engine="newmm") if w.strip()]
+    speech_text  = final_response["speech_text"]
+    emotion      = final_response["emotion"]
+
+    words      = [w for w in word_tokenize(speech_text, engine="newmm") if w.strip()]
     word_count = len(words)
-    
-    if word_count <= 20:
-        length_newmm = "Short"
-    elif word_count <= 50:
-        length_newmm = "Medium"
-    else:
-        length_newmm = "Long"
+    length_newmm = "Short" if word_count <= 20 else ("Medium" if word_count <= 50 else "Long")
 
     # ---------------------------------------------------------
-    # สเต็ป 4: TTS Generation (วัดเวลาสร้างไฟล์เสียง)
+    # สเต็ป 4: TTS Generation
     # ---------------------------------------------------------
     start_tts_time = time.perf_counter()
-    audio_path = await tts.generate_voice(speech_text)
-    tts_latency = time.perf_counter() - start_tts_time
-    logging.info(f"[TTS] ใช้เวลาสังเคราะห์เสียง: {tts_latency:.4f} วินาที")
-    
-    if audio_path:
-        audio_url = f"http://127.0.0.1:8000{audio_path}"
-    else:
-        audio_url = None
+    audio_path     = await tts.generate_voice(speech_text)
+    tts_latency    = time.perf_counter() - start_tts_time
 
-    # สรุปเวลาทั้งหมด
+    audio_url        = audio_path if audio_path else None
     e2e_total_latency = time.perf_counter() - start_total_time
-    logging.info(f"--- [DONE] ใช้เวลาประมวลผลรวมทั้งหมด (End-to-End Latency): {e2e_total_latency:.4f} วินาที ---\n")
 
-    # ---------------------------------------------------------
-    # คำนวณสูตรวัดผล (Duration, RTF, WPM, SPW)
-    # ---------------------------------------------------------
-    duration = word_count * 0.35  # ความเร็วพูดจำลอง (วินาทีต่อคำ)
-    if duration <= 0: duration = 0.1 
-    
+    duration   = max(word_count * 0.35, 0.1)
     total_time = logic_delay + tts_latency
-    rtf = total_time / duration
-    wpm = (word_count / duration) * 60
-    spw = duration / word_count
 
-    # [เพิ่มใหม่] อัปเดต Dictionary สำหรับเก็บ Report ให้มีข้อมูล Intent
     performance_report = {
-        "User_Dialogue": user_message,
-        "ID": current_id,
-        "Intent_Detected": display_intent,         # <--- เพิ่มข้อมูล Intent ลงใน Report
-        "Extracted_Entities": entities,            # <--- เพิ่มข้อมูล Entity ลงใน Report
-        "word_count": word_count,
-        "length_newmm": length_newmm,
-        "Intent_Latency": round(intent_latency, 4),# <--- เพิ่มเวลาประมวลผล Intent
-        "Logic_Delay": round(logic_delay, 4),
-        "TTS_Latency": round(tts_latency, 4),
-        "Duration": round(duration, 2),
-        "RTF": round(rtf, 4),
-        "Total_Time": round(total_time, 4),
-        "E2E_Total_Latency": round(e2e_total_latency, 4),
-        "WPM": round(wpm, 2),
-        "SPW": round(spw, 4),
-        "TTS_Script": speech_text
+        "User_Dialogue":      user_message,
+        "ID":                 current_id,
+        "Intent_Detected":    display_intent,
+        "Extracted_Entities": entities,
+        "word_count":         word_count,
+        "length_newmm":       length_newmm,
+        "Intent_Latency":     round(intent_latency, 4),
+        "RAG_Latency":        round(rag_latency, 4),
+        "LLM_Latency":        round(llm_latency, 4),
+        "Logic_Delay":        round(logic_delay, 4),
+        "TTS_Latency":        round(tts_latency, 4),
+        "Duration":           round(duration, 2),
+        "RTF":                round(total_time / duration, 4),
+        "Total_Time":         round(total_time, 4),
+        "E2E_Total_Latency":  round(e2e_total_latency, 4),
+        "TTS_Script":         speech_text,
     }
 
-    # พิมพ์ Report ออกมาที่ Terminal ให้มองเห็นได้ทันที
-    print("\n" + "="*60)
-    print("📊 PERFORMANCE REPORT (อัปเดตระบบ Intent แล้ว)")
-    print("="*60)
-    print(json.dumps(performance_report, ensure_ascii=False, indent=4))
-    print("="*60 + "\n")
+    print(
+        "\n" + "=" * 60 + "\n📊 PERFORMANCE REPORT\n"
+        + json.dumps(performance_report, ensure_ascii=False, indent=4)
+        + "\n" + "=" * 60
+    )
 
-    # ---------------------------------------------------------
-    # สเต็ป 5: ส่งของกลับให้ Frontend (แนบ Report และ Intent ไปด้วย)
-    # ---------------------------------------------------------
     return {
-        "answer": display_text,
-        "audio_url": audio_url,
-        "emotion": emotion,
-        "intent": detected_intent,        # <--- โยน Intent กลับไปเผื่อ Frontend อยากใช้
-        "performance_report": performance_report
+        "answer":             display_text,
+        "audio_url":          audio_url,
+        "emotion":            emotion,
+        "intent":             detected_intent,
+        "performance_report": performance_report,
     }
