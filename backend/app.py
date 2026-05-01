@@ -61,9 +61,10 @@ bot_memory = {
     "semester":        "",
     "curriculum_year": "",
     "sid_prefix":      "",
+    "pending_query":   "",  # จำคำถามเดิมไว้ตอน API Saver ขอข้อมูลเพิ่ม
 }
 
-# [อัปเดต] Mapping รหัสนักศึกษา 2 หน้า → รุ่นย่อยและปีหลักสูตร
+# Mapping รหัสนักศึกษา 2 หน้า → รุ่นย่อยและปีหลักสูตร
 COHORT_CONFIG = {
     "63": {"curr": "2563", "gens": ["1/1", "1/2", "2"]},
     "64": {"curr": "2563", "gens": ["1/1", "1/2", "2"]},
@@ -86,14 +87,58 @@ INTENT_GROUP_MAP = {
     "general_info":    "GENERAL",
 }
 
-# Intent ที่ "reset" ความจำเรื่อง curriculum (เปลี่ยนเรื่องแล้ว)
+INTENT_DISPLAY_MAP = {
+    "curriculum_info": "[หมวดหมู่: แผนการเรียน/โครงสร้างหลักสูตร]",
+    "course_desc":     "[หมวดหมู่: รายวิชาและคำอธิบายรายวิชา]",
+    "staff_info":      "[หมวดหมู่: ข้อมูลอาจารย์และบุคลากร]",
+    "admission_info":  "[หมวดหมู่: ค่าเทอมและการเงิน]",
+    "coop_intern":     "[หมวดหมู่: สหกิจศึกษา/การฝึกงาน]",
+    "mou_company":     "[หมวดหมู่: เครือข่ายบริษัท/MOU]",
+    "career_info":     "[หมวดหมู่: ข้อมูลสาขาวิชา]",
+    "major_info":      "[หมวดหมู่: ข้อมูลสาขาวิชา]",
+    "general_info":    "[หมวดหมู่: ข้อมูลทั่วไป]",
+}
+
+
+# Intent ที่ "reset" ความจำ
 MEMORY_RESET_INTENTS = {"greeting", "small_talk", "toxic", "out_of_scope", "report_issue"}
+
+# Pattern คำตอบ clarification สั้นๆ
+_CLARIFICATION_REPLY_PATTERN = re.compile(
+    r"^(ปี\s*[1-6]|เทอม\s*[1-3]|[1-6][/-][1-2]|รุ่น\s*\S+|6[3-9]|ปกติ|สหกิจ)$",
+    re.IGNORECASE
+)
+
+# กลุ่มที่ year/semester ไม่ควรข้ามไปกลุ่มอื่น
+NON_CURRICULUM_GROUPS = {"ADMISSION", "STAFF", "MOU", "CAREER"}
 # =========================================================
+
+
+def _empty_memory() -> dict:
+    return {
+        "intent":          "",
+        "intent_group":    "",
+        "year":            "",
+        "generation":      "",
+        "semester":        "",
+        "curriculum_year": "",
+        "sid_prefix":      "",
+        "pending_query":   "",
+    }
 
 
 @app.get("/")
 def read_root():
     return {"message": "AIDA API is running successfully!"}
+
+
+# 🆕 /reset — ต้องอยู่ข้างนอก ask_aida เสมอ
+@app.post("/reset")
+async def reset_session():
+    global bot_memory
+    bot_memory = _empty_memory()
+    logging.info("[Memory] Reset session ✅")
+    return {"status": "ok"}
 
 
 @app.post("/ask")
@@ -113,10 +158,10 @@ async def ask_aida(request: ChatRequest):
     # ---------------------------------------------------------
     start_intent_time = time.perf_counter()
     if intent_classifier is not None:
-        intent_data      = intent_classifier.predict(user_message)
-        detected_intent  = intent_data["intent"]["label"]
-        display_intent   = intent_data["intent"]["display_name"]
-        entities         = intent_data["entities"]
+        intent_data     = intent_classifier.predict(user_message)
+        detected_intent = intent_data["intent"]["label"]
+        display_intent  = intent_data["intent"]["display_name"]
+        entities        = intent_data["entities"]
     else:
         intent_data     = {"intent": {"label": "unknown", "display_name": "ไม่ระบุ"}, "entities": {}}
         detected_intent = "unknown"
@@ -126,10 +171,10 @@ async def ask_aida(request: ChatRequest):
     intent_latency = time.perf_counter() - start_intent_time
 
     # =========================================================
-    # [สเต็ป 0.5] Memory & Silent Mapping (เพิ่ม Advance Logic)
+    # [สเต็ป 0.5] Memory & Silent Mapping
     # =========================================================
 
-    # 1. Regex เพิ่มเติม: ชั้นปี (1-6) และเทอม (1-3)
+    # 1. Regex: ชั้นปี (1-6) และเทอม (1-3)
     m_year = re.search(r"ปี\s*([1-6])(?!\d)", user_message)
     if m_year:
         entities["year"] = m_year.group(1)
@@ -138,54 +183,61 @@ async def ask_aida(request: ChatRequest):
     if m_sem:
         entities["semester"] = m_sem.group(1)
 
-    # 2. Silent Mapping: cohort prefix 63-69 → หลักสูตร & เตรียมถามรุ่นย่อย
+    # 2. Silent Mapping: cohort prefix 63-69 → หลักสูตร
     match_id = re.search(r"\b(6[3-9])\b", user_message)
     if match_id:
         sid = match_id.group(1)
         if sid in COHORT_CONFIG:
             entities["curriculum_year"] = COHORT_CONFIG[sid]["curr"]
-            bot_memory["sid_prefix"] = sid # จำรหัส 2 ตัวหน้าไว้ใช้ถามกลับ
-            # ถ้าปีนั้นมีรุ่นเดียว จับยัดให้เลยไม่ต้องถาม
+            bot_memory["sid_prefix"] = sid
             if len(COHORT_CONFIG[sid]["gens"]) == 1:
                 entities["generation"] = COHORT_CONFIG[sid]["gens"][0]
 
-    # [เพิ่ม] ดักจับรุ่นย่อยจากข้อความ (เช่น 1/1, 1/2, /1, /2 หรือ รุ่น 2)
+    # 3. ดักจับรุ่นย่อย (1/1, 1/2, /1, /2, รุ่น 2)
     m_gen = re.search(r"(1/1|1/2|\b2\b|/1|/2)", user_message)
     if m_gen:
         gen_val = m_gen.group(1).replace("/", "1/") if "/" in m_gen.group(1) and len(m_gen.group(1)) == 2 else m_gen.group(1)
         entities["generation"] = gen_val
 
-    # [เพิ่มใหม่] ดึงสติบอท: ถ้าเจอข้อมูลตัวเลข ห้ามมองว่าเป็น small_talk เด็ดขาด! (แก้บั๊กตอบ "ปี 65 ครับ" แล้วลืม)
+    # 4. Intent Override: ถ้าเจอข้อมูลตัวเลขและเคยคุยเรื่อง curriculum อยู่
     has_important_data = bool(m_year or m_sem or match_id or m_gen)
     if has_important_data and bot_memory["intent"] in ["curriculum_info", "course_desc"]:
         detected_intent = bot_memory["intent"]
         intent_data["intent"]["label"] = detected_intent
         logging.info(f"[Intent Override] เจอข้อมูลตอบกลับ ดึงสติเข้าเรื่อง {detected_intent} ป้องกันการล้างความจำ!")
 
-    # 3. Memory Recovery: ถ้า intent ใหม่เป็น unknown/greeting แต่เคยคุยเรื่องหนึ่งอยู่
+    # 5. Memory Recovery
     new_group = INTENT_GROUP_MAP.get(detected_intent, "")
 
     if detected_intent in MEMORY_RESET_INTENTS:
-        # เปลี่ยนเรื่องชัดเจน — ล้าง memory บางส่วน
         if bot_memory["intent_group"] and bot_memory["intent_group"] != new_group:
-            logging.info(f"[Memory] เปลี่ยนเรื่องจาก {bot_memory['intent_group']} ไป {new_group or 'NONE'} -> ล้างความจำระยะสั้น")
-            bot_memory.update({"year": "", "generation": "", "semester": "", "curriculum_year": "", "sid_prefix": ""})
+            logging.info(f"[Memory] RESET_INTENT → ล้างความจำ")
+            bot_memory.update({
+                "year": "", "generation": "", "semester": "",
+                "curriculum_year": "", "sid_prefix": "", "pending_query": "",
+            })
+    elif new_group and bot_memory["intent_group"] and new_group != bot_memory["intent_group"]:
+        if bot_memory["intent_group"] in NON_CURRICULUM_GROUPS:
+            bot_memory.update({"year": "", "semester": ""})
+            logging.info(
+                f"[Memory] เปลี่ยนจาก {bot_memory['intent_group']} → {new_group} "
+                f"ล้าง year/semester ป้องกันข้อมูลปนกัน"
+            )
     elif detected_intent in ("unknown", "out_of_scope") and bot_memory["intent"]:
-        # ไม่ชัดเจน → ใช้ intent เดิม
         detected_intent = bot_memory["intent"]
         intent_data["intent"]["label"] = detected_intent
 
-    # 4. อัปเดต memory ด้วย intent ที่มีความหมาย
+    # 6. อัปเดต memory intent
     if detected_intent not in {*MEMORY_RESET_INTENTS, "unknown", "out_of_scope"}:
         bot_memory["intent"]       = detected_intent
         bot_memory["intent_group"] = INTENT_GROUP_MAP.get(detected_intent, "")
 
-    # 5. อัปเดต memory entity
+    # 7. อัปเดต memory entity
     for key in ("year", "generation", "semester", "curriculum_year"):
         if entities.get(key):
             bot_memory[key] = entities[key]
 
-    # 6. เติม entity จาก memory (ถ้าหายไป)
+    # 8. เติม entity จาก memory
     for key in ("year", "generation", "semester", "curriculum_year"):
         if not entities.get(key) and bot_memory[key]:
             entities[key] = bot_memory[key]
@@ -195,11 +247,13 @@ async def ask_aida(request: ChatRequest):
         f"รหัสอ้างอิง(รุ่น {entities.get('generation')}, หลักสูตร {entities.get('curriculum_year')})"
     )
 
-    # 7. API Saver (Validator) — เฉพาะ curriculum_info
+    # =========================================================
+    # [สเต็ป 0.7] API Saver (Validator) — เฉพาะ curriculum_info
+    # =========================================================
     if detected_intent == "curriculum_info":
-        is_missing   = False
-        val_display  = ""
-        val_speech   = ""
+        is_missing  = False
+        val_display = ""
+        val_speech  = ""
 
         sid = bot_memory.get("sid_prefix")
 
@@ -214,37 +268,62 @@ async def ask_aida(request: ChatRequest):
         elif sid and sid in COHORT_CONFIG:
             available_gens = COHORT_CONFIG[sid]["gens"]
             if len(available_gens) > 1 and not entities.get("generation"):
-                is_missing = True
+                is_missing    = True
                 gen_list_text = " หรือ ".join(available_gens)
-                val_display = f"รุ่นที่เท่าไหร่คะ (รุ่น {gen_list_text}) 😊"
-                val_speech = "รุ่นที่เท่าไหร่คะ 😊"
+                val_display   = f"รุ่นที่เท่าไหร่คะ (รุ่น {gen_list_text}) 😊"
+                val_speech    = "รุ่นที่เท่าไหร่คะ"
 
         if is_missing:
+            # จำ pending_query เฉพาะครั้งแรก ไม่ overwrite
+            if not bot_memory.get("pending_query"):
+                if len(user_message.strip()) > 5 and not _CLARIFICATION_REPLY_PATTERN.match(user_message.strip()):
+                    bot_memory["pending_query"] = user_message
+                    logging.info(f"[API Saver] บันทึก pending_query: '{user_message}'")
+
             logging.info("[API Saver] ข้อมูลไม่ครบ → ตัดจบก่อนเข้า LLM!")
             audio_path = await tts.generate_voice(val_speech)
             return {
-                "answer":   val_display,
-                "audio_url": audio_path,
-                "emotion":  "Curious",
-                "intent":   detected_intent,
+                "answer":            val_display,
+                "audio_url":         audio_path,
+                "emotion":           "Curious",
+                "intent":            detected_intent,
                 "performance_report": {"note": "Short-circuited: missing year/generation/clarification"},
             }
 
     # =========================================================
+    # [สเต็ป 0.9] เลือก effective_query
+    # =========================================================
+    effective_query = user_message
+    if (
+        bot_memory.get("pending_query")
+        and detected_intent == "curriculum_info"
+        and (
+            len(user_message.strip()) <= 10
+            or _CLARIFICATION_REPLY_PATTERN.match(user_message.strip())
+        )
+    ):
+        effective_query = bot_memory["pending_query"]
+        logging.info(f"[Memory] ใช้ pending_query แทน user_message: '{effective_query}'")
+        bot_memory["pending_query"] = ""  # ล้างหลังใช้แล้ว
 
+    # sync intent_data ก่อนส่งไป RAG
+    intent_data["intent"]["label"] = detected_intent
+    # sync display_name ด้วย ไม่งั้น force_category ใน RAG จะผิด
+    if detected_intent in INTENT_DISPLAY_MAP:
+        intent_data["intent"]["display_name"] = INTENT_DISPLAY_MAP[detected_intent]
     # ---------------------------------------------------------
     # สเต็ป 1: RAG Retrieval
     # ---------------------------------------------------------
     start_rag_time = time.perf_counter()
-    search_results = rag.retrieve(query=user_message, intent_result=intent_data, top_k=6)
+    search_results = rag.retrieve(query=effective_query, intent_result=intent_data, top_k=6)
     rag_latency    = time.perf_counter() - start_rag_time
 
     # ---------------------------------------------------------
     # สเต็ป 2 & 3: LLM Inference & Formatting
     # ---------------------------------------------------------
-    start_llm_time = time.perf_counter()
+    start_llm_time  = time.perf_counter()
     raw_ai_response = llm.generate_response(
-        query=user_message,
+        query=effective_query,
         retrieval_results=search_results,
         intent_result=intent_data,
     )
@@ -256,8 +335,8 @@ async def ask_aida(request: ChatRequest):
     speech_text  = final_response["speech_text"]
     emotion      = final_response["emotion"]
 
-    words      = [w for w in word_tokenize(speech_text, engine="newmm") if w.strip()]
-    word_count = len(words)
+    words        = [w for w in word_tokenize(speech_text, engine="newmm") if w.strip()]
+    word_count   = len(words)
     length_newmm = "Short" if word_count <= 20 else ("Medium" if word_count <= 50 else "Long")
 
     # ---------------------------------------------------------
@@ -267,7 +346,7 @@ async def ask_aida(request: ChatRequest):
     audio_path     = await tts.generate_voice(speech_text)
     tts_latency    = time.perf_counter() - start_tts_time
 
-    audio_url        = audio_path if audio_path else None
+    audio_url         = audio_path if audio_path else None
     e2e_total_latency = time.perf_counter() - start_total_time
 
     duration   = max(word_count * 0.35, 0.1)
@@ -290,6 +369,7 @@ async def ask_aida(request: ChatRequest):
         "Total_Time":         round(total_time, 4),
         "E2E_Total_Latency":  round(e2e_total_latency, 4),
         "TTS_Script":         speech_text,
+        "Effective_Query":    effective_query,
     }
 
     print(

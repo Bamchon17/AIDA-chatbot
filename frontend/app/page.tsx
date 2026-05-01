@@ -126,7 +126,7 @@ export default function Home() {
     return () => unsubscribe();
   }, [userId]);
 
-  const handleNewChat = useCallback(async () => {
+const handleNewChat = useCallback(async () => {
     const firestore = db;
 
     if (!firestore || !userId) return null;
@@ -135,6 +135,15 @@ export default function Home() {
       title: "New Chat",
       timestamp: serverTimestamp(),
     });
+
+    // Reset memory ฝั่ง backend ทุกครั้งที่เปิด New Chat
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/reset`, {
+        method: "POST",
+      });
+    } catch (err) {
+      console.warn("[NewChat] ไม่สามารถ reset memory ได้:", err);
+    }
 
     setCurrentChatId(docRef.id);
     setIsSidebarOpen(false);

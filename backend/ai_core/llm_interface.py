@@ -140,6 +140,21 @@ class LLMInterface:
 
     def generate_response(self, query: str, retrieval_results: list,
                           intent_result: dict, sentiment: str = "normal") -> dict | None:
+
+        # [เพิ่มใหม่] โค้ดสำหรับ Print ดูค่า retrieval_results สวยๆ ใน Terminal
+        print("\n" + "="*60)
+        print(f"[DEBUG] คำถามจาก User: '{query}'")
+        print(f"[DEBUG] จำนวนข้อมูลที่ดึงมาได้ (Retrieval Results): {len(retrieval_results)} ชิ้น")
+        print("-" * 60)
+        # ปริ้นออกมาให้ดูอ่านง่ายๆ เป็นภาษาไทย
+        print(json.dumps(retrieval_results, indent=2, ensure_ascii=False))
+        print("="*60 + "\n")
+
+        if retrieval_results == "__CLARIFICATION_NEEDED__":
+            # ถ้าต้องการความชัดเจนเรื่องหลักสูตร ให้คืนค่าคำถามสำเร็จรูปกลับไปเลย
+            from ai_core.rag_handler import CURRICULUM_CLARIFY_RESPONSE
+            return CURRICULUM_CLARIFY_RESPONSE
+            
         intent_info  = intent_result.get("intent",{})
         entities     = intent_result.get("entities",{})
         label        = intent_info.get("label","")

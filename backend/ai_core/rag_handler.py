@@ -5,7 +5,7 @@ rag_handler.py — Updated
   - _direct_curriculum_search: ค้นหา chunk ตรงจาก KB ไม่พึ่ง FAISS
   - Soft Ranking: Boost score แทน Hard Filter
   - Cross-search: MOU↔staff, coop↔MOU
-  - 🚨 [Targeted Fix] เพิ่ม Global Boost ดันวิชาเลือกเสรี, CO301 และ เดือนฝึกงานสหกิจ
+  - [Targeted Fix] เพิ่ม Global Boost ดันวิชาเลือกเสรี, CO301 และ เดือนฝึกงานสหกิจ
 """
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
@@ -92,7 +92,7 @@ class RAGHandler:
         print(f"[RAG] _direct_search → ไม่พบ → fallback FAISS")
         return None
 
-    # 🚨 [จุดที่แก้ 1] รับ query เข้ามา และเพิ่ม Boost กฎเหล็ก
+    # [จุดที่แก้ 1] รับ query เข้ามา และเพิ่ม Boost กฎเหล็ก
     def _rerank_curriculum(self, chunks: list, entities: dict, query: str = "") -> list:
         """
         Soft Ranking: Boost คะแนนให้ chunk ที่ตรง
@@ -232,7 +232,7 @@ class RAGHandler:
                 elif isinstance(res, str):
                     formatted.append({"text": res, "score": 0.0})
 
-            # 🚨 [จุดที่แก้ 2] Global Boost ดันช่วงเวลาสหกิจและปีให้ตรงก่อนจัดอันดับ
+            # [จุดที่แก้ 2] Global Boost ดันช่วงเวลาสหกิจและปีให้ตรงก่อนจัดอันดับ
             curr_year = entities.get("curriculum_year", "")
             for item in formatted:
                 txt = item.get("text", "")

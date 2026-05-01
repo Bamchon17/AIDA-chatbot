@@ -220,8 +220,18 @@ class ThaiIntentClassifier:
             return self._format_output(text, "general_info", 1.0, is_fallback=True)
 
         # 8. Coop/Intern
-        coop_keywords = ["สหกิจ","ฝึกงาน","co-op","coop","intern","สถานที่ฝึกงาน","ออกสหกิจ"]
-        if any(w in text_lower for w in coop_keywords):
+        coop_keywords = ["สหกิจ", "ฝึกงาน", "co-op", "coop", "intern", "สถานที่ฝึกงาน", "ออกสหกิจ"]
+
+        # เพิ่มตรงนี้ ถ้าถามเรื่องวิชา/แผนการเรียน → curriculum ก่อน
+        curriculum_override_kw = [
+            "เรียนเทอมไหน", "เทอมไหน", "เรียนปีไหน", "ปีไหน",
+            "วิชาเลือกเสรี", "free elective", "หน่วยกิต",
+            "ต้องเรียน", "ลงทะเบียน", "รายวิชา", "วิชาใด",
+            "แผนการเรียน", "ตารางเรียน"
+        ]
+        is_curriculum_question = any(w in text_lower for w in curriculum_override_kw)
+        
+        if any(w in text_lower for w in coop_keywords) and not is_curriculum_question:
             return self._format_output(text, "coop_intern", 1.0, is_fallback=True)
 
         # 9. MOU company
@@ -242,7 +252,7 @@ class ThaiIntentClassifier:
         if any(w in text_lower for w in curriculum_strong):
             return self._format_output(text, "curriculum_info", 1.0, is_fallback=True)
 
-        # 10b. Short reply: 🚨 ดักรหัส 63-69 และ ปี 1-6 ตรงนี้!
+        # 10b. Short reply: ดักรหัส 63-69 และ ปี 1-6 ตรงนี้!
         _ents_quick = self._extract_entities(clean_text)
         _is_plan_reply = (
             len(clean_text.strip()) <= 20
