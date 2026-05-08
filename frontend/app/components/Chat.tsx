@@ -21,6 +21,9 @@ interface ChatProps {
   chatId: string | null;
   onCreateNewChat?: () => Promise<string | null>;
   voiceInput?: string | null;
+  onMicClick?: () => void;
+  isRecording?: boolean;
+  recordingSecs?: number;
   onAISpeak?: (text: string) => void;
   onAIAudio?: (audioUrl: string | null) => void;
   onAIEmotion?: (emotion: "Normal" | "Talking" | "Curious") => void;
@@ -32,6 +35,9 @@ export default function Chat({
   chatId,
   onCreateNewChat,
   voiceInput,
+  onMicClick,
+  isRecording = false,
+  recordingSecs = 0,
   onAISpeak,
   onAIAudio,
   onAIEmotion,
@@ -47,6 +53,7 @@ export default function Chat({
   const chatRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const processedVoiceInputRef = useRef<string>("");
+  const formatRecordingTime = (s: number) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 
   useEffect(() => {
     setInputValue("");
@@ -123,6 +130,29 @@ export default function Chat({
       timestamp: serverTimestamp(),
     });
   }, [isFirebaseReady, userId]);
+  // --- MOCKUP: ลบออกหลัง screenshot เสร็จ ---
+  const GREETING_PATTERNS = /สวัสดี|หวัดดี|ดีค่ะ|ดีครับ|hello|hi\b/i;
+  const FOOD_PATTERNS = /ทานอะไร|กินอะไร|อาหาร|ข้าว|หิว/i;
+
+  const getMockResponse = useCallback((text: string): { answer: string; audio_url: null; emotion: "Normal" | "Talking" | "Curious" } | null => {
+    if (GREETING_PATTERNS.test(text)) {
+      return {
+        answer: "สวัสดีค่ะ Aida เป็นผู้ช่วยเสมือนซึ่งจะช่วยตอบคำถามเกี่ยวกับสาขาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล มีอะไรให้ช่วยไหมคะ",
+        audio_url: null,
+        emotion: "Talking",
+      };
+    }
+    if (FOOD_PATTERNS.test(text)) {
+      return {
+        answer: "ขออภัยค่ะ ไม่สามารถตอบคำถามได้ เนื่องจากไม่เกี่ยวกับวิชาของสาขา กรุณาถามใหม่นะคะ",
+        audio_url: null,
+        emotion: "Curious",
+      };
+    }
+    return null;
+  }, []);
+  // --- END MOCKUP ---
+
   //fetch ส่งไปให้ backend
   const requestAIResponse = useCallback(async (text: string) => {
     const response = await fetch("http://localhost:8000/ask", {
@@ -157,7 +187,8 @@ export default function Chat({
     }
 
     try {
-      const data = await requestAIResponse(userText);
+      const mock = getMockResponse(userText);
+      const data = mock ?? await requestAIResponse(userText);
       const aiText = data.answer ?? "";
       const aiAudioUrl = data.audio_url ?? null;
       const aiEmotion = (data.emotion ?? "Normal") as "Normal" | "Talking" | "Curious";
@@ -172,7 +203,7 @@ export default function Chat({
     } catch (error) {
       console.error("API Error:", error);
     }
-  }, [ensureChatId, isFirebaseReady, messages.length, onAISpeak, onAIAudio, onAIEmotion, persistMessage, requestAIResponse, updateChatTitle]);
+  }, [ensureChatId, getMockResponse, isFirebaseReady, messages.length, onAISpeak, onAIAudio, onAIEmotion, persistMessage, requestAIResponse, updateChatTitle]);
 
   // Handle mouse move for dragging
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -255,7 +286,7 @@ export default function Chat({
         className="absolute flex h-[95%] w-[95%] flex-col overflow-hidden backdrop-blur-2xl md:h-[90%] md:w-[62%]"
         style={{
           ...(position === null
-            ? { left: "50%", top: "50%", transform: "translate(-50%, -50%)" }
+            ? { right: 0, top: "50%", transform: "translateY(-50%)" }
             : { left: position.x, top: position.y, cursor: isDragging ? "grabbing" : "default" }),
           background: "rgba(215, 190, 255, 0.45)",
           border: "1px solid rgba(220, 190, 255, 0.55)",
@@ -398,6 +429,30 @@ export default function Chat({
                 e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.8)";
               }}
             />
+            <button
+              onClick={onMicClick}
+              disabled={!onMicClick}
+              className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl text-white transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+              style={{
+                background: isRecording
+                  ? "linear-gradient(135deg, rgba(255, 115, 180, 0.95), rgba(190, 70, 220, 0.88))"
+                  : "rgba(255,255,255,0.18)",
+                border: "1px solid rgba(230,205,255,0.55)",
+                boxShadow: isRecording
+                  ? "0 4px 18px rgba(220,70,190,0.42)"
+                  : "0 2px 14px rgba(120,70,200,0.24)",
+              }}
+              title={isRecording ? `Stop recording ${formatRecordingTime(recordingSecs)}` : "Start voice input"}
+            >
+              {isRecording && (
+                <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-pink-200 animate-pulse" />
+              )}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                strokeWidth={2} stroke="currentColor" className="h-5 w-5">
+                <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M12 18.75a6 6 0 006-6v-1.5m-12 0v1.5a6 6 0 006 6m0 0v3m-3 0h6M12 15.75a3 3 0 003-3v-6a3 3 0 10-6 0v6a3 3 0 003 3z" />
+              </svg>
+            </button>
             <button
               onClick={() => void handleSendMessage()}
               disabled={inputValue.trim() === ""}

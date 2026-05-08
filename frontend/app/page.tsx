@@ -31,7 +31,6 @@ export default function Home() {
   const [recordingSecs, setRecordingSecs] = useState(0);
   const [voiceInput, setVoiceInput] = useState<string | null>(null);
 
-  const formatTime = (s: number) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
   const [aiAudioUrl, setAIAudioUrl] = useState<string | null>(null);
   const [currentEmotion, setCurrentEmotion] = useState<"Normal" | "Talking" | "Curious">("Normal");
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
@@ -320,31 +319,6 @@ export default function Home() {
         </svg>
       </button>
 
-      {/* Mic overlay — bubble + clickable area */}
-      <div className="absolute z-20" style={{ left: "59%", bottom: "8%", width: "7%", height: "32%" }}>
-        <div
-          className="absolute -top-20 left-[calc(25%+20px)] -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full whitespace-nowrap text-[11px] font-medium text-white backdrop-blur-md pointer-events-none bubble-breathe"
-          style={{
-            background: "rgba(255,255,255,0.18)",
-            border: "1px solid rgba(255,255,255,0.40)",
-          }}
-        >
-          {isRecording ? (
-            <>
-              <span className="h-1.5 w-1.5 rounded-full bg-pink-300 animate-pulse" />
-              {formatTime(recordingSecs)}
-            </>
-          ) : (
-            "Tap the mic to speak"
-          )}
-        </div>
-        <button
-          className="w-full h-full cursor-pointer rounded-2xl"
-          style={{ background: "transparent" }}
-          onClick={() => setMicTrigger((n) => n + 1)}
-        />
-      </div>
-
       <div className="relative z-10 h-1/3 w-full md:h-full md:w-[55%]">
         <Avatar
           onVoiceInput={handleVoiceInput}
@@ -361,6 +335,9 @@ export default function Home() {
           chatId={currentChatId}
           onCreateNewChat={handleNewChat}
           voiceInput={voiceInput}
+          onMicClick={() => setMicTrigger((n) => n + 1)}
+          isRecording={isRecording}
+          recordingSecs={recordingSecs}
           onAIAudio={setAIAudioUrl}
           onAIEmotion={setCurrentEmotion}
           isFirebaseReady={isFirebaseConfigured && Boolean(db)}
