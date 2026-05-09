@@ -59,13 +59,29 @@ export default function Avatar({
     handleMicrophoneClick();
   }, [triggerMic]);
 
+  // Curious และ Talking จาก prop (กรณีไม่มี audio เช่น mockup)
+  useEffect(() => {
+    if (emotion === "Curious") {
+      managerRef.current?.setEmotion("Curious");
+      const t = setTimeout(() => managerRef.current?.stopMotion(), 4000);
+      return () => clearTimeout(t);
+    }
+    if (emotion === "Talking") {
+      managerRef.current?.setEmotion("Talking");
+      const t = setTimeout(() => managerRef.current?.stopMotion(), 5000);
+      return () => clearTimeout(t);
+    }
+  }, [emotion]);
+
+  // ─── Voice input ──────────────────────────────────────────────────────────
 
   const [isRecordingMode, setIsRecordingMode] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const aiAudioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const transcriptRef = useRef<string>("");
+  const finalTranscriptRef = useRef<string>("");
+  const interimTranscriptRef = useRef<string>("");
 
   const startTimer = () => {
     setRecordingTime(0);
@@ -86,7 +102,8 @@ export default function Avatar({
       stopRecording();
     } else {
       setIsRecordingMode(true);
-      transcriptRef.current = "";
+      finalTranscriptRef.current = "";
+      interimTranscriptRef.current = "";
       startRecording();
     }
   };
@@ -123,10 +140,11 @@ export default function Avatar({
       }
 
       if (finalTranscript) {
-        transcriptRef.current += finalTranscript;
+        finalTranscriptRef.current += finalTranscript;
+        interimTranscriptRef.current = "";
       }
       if (!finalTranscript && interimTranscript) {
-        transcriptRef.current = interimTranscript;
+        interimTranscriptRef.current = interimTranscript;
       }
     };
 
@@ -149,10 +167,13 @@ export default function Avatar({
     stopTimer();
     setRecordingTime(0);
 
-    if (transcriptRef.current.trim() && onVoiceInput) {
-      onVoiceInput(transcriptRef.current.trim());
+    const spokenText = (finalTranscriptRef.current || interimTranscriptRef.current).trim();
+
+    if (spokenText && onVoiceInput) {
+      onVoiceInput(spokenText);
     }
-    transcriptRef.current = "";
+    finalTranscriptRef.current = "";
+    interimTranscriptRef.current = "";
   };
 
   useEffect(() => {
